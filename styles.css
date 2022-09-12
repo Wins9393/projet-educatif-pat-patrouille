@@ -262,9 +262,22 @@ a{
 }
 
 @media (max-width: 600px) {
+    html{
+        overflow-y: scroll;
+    }
+
+    .main{
+        min-height: 120vh;
+    }
+
+    .flex-space-evenly-column{
+        justify-content: flex-start;
+    }
+
     .dynamic-content{
         height: 60vh;
     }
+
     .image-chiots{
         width: 33vw;
     }
@@ -283,7 +296,7 @@ a{
 
     .reaction{
         top: 18vh;
-        left: -22vw;
+        left: -50vw;
     }
 
     @keyframes imgReaction {
