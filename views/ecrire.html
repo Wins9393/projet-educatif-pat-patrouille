@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script src="../controllers/ecrire.js" defer></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.2.4/tsparticles.bundle.min.js" defer></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js">
+    </script>
+    <title>Ecrire</title>
+</head>
+
+<body>
+
+    <main class="main">
+        <audio class="audio1" autoplay loop src=""></audio>
+        <audio class="audio2" autoplay loop src=""></audio>
+        <div class="reaction"></div>
+        <div id="tsparticles"></div>
+
+        <header class="main-header flex-space-around">
+            <nav>
+                <a class="lien-header btn bleu" href="../index.html">RETOUR</a>
+            </nav>
+        </header>
+
+        <div class="main-content flex-space-evenly-column">
+            <div>
+                <button class="btn btn-jouer-ecrire rose">JOUER</button>
+            </div>
+
+            <!-- <div class="victoire">
+                <img src="../assets/reactions/X5NZ.gif" alt="">
+                <img src="../assets/reactions/bf6.gif" alt="">
+                <img src="../assets/reactions/5G7b.gif" alt="">
+                <img src="../assets/reactions/Z3us.gif" alt="">
+            </div> -->
+
+            <div>
+                <div class="dynamic-letters flex-center">
+                    <img class="img-btn-lettre" src="" alt="">
+                    <img class="img-btn-lettre" src="" alt="">
+                    <img class="img-btn-lettre" src="" alt="">
+                    <img class="img-btn-lettre" src="" alt="">
+                    <img class="img-btn-lettre" src="" alt="">
+                </div>
+            </div>
+
+            <div class="image-aleatoire-wrapper flex-center">
+                <img class="image-aleatoire" src="" alt="">
+            </div>
+
+            <div class="nom-chiot"></div>
+
+        </div>
+    </main>
+
+    <!-- <script class="script-particules" type="module" src="../controllers/particules.js" defer></script> -->
+</body>
+
+</html>
