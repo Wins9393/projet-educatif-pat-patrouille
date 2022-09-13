@@ -83,19 +83,23 @@ a{
     height: 20vh;
 }
 
-.img-btn-lettre{
+.dynamic-chiots{
+    display: none;
+    height: 20vh;
+}
+
+.img-lettre{
+    max-height: 20vh;
+}
+
+.img-btn{
     max-height: 100%;
     cursor: pointer;
 }
 
-.img-btn-lettre:hover{
+.img-btn:hover{
     transform: scale(1.1);
 }
-
-/* .main-footer{
-    min-height: 10vh;
-    min-width: 100%;
-} */
 
 .lien-header{
     display: inline-block;
@@ -103,10 +107,11 @@ a{
 }
 
 .lien-header:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    background-color: #0876CC;
 }
 
-.btn-jouer-ecrire{
+.btn-jouer{
     color: white;
     cursor: pointer;
 }
@@ -166,6 +171,10 @@ a{
 
 .image-aleatoire{
     width: 20%;
+}
+
+.nom-aleatoire{
+    height: 20vh;
 }
 
 .nom-chiot{
@@ -229,6 +238,25 @@ a{
     display: none;
 }
 
+.img-chiot-trouve{
+    animation-duration: 2s;
+    animation-name: imgChiotTrouve;
+}
+
+@keyframes imgChiotTrouve {
+    from {
+      transform: scale(1);
+    }
+
+    50%{
+        transform: scale(3);
+    }
+  
+    to {
+      transform: scale(1);
+    }
+}
+
 @media (max-width: 1000px) {
     .flex-space-around{
         flex-wrap: wrap;
@@ -256,7 +284,11 @@ a{
         flex-wrap: wrap;
     }
 
-    .img-btn-lettre{
+    .dynamic-chiots{
+        flex-wrap: wrap;
+    }
+
+    .img-btn{
         max-height: 80%;
     }
 }
@@ -266,8 +298,20 @@ a{
         overflow-y: scroll;
     }
 
+    body{
+        overflow: hidden;
+    }
+
     .main{
         min-height: 120vh;
+    }
+
+    .lien-header{
+        font-size: 1.5rem;
+    }
+
+    .main-content{
+        height: 100%;
     }
 
     .flex-space-evenly-column{
@@ -278,12 +322,20 @@ a{
         height: 60vh;
     }
 
+    .dynamic-chiots{
+        flex-wrap: wrap;
+    }
+
     .image-chiots{
         width: 33vw;
     }
 
-    .img-btn-lettre{
+    .img-btn{
         max-height: 50%;
+    }
+
+    .img-btn-chiot{
+        max-height: 100%;
     }
 
     .image-aleatoire{
@@ -297,6 +349,10 @@ a{
     .reaction{
         top: 18vh;
         left: -50vw;
+    }
+
+    .img-lettre{
+        max-height: 40%;
     }
 
     @keyframes imgReaction {

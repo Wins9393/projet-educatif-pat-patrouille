@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <script type="module" src="../controllers/lire.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js">
+    </script>
+    <title>Lire</title>
+</head>
+
+<body>
+
+    <main class="main">
+        <audio class="audio1" autoplay loop src=""></audio>
+        <audio class="audio2" autoplay loop src=""></audio>
+        <div class="reaction"></div>
+        <div id="tsparticles"></div>
+
+        <header class="main-header flex-space-around">
+            <nav>
+                <a class="lien-header btn bleu" href="../index.html">ACCUEIL</a>
+                <a class="lien-header btn bleu" href="ecrire.html">ÉCRIRE</a>
+                <a class="lien-header btn bleu" href="#">LIRE</a>
+            </nav>
+        </header>
+
+        <div class="main-content flex-space-evenly-column">
+            <div>
+                <button class="btn btn-jouer btn-lire rose">JOUER</button>
+            </div>
+
+            <div class="nom-aleatoire-wrapper">
+                <div class="nom-aleatoire flex-center"></div>
+            </div>
+
+            <div>
+                <div class="dynamic-chiots flex-center">
+                    <img class="img-btn img-btn-chiot" src="" alt="">
+                    <img class="img-btn img-btn-chiot" src="" alt="">
+                    <img class="img-btn img-btn-chiot" src="" alt="">
+                    <img class="img-btn img-btn-chiot" src="" alt="">
+                </div>
+            </div>
+
+            <div></div>
+
+        </div>
+    </main>
+
+</body>
+
+</html>
