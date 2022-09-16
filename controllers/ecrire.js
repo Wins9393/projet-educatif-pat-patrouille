@@ -1,6 +1,5 @@
 import { options } from "../particles/particles-options.js";
 
-const baliseScript = document.querySelector(".script-particules");
 const imageAleatoire = document.querySelector(".image-aleatoire");
 const dynamicLetters = document.querySelector(".dynamic-letters");
 const btnJouerEcrire = document.querySelector(".btn-ecrire");
@@ -23,6 +22,7 @@ const chiots = [
   "ruben",
   "zuma",
   "chase",
+  "tracker",
 ];
 const alphabet = [
   "a",
@@ -54,7 +54,7 @@ const alphabet = [
 ];
 
 const selectUnChiotAleatoire = () => {
-  let randomInt = Math.floor(Math.random() * 7);
+  let randomInt = Math.floor(Math.random() * chiots.length);
 
   currentChiot = chiots[randomInt];
   imageAleatoire.src = `../assets/${chiots[randomInt]}.png`;
@@ -65,7 +65,7 @@ const afficheLettres = (currentChiot) => {
   let randomLetterPlace = Math.floor(Math.random() * 4);
 
   lettersButton.forEach((imgButton, index) => {
-    let randomInt = Math.floor(Math.random() * 26);
+    let randomInt = Math.floor(Math.random() * alphabet.length);
 
     if (index === randomLetterPlace) {
       imgButton.src = `../assets/alphabet/${premiereLettre}.png`;

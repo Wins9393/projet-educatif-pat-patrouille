@@ -13,12 +13,13 @@ const chiots = [
   "ruben",
   "zuma",
   "chase",
+  "tracker",
 ];
 
 let currentChiot = "";
 
 const generateurDeNom = () => {
-  let randomInt = Math.floor(Math.random() * 7);
+  let randomInt = Math.floor(Math.random() * chiots.length);
 
   currentChiot = chiots[randomInt];
 
@@ -35,7 +36,7 @@ const afficheImageChiots = (currentChiot) => {
   let randomChiotPlace = Math.floor(Math.random() * 3);
 
   chiotButtons.forEach((imgButton, index) => {
-    let randomInt = Math.floor(Math.random() * 7);
+    let randomInt = Math.floor(Math.random() * chiots.length);
 
     if (index === randomChiotPlace) {
       imgButton.src = `../assets/${currentChiot}.png`;
