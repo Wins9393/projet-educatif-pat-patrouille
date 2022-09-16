@@ -95,3 +95,6 @@ chiotButtons.forEach((imgBtn) => {
     verifieChiotClique(e);
   });
 });
+
+generateurDeNom();
+afficheImageChiots(currentChiot);

@@ -147,3 +147,6 @@ lettersButton.forEach((imgBtn) => {
     verifieLettreCliquee(e);
   });
 });
+
+selectUnChiotAleatoire();
+afficheLettres(currentChiot);
