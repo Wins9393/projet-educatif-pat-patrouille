@@ -12,7 +12,7 @@ let randomInt;
 
 const afficheOsAleatoire = () => {
   randomInt = Math.floor(Math.random() * 10);
-  nombreOsAleatoire.style.display = "flex";
+  // nombreOsAleatoire.style.display = "flex";
 
   for (let i = 0; i < randomInt; i++) {
     const imgOs = document.createElement("img");
@@ -44,8 +44,17 @@ const verifieNombreClique = (e) => {
   console.log(nombreClique);
 
   if (nombreClique === randomInt) {
-    nombreOsAleatoire.style.display = "none";
-    audio.src = "../assets/sons/bon.mp3";
+    // nombreOsAleatoire.style.display = "none";
+
+    imgBtnNombre.forEach((imgBtn) => {
+      if (imgBtn !== e.target) {
+        imgBtn.style.display = "none";
+      } else {
+        imgBtn.classList.add("img-trouvee");
+      }
+    });
+
+    audio.src = "../assets/reactions/cris-de-joie.mp3";
     tsParticles.load("tsparticles", options);
   } else {
     audio.src = `../assets/sons/mauvais.mp3`;
@@ -53,6 +62,10 @@ const verifieNombreClique = (e) => {
 };
 
 btnJouerCompter.addEventListener("click", () => {
+  imgBtnNombre.forEach((imgBtn) => {
+    imgBtn.classList.remove("img-trouvee");
+    imgBtn.style.display = "flex";
+  });
   nombreOsAleatoire.innerHTML = "";
   afficheOsAleatoire();
 });

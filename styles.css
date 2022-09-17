@@ -259,12 +259,12 @@ a{
     display: none;
 }
 
-.img-chiot-trouve{
+.img-trouvee{
     animation-duration: 2s;
-    animation-name: imgChiotTrouve;
+    animation-name: imgTrouvee;
 }
 
-@keyframes imgChiotTrouve {
+@keyframes imgTrouvee {
     from {
       transform: scale(1);
     }
@@ -335,8 +335,15 @@ a{
         min-height: 120vh;
     }
 
+    nav{
+        width: 100%;
+        text-align: center;
+    }
+
     .lien-header{
         font-size: 1.5rem;
+        margin: 0px;
+        padding: 1rem 1.2rem;
     }
 
     .main-content{
@@ -376,11 +383,11 @@ a{
     }
 
     .nombre-aleatoire-wrapper{
-        min-height: 30vh;
+        min-height: 40vh;
     }
 
     .img-os{
-        width: 20vw;
+        width: 30vw;
     }
 
     .reaction{

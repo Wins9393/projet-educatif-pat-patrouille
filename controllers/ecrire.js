@@ -107,19 +107,9 @@ const verifieLettreCliquee = (e) => {
 
     if (premiereLettre === undefined) {
       audio.src = "../assets/reactions/cris-de-joie.mp3";
-      // audio2.src = "../assets/reactions/son-victoire.wav";
-      audio.setAttribute("loop", "");
-      // audio2.setAttribute("loop", "");
-
       tsParticles.load("tsparticles", options);
 
-      // setTimeout(() => {
-      //   audio.pause();
-      //   // audio2.pause();
-      // }, 6000);
-
       dynamicLetters.style.display = "none";
-      // victoireDiv.style.display = "flex";
     }
 
     setTimeout(() => {
@@ -131,13 +121,10 @@ const verifieLettreCliquee = (e) => {
 };
 
 btnJouerEcrire.addEventListener("click", () => {
-  audio.removeAttribute("loop");
-  // audio2.removeAttribute("loop");
-
   lettreCounter = 0;
   nomChiot.innerHTML = "";
   reaction.innerHTML = "";
-  // victoireDiv.style.display = "none";
+
   selectUnChiotAleatoire();
   afficheLettres(currentChiot);
 });

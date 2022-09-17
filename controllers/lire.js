@@ -54,20 +54,15 @@ const verifieChiotClique = (e) => {
   const chiotClique = chiotCliqueTmp2.split(".")[0];
 
   if (chiotClique === currentChiot) {
-    audio.src = "../assets/sons/bon.mp3";
-    // audio.setAttribute("loop", "");
+    audio.src = "../assets/reactions/cris-de-joie.mp3";
 
     tsParticles.load("tsparticles", options);
-
-    // setTimeout(() => {
-    //   audio.pause();
-    // }, 6000);
 
     chiotButtons.forEach((chiotBtn) => {
       if (chiotBtn !== e.target) {
         chiotBtn.style.display = "none";
       } else {
-        chiotBtn.classList.add("img-chiot-trouve");
+        chiotBtn.classList.add("img-trouvee");
         // chiotBtn.classList.remove("img-btn");
       }
     });
@@ -80,7 +75,7 @@ const verifieChiotClique = (e) => {
 
 btnJouerLire.addEventListener("click", () => {
   chiotButtons.forEach((chiotBtn) => {
-    chiotBtn.classList.remove("img-chiot-trouve");
+    chiotBtn.classList.remove("img-trouvee");
     // chiotBtn.classList.add("img-btn");
     chiotBtn.style.display = "flex";
   });
