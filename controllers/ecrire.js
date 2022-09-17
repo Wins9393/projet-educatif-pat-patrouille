@@ -62,7 +62,7 @@ const selectUnChiotAleatoire = () => {
 
 const afficheLettres = (currentChiot) => {
   premiereLettre = currentChiot[lettreCounter];
-  let randomLetterPlace = Math.floor(Math.random() * 4);
+  let randomLetterPlace = Math.floor(Math.random() * 5);
 
   lettersButton.forEach((imgButton, index) => {
     let randomInt = Math.floor(Math.random() * alphabet.length);
@@ -113,10 +113,10 @@ const verifieLettreCliquee = (e) => {
 
       tsParticles.load("tsparticles", options);
 
-      setTimeout(() => {
-        audio.pause();
-        // audio2.pause();
-      }, 6000);
+      // setTimeout(() => {
+      //   audio.pause();
+      //   // audio2.pause();
+      // }, 6000);
 
       dynamicLetters.style.display = "none";
       // victoireDiv.style.display = "flex";

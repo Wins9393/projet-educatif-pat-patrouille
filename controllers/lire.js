@@ -54,14 +54,14 @@ const verifieChiotClique = (e) => {
   const chiotClique = chiotCliqueTmp2.split(".")[0];
 
   if (chiotClique === currentChiot) {
-    audio.src = "../assets/reactions/cris-de-joie.mp3";
-    audio.setAttribute("loop", "");
+    audio.src = "../assets/sons/bon.mp3";
+    // audio.setAttribute("loop", "");
 
     tsParticles.load("tsparticles", options);
 
-    setTimeout(() => {
-      audio.pause();
-    }, 6000);
+    // setTimeout(() => {
+    //   audio.pause();
+    // }, 6000);
 
     chiotButtons.forEach((chiotBtn) => {
       if (chiotBtn !== e.target) {
