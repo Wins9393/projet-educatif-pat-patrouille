@@ -243,6 +243,7 @@ btnJouerCalculer.addEventListener("click", () => {
   totalOsPose = 0;
   totalOsPoseTab = [];
   afficheTotalOsPose(totalOsPose);
+  receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
 });
 
 afficheTotalOsPose(totalOsPose);
