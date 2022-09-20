@@ -545,7 +545,8 @@ a{
     }
 
     .nombre-aleatoire-calculer{
-        width: 30vw;
+        width: 26vw;
+        margin: -8px 0 8px 0;
     }
 
     .receptacle-total-wrapper{
@@ -554,7 +555,11 @@ a{
     }
 
     .receptacle-wrapper{
-        width: 100%;
+        width: 60%;
+    }
+
+    .img-total-os-pose{
+        width: 80%;
     }
 
     .os-paquet-wrapper{
@@ -582,12 +587,12 @@ a{
     }
 
     .img-os-4{
-        bottom: 24px;
+        bottom: 2%;
         left: 2%;
     }
 
     .img-os-5{
-        bottom: 24px;
+        bottom: 2%;
         left: auto;
         right: 2%;
     }

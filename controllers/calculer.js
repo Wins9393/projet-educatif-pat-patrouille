@@ -84,7 +84,6 @@ const mouseUpTouchEndHandler = (e) => {
         if (totalOsPose <= 9) afficheTotalOsPose(totalOsPose);
 
         if (totalOsPose === randomInt) {
-          console.log("ok");
           audio.src = "../assets/reactions/cris-de-joie.mp3";
           tsParticles.load("tsparticles", options);
           receptacleCourant.style.boxShadow = "0px 0px 18px 12px #0be881";
