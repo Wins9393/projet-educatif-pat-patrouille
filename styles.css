@@ -446,6 +446,7 @@ a{
 
     body{
         overflow: hidden;
+        overscroll-behavior: contain;
     }
 
     .main{
