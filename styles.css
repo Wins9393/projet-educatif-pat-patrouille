@@ -551,7 +551,6 @@ a{
     .receptacle-total-wrapper{
         width: 70vw;
         margin-left: 58px;
-        margin-top: 32px;
     }
 
     .receptacle-wrapper{
@@ -567,17 +566,17 @@ a{
     }
 
     .img-os-1{
-        bottom: 170px;
+        bottom: 16%;
         left: 2%;
     }
 
     .img-os-2{
-        bottom: 170px;
+        bottom: 16%;
         left: 34%;
     }
 
     .img-os-3{
-        bottom: 170px;
+        bottom: 16%;
         left: auto;
         right: 2%;
     }
