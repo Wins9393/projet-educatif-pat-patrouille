@@ -14,6 +14,7 @@ const chiots = [
   "zuma",
   "chase",
   "tracker",
+  "rex",
 ];
 
 let currentChiot = "";

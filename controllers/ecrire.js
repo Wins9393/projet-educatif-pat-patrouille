@@ -23,6 +23,7 @@ const chiots = [
   "zuma",
   "chase",
   "tracker",
+  "rex",
 ];
 const alphabet = [
   "a",
