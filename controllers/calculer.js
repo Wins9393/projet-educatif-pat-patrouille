@@ -1,5 +1,6 @@
 import { options } from "../particles/particles-options.js";
 
+const body = document.querySelector(".body-100");
 const nombreAleatoire = document.querySelector(".nombre-aleatoire-calculer");
 const imgOsPaquet = document.querySelectorAll(".img-os-paquet");
 const divTotalOsPose = document.querySelector(".total-os-pose");
@@ -35,16 +36,40 @@ const getImgOsPosition = () => {
 };
 
 const resetOsPosition = () => {
-  imgOs1.style.left = os1InitialPosition.left + "px";
-  imgOs1.style.top = os1InitialPosition.top + "px";
-  imgOs2.style.left = os2InitialPosition.left + "px";
-  imgOs2.style.top = os2InitialPosition.top + "px";
-  imgOs3.style.left = os3InitialPosition.left + "px";
-  imgOs3.style.top = os3InitialPosition.top + "px";
-  imgOs4.style.left = os4InitialPosition.left + "px";
-  imgOs4.style.top = os4InitialPosition.top + "px";
-  imgOs5.style.left = os5InitialPosition.left + "px";
-  imgOs5.style.top = os5InitialPosition.top + "px";
+  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
+    imgOs1.style.left = 8 + "px";
+    imgOs1.style.top = body.clientHeight - 170 + "px";
+    imgOs2.style.left = body.clientWidth / 2 - 58 + "px";
+    imgOs2.style.top = body.clientHeight - 170 + "px";
+    imgOs3.style.left = body.clientWidth - 105 + "px";
+    imgOs3.style.top = body.clientHeight - 170 + "px";
+    imgOs4.style.left = 8 + "px";
+    imgOs4.style.top = body.clientHeight - 85 + "px";
+    imgOs5.style.left = body.clientWidth - 165 + "px";
+    imgOs5.style.top = body.clientHeight - 85 + "px";
+  } else if (body.clientWidth > 700 && navigator.userAgent.includes("Chrome")) {
+    imgOs1.style.left = 86 + "px";
+    imgOs1.style.top = body.clientHeight - 310 + "px";
+    imgOs2.style.left = body.clientWidth / 4 - 150 + "px";
+    imgOs2.style.top = body.clientHeight - 310 + "px";
+    imgOs3.style.left = body.clientWidth / 2.5 - 130 + "px";
+    imgOs3.style.top = body.clientHeight - 310 + "px";
+    imgOs4.style.left = body.clientWidth / 1.5 - 280 + "px";
+    imgOs4.style.top = body.clientHeight - 310 + "px";
+    imgOs5.style.left = body.clientWidth - 550 + "px";
+    imgOs5.style.top = body.clientHeight - 310 + "px";
+  } else {
+    imgOs1.style.left = os1InitialPosition.left + "px";
+    imgOs1.style.top = os1InitialPosition.top + "px";
+    imgOs2.style.left = os2InitialPosition.left + "px";
+    imgOs2.style.top = os2InitialPosition.top + "px";
+    imgOs3.style.left = os3InitialPosition.left + "px";
+    imgOs3.style.top = os3InitialPosition.top + "px";
+    imgOs4.style.left = os4InitialPosition.left + "px";
+    imgOs4.style.top = os4InitialPosition.top + "px";
+    imgOs5.style.left = os5InitialPosition.left + "px";
+    imgOs5.style.top = os5InitialPosition.top + "px";
+  }
 };
 
 const afficheNombreAleatoire = () => {
@@ -136,6 +161,8 @@ document.addEventListener("mousemove", (e) => {
 
     imgOsPaquet.forEach((imgOs) => {
       if (imgOs === e.target) {
+        window.scrollTo(0, 0);
+
         imgOs.style.left = mousePosition.x + offset[0] + "px";
         imgOs.style.top = mousePosition.y + offset[1] + "px";
 
@@ -190,8 +217,30 @@ document.addEventListener("touchmove", (e) => {
     imgOsPaquet.forEach((imgOs) => {
       if (imgOs === e.target) {
         // window.scrollTo(0, 0);
-        imgOs.style.left = mousePosition.x + offset[0] + "px";
-        imgOs.style.top = mousePosition.y + offset[1] + "px";
+        let imgOsLeft = imgOs.style.left.split("p")[0];
+        let imgOsTop = imgOs.style.top.split("p")[0];
+
+        if (imgOsLeft <= body.clientWidth - 70 && imgOsLeft >= 0) {
+          imgOs.style.left = mousePosition.x + offset[0] + "px";
+        } else {
+          if (imgOsLeft <= 0) {
+            imgOs.style.left = 5 + "px";
+          } else if (imgOsLeft >= body.clientWidth - 70) {
+            imgOs.style.left = body.clientWidth - 75 + "px";
+          }
+        }
+
+        if (imgOsTop <= body.clientHeight - 70 && imgOsTop >= 0) {
+          imgOs.style.top = mousePosition.y + offset[1] + "px";
+        } else {
+          if (imgOsTop <= 0) {
+            imgOs.style.top = 5 + "px";
+          } else if (imgOsTop >= body.clientHeight - 70) {
+            imgOs.style.top = body.clientHeight - 75 + "px";
+          }
+        }
+        // imgOs.style.left = mousePosition.x + offset[0] + "px";
+        // imgOs.style.top = mousePosition.y + offset[1] + "px";
 
         imgOs.hidden = true;
         let sousElem = document.elementFromPoint(
@@ -242,7 +291,8 @@ btnJouerCalculer.addEventListener("click", () => {
   totalOsPose = 0;
   totalOsPoseTab = [];
   afficheTotalOsPose(totalOsPose);
-  receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
+  if (receptacleCourant)
+    receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
 });
 
 afficheTotalOsPose(totalOsPose);
