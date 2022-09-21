@@ -38,15 +38,15 @@ const getImgOsPosition = () => {
 const resetOsPosition = () => {
   if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
     imgOs1.style.left = 8 + "px";
-    imgOs1.style.top = body.clientHeight - 170 + "px";
+    imgOs1.style.top = body.clientHeight - 350 + "px";
     imgOs2.style.left = body.clientWidth / 2 - 58 + "px";
-    imgOs2.style.top = body.clientHeight - 170 + "px";
+    imgOs2.style.top = body.clientHeight - 350 + "px";
     imgOs3.style.left = body.clientWidth - 105 + "px";
-    imgOs3.style.top = body.clientHeight - 170 + "px";
+    imgOs3.style.top = body.clientHeight - 350 + "px";
     imgOs4.style.left = 8 + "px";
-    imgOs4.style.top = body.clientHeight - 85 + "px";
+    imgOs4.style.top = body.clientHeight - 185 + "px";
     imgOs5.style.left = body.clientWidth - 165 + "px";
-    imgOs5.style.top = body.clientHeight - 85 + "px";
+    imgOs5.style.top = body.clientHeight - 185 + "px";
   } else if (body.clientWidth > 700 && navigator.userAgent.includes("Chrome")) {
     imgOs1.style.left = 86 + "px";
     imgOs1.style.top = body.clientHeight - 310 + "px";
