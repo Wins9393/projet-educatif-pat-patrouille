@@ -29,10 +29,7 @@ let randomInt;
 let toggleFullscreen = false;
 
 const afficheBtnPleinEcran = () => {
-  if (
-    (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) ||
-    navigator.userAgent.includes("Safari")
-  ) {
+  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
     const btnFullscreen = document.createElement("button");
     const btnJouerContainer = document.querySelector(".btn-jouer-container");
     btnFullscreen.classList.add("btn", "btn-jouer", "vert");
@@ -177,6 +174,12 @@ document.addEventListener("touchend", (e) => {
 });
 
 document.addEventListener("mousemove", (e) => {
+  if (navigator.userAgent.includes("Safari")) {
+    window.addEventListener("scroll", (e) => {
+      e.preventDefault();
+      window.scrollTo(0, 0);
+    });
+  }
   e.preventDefault();
   if (isDown) {
     mousePosition = {
