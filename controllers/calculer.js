@@ -29,7 +29,10 @@ let randomInt;
 let toggleFullscreen = false;
 
 const afficheBtnPleinEcran = () => {
-  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
+  if (
+    (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) ||
+    navigator.userAgent.includes("Safari")
+  ) {
     const btnFullscreen = document.createElement("button");
     const btnJouerContainer = document.querySelector(".btn-jouer-container");
     btnFullscreen.classList.add("btn", "btn-jouer", "vert");
