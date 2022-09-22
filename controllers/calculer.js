@@ -48,7 +48,6 @@ const afficheBtnPleinEcran = () => {
     btnJouerContainer.append(btnFullscreen);
   }
 };
-console.log(navigator.userAgent);
 
 const getImgOsPosition = () => {
   os1InitialPosition = { left: imgOs1.x, top: imgOs1.y };
