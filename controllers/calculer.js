@@ -26,6 +26,7 @@ let receptacleCourant = null;
 let totalOsPose = 0;
 let totalOsPoseTab = [];
 let randomInt;
+let toggleFullscreen = false;
 
 const afficheBtnPleinEcran = () => {
   if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
@@ -35,7 +36,13 @@ const afficheBtnPleinEcran = () => {
     btnFullscreen.innerHTML = "PLEIN ÉCRAN";
     btnFullscreen.addEventListener("click", () => {
       if (document.body.requestFullscreen && body.clientWidth < 700) {
-        document.body.requestFullscreen();
+        if (!toggleFullscreen) {
+          document.body.requestFullscreen();
+          toggleFullscreen = true;
+        } else {
+          document.exitFullscreen();
+          toggleFullscreen = false;
+        }
       }
     });
     btnJouerContainer.append(btnFullscreen);
