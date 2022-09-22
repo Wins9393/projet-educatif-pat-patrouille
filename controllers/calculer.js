@@ -298,3 +298,8 @@ btnJouerCalculer.addEventListener("click", () => {
 afficheTotalOsPose(totalOsPose);
 afficheNombreAleatoire();
 getImgOsPosition();
+
+console.log(body.requestFullscreen);
+if (body.requestFullscreen) {
+  body.requestFullscreen();
+}
