@@ -27,6 +27,21 @@ let totalOsPose = 0;
 let totalOsPoseTab = [];
 let randomInt;
 
+const afficheBtnPleinEcran = () => {
+  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
+    const btnFullscreen = document.createElement("button");
+    const btnJouerContainer = document.querySelector(".btn-jouer-container");
+    btnFullscreen.classList.add("btn", "btn-jouer", "vert");
+    btnFullscreen.innerHTML = "PLEIN ÉCRAN";
+    btnFullscreen.addEventListener("click", () => {
+      if (document.body.requestFullscreen && body.clientWidth < 700) {
+        document.body.requestFullscreen();
+      }
+    });
+    btnJouerContainer.append(btnFullscreen);
+  }
+};
+
 const getImgOsPosition = () => {
   os1InitialPosition = { left: imgOs1.x, top: imgOs1.y };
   os2InitialPosition = { left: imgOs2.x, top: imgOs2.y };
@@ -38,11 +53,11 @@ const getImgOsPosition = () => {
 const resetOsPosition = () => {
   if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
     imgOs1.style.left = 8 + "px";
-    imgOs1.style.top = body.clientHeight - 250 + "px";
+    imgOs1.style.top = body.clientHeight - 280 + "px";
     imgOs2.style.left = body.clientWidth / 2 - 58 + "px";
-    imgOs2.style.top = body.clientHeight - 250 + "px";
+    imgOs2.style.top = body.clientHeight - 280 + "px";
     imgOs3.style.left = body.clientWidth - 105 + "px";
-    imgOs3.style.top = body.clientHeight - 250 + "px";
+    imgOs3.style.top = body.clientHeight - 280 + "px";
     imgOs4.style.left = 8 + "px";
     imgOs4.style.top = body.clientHeight - 185 + "px";
     imgOs5.style.left = body.clientWidth - 165 + "px";
@@ -286,9 +301,6 @@ document.addEventListener("touchmove", (e) => {
 });
 
 btnJouerCalculer.addEventListener("click", () => {
-  if (document.body.requestFullscreen && body.clientWidth < 700) {
-    document.body.requestFullscreen();
-  }
   afficheNombreAleatoire();
   resetOsPosition();
   totalOsPose = 0;
@@ -298,6 +310,7 @@ btnJouerCalculer.addEventListener("click", () => {
     receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
 });
 
+afficheBtnPleinEcran();
 afficheTotalOsPose(totalOsPose);
 afficheNombreAleatoire();
 getImgOsPosition();
