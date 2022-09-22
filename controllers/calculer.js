@@ -286,6 +286,9 @@ document.addEventListener("touchmove", (e) => {
 });
 
 btnJouerCalculer.addEventListener("click", () => {
+  if (document.body.requestFullscreen && body.clientWidth < 700) {
+    document.body.requestFullscreen();
+  }
   afficheNombreAleatoire();
   resetOsPosition();
   totalOsPose = 0;
@@ -298,8 +301,3 @@ btnJouerCalculer.addEventListener("click", () => {
 afficheTotalOsPose(totalOsPose);
 afficheNombreAleatoire();
 getImgOsPosition();
-
-console.log(body.requestFullscreen);
-if (body.requestFullscreen) {
-  body.requestFullscreen();
-}
