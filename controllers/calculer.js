@@ -174,12 +174,6 @@ document.addEventListener("touchend", (e) => {
 });
 
 document.addEventListener("mousemove", (e) => {
-  if (navigator.userAgent.includes("Safari")) {
-    window.addEventListener("scroll", (e) => {
-      e.preventDefault();
-      window.scrollTo(0, 0);
-    });
-  }
   e.preventDefault();
   if (isDown) {
     mousePosition = {

@@ -77,7 +77,8 @@ a{
 }
 
 .dynamic-content{
-    height: 20vh;
+    height: 50vh;
+    flex-wrap: wrap;
 }
 
 .dynamic-content-img{

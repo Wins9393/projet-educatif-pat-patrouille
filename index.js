@@ -5,6 +5,8 @@ const marcusBtn = document.querySelector(".marcus-btn");
 const rubbenBtn = document.querySelector(".rubben-btn");
 const zumaBtn = document.querySelector(".zuma-btn");
 const chaseBtn = document.querySelector(".chase-btn");
+const rexBtn = document.querySelector(".rex-btn");
+const libertyBtn = document.querySelector(".liberty-btn");
 
 const dynamicContent = document.querySelector(".dynamic-content");
 const tabImages = [];
@@ -50,57 +52,21 @@ chaseBtn.addEventListener("click", () => {
   afficheLesChiots(tabImages);
 });
 
+rexBtn.addEventListener("click", () => {
+  ajouteUnChiot("rex");
+  afficheLesChiots(tabImages);
+});
+
+libertyBtn.addEventListener("click", () => {
+  ajouteUnChiot("liberty");
+  afficheLesChiots(tabImages);
+});
+
 const ajouteUnChiot = (chiot) => {
-  switch (chiot) {
-    case "everest":
-      if (!tabImages.includes("everest")) {
-        tabImages.push("everest");
-      } else {
-        tabImages.splice(tabImages.indexOf("everest"), 1);
-      }
-      break;
-    case "rocky":
-      if (!tabImages.includes("rocky")) {
-        tabImages.push("rocky");
-      } else {
-        tabImages.splice(tabImages.indexOf("rocky"), 1);
-      }
-      break;
-    case "stella":
-      if (!tabImages.includes("stella")) {
-        tabImages.push("stella");
-      } else {
-        tabImages.splice(tabImages.indexOf("stella"), 1);
-      }
-      break;
-    case "marcus":
-      if (!tabImages.includes("marcus")) {
-        tabImages.push("marcus");
-      } else {
-        tabImages.splice(tabImages.indexOf("marcus"), 1);
-      }
-      break;
-    case "ruben":
-      if (!tabImages.includes("ruben")) {
-        tabImages.push("ruben");
-      } else {
-        tabImages.splice(tabImages.indexOf("ruben"), 1);
-      }
-      break;
-    case "zuma":
-      if (!tabImages.includes("zuma")) {
-        tabImages.push("zuma");
-      } else {
-        tabImages.splice(tabImages.indexOf("zuma"), 1);
-      }
-      break;
-    case "chase":
-      if (!tabImages.includes("chase")) {
-        tabImages.push("chase");
-      } else {
-        tabImages.splice(tabImages.indexOf("chase"), 1);
-      }
-      break;
+  if (!tabImages.includes(chiot)) {
+    tabImages.push(chiot);
+  } else {
+    tabImages.splice(tabImages.indexOf(chiot), 1);
   }
 };
 
