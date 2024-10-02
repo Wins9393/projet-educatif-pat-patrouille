@@ -85,7 +85,6 @@ const verifieLettreCliquee = (e) => {
 };
 
 btnJouerEcrire.addEventListener("click", () => {
-  tsParticles.destroy();
   lettreCounter = 0;
   nomChiot.innerHTML = "";
   reaction.innerHTML = "";
