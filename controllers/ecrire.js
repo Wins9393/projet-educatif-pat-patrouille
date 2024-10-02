@@ -14,46 +14,8 @@ let currentChiot = "";
 let premiereLettre = "";
 let lettreCounter = 0;
 
-const chiots = [
-  "everest",
-  "rocky",
-  "stella",
-  "marcus",
-  "ruben",
-  "zuma",
-  "chase",
-  "tracker",
-  "rex",
-  "liberty",
-];
-const alphabet = [
-  "a",
-  "b",
-  "c",
-  "d",
-  "e",
-  "f",
-  "g",
-  "h",
-  "i",
-  "j",
-  "k",
-  "l",
-  "m",
-  "n",
-  "o",
-  "p",
-  "q",
-  "r",
-  "s",
-  "t",
-  "u",
-  "v",
-  "w",
-  "x",
-  "y",
-  "z",
-];
+const chiots = ["everest", "rocky", "stella", "marcus", "ruben", "zuma", "chase", "tracker", "rex", "liberty"];
+const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 
 const selectUnChiotAleatoire = () => {
   let randomInt = Math.floor(Math.random() * chiots.length);
@@ -123,6 +85,7 @@ const verifieLettreCliquee = (e) => {
 };
 
 btnJouerEcrire.addEventListener("click", () => {
+  tsParticles.destroy();
   lettreCounter = 0;
   nomChiot.innerHTML = "";
   reaction.innerHTML = "";
