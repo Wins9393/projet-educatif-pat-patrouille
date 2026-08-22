@@ -40,6 +40,9 @@ const nouvelleManche = (repris = null) => {
   itemADeviner = (repris && parMot(repris.mot)) || choisirAleatoire(disponibles);
 
   motALire.innerHTML = "";
+  // La CSS ne peut pas compter les lettres : elle en a besoin pour que le mot
+  // tienne sur une ligne sur un écran étroit.
+  motALire.style.setProperty("--lettres", itemADeviner.mot.length);
   for (const caractere of itemADeviner.mot) {
     motALire.append(creeCaractere(theme, caractere));
   }

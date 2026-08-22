@@ -62,6 +62,7 @@ const dessineLesCases = () => {
     motEnCours.append(case_);
   });
 
+  motEnCours.style.setProperty("--lettres", itemAEcrire.mot.length);
   motEnCours.setAttribute("aria-label", `${position} lettre sur ${itemAEcrire.mot.length}`);
 };
 

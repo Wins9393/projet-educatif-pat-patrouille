@@ -132,16 +132,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 4px;
   min-height: 12vh;
-  --taille-caractere: clamp(2.2rem, 8vh, 4.5rem);
+  max-width: 100%;
+  /* Même raison qu'en LIRE : onze cases de 38 px ne tiennent pas sur un
+     téléphone. La place disponible se partage entre les lettres du mot. */
+  --place-par-lettre: calc((100vw - 40px) / var(--lettres, 6));
+  --taille-caractere: min(clamp(1.5rem, 8vh, 4.5rem), calc(var(--place-par-lettre) / 0.75));
 }
 
 .mot-en-cours__case {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: clamp(38px, 9vw, 64px);
+  min-width: min(clamp(30px, 9vw, 64px), calc(var(--place-par-lettre) - 4px));
   min-height: clamp(48px, 11vh, 80px);
   border-radius: 12px;
   background: rgba(0, 0, 0, 0.16);
@@ -162,18 +166,29 @@
   to { transform: scale(1) translateY(0); opacity: 1; }
 }
 
-/* Le mot à lire (jeu LIRE) */
+/* Le mot à lire (jeu LIRE)
+ *
+ * Un mot ne se coupe pas : MONTGOLFIERE sur trois lignes ne se lit plus. La
+ * taille des lettres ne peut donc pas dépendre de la seule hauteur — elle est
+ * aussi plafonnée par la largeur disponible divisée par le nombre de lettres,
+ * que le contrôleur pose dans `--lettres`. Le 0,68 est mesuré : une capitale
+ * de Fredoka occupe 0,587 fois sa taille de police, l'écart au chiffre rond
+ * absorbe les espaces entre lettres. */
 .mot-a-lire {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 4px;
-  padding: 18px 34px;
+  flex-wrap: nowrap;
+  gap: 0.04em;
+  padding: 18px clamp(14px, 4vw, 34px);
   background: var(--bloc);
   border-radius: var(--rayon-lg);
   box-shadow: 0 var(--epaisseur) 0 var(--levre);
-  --taille-caractere: clamp(2.6rem, 10vh, 5.4rem);
+  max-width: 100%;
+  --taille-caractere: min(
+    clamp(2.6rem, 10vh, 5.4rem),
+    calc((100vw - 66px) / (var(--lettres, 6) * 0.68))
+  );
 }
 
 .mot-a-lire img {
