@@ -4,7 +4,7 @@
  * Le noyau (pages, styles, scripts, sons) est précaché à l'installation ;
  * le reste — visuels des thèmes — est mis en cache au fil de l'utilisation.
  */
-const VERSION = "petits-mondes-v14";
+const VERSION = "petits-mondes-v19";
 const NOYAU = [
   "./",
   "./index.html",

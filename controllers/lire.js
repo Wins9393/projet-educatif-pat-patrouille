@@ -65,10 +65,10 @@ const nouvelleManche = (repris = null) => {
   });
 
   consigne.textContent = "Quel mot est écrit ?";
+  noteLaManche(grille);
   annonce();
 };
 
-  noteLaManche(grille);
 const verifie = (item, bouton) => {
   if (mancheGagnee) return;
 
@@ -80,10 +80,10 @@ const verifie = (item, bouton) => {
   }
 
   mancheGagnee = true;
+  oublie("lire");
   sonJuste();
   bouton.classList.add("choix__bouton--juste");
 
-  oublie("lire");
   zoneChoix.querySelectorAll(".choix__bouton").forEach((autre) => {
     if (autre !== bouton) autre.classList.add("choix__bouton--efface");
   });

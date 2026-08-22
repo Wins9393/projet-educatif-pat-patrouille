@@ -28,10 +28,23 @@ let motTermine = false;
 
 const lettreAttendue = () => itemAEcrire.mot[position];
 
-/** Aide complète : le mot, puis la lettre à chercher. C'est le rôle du 🔊. */
+/**
+ * Ce que souffle le 🔊.
+ *
+ * Aux premiers niveaux, l'aide est complète : le mot, puis la lettre à
+ * chercher. À partir du quatrième la lettre disparaît — la dicter revenait à
+ * donner la réponse coup par coup, et l'enfant pouvait finir le mot sans
+ * jamais l'épeler. Le mot, lui, reste soufflé : c'est l'orthographe qu'on
+ * travaille, pas la devinette.
+ */
 const souffle = () => {
   if (motTermine) return;
-  prononce(`${itemAEcrire.affichage}. Trouve la lettre ${lettreAttendue()}`);
+
+  prononce(
+    niveau.lettreDictee
+      ? `${itemAEcrire.affichage}. Trouve la lettre ${lettreAttendue()}`
+      : itemAEcrire.affichage
+  );
 };
 
 /**
@@ -49,6 +62,7 @@ const annonce = () => {
 /** Une case par lettre : l'enfant voit d'emblée la longueur du mot. */
 const dessineLesCases = () => {
   motEnCours.innerHTML = "";
+  motEnCours.style.setProperty("--lettres", itemAEcrire.mot.length);
 
   [...itemAEcrire.mot].forEach((caractere, index) => {
     const case_ = document.createElement("span");
@@ -62,7 +76,6 @@ const dessineLesCases = () => {
     motEnCours.append(case_);
   });
 
-  motEnCours.style.setProperty("--lettres", itemAEcrire.mot.length);
   motEnCours.setAttribute("aria-label", `${position} lettre sur ${itemAEcrire.mot.length}`);
 };
 
@@ -99,6 +112,7 @@ const nouvelleManche = (repris = null) => {
 
   dessineLesCases();
   dessineLesChoix();
+  noteLaManche();
   annonce();
 };
 
@@ -113,15 +127,16 @@ const verifie = (caractere, bouton) => {
   }
 
   sonJuste();
-  noteLaManche();
   prononceUneLettre(caractere);
   position += 1;
   dessineLesCases();
+  noteLaManche();
 
   // Le mot est complet : on s'arrête ici plutôt que de tirer une grille sur
   // une lettre qui n'existe pas.
   if (position === itemAEcrire.mot.length) {
     motTermine = true;
+    oublie("ecrire");
     zoneChoix.innerHTML = "";
 
     termineLaManche({
@@ -131,13 +146,11 @@ const verifie = (caractere, bouton) => {
       emoji: itemAEcrire.visuel,
       surSuite: nouvelleManche,
     });
-  noteLaManche();
     return;
   }
 
   dessineLesChoix();
   annonce();
-    oublie("ecrire");
 };
 
 document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());

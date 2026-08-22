@@ -40,10 +40,12 @@ compose une quantité en la touchant. À partir du troisième, l'opération est
 posée, et les petites additions et soustractions restent illustrées par les
 objets du thème.
 
-En ÉCRIRE, le mot est écrit sous l'image et prononcé jusqu'au niveau 3. À
-partir du quatrième, il est masqué : l'image suffit à le nommer, et le
-reconnaître fait partie de l'exercice. Le bouton 🔊 continue de le souffler à
-qui bloque.
+En ÉCRIRE, le mot est écrit sous l'image et prononcé jusqu'au niveau 3, et le
+🔊 dicte en plus la lettre à chercher. À partir du quatrième, les deux aides
+tombent : le mot est masqué — l'image suffit à le nommer, et le reconnaître
+fait partie de l'exercice — et le 🔊 ne souffle plus que le mot. Dicter la
+lettre reviendrait à donner la réponse coup par coup : l'enfant finirait le mot
+sans jamais l'épeler.
 
 ## Démarrer
 

@@ -19,6 +19,12 @@ export const NIVEAUX = [
      * l'enfant doit-il le déduire de l'image seule ?
      */
     motDonne: true,
+    /**
+     * Et la lettre à chercher, le 🔊 la dicte-t-il ? La dicter transforme
+     * l'exercice en suite d'instructions : l'enfant n'a plus qu'à obéir, sans
+     * jamais épeler. Aux grands niveaux, le 🔊 ne souffle que le mot.
+     */
+    lettreDictee: true,
     /** Quantité maximale à dénombrer en COMPTER. */
     quantiteMax: 5,
     /** Nombre de paires à retrouver en MEMORY. */
@@ -35,6 +41,7 @@ export const NIVEAUX = [
     age: "4-5 ans",
     longueurMax: 5,
     motDonne: true,
+    lettreDictee: true,
     quantiteMax: 9,
     paires: 4,
     operations: ["collecte"],
@@ -47,6 +54,7 @@ export const NIVEAUX = [
     age: "5-6 ans",
     longueurMax: 7,
     motDonne: true,
+    lettreDictee: true,
     quantiteMax: 12,
     paires: 6,
     operations: ["addition"],
@@ -59,6 +67,7 @@ export const NIVEAUX = [
     age: "6-7 ans",
     longueurMax: 9,
     motDonne: false,
+    lettreDictee: false,
     quantiteMax: 16,
     paires: 8,
     operations: ["addition", "soustraction"],
@@ -71,6 +80,7 @@ export const NIVEAUX = [
     age: "7 ans et +",
     longueurMax: 99,
     motDonne: false,
+    lettreDictee: false,
     quantiteMax: 20,
     paires: 10,
     operations: ["addition", "soustraction", "multiplication", "division"],
