@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Miel">
+  <defs>
+    <linearGradient id="miel-pot" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#f0d9b8"/><stop offset="55%" stop-color="#d9b483"/><stop offset="100%" stop-color="#a3814f"/>
+    </linearGradient>
+    <linearGradient id="miel-liquide" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffd166"/><stop offset="100%" stop-color="#e8971a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="108" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M24 46 q0 -10 36 -10 q36 0 36 10 v42 q0 14 -36 14 q-36 0 -36 -14z"
+        fill="url(#miel-pot)" stroke="#7c5c2c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M28 62 h64 v22 q-32 8 -64 0z" fill="url(#miel-liquide)"/>
+  <rect x="18" y="34" width="84" height="16" rx="7" fill="#c9925c" stroke="#7a5228" stroke-width="3.5"/>
+  <path d="M60 34 v-14" stroke="#a8763f" stroke-width="6" stroke-linecap="round"/>
+  <path d="M60 20 q-10 -6 -4 -12 q8 2 8 12z" fill="url(#miel-liquide)" stroke="#b8860b" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="34" y="68" width="52" height="18" rx="4" fill="#fff8e0" stroke="#c9ac7c" stroke-width="3"/>
+  <g fill="#e8971a"><circle cx="46" cy="77" r="4"/><circle cx="60" cy="77" r="4"/><circle cx="74" cy="77" r="4"/></g>
+</svg>

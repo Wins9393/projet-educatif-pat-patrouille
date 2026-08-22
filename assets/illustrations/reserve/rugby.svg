@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Rugby">
+  <defs><radialGradient id="rugby-cuir" cx="34%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#c9925c"/><stop offset="50%" stop-color="#8a5f2c"/><stop offset="100%" stop-color="#513413"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="36" ry="6" fill="#000" opacity="0.2"/>
+  <ellipse cx="60" cy="60" rx="48" ry="30" fill="url(#rugby-cuir)" stroke="#3f2708" stroke-width="3.5" transform="rotate(-24 60 60)"/>
+  <g transform="rotate(-24 60 60)">
+    <path d="M34 60 h52" stroke="#f7f9fc" stroke-width="5" stroke-linecap="round"/>
+    <g stroke="#f7f9fc" stroke-width="4.5" stroke-linecap="round">
+      <path d="M44 52 v16"/><path d="M54 50 v20"/><path d="M64 50 v20"/><path d="M74 52 v16"/>
+    </g>
+    <path d="M22 46 q10 -12 24 -14" stroke="#e0b483" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Bougie">
+  <defs>
+    <linearGradient id="bougie-cire" x1="0" y1="0" x2="0.4" y2="1">
+      <stop offset="0" stop-color="#fff5e0"/><stop offset="55%" stop-color="#f2ddc0"/><stop offset="100%" stop-color="#c9ac88"/>
+    </linearGradient>
+    <radialGradient id="bougie-flamme" cx="50%" cy="70%" r="70%">
+      <stop offset="0" stop-color="#fff6c4"/><stop offset="45%" stop-color="#ffc93c"/><stop offset="100%" stop-color="#f57c1e"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="60" cy="108" rx="30" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M60 8 q14 16 14 26 q0 14 -14 14 q-14 0 -14 -14 q0 -10 14 -26z" fill="url(#bougie-flamme)"/>
+  <path d="M60 20 q7 10 7 16 q0 8 -7 8 q-7 0 -7 -8 q0 -6 7 -16z" fill="#fff3c4" opacity="0.85"/>
+  <path d="M60 48 v8" stroke="#4a3a24" stroke-width="4" stroke-linecap="round"/>
+  <rect x="38" y="56" width="44" height="48" rx="8" fill="url(#bougie-cire)" stroke="#b09268" stroke-width="3.5"/>
+  <path d="M38 64 q10 8 22 0 q12 -8 22 0" fill="none" stroke="#e0cba8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M46 72 v26" stroke="#fff" stroke-width="5" opacity="0.45" stroke-linecap="round"/>
+</svg>

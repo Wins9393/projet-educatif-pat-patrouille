@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Singe">
+  <defs>
+    <linearGradient id="singe-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#a9753f"/><stop offset="55%" stop-color="#835326"/><stop offset="100%" stop-color="#5b3714"/>
+    </linearGradient>
+    <linearGradient id="singe-face" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#f0cfa8"/><stop offset="100%" stop-color="#d3ac7d"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="18" cy="56" r="16" fill="url(#singe-poil)" stroke="#4a2c0f" stroke-width="3.5"/>
+  <circle cx="102" cy="56" r="16" fill="url(#singe-poil)" stroke="#4a2c0f" stroke-width="3.5"/>
+  <circle cx="18" cy="56" r="8" fill="url(#singe-face)"/><circle cx="102" cy="56" r="8" fill="url(#singe-face)"/>
+  <circle cx="60" cy="58" r="38" fill="url(#singe-poil)" stroke="#4a2c0f" stroke-width="3.5"/>
+  <ellipse cx="60" cy="66" rx="27" ry="25" fill="url(#singe-face)"/>
+  <ellipse cx="60" cy="42" rx="24" ry="12" fill="url(#singe-face)" opacity="0.55"/>
+  <circle cx="49" cy="54" r="6" fill="#2d2016"/><circle cx="71" cy="54" r="6" fill="#2d2016"/>
+  <circle cx="47" cy="52" r="2.4" fill="#fff"/><circle cx="69" cy="52" r="2.4" fill="#fff"/>
+  <ellipse cx="54" cy="70" rx="3" ry="4" fill="#8a5c2e"/><ellipse cx="66" cy="70" rx="3" ry="4" fill="#8a5c2e"/>
+  <path d="M50 80 q10 8 20 0" stroke="#8a5c2e" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

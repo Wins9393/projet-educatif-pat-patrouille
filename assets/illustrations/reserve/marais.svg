@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Marais">
+  <defs><linearGradient id="marais-eau" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7fa85c"/><stop offset="55%" stop-color="#4a7a34"/><stop offset="100%" stop-color="#2a4d1c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="86" rx="56" ry="28" fill="url(#marais-eau)" stroke="#22401a" stroke-width="3.5"/>
+  <g stroke="#8fbf6b" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M22 84 q10 -5 20 0"/><path d="M62 92 q10 -5 20 0"/><path d="M40 98 q10 -5 20 0"/>
+  </g>
+  <g fill="#3fb56b" stroke="#237a44" stroke-width="3">
+    <ellipse cx="34" cy="80" rx="16" ry="7"/><ellipse cx="86" cy="88" rx="14" ry="6"/>
+  </g>
+  <g stroke="#5cb03c" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M14 78 q-2 -26 2 -40"/><path d="M26 74 q0 -22 -4 -34"/><path d="M104 82 q4 -24 0 -36"/><path d="M94 78 q2 -20 6 -30"/>
+  </g>
+  <g fill="#8a6a48"><ellipse cx="16" cy="36" rx="4" ry="10"/><ellipse cx="100" cy="44" rx="4" ry="9"/></g>
+  <g fill="#c9e8b8" opacity="0.6"><circle cx="52" cy="82" r="4"/><circle cx="70" cy="76" r="3.4"/></g>
+</svg>

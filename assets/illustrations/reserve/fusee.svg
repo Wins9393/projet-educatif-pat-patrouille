@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fusée">
+  <ellipse cx="60" cy="112" rx="24" ry="5" fill="#000" opacity="0.18"/>
+  <!-- flamme -->
+  <path d="M60 118 q-13 -14 -9 -26 q5 7 9 7 q4 0 9 -7 q4 12 -9 26z" fill="#ffb703"/>
+  <path d="M60 112 q-7 -9 -5 -17 q3 5 5 5 q2 0 5 -5 q2 8 -5 17z" fill="#ff6b35"/>
+  <!-- ailerons -->
+  <path d="M38 74 q-13 6 -14 22 q12 -2 20 -10z" fill="#d64545"/>
+  <path d="M82 74 q13 6 14 22 q-12 -2 -20 -10z" fill="#d64545"/>
+  <!-- corps -->
+  <path d="M60 8 q22 22 22 54 v22 h-44 v-22 q0 -32 22 -54z" fill="#f2f4f8"/>
+  <path d="M60 8 q22 22 22 54 v22 h-22z" fill="#d9dee8"/>
+  <!-- pointe -->
+  <path d="M60 8 q12 12 17 28 h-34 q5 -16 17 -28z" fill="#e63946"/>
+  <!-- hublot -->
+  <circle cx="60" cy="56" r="13" fill="#8ecae6"/>
+  <circle cx="60" cy="56" r="13" fill="none" stroke="#4a5568" stroke-width="4"/>
+  <path d="M53 50 a9 9 0 0 1 8 -4" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.85"/>
+  <rect x="38" y="84" width="44" height="8" rx="4" fill="#4a5568"/>
+</svg>

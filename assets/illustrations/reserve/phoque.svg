@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Phoque">
+  <defs><linearGradient id="phoque-peau" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#c6ced9"/><stop offset="55%" stop-color="#94a0af"/><stop offset="100%" stop-color="#616d7c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="40" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M96 92 q18 -6 20 -20 q-16 -4 -24 8z" fill="url(#phoque-peau)" stroke="#4d5967" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M18 96 q-8 -40 22 -56 q28 -14 50 8 q18 18 8 48z"
+        fill="url(#phoque-peau)" stroke="#4d5967" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M34 98 q-12 -4 -14 -16 q12 -6 20 4z" fill="#a7b2bf" stroke="#4d5967" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="48" cy="76" rx="26" ry="20" fill="#e2e7ee" opacity="0.75"/>
+  <circle cx="38" cy="52" r="6" fill="#1d2430"/><circle cx="64" cy="50" r="6" fill="#1d2430"/>
+  <circle cx="36" cy="50" r="2.4" fill="#fff"/><circle cx="62" cy="48" r="2.4" fill="#fff"/>
+  <ellipse cx="50" cy="64" rx="7" ry="5" fill="#3a4350"/>
+  <path d="M50 69 q-6 6 -12 3 M50 69 q6 6 12 3" stroke="#4d5967" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M40 66 h-16 M40 72 h-15 M60 66 h16 M60 72 h15" stroke="#8b96a4" stroke-width="3" stroke-linecap="round"/>
+</svg>

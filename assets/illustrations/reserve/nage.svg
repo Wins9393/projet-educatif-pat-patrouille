@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Nage">
+  <defs><linearGradient id="nage-eau" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fd4f5"/><stop offset="100%" stop-color="#2b83c9"/>
+  </linearGradient></defs>
+  <circle cx="42" cy="42" r="16" fill="#f0c9a8" stroke="#c49a76" stroke-width="3.5"/>
+  <path d="M28 38 q0 -18 14 -18 q14 0 14 18 q-6 -6 -14 -6 q-8 0 -14 6z" fill="#3a4350" stroke="#232a35" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="48" cy="44" r="3.4" fill="#2f3540"/>
+  <path d="M44 52 q6 4 10 0" stroke="#c49a76" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M56 56 q26 4 34 18" stroke="#e03131" stroke-width="14" fill="none" stroke-linecap="round"/>
+  <path d="M56 56 q26 4 34 18" stroke="#8f1414" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.3"/>
+  <path d="M28 50 q-14 -10 -18 -24" stroke="#f0c9a8" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <path d="M90 74 q12 4 16 14" stroke="#f0c9a8" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <path d="M0 86 q16 -12 30 0 q16 12 30 0 q16 -12 30 0 q14 10 30 0 v30 h-120z" fill="url(#nage-eau)" opacity="0.85"/>
+  <g stroke="#d6f0fb" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M10 98 q10 -5 20 0"/><path d="M50 100 q10 -5 20 0"/><path d="M88 98 q10 -5 20 0"/>
+  </g>
+</svg>

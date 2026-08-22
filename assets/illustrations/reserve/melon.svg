@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Melon">
+  <defs>
+    <radialGradient id="melon-peau" cx="34%" cy="28%" r="78%">
+      <stop offset="0" stop-color="#d9e88a"/><stop offset="50%" stop-color="#a8c24a"/><stop offset="100%" stop-color="#6e8a24"/>
+    </radialGradient>
+    <linearGradient id="melon-chair" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffc98a"/><stop offset="100%" stop-color="#f5a35c"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="108" rx="34" ry="5.5" fill="#000" opacity="0.16"/>
+  <circle cx="54" cy="66" r="38" fill="url(#melon-peau)" stroke="#5e7a18" stroke-width="3.5"/>
+  <g stroke="#8aa634" stroke-width="4" fill="none" opacity="0.8">
+    <path d="M28 42 q26 12 52 -4"/><path d="M22 62 q30 14 62 -2"/><path d="M26 82 q28 12 56 -4"/>
+  </g>
+  <path d="M88 40 a38 38 0 0 1 0 52 a30 30 0 0 0 0 -52z" fill="#e8f0b8" stroke="#5e7a18" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M90 46 a30 30 0 0 1 0 40 a24 24 0 0 0 0 -40z" fill="url(#melon-chair)"/>
+  <ellipse cx="38" cy="46" rx="10" ry="7" fill="#fff" opacity="0.3" transform="rotate(-22 38 46)"/>
+</svg>

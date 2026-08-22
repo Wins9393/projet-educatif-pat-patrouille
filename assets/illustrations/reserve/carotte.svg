@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Carotte">
+  <defs><linearGradient id="carotte-racine" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffb26b"/><stop offset="50%" stop-color="#f57c1e"/><stop offset="100%" stop-color="#b54c04"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="24" ry="5" fill="#000" opacity="0.16"/>
+  <g fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round">
+    <path d="M56 32 q-18 -14 -30 -8 q10 16 28 16z"/>
+    <path d="M60 30 q-4 -22 6 -28 q10 14 4 30z"/>
+    <path d="M64 32 q18 -12 28 -4 q-12 14 -28 12z"/>
+  </g>
+  <path d="M44 36 q16 -8 32 0 l-12 66 q-4 8 -8 0z"
+        fill="url(#carotte-racine)" stroke="#96400a" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#c25c08" stroke-width="3.5" stroke-linecap="round" opacity="0.75">
+    <path d="M48 50 h22"/><path d="M50 64 h18"/><path d="M53 78 h13"/>
+  </g>
+  <path d="M50 40 q6 26 6 56" stroke="#fff" stroke-width="4" fill="none" opacity="0.28" stroke-linecap="round"/>
+</svg>

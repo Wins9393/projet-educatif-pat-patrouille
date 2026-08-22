@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Herbe">
+  <defs><linearGradient id="herbe-brin" x1="0" y1="1" x2="0.3" y2="0">
+    <stop offset="0" stop-color="#2d6b1c"/><stop offset="55%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#8fd47a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="42" ry="7" fill="#000" opacity="0.2"/>
+  <g fill="url(#herbe-brin)" stroke="#245517" stroke-width="3" stroke-linejoin="round">
+    <path d="M22 100 q-10 -30 2 -48 q8 22 8 48z"/>
+    <path d="M40 100 q-6 -40 6 -58 q8 30 4 58z"/>
+    <path d="M60 100 q-4 -46 4 -64 q10 34 4 64z"/>
+    <path d="M80 100 q4 -40 -4 -56 q-12 26 -6 56z"/>
+    <path d="M98 100 q10 -30 0 -46 q-10 20 -8 46z"/>
+  </g>
+  <ellipse cx="60" cy="100" rx="44" ry="8" fill="#6b4a26" stroke="#4a3016" stroke-width="3.5"/>
+  <g fill="#7cc266" opacity="0.6"><circle cx="34" cy="72" r="4"/><circle cx="70" cy="62" r="4"/></g>
+</svg>

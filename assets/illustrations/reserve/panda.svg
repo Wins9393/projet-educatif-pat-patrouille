@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Panda">
+  <defs><linearGradient id="panda-blanc" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#eef1f5"/><stop offset="100%" stop-color="#c6ccd6"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="28" cy="26" r="15" fill="#2f353f"/><circle cx="92" cy="26" r="15" fill="#2f353f"/>
+  <ellipse cx="60" cy="86" rx="30" ry="22" fill="url(#panda-blanc)" stroke="#aab2be" stroke-width="3.5"/>
+  <ellipse cx="30" cy="84" rx="11" ry="16" fill="#2f353f" transform="rotate(-18 30 84)"/>
+  <ellipse cx="90" cy="84" rx="11" ry="16" fill="#2f353f" transform="rotate(18 90 84)"/>
+  <circle cx="60" cy="50" r="34" fill="url(#panda-blanc)" stroke="#aab2be" stroke-width="3.5"/>
+  <ellipse cx="46" cy="44" rx="11" ry="13" fill="#2f353f" transform="rotate(-16 46 44)"/>
+  <ellipse cx="74" cy="44" rx="11" ry="13" fill="#2f353f" transform="rotate(16 74 44)"/>
+  <circle cx="46" cy="44" r="4.5" fill="#fff"/><circle cx="74" cy="44" r="4.5" fill="#fff"/>
+  <circle cx="46" cy="44" r="2.4" fill="#1d2430"/><circle cx="74" cy="44" r="2.4" fill="#1d2430"/>
+  <ellipse cx="60" cy="60" rx="7" ry="5" fill="#2f353f"/>
+  <path d="M60 65 v4 M60 69 q-6 5 -11 1 M60 69 q6 5 11 1" stroke="#5c6470" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

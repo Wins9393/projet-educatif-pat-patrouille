@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lune">
+  <defs>
+    <radialGradient id="lune-corps" cx="34%" cy="30%" r="76%">
+      <stop offset="0" stop-color="#fffdf2"/>
+      <stop offset="60%" stop-color="#f6e9b8"/>
+      <stop offset="100%" stop-color="#e0c86f"/>
+    </radialGradient>
+    <mask id="lune-croissant">
+      <rect width="120" height="120" fill="#fff"/>
+      <circle cx="80" cy="48" r="40" fill="#000"/>
+    </mask>
+  </defs>
+  <ellipse cx="60" cy="112" rx="22" ry="5" fill="#000" opacity="0.15"/>
+  <g mask="url(#lune-croissant)">
+    <circle cx="58" cy="58" r="46" fill="url(#lune-corps)"/>
+    <circle cx="40" cy="44" r="7" fill="#dcc372" opacity="0.6"/>
+    <circle cx="34" cy="70" r="5" fill="#dcc372" opacity="0.5"/>
+    <circle cx="52" cy="88" r="6" fill="#dcc372" opacity="0.45"/>
+  </g>
+  <g mask="url(#lune-croissant)">
+    <circle cx="58" cy="58" r="46" fill="none" stroke="#c9a94a" stroke-width="3.5" opacity="0.55"/>
+  </g>
+</svg>

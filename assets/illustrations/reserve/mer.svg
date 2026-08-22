@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Mer">
+  <defs>
+    <linearGradient id="mer-eau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5cb8e8"/><stop offset="55%" stop-color="#2b83c9"/><stop offset="100%" stop-color="#134f80"/>
+    </linearGradient>
+  </defs>
+  <path d="M6 46 q22 -22 40 0 q10 12 22 2 q16 -14 34 4 q10 10 12 6 v56 h-108z"
+        fill="url(#mer-eau)" stroke="#0f4470" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M8 60 q18 -14 34 2 q14 12 26 0 q16 -14 32 2" fill="none" stroke="#8fd4f5" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+  <path d="M10 78 q20 -12 36 2 q16 12 30 0 q14 -10 32 2" fill="none" stroke="#a9e0f7" stroke-width="4.5" stroke-linecap="round" opacity="0.7"/>
+  <path d="M14 96 q22 -10 40 2 q18 10 32 -2" fill="none" stroke="#c3ebfb" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  <path d="M20 40 q10 -12 22 -2 q-12 6 -22 2z" fill="#fff" opacity="0.7"/>
+  <path d="M78 38 q10 -10 20 0 q-10 6 -20 0z" fill="#fff" opacity="0.6"/>
+</svg>

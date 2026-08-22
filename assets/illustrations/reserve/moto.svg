@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Moto">
+  <defs><linearGradient id="moto-carenage" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7fc4f0"/><stop offset="50%" stop-color="#2b7fc9"/><stop offset="100%" stop-color="#134f80"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="46" ry="6" fill="#000" opacity="0.2"/>
+  <circle cx="26" cy="80" r="20" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="94" cy="80" r="20" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="26" cy="80" r="8" fill="#b9c2ce"/><circle cx="94" cy="80" r="8" fill="#b9c2ce"/>
+  <path d="M26 80 l20 -18 h26 l14 18" fill="none" stroke="#4a5464" stroke-width="7" stroke-linejoin="round"/>
+  <path d="M40 62 q10 -14 26 -12 q16 2 20 14 q-14 8 -30 6 q-12 -2 -16 -8z"
+        fill="url(#moto-carenage)" stroke="#0f3f68" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M78 50 q10 -8 16 -4" stroke="#2f3540" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M46 48 h18 l-2 8 h-16z" fill="#2f3540" stroke="#1b1f27" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="90" cy="58" r="7" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+</svg>

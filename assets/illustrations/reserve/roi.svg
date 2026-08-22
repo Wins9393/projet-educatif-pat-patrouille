@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Roi">
+  <defs><linearGradient id="roi-manteau" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ff8080"/><stop offset="50%" stop-color="#c0392b"/><stop offset="100%" stop-color="#7c1810"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M24 108 v-22 q0 -22 36 -22 q36 0 36 22 v22z" fill="url(#roi-manteau)" stroke="#6b120c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M50 64 l10 18 10 -18" fill="#f7f4ee" stroke="#c9c2b4" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="60" cy="46" r="22" fill="#f7d9bc" stroke="#c49a76" stroke-width="3.5"/>
+  <path d="M40 52 q-4 20 8 24 M80 52 q4 20 -8 24" stroke="#e0d5c4" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g fill="#2f3540"><circle cx="53" cy="44" r="3.6"/><circle cx="67" cy="44" r="3.6"/></g>
+  <path d="M54 56 q6 5 12 0" stroke="#c49a76" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M34 30 l4 -22 10 12 12 -18 12 18 10 -12 4 22z" fill="#f5c518" stroke="#a8830a" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#e03131"><circle cx="46" cy="24" r="3.4"/><circle cx="60" cy="20" r="3.6"/><circle cx="74" cy="24" r="3.4"/></g>
+</svg>

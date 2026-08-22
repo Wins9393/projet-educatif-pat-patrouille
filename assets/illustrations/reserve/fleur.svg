@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fleur">
+  <defs><radialGradient id="fleur-petale" cx="40%" cy="34%" r="70%">
+    <stop offset="0" stop-color="#ffc0e0"/><stop offset="55%" stop-color="#f0609c"/><stop offset="100%" stop-color="#b52f68"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="22" ry="4.5" fill="#000" opacity="0.16"/>
+  <path d="M60 106 v-44" stroke="#3f8f2e" stroke-width="8" stroke-linecap="round"/>
+  <path d="M60 84 q-20 -6 -24 -20 q20 -2 24 12z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 92 q20 -4 24 -18 q-20 -4 -24 10z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="url(#fleur-petale)" stroke="#a32a5c" stroke-width="3">
+    <ellipse cx="60" cy="20" rx="14" ry="18"/><ellipse cx="86" cy="38" rx="18" ry="14"/>
+    <ellipse cx="76" cy="66" rx="14" ry="18"/><ellipse cx="44" cy="66" rx="14" ry="18"/><ellipse cx="34" cy="38" rx="18" ry="14"/>
+  </g>
+  <circle cx="60" cy="44" r="16" fill="#ffd166" stroke="#c9931a" stroke-width="3.5"/>
+  <g fill="#e0a516"><circle cx="54" cy="40" r="3"/><circle cx="66" cy="42" r="3"/><circle cx="58" cy="50" r="3"/></g>
+</svg>

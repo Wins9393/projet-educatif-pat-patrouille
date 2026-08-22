@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Camion">
+  <defs><linearGradient id="camion-cabine" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff8f7a"/><stop offset="50%" stop-color="#e03131"/><stop offset="100%" stop-color="#961818"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="48" ry="6" fill="#000" opacity="0.2"/>
+  <rect x="6" y="36" width="60" height="52" rx="8" fill="#e8edf4" stroke="#98a3b0" stroke-width="3.5"/>
+  <path d="M14 46 h44 M14 60 h44 M14 74 h44" stroke="#c3ccd8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M66 52 h20 q8 0 12 8 l8 14 v14 h-40z" fill="url(#camion-cabine)" stroke="#7a1212" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M72 58 h14 q4 0 6 4 l5 9 h-25z" fill="#c9e8fa" stroke="#7a1212" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="98" y="72" width="10" height="9" rx="4" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <circle cx="30" cy="90" r="13" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="86" cy="90" r="13" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="30" cy="90" r="5.5" fill="#b9c2ce"/><circle cx="86" cy="90" r="5.5" fill="#b9c2ce"/>
+</svg>

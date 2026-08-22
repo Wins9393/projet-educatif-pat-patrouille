@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tracteur">
+  <defs><linearGradient id="tracteur-corps" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="50%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2d6b1c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="48" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M28 78 v-24 h20 v-20 q0 -6 6 -6 h20 q6 0 6 6 v20 h18 q6 0 6 6 v18z"
+        fill="url(#tracteur-corps)" stroke="#245517" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="52" y="36" width="22" height="18" rx="4" fill="#c9e8fa" stroke="#245517" stroke-width="3"/>
+  <rect x="34" y="26" width="10" height="20" rx="4" fill="#4a5464" stroke="#2b3441" stroke-width="3"/>
+  <circle cx="34" cy="84" r="16" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="34" cy="84" r="7" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <circle cx="88" cy="78" r="24" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="88" cy="78" r="10" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <g stroke="#4a5464" stroke-width="4" stroke-linecap="round">
+    <path d="M88 54 v8 M88 94 v8 M64 78 h8 M104 78 h8 M71 61 l6 6 M105 95 l-6 -6 M71 95 l6 -6 M105 61 l-6 6"/>
+  </g>
+</svg>

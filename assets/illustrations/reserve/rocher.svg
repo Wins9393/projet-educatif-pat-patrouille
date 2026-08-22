@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Rocher">
+  <defs>
+    <linearGradient id="rocher-masse" x1="0.2" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#c4bdb4"/>
+      <stop offset="45%" stop-color="#9d958c"/>
+      <stop offset="100%" stop-color="#6b6560"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="104" rx="38" ry="7" fill="#000" opacity="0.22"/>
+  <path d="M18 100 q-6 -20 6 -34 q10 -12 22 -14 q16 -3 28 6 q16 10 20 26 q3 12 -4 16z"
+        fill="url(#rocher-masse)" stroke="#57524d" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M24 66 q10 -12 22 -14 q10 -2 18 3 q-12 10 -22 12 q-10 2 -18 -1z"
+        fill="#d8d2c9" opacity="0.5"/>
+  <path d="M64 55 q14 9 18 24 q2 9 -2 14 q-10 -14 -16 -38z" fill="#5f5a55" opacity="0.35"/>
+  <path d="M40 78 q12 4 24 1" stroke="#57524d" stroke-width="3" fill="none" opacity="0.45" stroke-linecap="round"/>
+  <path d="M30 88 q8 3 15 1" stroke="#57524d" stroke-width="3" fill="none" opacity="0.35" stroke-linecap="round"/>
+  <ellipse cx="46" cy="62" rx="6" ry="4" fill="#7a736c" opacity="0.4"/>
+</svg>

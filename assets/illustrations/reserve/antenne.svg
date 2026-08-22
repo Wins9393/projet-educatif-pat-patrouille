@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Antenne">
+  <defs><linearGradient id="antenne-parabole" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#f2f6fb"/><stop offset="55%" stop-color="#c3ccd8"/><stop offset="100%" stop-color="#8b96a4"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M52 104 l-16 0 24 -46 24 46 -16 0z" fill="#7e8a99" stroke="#4d5867" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M28 62 q0 -40 44 -40 q22 0 26 12 q-30 -4 -44 12 q-14 16 -6 32z"
+        fill="url(#antenne-parabole)" stroke="#68727f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M42 52 q14 -18 38 -18" stroke="#fff" stroke-width="5" fill="none" opacity="0.55" stroke-linecap="round"/>
+  <path d="M52 68 l24 -24" stroke="#8b96a4" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="80" cy="40" r="9" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+  <g stroke="#5cb8e8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M92 26 q8 8 8 18"/><path d="M100 16 q14 12 14 28"/>
+  </g>
+</svg>

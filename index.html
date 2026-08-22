@@ -3,45 +3,46 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script async src="index.js"></script>
-    <title>Pat Patrouille</title>
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Petits jeux pour apprendre à lire, écrire et compter, avec des univers à explorer.">
+    <meta name="theme-color" content="#1b2a4a">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/decors.css">
+    <link rel="stylesheet" href="styles/accueil.css">
+    <link rel="stylesheet" href="styles/panneaux.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icones/icone-192.png">
+    <script type="module" src="index.js"></script>
+    <title>Les Petits Mondes</title>
 </head>
 
 <body>
-    <main class="main">
-        <header class="main-header flex-space-around">
-            <nav>
-                <a class="lien-header btn bleu" href="#">ACCUEIL</a>
-                <a class="lien-header btn bleu" href="views/ecrire.html">ÉCRIRE</a>
-                <a class="lien-header btn bleu" href="views/lire.html">LIRE</a>
-                <a class="lien-header btn bleu" href="views/compter.html">COMPTER</a>
-                <a class="lien-header btn bleu" href="views/calculer.html">CALCULER</a>
-            </nav>
-        </header>
+    <main class="accueil">
+        <div class="accueil__corps">
+            <h1 class="accueil__titre">Les Petits Mondes</h1>
+            <p class="accueil__sous-titre">Choisis un jeu, puis explore un univers.</p>
 
-        <div class="main-content flex-space-evenly-column">
+            <nav class="jeux" aria-label="Mini-jeux"></nav>
 
-            <div class="main-content-child flex-space-around">
-                <img class="logo-everest everest-btn" src="assets\everest-logo.png">
-                <img class="logo-chiots rocky-btn" src="assets\rocky-logo.png">
-                <img class="logo-chiots stella-btn" src="assets\stella-logo.png">
-                <img class="logo-chiots marcus-btn" src="assets\marcus-logo.png">
-                <img class="logo-chiots rubben-btn" src="assets\rubben-logo.png">
-                <img class="logo-chiots zuma-btn" src="assets\zuma-logo.png">
-                <img class="logo-chiots chase-btn" src="assets\chase-logo.png">
-                <img class="logo-chiots rex-btn" src="assets\rex-logo.png">
-                <img class="logo-chiots liberty-btn" src="assets\liberty-logo.png">
-            </div>
+            <section class="bloc">
+                <div class="bloc__titre">
+                    <span>Univers</span>
+                    <button class="bouton bouton--discret" data-action="theme-surprise">🎲 Au hasard</button>
+                </div>
+                <div class="selecteur-themes"></div>
+            </section>
 
-            <div class="dynamic-content flex-center"></div>
+            <section class="bloc">
+                <div class="bloc__titre"><span>Mes autocollants</span></div>
+                <div class="autocollants"></div>
+                <div class="progression-barre">
+                    <div class="progression-barre__jauge" style="width: 0%"></div>
+                </div>
+                <p class="progression-legende"></p>
+            </section>
         </div>
-        <!-- <footer class="main-footer"></footer> -->
     </main>
-
 </body>
 
 </html>

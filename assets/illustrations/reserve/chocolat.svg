@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Chocolat">
+  <defs><linearGradient id="chocolat-tablette" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#a06a3c"/><stop offset="50%" stop-color="#6f4218"/><stop offset="100%" stop-color="#43260c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="40" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M16 96 v-70 h74 l14 14 v56z" fill="url(#chocolat-tablette)" stroke="#311906" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M90 26 l14 14 h-14z" fill="#c08a52" stroke="#311906" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#311906" stroke-width="3.5" opacity="0.85">
+    <path d="M16 50 h88"/><path d="M16 74 h88"/><path d="M46 26 v70"/><path d="M74 40 v56"/>
+  </g>
+  <g fill="#8a5a2c" opacity="0.55">
+    <rect x="20" y="30" width="22" height="16" rx="3"/><rect x="50" y="54" width="20" height="16" rx="3"/><rect x="78" y="78" width="22" height="14" rx="3"/>
+  </g>
+  <path d="M22 34 v10" stroke="#c08a52" stroke-width="4" opacity="0.5" stroke-linecap="round"/>
+</svg>

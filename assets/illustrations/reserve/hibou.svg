@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Hibou">
+  <defs><linearGradient id="hibou-plume" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#c49a6c"/><stop offset="55%" stop-color="#96703f"/><stop offset="100%" stop-color="#66491f"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M50 104 v6 M70 104 v6" stroke="#e8a33d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M34 26 l-2 -16 18 10z" fill="url(#hibou-plume)" stroke="#553c17" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M86 26 l2 -16 -18 10z" fill="url(#hibou-plume)" stroke="#553c17" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="62" rx="38" ry="42" fill="url(#hibou-plume)" stroke="#553c17" stroke-width="3.5"/>
+  <path d="M26 66 q10 26 34 30 q-24 6 -34 -12z" fill="#7d5c30" opacity="0.55"/>
+  <path d="M94 66 q-10 26 -34 30 q24 6 34 -12z" fill="#7d5c30" opacity="0.55"/>
+  <ellipse cx="60" cy="84" rx="20" ry="16" fill="#e0c9a3" opacity="0.8"/>
+  <circle cx="45" cy="50" r="15" fill="#f7ecd8" stroke="#a98a5c" stroke-width="3"/>
+  <circle cx="75" cy="50" r="15" fill="#f7ecd8" stroke="#a98a5c" stroke-width="3"/>
+  <circle cx="45" cy="50" r="8" fill="#1d2430"/><circle cx="75" cy="50" r="8" fill="#1d2430"/>
+  <circle cx="42" cy="47" r="3" fill="#fff"/><circle cx="72" cy="47" r="3" fill="#fff"/>
+  <path d="M60 60 l-6 8 h12z" fill="#f2a33c" stroke="#c47b18" stroke-width="3" stroke-linejoin="round"/>
+</svg>

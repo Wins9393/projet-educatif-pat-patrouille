@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Montagne">
+  <defs>
+    <linearGradient id="montagne-roche" x1="0.2" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#8b96a4"/><stop offset="55%" stop-color="#5f6a7a"/><stop offset="100%" stop-color="#3a4350"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 100 l32 -54 22 34 14 -20 44 40z" fill="url(#montagne-roche)" stroke="#2b3441" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M36 46 l-14 24 28 0z" fill="#f2f6fb" stroke="#c4cdd8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M72 60 l-10 14 22 0z" fill="#f2f6fb" stroke="#c4cdd8" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M36 46 l22 34 -10 20 -26 0z" fill="#6e7a8a" opacity="0.55"/>
+  <path d="M4 100 h112" stroke="#2b3441" stroke-width="3.5" stroke-linecap="round"/>
+  <circle cx="94" cy="26" r="12" fill="#ffd166" stroke="#c9931a" stroke-width="3"/>
+</svg>

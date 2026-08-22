@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Note de musique">
+  <defs><linearGradient id="note-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#7fb8f0"/><stop offset="50%" stop-color="#2f6ec9"/><stop offset="100%" stop-color="#173f80"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M46 88 v-64 l44 -12 v58" fill="none" stroke="url(#note-corps)" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M46 26 l44 -12 v14 l-44 12z" fill="url(#note-corps)" stroke="#12356b" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="34" cy="88" rx="18" ry="14" fill="url(#note-corps)" stroke="#12356b" stroke-width="3.5" transform="rotate(-16 34 88)"/>
+  <ellipse cx="78" cy="76" rx="16" ry="13" fill="url(#note-corps)" stroke="#12356b" stroke-width="3.5" transform="rotate(-16 78 76)"/>
+  <ellipse cx="28" cy="82" rx="6" ry="4" fill="#fff" opacity="0.35" transform="rotate(-16 28 82)"/>
+</svg>

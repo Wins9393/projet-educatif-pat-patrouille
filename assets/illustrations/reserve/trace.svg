@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Trace de pas">
+  <defs><linearGradient id="trace-empreinte" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#a08260"/><stop offset="55%" stop-color="#6f5334"/><stop offset="100%" stop-color="#453018"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="42" ry="5" fill="#d9c4a3" opacity="0.5"/>
+  <g fill="url(#trace-empreinte)" stroke="#33230f" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M30 76 q-14 -10 -12 -26 q2 -14 16 -12 q14 2 16 16 q2 14 -8 22z"/>
+    <ellipse cx="20" cy="34" rx="9" ry="11" transform="rotate(-18 20 34)"/>
+    <ellipse cx="38" cy="26" rx="9" ry="11"/>
+    <ellipse cx="54" cy="36" rx="9" ry="11" transform="rotate(18 54 36)"/>
+  </g>
+  <g fill="url(#trace-empreinte)" stroke="#33230f" stroke-width="3" stroke-linejoin="round" opacity="0.55">
+    <path d="M84 104 q-10 -8 -9 -20 q2 -10 12 -9 q11 2 12 12 q2 11 -6 17z"/>
+    <ellipse cx="76" cy="74" rx="7" ry="8" transform="rotate(-18 76 74)"/>
+    <ellipse cx="90" cy="68" rx="7" ry="8"/>
+    <ellipse cx="102" cy="76" rx="7" ry="8" transform="rotate(18 102 76)"/>
+  </g>
+</svg>

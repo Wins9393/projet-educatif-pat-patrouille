@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Coquillage">
+  <defs><radialGradient id="coquillage-nacre" cx="50%" cy="88%" r="80%">
+    <stop offset="0" stop-color="#fff0f5"/><stop offset="50%" stop-color="#ffc9dd"/><stop offset="100%" stop-color="#d98aae"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="106" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M60 100 q-48 0 -48 -34 q0 -44 48 -44 q48 0 48 44 q0 34 -48 34z"
+        fill="url(#coquillage-nacre)" stroke="#b56d90" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#c9799c" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.8">
+    <path d="M60 98 q-16 -40 -6 -74"/><path d="M60 98 q16 -40 6 -74"/>
+    <path d="M60 98 q-32 -34 -34 -50"/><path d="M60 98 q32 -34 34 -50"/>
+  </g>
+  <path d="M52 100 q8 6 16 0 q-2 -8 -8 -8 q-6 0 -8 8z" fill="#e8a3c0" stroke="#b56d90" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="44" cy="46" rx="10" ry="7" fill="#fff" opacity="0.45" transform="rotate(-24 44 46)"/>
+</svg>

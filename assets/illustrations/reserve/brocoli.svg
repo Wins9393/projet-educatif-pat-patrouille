@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Brocoli">
+  <defs><radialGradient id="brocoli-fleur" cx="36%" cy="26%" r="76%">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="50%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2d6b1c"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M48 60 q-4 30 4 44 h16 q8 -14 4 -44z" fill="#b8d99a" stroke="#79a35c" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="url(#brocoli-fleur)" stroke="#26601a" stroke-width="3">
+    <circle cx="34" cy="52" r="18"/><circle cx="60" cy="38" r="21"/><circle cx="86" cy="52" r="18"/>
+    <circle cx="46" cy="64" r="16"/><circle cx="74" cy="64" r="16"/>
+  </g>
+  <g fill="#7cc266" opacity="0.6"><circle cx="30" cy="46" r="5"/><circle cx="56" cy="32" r="5"/><circle cx="82" cy="46" r="5"/><circle cx="42" cy="60" r="4"/></g>
+</svg>

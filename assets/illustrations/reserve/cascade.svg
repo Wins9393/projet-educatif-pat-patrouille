@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cascade">
+  <defs><linearGradient id="cascade-eau" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#d6f0fb"/><stop offset="45%" stop-color="#5cb8e8"/><stop offset="100%" stop-color="#2b7fc9"/>
+  </linearGradient></defs>
+  <path d="M4 8 h36 l-4 24 h-32z M80 8 h36 v24 h-32z" fill="#7e8a99" stroke="#4d5867" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M36 24 h48 v62 q-24 10 -48 0z" fill="url(#cascade-eau)" stroke="#1d6ba3" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#eaf8ff" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M48 30 v52"/><path d="M60 28 v56"/><path d="M72 30 v52"/>
+  </g>
+  <ellipse cx="60" cy="94" rx="46" ry="18" fill="url(#cascade-eau)" stroke="#1d6ba3" stroke-width="3.5"/>
+  <g stroke="#eaf8ff" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M28 94 q10 -5 20 0"/><path d="M64 98 q10 -5 20 0"/>
+  </g>
+  <g fill="#fff" opacity="0.85"><circle cx="42" cy="86" r="5"/><circle cx="76" cy="88" r="4.5"/><circle cx="60" cy="82" r="4"/></g>
+  <g fill="#4a9c3c" stroke="#255c17" stroke-width="3"><circle cx="14" cy="40" r="10"/><circle cx="106" cy="40" r="10"/></g>
+</svg>

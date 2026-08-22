@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Baleine">
+  <defs><linearGradient id="baleine-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#7fb8e0"/><stop offset="45%" stop-color="#3d7cae"/><stop offset="100%" stop-color="#1d4b72"/>
+  </linearGradient></defs>
+  <path d="M56 30 q-4 -18 4 -22 q8 4 6 22 M64 30 q10 -14 20 -12 q-6 10 -14 14"
+        stroke="#a9d8f0" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <path d="M98 70 l18 -14 -6 16 8 14z" fill="url(#baleine-corps)" stroke="#153c59" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M8 72 q10 -34 46 -34 q40 0 48 32 q-14 26 -48 26 q-36 0 -46 -24z"
+        fill="url(#baleine-corps)" stroke="#153c59" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M12 80 q22 16 44 16 q30 0 44 -14 q-14 24 -46 24 q-32 0 -42 -26z" fill="#dfeef8" opacity="0.9"/>
+  <path d="M18 84 h48 M22 92 h40" stroke="#9fc6de" stroke-width="4" stroke-linecap="round" opacity="0.8"/>
+  <path d="M56 44 q10 -10 18 -6 q-4 10 -10 12z" fill="#2f6c96" stroke="#153c59" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="30" cy="66" r="6" fill="#1d2430"/><circle cx="28.4" cy="64.4" r="2.2" fill="#fff"/>
+  <path d="M18 76 q8 5 15 1" stroke="#153c59" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

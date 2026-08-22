@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Planète">
+  <defs>
+    <radialGradient id="planete-corps" cx="36%" cy="32%" r="76%">
+      <stop offset="0" stop-color="#ffe0a3"/>
+      <stop offset="55%" stop-color="#e8a33d"/>
+      <stop offset="100%" stop-color="#a9631a"/>
+    </radialGradient>
+    <clipPath id="planete-bord"><circle cx="60" cy="58" r="34"/></clipPath>
+  </defs>
+  <ellipse cx="60" cy="58" rx="56" ry="17" fill="none" stroke="#8d5a1c" stroke-width="9" opacity="0.9" transform="rotate(-18 60 58)"/>
+  <circle cx="60" cy="58" r="34" fill="url(#planete-corps)"/>
+  <g clip-path="url(#planete-bord)">
+    <path d="M26 46 q34 8 68 -2" stroke="#c9821f" stroke-width="7" fill="none" opacity="0.5"/>
+    <path d="M26 68 q34 8 68 -3" stroke="#c9821f" stroke-width="5" fill="none" opacity="0.4"/>
+  </g>
+  <circle cx="60" cy="58" r="34" fill="none" stroke="#8d5a1c" stroke-width="3.5" opacity="0.5"/>
+  <ellipse cx="60" cy="58" rx="56" ry="17" fill="none" stroke="#f0c274" stroke-width="5" opacity="0.95" transform="rotate(-18 60 58)"
+           stroke-dasharray="86 200" stroke-dashoffset="-6" stroke-linecap="round"/>
+  <circle cx="47" cy="44" r="6" fill="#fff" opacity="0.4"/>
+</svg>

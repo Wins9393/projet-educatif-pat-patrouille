@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Volcan">
+  <defs>
+    <linearGradient id="volcan-roche" x1="0.2" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#7b6a5c"/><stop offset="55%" stop-color="#54473c"/><stop offset="100%" stop-color="#332a22"/>
+    </linearGradient>
+    <linearGradient id="volcan-lave" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff3c4"/><stop offset="45%" stop-color="#ffb703"/><stop offset="100%" stop-color="#e03131"/>
+    </linearGradient>
+  </defs>
+  <g fill="#5c6878" opacity="0.65">
+    <circle cx="42" cy="18" r="12"/><circle cx="60" cy="10" r="14"/><circle cx="78" cy="18" r="11"/>
+  </g>
+  <path d="M6 104 l34 -66 h40 l34 66z" fill="url(#volcan-roche)" stroke="#241c15" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M40 38 h40 l-8 12 h-24z" fill="#3a3028"/>
+  <path d="M44 42 q6 22 -2 34 q-6 20 6 28 h24 q10 -14 4 -30 q-8 -18 -2 -32z" fill="url(#volcan-lave)" stroke="#c02a10" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 38 q-8 -18 4 -26 q4 12 12 14 q-4 -16 6 -22 q4 14 14 18 q-4 -12 4 -18 q10 14 0 34z"
+        fill="url(#volcan-lave)" stroke="#c02a10" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#ffb703"><circle cx="24" cy="34" r="5"/><circle cx="96" cy="40" r="4.5"/><circle cx="86" cy="24" r="4"/></g>
+  <path d="M6 104 h108" stroke="#241c15" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

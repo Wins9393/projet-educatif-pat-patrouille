@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Dinosaure">
+  <defs><linearGradient id="dino-peau" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="55%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2a6b1c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="40" ry="5.5" fill="#000" opacity="0.2"/>
+  <path d="M92 90 q22 -4 22 -24 q0 -12 -12 -10 q8 12 -2 20 q-6 6 -14 6z" fill="url(#dino-peau)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M40 104 v-16 M70 104 v-18" stroke="#4f9c3c" stroke-width="12" stroke-linecap="round"/>
+  <path d="M28 62 q0 -34 34 -34 q34 0 38 32 q2 22 -18 28 q-24 8 -40 -4 q-14 -10 -14 -22z"
+        fill="url(#dino-peau)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M36 34 l6 -14 8 12 8 -14 8 14 8 -12 6 14z" fill="#3fb56b" stroke="#215417" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M28 58 q-16 -2 -18 10 q-2 12 12 14 q10 2 14 -8z" fill="url(#dino-peau)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M12 78 q10 4 20 0" stroke="#215417" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="26" cy="66" r="5.5" fill="#1d2430"/><circle cx="24.5" cy="64.5" r="2" fill="#fff"/>
+  <g fill="#7cc266" opacity="0.6"><circle cx="60" cy="66" r="5"/><circle cx="76" cy="76" r="4.5"/></g>
+</svg>

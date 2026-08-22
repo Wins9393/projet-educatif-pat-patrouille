@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Perroquet">
+  <defs><linearGradient id="perroquet-corps" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ff7d7d"/><stop offset="55%" stop-color="#e63946"/><stop offset="100%" stop-color="#a01f2b"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="24" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M74 92 q22 12 30 20 q-22 2 -34 -10z" fill="#3fb56b" stroke="#237a44" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M78 96 q18 10 24 16" stroke="#f5d547" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="56" cy="70" rx="30" ry="32" fill="url(#perroquet-corps)" stroke="#8f1f29" stroke-width="3.5"/>
+  <path d="M70 56 q22 10 18 34 q-16 4 -24 -14z" fill="#3fb56b" stroke="#237a44" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M74 64 q12 10 12 22" stroke="#f5d547" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <circle cx="52" cy="42" r="24" fill="url(#perroquet-corps)" stroke="#8f1f29" stroke-width="3.5"/>
+  <path d="M44 20 q6 -14 16 -12 q-2 8 -6 14z" fill="#f5d547" stroke="#c9a812" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="46" cy="38" r="6" fill="#fff"/><circle cx="46" cy="38" r="3" fill="#1d2430"/>
+  <path d="M30 44 q-14 2 -12 12 q10 8 16 -4z" fill="#f2f4f8" stroke="#a9b1bd" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M22 50 q6 6 10 2" stroke="#8b939f" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

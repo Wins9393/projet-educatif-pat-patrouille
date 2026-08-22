@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Aigle">
+  <defs><linearGradient id="aigle-plume" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#a3764a"/><stop offset="55%" stop-color="#7a5327"/><stop offset="100%" stop-color="#4f3413"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M52 102 v8 M70 102 v8" stroke="#f2a33c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M46 58 q-38 -16 -42 4 q22 16 44 10z" fill="url(#aigle-plume)" stroke="#3d2708" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M74 58 q38 -16 42 4 q-22 16 -44 10z" fill="url(#aigle-plume)" stroke="#3d2708" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="76" rx="24" ry="27" fill="url(#aigle-plume)" stroke="#3d2708" stroke-width="3.5"/>
+  <circle cx="60" cy="40" r="22" fill="#f7f4ee" stroke="#b8b0a3" stroke-width="3.5"/>
+  <path d="M60 62 q-10 -2 -14 -10 q14 -4 28 0 q-4 8 -14 10z" fill="#f7f4ee"/>
+  <circle cx="51" cy="36" r="5.5" fill="#1d2430"/><circle cx="69" cy="36" r="5.5" fill="#1d2430"/>
+  <circle cx="49" cy="34" r="2.2" fill="#fff"/><circle cx="67" cy="34" r="2.2" fill="#fff"/>
+  <path d="M60 44 q-8 4 -6 12 q6 4 12 0 q2 -8 -6 -12z" fill="#f5b21e" stroke="#c98a08" stroke-width="3" stroke-linejoin="round"/>
+</svg>

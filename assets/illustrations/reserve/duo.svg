@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Duo">
+  <defs>
+    <linearGradient id="duo-bleu" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#7fb8f0"/><stop offset="55%" stop-color="#3d7fc9"/><stop offset="100%" stop-color="#1d4f80"/>
+    </linearGradient>
+    <linearGradient id="duo-rose" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ff9ec4"/><stop offset="55%" stop-color="#e0508e"/><stop offset="100%" stop-color="#96225a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="110" rx="42" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M14 104 v-22 q0 -18 20 -18 q20 0 20 18 v22z" fill="url(#duo-bleu)" stroke="#173f70" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="34" cy="42" r="20" fill="#f0c9a8" stroke="#c49a76" stroke-width="3.5"/>
+  <path d="M14 40 q0 -22 20 -22 q20 0 20 22 q-10 -8 -20 -8 q-10 0 -20 8z" fill="#8a5f2c" stroke="#5f3f18" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#2f3540"><circle cx="27" cy="42" r="3.4"/><circle cx="41" cy="42" r="3.4"/></g>
+  <path d="M28 52 q6 5 12 0" stroke="#c49a76" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M66 104 v-22 q0 -18 20 -18 q20 0 20 18 v22z" fill="url(#duo-rose)" stroke="#7c1a48" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="86" cy="42" r="20" fill="#f0c9a8" stroke="#c49a76" stroke-width="3.5"/>
+  <path d="M66 44 q0 -26 20 -26 q20 0 20 26 q-4 -14 -20 -14 q-16 0 -20 14z" fill="#c96a1e" stroke="#8f4508" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#2f3540"><circle cx="79" cy="42" r="3.4"/><circle cx="93" cy="42" r="3.4"/></g>
+  <path d="M80 52 q6 5 12 0" stroke="#c49a76" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

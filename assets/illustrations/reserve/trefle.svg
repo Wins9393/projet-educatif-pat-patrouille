@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Trèfle">
+  <defs><radialGradient id="trefle-feuille" cx="36%" cy="30%" r="76%">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="55%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2a6b1c"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="22" ry="4.5" fill="#000" opacity="0.14"/>
+  <path d="M60 104 q-6 -24 0 -42" stroke="#3f8f2e" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <g fill="url(#trefle-feuille)" stroke="#215417" stroke-width="3.5">
+    <path d="M58 58 q-30 6 -34 -14 q-4 -18 16 -18 q18 0 20 22z"/>
+    <path d="M62 58 q30 6 34 -14 q4 -18 -16 -18 q-18 0 -20 22z"/>
+    <path d="M60 56 q-14 -26 4 -34 q18 8 6 34z"/>
+  </g>
+  <g fill="#7cc266" opacity="0.5"><circle cx="38" cy="34" r="5"/><circle cx="82" cy="34" r="5"/><circle cx="62" cy="30" r="4.5"/></g>
+</svg>

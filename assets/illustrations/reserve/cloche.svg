@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cloche">
+  <defs><linearGradient id="cloche-metal" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe08a"/><stop offset="50%" stop-color="#e0a516"/><stop offset="100%" stop-color="#8f6f04"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M60 12 v10" stroke="#8a6a48" stroke-width="6" stroke-linecap="round"/>
+  <circle cx="60" cy="12" r="8" fill="none" stroke="#a8763f" stroke-width="5"/>
+  <path d="M22 84 q0 -62 38 -62 q38 0 38 62z" fill="url(#cloche-metal)" stroke="#7c6008" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="14" y="84" width="92" height="14" rx="7" fill="#c9a227" stroke="#7c6008" stroke-width="3.5"/>
+  <circle cx="60" cy="104" r="9" fill="#a8830a" stroke="#7c6008" stroke-width="3"/>
+  <path d="M36 68 q-2 -40 20 -44" stroke="#fff" stroke-width="6" fill="none" opacity="0.4" stroke-linecap="round"/>
+</svg>

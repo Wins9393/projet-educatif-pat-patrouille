@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Terre">
+  <defs>
+    <radialGradient id="terre-ocean" cx="36%" cy="30%" r="78%">
+      <stop offset="0" stop-color="#6ec6f5"/>
+      <stop offset="55%" stop-color="#2b83d6"/>
+      <stop offset="100%" stop-color="#14508f"/>
+    </radialGradient>
+    <clipPath id="terre-bord"><circle cx="60" cy="60" r="46"/></clipPath>
+  </defs>
+  <circle cx="60" cy="60" r="46" fill="url(#terre-ocean)"/>
+  <g clip-path="url(#terre-bord)">
+    <path d="M18 44 q14 -12 26 -4 q10 7 4 16 q-8 11 -22 8 q-10 -3 -8 -20z" fill="#57b85a"/>
+    <path d="M52 26 q16 -6 26 4 q7 8 -2 13 q-12 6 -22 -2 q-7 -6 -2 -15z" fill="#57b85a"/>
+    <path d="M46 74 q18 -8 30 2 q9 9 0 18 q-14 12 -28 2 q-10 -9 -2 -22z" fill="#4aa84e"/>
+    <path d="M86 56 q12 -4 18 6 q4 9 -6 13 q-12 4 -16 -6 q-3 -9 4 -13z" fill="#57b85a"/>
+    <ellipse cx="36" cy="30" rx="16" ry="5" fill="#fff" opacity="0.5"/>
+    <ellipse cx="80" cy="86" rx="18" ry="6" fill="#fff" opacity="0.4"/>
+  </g>
+  <circle cx="60" cy="60" r="46" fill="none" stroke="#0e3a6b" stroke-width="3.5" opacity="0.5"/>
+  <circle cx="44" cy="40" r="6" fill="#fff" opacity="0.35"/>
+</svg>

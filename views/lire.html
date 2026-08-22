@@ -3,57 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    <script type="module" src="../controllers/lire.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js">
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1b2a4a">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/decors.css">
+    <link rel="stylesheet" href="../styles/jeux.css">
+    <link rel="stylesheet" href="../styles/panneaux.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../vendor/confetti.min.js" defer></script>
+    <script type="module" src="../controllers/lire.js"></script>
     <title>LIRE</title>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 </head>
 
 <body>
+    <main class="jeu-page">
+        <div class="plateau">
+            <p class="consigne">
+                <span class="consigne__texte">Quel mot est écrit ?</span>
+                <button class="bouton bouton--discret bouton--icone" data-action="ecouter" aria-label="Réécouter">🔊</button>
+            </p>
 
-    <main class="main">
-        <audio class="audio1" autoplay src=""></audio>
-        <!-- <audio class="audio2" autoplay loop src=""></audio> -->
-        <div class="reaction"></div>
-        <div id="tsparticles"></div>
-
-        <header class="main-header flex-space-around">
-            <nav>
-                <a class="lien-header btn bleu" href="../index.html">ACCUEIL</a>
-                <a class="lien-header btn bleu" href="ecrire.html">ÉCRIRE</a>
-                <a class="lien-header btn bleu" href="#">LIRE</a>
-                <a class="lien-header btn bleu" href="compter.html">COMPTER</a>
-                <a class="lien-header btn bleu" href="calculer.html">CALCULER</a>
-            </nav>
-        </header>
-
-        <div class="main-content flex-space-evenly-column">
-            <div>
-                <button class="btn btn-jouer btn-lire rose">REJOUER</button>
+            <div class="question">
+                <div class="mot-a-lire"></div>
             </div>
 
-            <div class="nom-aleatoire-wrapper">
-                <div class="nom-aleatoire flex-center"></div>
-            </div>
+            <div class="choix"></div>
 
-            <div>
-                <div class="dynamic-chiots flex-center">
-                    <img class="img-btn img-btn-chiot" src="" alt="">
-                    <img class="img-btn img-btn-chiot" src="" alt="">
-                    <img class="img-btn img-btn-chiot" src="" alt="">
-                    <img class="img-btn img-btn-chiot" src="" alt="">
-                </div>
-            </div>
-
-            <div></div>
-
+            <button class="bouton" data-action="rejouer">Nouveau mot</button>
         </div>
     </main>
-
 </body>
 
 </html>

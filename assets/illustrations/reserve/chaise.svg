@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Chaise">
+  <defs><linearGradient id="chaise-bois" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#d9a86b"/><stop offset="50%" stop-color="#a8763f"/><stop offset="100%" stop-color="#714d20"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="34" ry="5.5" fill="#000" opacity="0.18"/>
+  <rect x="30" y="10" width="12" height="56" rx="5" fill="url(#chaise-bois)" stroke="#5f3f18" stroke-width="3.5"/>
+  <rect x="78" y="10" width="12" height="56" rx="5" fill="url(#chaise-bois)" stroke="#5f3f18" stroke-width="3.5"/>
+  <rect x="30" y="20" width="60" height="10" rx="4" fill="url(#chaise-bois)" stroke="#5f3f18" stroke-width="3"/>
+  <rect x="30" y="38" width="60" height="10" rx="4" fill="url(#chaise-bois)" stroke="#5f3f18" stroke-width="3"/>
+  <rect x="20" y="60" width="80" height="14" rx="5" fill="url(#chaise-bois)" stroke="#5f3f18" stroke-width="3.5"/>
+  <path d="M28 74 v30 M92 74 v30 M36 74 v26 M84 74 v26" stroke="#8a5f2c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M28 74 v30 M92 74 v30" stroke="#5f3f18" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+</svg>

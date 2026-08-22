@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Douche">
+  <defs><linearGradient id="douche-metal" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#e0e6ee"/><stop offset="50%" stop-color="#a9b4c2"/><stop offset="100%" stop-color="#6e7a8a"/>
+  </linearGradient></defs>
+  <path d="M20 12 h10 v22 q0 8 10 8 h16" fill="none" stroke="url(#douche-metal)" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M52 32 q22 0 22 14 q0 8 -22 8 q-22 0 -22 -8 q0 -14 22 -14z"
+        fill="url(#douche-metal)" stroke="#5c6878" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#5c6878"><circle cx="40" cy="50" r="2.6"/><circle cx="52" cy="52" r="2.6"/><circle cx="64" cy="50" r="2.6"/></g>
+  <g stroke="#5cb8e8" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M38 62 v14"/><path d="M52 64 v18"/><path d="M66 62 v14"/>
+    <path d="M44 84 v12"/><path d="M60 88 v12"/><path d="M74 82 v12"/>
+  </g>
+  <g fill="#8fd4f5"><circle cx="34" cy="86" r="4"/><circle cx="70" cy="102" r="4"/><circle cx="52" cy="98" r="3.5"/></g>
+  <ellipse cx="60" cy="112" rx="40" ry="5" fill="#5cb8e8" opacity="0.35"/>
+</svg>

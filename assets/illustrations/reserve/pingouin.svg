@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pingouin">
+  <defs><linearGradient id="pingouin-dos" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#4a5464"/><stop offset="55%" stop-color="#2f3846"/><stop offset="100%" stop-color="#1b212b"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#000" opacity="0.18"/>
+  <path d="M40 106 q-12 6 -4 8 h20z" fill="#f5b21e" stroke="#c98a08" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M80 106 q12 6 4 8 h-20z" fill="#f5b21e" stroke="#c98a08" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="62" rx="38" ry="46" fill="url(#pingouin-dos)" stroke="#12171f" stroke-width="3.5"/>
+  <ellipse cx="60" cy="70" rx="26" ry="36" fill="#f7f9fc"/>
+  <path d="M22 56 q-8 22 2 40 q10 8 14 -6z" fill="url(#pingouin-dos)" stroke="#12171f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M98 56 q8 22 -2 40 q-10 8 -14 -6z" fill="url(#pingouin-dos)" stroke="#12171f" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="49" cy="46" r="6.5" fill="#12171f"/><circle cx="71" cy="46" r="6.5" fill="#12171f"/>
+  <circle cx="49" cy="46" r="6.5" fill="#fff"/><circle cx="71" cy="46" r="6.5" fill="#fff"/>
+  <circle cx="49" cy="47" r="3.4" fill="#12171f"/><circle cx="71" cy="47" r="3.4" fill="#12171f"/>
+  <path d="M60 56 l-8 8 8 6 8 -6z" fill="#f5b21e" stroke="#c98a08" stroke-width="3" stroke-linejoin="round"/>
+</svg>

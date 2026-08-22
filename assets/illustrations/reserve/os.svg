@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Os">
+  <defs><linearGradient id="os-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#f0ece0"/><stop offset="100%" stop-color="#c9c2b0"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="40" ry="6" fill="#000" opacity="0.18"/>
+  <g transform="rotate(-24 60 60)">
+    <path d="M28 46 h64 v20 h-64z" fill="url(#os-corps)" stroke="#a89f8c" stroke-width="3.5" stroke-linejoin="round"/>
+    <circle cx="24" cy="44" r="15" fill="url(#os-corps)" stroke="#a89f8c" stroke-width="3.5"/>
+    <circle cx="24" cy="68" r="15" fill="url(#os-corps)" stroke="#a89f8c" stroke-width="3.5"/>
+    <circle cx="96" cy="44" r="15" fill="url(#os-corps)" stroke="#a89f8c" stroke-width="3.5"/>
+    <circle cx="96" cy="68" r="15" fill="url(#os-corps)" stroke="#a89f8c" stroke-width="3.5"/>
+    <path d="M34 52 h52" stroke="#fff" stroke-width="5" opacity="0.7" stroke-linecap="round"/>
+  </g>
+</svg>

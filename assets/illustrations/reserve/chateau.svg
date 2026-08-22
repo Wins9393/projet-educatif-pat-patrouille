@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Château">
+  <defs><linearGradient id="chateau-pierre" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0" stop-color="#f2f6fb"/><stop offset="55%" stop-color="#d2dae4"/><stop offset="100%" stop-color="#a9b4c2"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="46" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M14 32 l14 -22 14 22z" fill="#e0508e" stroke="#96225a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M78 32 l14 -22 14 22z" fill="#e0508e" stroke="#96225a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M42 26 l18 -22 18 22z" fill="#e0508e" stroke="#96225a" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="14" y="32" width="28" height="70" fill="url(#chateau-pierre)" stroke="#8b96a4" stroke-width="3.5"/>
+  <rect x="78" y="32" width="28" height="70" fill="url(#chateau-pierre)" stroke="#8b96a4" stroke-width="3.5"/>
+  <rect x="40" y="46" width="40" height="56" fill="url(#chateau-pierre)" stroke="#8b96a4" stroke-width="3.5"/>
+  <path d="M40 46 h8 v-8 h8 v8 h8 v-8 h8 v8 h8" fill="none" stroke="#8b96a4" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M50 102 v-24 q10 -12 20 0 v24z" fill="#8a5f2c" stroke="#5f3f18" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#3d6fc9" stroke="#1d3f80" stroke-width="3">
+    <rect x="22" y="52" width="12" height="16" rx="6"/><rect x="86" y="52" width="12" height="16" rx="6"/>
+    <rect x="54" y="56" width="12" height="14" rx="6"/>
+  </g>
+  <path d="M60 4 v-4" stroke="#f5c518" stroke-width="4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Aimant">
+  <defs><linearGradient id="aimant-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ff8080"/><stop offset="50%" stop-color="#e02020"/><stop offset="100%" stop-color="#8f1010"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="36" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M18 96 v-38 q0 -42 42 -42 q42 0 42 42 v38 h-28 v-38 q0 -14 -14 -14 q-14 0 -14 14 v38z"
+        fill="url(#aimant-corps)" stroke="#7c0e18" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="18" y="78" width="28" height="20" rx="3" fill="#c9d2de" stroke="#68727f" stroke-width="3.5"/>
+  <rect x="74" y="78" width="28" height="20" rx="3" fill="#c9d2de" stroke="#68727f" stroke-width="3.5"/>
+  <path d="M32 34 q10 -12 24 -12" stroke="#fff" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
+  <g stroke="#5cb8e8" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M30 22 l-8 -10"/><path d="M90 22 l8 -10"/><path d="M60 8 v-6"/>
+  </g>
+</svg>

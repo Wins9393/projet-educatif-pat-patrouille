@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Squelette de dinosaure">
+  <defs><linearGradient id="squelette-os" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#f0ece0"/><stop offset="100%" stop-color="#c9c2b0"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="42" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M24 56 q26 -22 56 -6 q22 12 30 -4" fill="none" stroke="url(#squelette-os)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M24 56 q26 -22 56 -6 q22 12 30 -4" fill="none" stroke="#b0a893" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <g stroke="url(#squelette-os)" stroke-width="7" stroke-linecap="round">
+    <path d="M38 58 v22"/><path d="M50 54 v26"/><path d="M62 54 v26"/><path d="M74 58 v22"/>
+  </g>
+  <g stroke="url(#squelette-os)" stroke-width="9" stroke-linecap="round">
+    <path d="M42 84 v18"/><path d="M72 84 v18"/>
+  </g>
+  <path d="M24 56 q-16 -4 -16 -18 q0 -12 14 -12 q16 0 18 14 q2 10 -6 14z"
+        fill="url(#squelette-os)" stroke="#b0a893" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="20" cy="36" r="5" fill="#3a3428"/>
+  <path d="M10 46 q10 4 18 0" stroke="#b0a893" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <g fill="#fff"><path d="M12 48 l2 5 3 -5z"/><path d="M20 50 l2 5 3 -5z"/></g>
+</svg>

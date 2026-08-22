@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Téléphone">
+  <defs><linearGradient id="telephone-corps" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#ff8080"/><stop offset="50%" stop-color="#e03131"/><stop offset="100%" stop-color="#96101f"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="38" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M16 96 q-4 -30 44 -30 q48 0 44 30z" fill="url(#telephone-corps)" stroke="#7c0e18" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M22 62 q0 -12 12 -12 q12 0 12 12 v6 h-24z" fill="#f7f9fc" stroke="#98a3b0" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M74 62 q0 -12 12 -12 q12 0 12 12 v6 h-24z" fill="#f7f9fc" stroke="#98a3b0" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M34 54 q26 -18 52 0" fill="none" stroke="#e03131" stroke-width="11" stroke-linecap="round"/>
+  <path d="M34 54 q26 -18 52 0" fill="none" stroke="#7c0e18" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  <g fill="#f7d9dc"><circle cx="44" cy="82" r="5"/><circle cx="60" cy="82" r="5"/><circle cx="76" cy="82" r="5"/></g>
+  <ellipse cx="36" cy="76" rx="8" ry="5" fill="#fff" opacity="0.2"/>
+</svg>

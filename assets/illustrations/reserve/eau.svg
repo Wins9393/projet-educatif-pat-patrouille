@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Eau">
+  <defs><radialGradient id="eau-goutte" cx="34%" cy="30%" r="76%">
+    <stop offset="0" stop-color="#d6f0fb"/><stop offset="50%" stop-color="#5cb8e8"/><stop offset="100%" stop-color="#1d6ba3"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M60 8 q34 42 34 62 q0 34 -34 34 q-34 0 -34 -34 q0 -20 34 -62z"
+        fill="url(#eau-goutte)" stroke="#14547f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M44 66 q-6 20 6 28" stroke="#fff" stroke-width="7" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <ellipse cx="48" cy="52" rx="7" ry="11" fill="#fff" opacity="0.35" transform="rotate(-18 48 52)"/>
+</svg>

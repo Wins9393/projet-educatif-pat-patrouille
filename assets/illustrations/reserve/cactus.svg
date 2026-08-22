@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cactus">
+  <defs><linearGradient id="cactus-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#7fc46b"/><stop offset="55%" stop-color="#4a9c3c"/><stop offset="100%" stop-color="#2a6b1e"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="32" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M46 96 v-72 q0 -14 14 -14 q14 0 14 14 v72z" fill="url(#cactus-corps)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M46 56 h-12 q-12 0 -12 -14 q0 -12 8 -12 q8 0 8 12 v6 h8z" fill="url(#cactus-corps)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M74 68 h12 q12 0 12 -16 q0 -12 -8 -12 q-8 0 -8 12 v8 h-8z" fill="url(#cactus-corps)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#2a6b1e" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M54 24 v66"/><path d="M66 24 v66"/>
+  </g>
+  <g stroke="#d9e88a" stroke-width="3" stroke-linecap="round">
+    <path d="M46 40 l-5 -4 M74 46 l5 -4 M46 66 l-5 -4 M74 80 l5 -4 M60 16 v-5"/>
+  </g>
+  <ellipse cx="60" cy="102" rx="34" ry="8" fill="#d9b877" stroke="#a88a52" stroke-width="3"/>
+  <circle cx="60" cy="14" r="7" fill="#f0609c" stroke="#b52f68" stroke-width="3"/>
+</svg>

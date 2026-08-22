@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tigre">
+  <defs><linearGradient id="tigre-robe" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffb763"/><stop offset="55%" stop-color="#f08a1e"/><stop offset="100%" stop-color="#bd5f08"/>
+  </linearGradient>
+  <clipPath id="tigre-bord"><circle cx="60" cy="58" r="38"/></clipPath></defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M32 32 l-6 -20 22 10z" fill="url(#tigre-robe)" stroke="#a34f05" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M88 32 l6 -20 -22 10z" fill="url(#tigre-robe)" stroke="#a34f05" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="58" r="38" fill="url(#tigre-robe)" stroke="#a34f05" stroke-width="3.5"/>
+  <g clip-path="url(#tigre-bord)" stroke="#3a2b1a" stroke-width="6" stroke-linecap="round" fill="none">
+    <path d="M60 20 v14"/><path d="M40 26 l6 14"/><path d="M80 26 l-6 14"/>
+    <path d="M22 52 l16 4"/><path d="M98 52 l-16 4"/><path d="M26 76 l14 -2"/><path d="M94 76 l-14 -2"/>
+  </g>
+  <ellipse cx="60" cy="70" rx="22" ry="16" fill="#fff3e0"/>
+  <circle cx="48" cy="54" r="6" fill="#2d2016"/><circle cx="72" cy="54" r="6" fill="#2d2016"/>
+  <circle cx="46" cy="52" r="2.4" fill="#fff"/><circle cx="70" cy="52" r="2.4" fill="#fff"/>
+  <path d="M53 66 h14 l-7 6z" fill="#c4788c"/>
+  <path d="M60 72 q-7 7 -13 2 M60 72 q7 7 13 2" stroke="#8a4409" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Camion de pompier">
+  <defs><linearGradient id="pompier-corps" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ff8f7a"/><stop offset="50%" stop-color="#e02020"/><stop offset="100%" stop-color="#8f1010"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="102" rx="48" ry="6" fill="#000" opacity="0.2"/>
+  <rect x="40" y="16" width="24" height="11" rx="5" fill="#5eb3e8" stroke="#2b7fc9" stroke-width="3"/>
+  <path d="M6 82 v-30 q0 -8 8 -8 h52 v-10 h12 q8 0 12 8 l14 20 v20z"
+        fill="url(#pompier-corps)" stroke="#7a0f0f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M76 44 h6 q4 0 6 4 l9 12 h-21z" fill="#c9e8fa" stroke="#7a0f0f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M12 38 h56 v8 h-56z" fill="#9aa5b4" stroke="#68727f" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M12 42 h56 M20 38 v8 M34 38 v8 M48 38 v8 M62 38 v8" stroke="#68727f" stroke-width="3"/>
+  <rect x="14" y="58" width="20" height="14" rx="3" fill="#ffd166" stroke="#c9a812" stroke-width="3"/>
+  <circle cx="30" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="86" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="30" cy="86" r="6" fill="#b9c2ce"/><circle cx="86" cy="86" r="6" fill="#b9c2ce"/>
+</svg>

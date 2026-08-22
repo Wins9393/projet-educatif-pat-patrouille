@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fougère">
+  <defs><linearGradient id="fougere-tige" x1="0" y1="1" x2="0.3" y2="0">
+    <stop offset="0" stop-color="#2f7020"/><stop offset="100%" stop-color="#7fc46b"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="32" ry="6" fill="#000" opacity="0.18"/>
+  <g stroke="url(#fougere-tige)" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M60 104 q-4 -46 -2 -74"/><path d="M60 100 q-24 -20 -34 -46"/><path d="M60 100 q24 -20 34 -46"/>
+  </g>
+  <g fill="#5cb03c" stroke="#255c17" stroke-width="3">
+    <ellipse cx="48" cy="46" rx="10" ry="6" transform="rotate(-30 48 46)"/>
+    <ellipse cx="44" cy="64" rx="11" ry="6" transform="rotate(-20 44 64)"/>
+    <ellipse cx="46" cy="82" rx="10" ry="6" transform="rotate(-12 46 82)"/>
+    <ellipse cx="72" cy="46" rx="10" ry="6" transform="rotate(30 72 46)"/>
+    <ellipse cx="76" cy="64" rx="11" ry="6" transform="rotate(20 76 64)"/>
+    <ellipse cx="74" cy="82" rx="10" ry="6" transform="rotate(12 74 82)"/>
+    <ellipse cx="54" cy="34" rx="9" ry="5.5" transform="rotate(-40 54 34)"/>
+    <ellipse cx="66" cy="34" rx="9" ry="5.5" transform="rotate(40 66 34)"/>
+  </g>
+  <path d="M58 30 q-4 -14 6 -18 q8 6 2 18z" fill="#7fc46b" stroke="#255c17" stroke-width="3" stroke-linejoin="round"/>
+</svg>

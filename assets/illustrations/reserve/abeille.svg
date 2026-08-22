@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Abeille">
+  <defs><linearGradient id="abeille-corps" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffe066"/><stop offset="55%" stop-color="#f5b81e"/><stop offset="100%" stop-color="#c48a08"/>
+  </linearGradient>
+  <clipPath id="abeille-bord"><ellipse cx="60" cy="70" rx="34" ry="27"/></clipPath></defs>
+  <ellipse cx="60" cy="112" rx="24" ry="4.5" fill="#000" opacity="0.14"/>
+  <path d="M46 42 q-26 -22 -34 -4 q-6 16 18 18 q14 1 20 -8z" fill="#e8f4ff" stroke="#a9c4d8" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M74 42 q26 -22 34 -4 q6 16 -18 18 q-14 1 -20 -8z" fill="#e8f4ff" stroke="#a9c4d8" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="70" rx="34" ry="27" fill="url(#abeille-corps)" stroke="#a67206" stroke-width="3.5"/>
+  <g clip-path="url(#abeille-bord)" fill="#2f2a22">
+    <path d="M60 42 h13 v58 h-13z"/><path d="M84 46 h13 v50 h-13z"/>
+  </g>
+  <circle cx="34" cy="60" r="18" fill="#2f2a22"/>
+  <path d="M26 44 q-6 -12 -12 -14 M40 42 q2 -12 10 -16" stroke="#2f2a22" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="14" cy="30" r="3.5" fill="#2f2a22"/><circle cx="50" cy="26" r="3.5" fill="#2f2a22"/>
+  <circle cx="30" cy="56" r="5" fill="#fff"/><circle cx="30" cy="56" r="2.6" fill="#1d2430"/>
+  <path d="M26 68 q8 5 15 1" stroke="#f5b81e" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

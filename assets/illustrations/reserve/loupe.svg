@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Loupe">
+  <defs><radialGradient id="loupe-verre" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#eaf8ff"/><stop offset="55%" stop-color="#a9d8f0" stop-opacity="0.85"/><stop offset="100%" stop-color="#6ba8cf" stop-opacity="0.7"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M66 68 l30 32 q6 8 -2 14 q-8 6 -14 -2 l-28 -32z" fill="#c9925c" stroke="#7a5228" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="50" cy="46" r="38" fill="url(#loupe-verre)" stroke="#8b96a4" stroke-width="3.5"/>
+  <circle cx="50" cy="46" r="38" fill="none" stroke="#c9d2de" stroke-width="9" opacity="0.55"/>
+  <circle cx="50" cy="46" r="30" fill="none" stroke="#7e8a99" stroke-width="3"/>
+  <path d="M28 32 q10 -12 24 -14" stroke="#fff" stroke-width="7" fill="none" opacity="0.7" stroke-linecap="round"/>
+</svg>

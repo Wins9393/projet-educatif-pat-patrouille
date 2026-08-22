@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Thon">
+  <defs><linearGradient id="thon-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#8fc8e8"/><stop offset="45%" stop-color="#3d7fae"/><stop offset="100%" stop-color="#1d4d72"/>
+  </linearGradient></defs>
+  <path d="M100 60 l16 -18 -4 18 4 18z" fill="url(#thon-corps)" stroke="#153c59" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M6 60 q26 -30 56 -30 q28 0 40 30 q-12 30 -40 30 q-30 0 -56 -30z"
+        fill="url(#thon-corps)" stroke="#153c59" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M6 60 q26 22 56 24 q28 2 40 -24 q-12 30 -40 30 q-30 0 -56 -30z" fill="#cfe4f0" opacity="0.7"/>
+  <path d="M56 30 q8 -16 18 -12 q-2 10 -8 14z" fill="#2f6c96" stroke="#153c59" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M62 84 q10 12 20 8 q-4 -10 -12 -12z" fill="#2f6c96" stroke="#153c59" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M74 46 h16 M78 54 h14" stroke="#f5d547" stroke-width="4" stroke-linecap="round" opacity="0.9"/>
+  <circle cx="26" cy="54" r="7" fill="#fff"/><circle cx="26" cy="54" r="4" fill="#1d2430"/>
+  <circle cx="24.4" cy="52.4" r="1.6" fill="#fff"/>
+  <path d="M14 62 q8 5 14 1" stroke="#153c59" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

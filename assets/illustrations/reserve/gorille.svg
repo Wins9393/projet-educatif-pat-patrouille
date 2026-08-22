@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Gorille">
+  <defs>
+    <linearGradient id="gorille-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#5c6470"/><stop offset="55%" stop-color="#3e4552"/><stop offset="100%" stop-color="#252a34"/>
+    </linearGradient>
+    <linearGradient id="gorille-face" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#8b7f74"/><stop offset="100%" stop-color="#5f544a"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="34" ry="5.5" fill="#000" opacity="0.18"/>
+  <ellipse cx="60" cy="86" rx="36" ry="24" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3.5"/>
+  <ellipse cx="20" cy="88" rx="12" ry="18" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3.5"/>
+  <ellipse cx="100" cy="88" rx="12" ry="18" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3.5"/>
+  <ellipse cx="60" cy="90" rx="20" ry="16" fill="url(#gorille-face)" opacity="0.55"/>
+  <circle cx="26" cy="42" r="11" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3"/>
+  <circle cx="94" cy="42" r="11" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3"/>
+  <ellipse cx="60" cy="44" rx="32" ry="28" fill="url(#gorille-poil)" stroke="#1c212a" stroke-width="3.5"/>
+  <ellipse cx="60" cy="52" rx="23" ry="19" fill="url(#gorille-face)"/>
+  <circle cx="50" cy="44" r="5" fill="#1a1f27"/><circle cx="70" cy="44" r="5" fill="#1a1f27"/>
+  <circle cx="48.5" cy="42.5" r="2" fill="#fff"/><circle cx="68.5" cy="42.5" r="2" fill="#fff"/>
+  <ellipse cx="54" cy="58" rx="3" ry="4" fill="#3e352d"/><ellipse cx="66" cy="58" rx="3" ry="4" fill="#3e352d"/>
+  <path d="M50 66 q10 6 20 0" stroke="#3e352d" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>

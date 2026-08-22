@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Trompette">
+  <defs><linearGradient id="trompette-laiton" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe08a"/><stop offset="50%" stop-color="#e0a516"/><stop offset="100%" stop-color="#96760a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="36" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M76 44 l30 -22 v56 l-30 -22z" fill="url(#trompette-laiton)" stroke="#7c6008" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="22" y="44" width="56" height="24" rx="10" fill="url(#trompette-laiton)" stroke="#7c6008" stroke-width="3.5"/>
+  <rect x="10" y="48" width="14" height="16" rx="6" fill="#c9a227" stroke="#7c6008" stroke-width="3"/>
+  <g fill="url(#trompette-laiton)" stroke="#7c6008" stroke-width="3">
+    <rect x="34" y="26" width="10" height="20" rx="4"/><rect x="50" y="26" width="10" height="20" rx="4"/><rect x="66" y="26" width="10" height="20" rx="4"/>
+  </g>
+  <g fill="#e03131" stroke="#8f1414" stroke-width="3">
+    <circle cx="39" cy="24" r="6"/><circle cx="55" cy="24" r="6"/><circle cx="71" cy="24" r="6"/>
+  </g>
+  <path d="M28 68 q26 12 50 0" stroke="#c9a227" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M30 50 h40" stroke="#fff" stroke-width="4" opacity="0.4" stroke-linecap="round"/>
+</svg>

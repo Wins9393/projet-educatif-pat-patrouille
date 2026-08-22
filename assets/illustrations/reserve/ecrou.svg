@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Écrou">
+  <defs><linearGradient id="ecrou-metal" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#dce3ec"/><stop offset="50%" stop-color="#9aa5b4"/><stop offset="100%" stop-color="#5f6a7a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M60 12 l42 24 v48 l-42 24 -42 -24 v-48z" fill="url(#ecrou-metal)" stroke="#454f5e" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M60 12 l42 24 -42 24 -42 -24z" fill="#c3ccd8" opacity="0.5"/>
+  <circle cx="60" cy="60" r="22" fill="#6e7a8a" stroke="#454f5e" stroke-width="3.5"/>
+  <circle cx="60" cy="60" r="14" fill="#3a4350" stroke="#242c37" stroke-width="3"/>
+  <path d="M30 40 l20 -12" stroke="#fff" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+</svg>

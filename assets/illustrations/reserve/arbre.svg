@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Arbre">
+  <defs><radialGradient id="arbre-feuillage" cx="36%" cy="26%" r="78%">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="55%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2d6b1c"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="32" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M52 106 v-34 q-10 -6 -10 -14 M68 106 v-40 q10 -6 10 -14" stroke="#8a6a48" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M54 106 h12 v-46 h-12z" fill="#9c7448" stroke="#6b4a26" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="38" cy="52" r="22" fill="url(#arbre-feuillage)" stroke="#24581a" stroke-width="3.5"/>
+  <circle cx="82" cy="52" r="22" fill="url(#arbre-feuillage)" stroke="#24581a" stroke-width="3.5"/>
+  <circle cx="60" cy="36" r="26" fill="url(#arbre-feuillage)" stroke="#24581a" stroke-width="3.5"/>
+  <circle cx="60" cy="60" r="22" fill="url(#arbre-feuillage)" stroke="#24581a" stroke-width="3.5"/>
+  <g fill="#7cc266" opacity="0.55"><circle cx="48" cy="30" r="7"/><circle cx="72" cy="46" r="6"/><circle cx="34" cy="46" r="5"/></g>
+</svg>

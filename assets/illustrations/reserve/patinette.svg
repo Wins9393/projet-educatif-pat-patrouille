@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Trottinette">
+  <ellipse cx="60" cy="106" rx="40" ry="5" fill="#000" opacity="0.18"/>
+  <circle cx="26" cy="92" r="12" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="96" cy="92" r="12" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="26" cy="92" r="5" fill="#b9c2ce"/><circle cx="96" cy="92" r="5" fill="#b9c2ce"/>
+  <path d="M26 92 h70" stroke="#e03131" stroke-width="10" stroke-linecap="round"/>
+  <path d="M26 92 h70" stroke="#8f1414" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <path d="M96 92 v-58" stroke="#9aa5b4" stroke-width="9" stroke-linecap="round"/>
+  <path d="M96 92 v-58" stroke="#68727f" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <path d="M74 30 h44" stroke="#4a5464" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="76" cy="30" r="6" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+  <circle cx="116" cy="30" r="6" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+</svg>

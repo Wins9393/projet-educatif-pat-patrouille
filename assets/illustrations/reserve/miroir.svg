@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Miroir">
+  <defs><linearGradient id="miroir-glace" x1="0" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#e8f6ff"/><stop offset="50%" stop-color="#a9d0e8"/><stop offset="100%" stop-color="#6b9cbd"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M50 96 h20 v10 h-20z" fill="#c9a227" stroke="#96760a" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="54" rx="42" ry="48" fill="#f5c518" stroke="#96760a" stroke-width="3.5"/>
+  <ellipse cx="60" cy="54" rx="33" ry="39" fill="url(#miroir-glace)" stroke="#7fa8c4" stroke-width="3"/>
+  <path d="M40 32 l22 -14 M38 56 l34 -26" stroke="#fff" stroke-width="6" opacity="0.6" stroke-linecap="round"/>
+  <ellipse cx="60" cy="106" rx="22" ry="6" fill="#e0b41c" stroke="#96760a" stroke-width="3"/>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Guitare">
+  <defs><radialGradient id="guitare-caisse" cx="36%" cy="30%" r="76%">
+    <stop offset="0" stop-color="#f0b46b"/><stop offset="55%" stop-color="#c9803a"/><stop offset="100%" stop-color="#8a4f14"/>
+  </radialGradient></defs>
+  <ellipse cx="52" cy="110" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M84 34 l22 -22" stroke="#6b4620" stroke-width="10" stroke-linecap="round"/>
+  <path d="M100 8 l14 14 -8 8 -14 -14z" fill="#5f4830" stroke="#3d2c18" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M52 56 q-16 -12 -6 -26 q10 -14 26 -4 q14 8 6 24" fill="none" stroke="#8a5a24" stroke-width="4"/>
+  <path d="M56 40 q-24 6 -30 28 q-6 22 12 34 q20 12 38 -2 q16 -14 10 -34 q-6 -20 -30 -26z"
+        fill="url(#guitare-caisse)" stroke="#6f3d0c" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="54" cy="76" r="13" fill="#5f3a12" stroke="#3f2408" stroke-width="3"/>
+  <g stroke="#f2e6d0" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M44 100 l40 -60"/><path d="M50 102 l40 -60"/><path d="M56 104 l40 -60"/>
+  </g>
+  <path d="M42 96 h28" stroke="#4a3018" stroke-width="6" stroke-linecap="round"/>
+  <ellipse cx="38" cy="60" rx="8" ry="10" fill="#fff" opacity="0.22" transform="rotate(-22 38 60)"/>
+</svg>

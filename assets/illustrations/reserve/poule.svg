@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Poule">
+  <defs><linearGradient id="poule-plume" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#eef1f5"/><stop offset="100%" stop-color="#c6ccd6"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M52 104 v6 M70 104 v6" stroke="#e8a33d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M84 74 q20 -6 22 -22 q-18 4 -26 12z" fill="url(#poule-plume)" stroke="#a8b0bc" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="58" cy="78" rx="32" ry="26" fill="url(#poule-plume)" stroke="#a8b0bc" stroke-width="3.5"/>
+  <path d="M46 72 q18 -2 24 12 q-14 10 -26 0z" fill="#dfe4ea"/>
+  <circle cx="44" cy="46" r="21" fill="url(#poule-plume)" stroke="#a8b0bc" stroke-width="3.5"/>
+  <path d="M34 28 q4 -10 9 -3 q5 -8 9 0 q-8 5 -18 3z" fill="#e63946" stroke="#a01f2b" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 62 q-3 9 5 9 q7 0 5 -9z" fill="#e63946" stroke="#a01f2b" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="38" cy="43" r="5" fill="#1d2430"/><circle cx="36.5" cy="41.5" r="2" fill="#fff"/>
+  <path d="M23 48 l-13 5 13 6z" fill="#f5d547" stroke="#c9a812" stroke-width="3" stroke-linejoin="round"/>
+</svg>

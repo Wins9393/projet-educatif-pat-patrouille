@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Perle">
+  <defs>
+    <radialGradient id="perle-nacre" cx="34%" cy="28%" r="76%">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="45%" stop-color="#ffeef7"/><stop offset="100%" stop-color="#d9b8cd"/>
+    </radialGradient>
+    <linearGradient id="perle-coquille" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9a8d8"/><stop offset="100%" stop-color="#8a6ba0"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="108" rx="42" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M8 96 q0 -34 52 -34 q52 0 52 34z" fill="url(#perle-coquille)" stroke="#5f4472" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#a98cc0" stroke-width="4" fill="none" opacity="0.8">
+    <path d="M60 62 v34"/><path d="M36 68 q-6 16 -8 28"/><path d="M84 68 q6 16 8 28"/>
+  </g>
+  <circle cx="60" cy="52" r="24" fill="url(#perle-nacre)" stroke="#c49ab5" stroke-width="3"/>
+  <circle cx="50" cy="42" r="7" fill="#fff" opacity="0.85"/>
+  <path d="M8 96 h104" stroke="#5f4472" stroke-width="3.5" stroke-linecap="round"/>
+</svg>

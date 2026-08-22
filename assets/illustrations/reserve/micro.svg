@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Micro">
+  <defs><linearGradient id="micro-grille" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#c9d4e0"/><stop offset="50%" stop-color="#8b96a4"/><stop offset="100%" stop-color="#4a5464"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.18"/>
+  <rect x="50" y="62" width="20" height="34" rx="8" fill="#3a4350" stroke="#232a35" stroke-width="3.5"/>
+  <ellipse cx="60" cy="100" rx="24" ry="9" fill="#4a5464" stroke="#232a35" stroke-width="3.5"/>
+  <rect x="30" y="8" width="60" height="66" rx="30" fill="url(#micro-grille)" stroke="#333c49" stroke-width="3.5"/>
+  <g stroke="#5f6a7a" stroke-width="3" opacity="0.8">
+    <path d="M32 26 h56"/><path d="M32 40 h56"/><path d="M32 54 h56"/>
+    <path d="M46 10 v60"/><path d="M60 8 v66"/><path d="M74 10 v60"/>
+  </g>
+  <rect x="52" y="76" width="16" height="8" rx="3" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+  <path d="M40 20 q6 -8 16 -8" stroke="#fff" stroke-width="5" fill="none" opacity="0.4" stroke-linecap="round"/>
+</svg>

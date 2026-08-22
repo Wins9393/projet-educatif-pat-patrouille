@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tennis">
+  <defs><linearGradient id="tennis-cadre" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#8fb8f0"/><stop offset="50%" stop-color="#3d6fc9"/><stop offset="100%" stop-color="#1d3f80"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <g transform="rotate(-28 54 50)">
+    <ellipse cx="54" cy="42" rx="34" ry="40" fill="none" stroke="url(#tennis-cadre)" stroke-width="11"/>
+    <ellipse cx="54" cy="42" rx="28" ry="34" fill="#f2f6fb" opacity="0.25"/>
+    <g stroke="#e8edf4" stroke-width="3">
+      <path d="M34 12 v60"/><path d="M46 8 v68"/><path d="M62 8 v68"/><path d="M74 12 v60"/>
+      <path d="M26 26 h56"/><path d="M24 42 h60"/><path d="M26 58 h56"/>
+    </g>
+    <path d="M54 82 v28 q0 8 -8 8" fill="none" stroke="url(#tennis-cadre)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M54 96 v22" stroke="#2f3540" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <circle cx="94" cy="82" r="16" fill="#d9e83c" stroke="#a8b510" stroke-width="3.5"/>
+  <path d="M82 74 q10 8 0 18 M106 74 q-10 8 0 18" stroke="#fff" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>

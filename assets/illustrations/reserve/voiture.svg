@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Voiture">
+  <defs><linearGradient id="voiture-carrosserie" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7fc4f0"/><stop offset="50%" stop-color="#2b83c9"/><stop offset="100%" stop-color="#134f80"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="102" rx="46" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M18 74 q0 -18 14 -20 l8 -14 q4 -8 14 -8 h20 q10 0 14 8 l8 14 q14 2 14 20 v10 h-92z"
+        fill="url(#voiture-carrosserie)" stroke="#0f3f68" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M44 40 h14 v14 h-22z M64 40 h10 q6 0 8 6 l4 8 h-22z" fill="#c9e8fa" stroke="#0f3f68" stroke-width="3" stroke-linejoin="round"/>
+  <rect x="14" y="66" width="12" height="9" rx="4" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <rect x="94" y="66" width="12" height="9" rx="4" fill="#ff8080" stroke="#a52a2a" stroke-width="3"/>
+  <circle cx="36" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="84" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="36" cy="86" r="6" fill="#b9c2ce"/><circle cx="84" cy="86" r="6" fill="#b9c2ce"/>
+</svg>

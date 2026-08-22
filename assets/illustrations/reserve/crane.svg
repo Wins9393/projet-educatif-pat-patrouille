@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Crâne">
+  <defs><radialGradient id="crane-os" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#f0ece0"/><stop offset="100%" stop-color="#c4bda9"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="30" ry="5.5" fill="#000" opacity="0.2"/>
+  <path d="M16 56 q0 -44 44 -44 q44 0 44 44 q0 24 -16 32 v12 h-56 v-12 q-16 -8 -16 -32z"
+        fill="url(#crane-os)" stroke="#a3987f" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="40" cy="54" rx="14" ry="16" fill="#3a3428"/>
+  <ellipse cx="80" cy="54" rx="14" ry="16" fill="#3a3428"/>
+  <circle cx="36" cy="48" r="4" fill="#fff" opacity="0.35"/>
+  <path d="M60 68 l-7 12 h14z" fill="#3a3428"/>
+  <path d="M36 100 v-12 M52 100 v-12 M68 100 v-12 M84 100 v-12" stroke="#a3987f" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M28 34 q12 -14 28 -14" stroke="#fff" stroke-width="6" fill="none" opacity="0.55" stroke-linecap="round"/>
+</svg>

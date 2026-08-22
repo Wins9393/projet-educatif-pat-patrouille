@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Orange">
+  <defs><radialGradient id="orange-peau" cx="34%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#ffc46b"/><stop offset="50%" stop-color="#f58a1e"/><stop offset="100%" stop-color="#bd5604"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="68" r="40" fill="url(#orange-peau)" stroke="#9c4604" stroke-width="3.5"/>
+  <path d="M60 28 q-4 -10 -10 -14" stroke="#7a4a1e" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M58 24 q14 -14 28 -8 q-8 14 -26 14z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#c9700f" opacity="0.35"><circle cx="46" cy="80" r="3"/><circle cx="72" cy="86" r="3"/><circle cx="82" cy="62" r="3"/><circle cx="52" cy="58" r="2.6"/></g>
+  <ellipse cx="44" cy="52" rx="10" ry="13" fill="#fff" opacity="0.3" transform="rotate(-22 44 52)"/>
+</svg>

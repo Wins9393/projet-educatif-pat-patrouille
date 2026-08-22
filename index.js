@@ -1,89 +1,130 @@
-const everestBtn = document.querySelector(".everest-btn");
-const rockyBtn = document.querySelector(".rocky-btn");
-const stellaBtn = document.querySelector(".stella-btn");
-const marcusBtn = document.querySelector(".marcus-btn");
-const rubbenBtn = document.querySelector(".rubben-btn");
-const zumaBtn = document.querySelector(".zuma-btn");
-const chaseBtn = document.querySelector(".chase-btn");
-const rexBtn = document.querySelector(".rex-btn");
-const libertyBtn = document.querySelector(".liberty-btn");
+import { construitLaBarre, construitLeSelecteurDeThemes } from "./shared/interface.js";
+import * as progression from "./shared/progression.js";
+import { applique } from "./shared/rendu.js";
+import { themeActif, themeSuivant, choisitLeTheme } from "./shared/themes.js";
+import { niveauParId } from "./shared/niveaux.js";
+import { reglages } from "./shared/reglages.js";
+import { prononce } from "./shared/voix.js";
 
-const dynamicContent = document.querySelector(".dynamic-content");
-const tabImages = [];
+const JEUX = [
+  { id: "ecrire", nom: "ÉCRIRE", icone: "✏️", desc: "Retrouve les lettres du mot", lien: "views/ecrire.html" },
+  { id: "lire", nom: "LIRE", icone: "📖", desc: "Associe le mot à son image", lien: "views/lire.html" },
+  { id: "compter", nom: "COMPTER", icone: "🔢", desc: "Combien y en a-t-il ?", lien: "views/compter.html" },
+  { id: "calculer", nom: "CALCULER", icone: "➕", desc: "Compose le bon total", lien: "views/calculer.html" },
+  { id: "memory", nom: "MEMORY", icone: "🃏", desc: "Retrouve les paires", lien: "views/memory.html" },
+];
 
-if (!tabImages.length) {
-  const logoPP = document.createElement("img");
-  logoPP.src = "assets/logo-pp.gif";
-  dynamicContent.append(logoPP);
-}
+const accueil = document.querySelector(".accueil");
+const listeDesJeux = document.querySelector(".jeux");
+const zoneThemes = document.querySelector(".selecteur-themes");
+const zoneAutocollants = document.querySelector(".autocollants");
+const jauge = document.querySelector(".progression-barre__jauge");
+const legende = document.querySelector(".progression-legende");
+const titre = document.querySelector(".accueil__titre");
 
-everestBtn.addEventListener("click", () => {
-  ajouteUnChiot("everest");
-  afficheLesChiots(tabImages);
-});
+const construitLesJeux = () => {
+  listeDesJeux.innerHTML = "";
+  const stats = progression.profil().parJeu;
 
-rockyBtn.addEventListener("click", () => {
-  ajouteUnChiot("rocky");
-  afficheLesChiots(tabImages);
-});
+  JEUX.forEach((jeu) => {
+    const carte = document.createElement("a");
+    carte.className = "jeu";
+    carte.href = jeu.lien;
 
-stellaBtn.addEventListener("click", () => {
-  ajouteUnChiot("stella");
-  afficheLesChiots(tabImages);
-});
+    const reussites = stats[jeu.id]?.reussites ?? 0;
 
-marcusBtn.addEventListener("click", () => {
-  ajouteUnChiot("marcus");
-  afficheLesChiots(tabImages);
-});
+    carte.innerHTML = `
+      <span class="jeu__icone" aria-hidden="true">${jeu.icone}</span>
+      <span class="jeu__nom">${jeu.nom}</span>
+      <span class="jeu__desc">${jeu.desc}</span>
+      <span class="jeu__compteur">${reussites > 0 ? `⭐ ${reussites}` : "à découvrir"}</span>
+    `;
 
-rubbenBtn.addEventListener("click", () => {
-  ajouteUnChiot("ruben");
-  afficheLesChiots(tabImages);
-});
-
-zumaBtn.addEventListener("click", () => {
-  ajouteUnChiot("zuma");
-  afficheLesChiots(tabImages);
-});
-
-chaseBtn.addEventListener("click", () => {
-  ajouteUnChiot("chase");
-  afficheLesChiots(tabImages);
-});
-
-rexBtn.addEventListener("click", () => {
-  ajouteUnChiot("rex");
-  afficheLesChiots(tabImages);
-});
-
-libertyBtn.addEventListener("click", () => {
-  ajouteUnChiot("liberty");
-  afficheLesChiots(tabImages);
-});
-
-const ajouteUnChiot = (chiot) => {
-  if (!tabImages.includes(chiot)) {
-    tabImages.push(chiot);
-  } else {
-    tabImages.splice(tabImages.indexOf(chiot), 1);
-  }
-};
-
-const afficheLesChiots = (tabImages) => {
-  dynamicContent.innerHTML = "";
-
-  if (!tabImages.length) {
-    const logoPP = document.createElement("img");
-    logoPP.src = "assets/logo-pp.gif";
-    dynamicContent.append(logoPP);
-  }
-
-  tabImages.forEach((chiot) => {
-    const baliseImg = document.createElement("img");
-
-    baliseImg.src = `assets/${chiot}.png`;
-    baliseImg.classList.add("image-chiots");
-    dynamicContent.append(baliseImg);
+    carte.addEventListener("pointerenter", () => prononce(jeu.nom));
+    listeDesJeux.append(carte);
   });
 };
+
+const construitLesAutocollants = () => {
+  zoneAutocollants.innerHTML = "";
+  const obtenus = progression.autocollantsObtenus();
+
+  progression.AUTOCOLLANTS.forEach((autocollant) => {
+    const debloque = obtenus.includes(autocollant);
+    const jeton = document.createElement("span");
+
+    jeton.className = debloque ? "autocollant" : "autocollant autocollant--verrouille";
+    jeton.textContent = autocollant.emoji;
+    jeton.setAttribute("role", "img");
+    jeton.setAttribute(
+      "aria-label",
+      debloque ? `${autocollant.nom}, débloqué` : `${autocollant.nom}, à débloquer à ${autocollant.seuil} réussites`
+    );
+    jeton.title = jeton.getAttribute("aria-label");
+
+    zoneAutocollants.append(jeton);
+  });
+
+  const reussites = progression.profil().reussites;
+  const prochain = progression.prochainAutocollant();
+
+  if (prochain) {
+    const precedent = progression.autocollantsObtenus().at(-1)?.seuil ?? 0;
+    const avance = ((reussites - precedent) / (prochain.seuil - precedent)) * 100;
+
+    jauge.style.width = `${Math.max(0, Math.min(100, avance))}%`;
+    legende.textContent = `Encore ${prochain.seuil - reussites} réussite${prochain.seuil - reussites > 1 ? "s" : ""} pour débloquer ${prochain.emoji}`;
+  } else {
+    jauge.style.width = "100%";
+    legende.textContent = "Tous les autocollants sont débloqués. Bravo !";
+  }
+};
+
+const rafraichit = () => {
+  const theme = themeActif();
+  applique(theme);
+
+  titre.textContent = "Les Petits Mondes";
+  document.querySelector(".accueil__sous-titre").textContent = `Univers : ${theme.nom} ${theme.vignette}`;
+
+  construitLesJeux();
+  construitLesAutocollants();
+};
+
+accueil.prepend(construitLaBarre({ niveau: niveauParId(reglages().niveau) }));
+zoneThemes.append(construitLeSelecteurDeThemes(rafraichit));
+
+document.querySelector('[data-action="theme-surprise"]').addEventListener("click", () => {
+  const theme = themeSuivant();
+  choisitLeTheme(theme.id);
+
+  zoneThemes.innerHTML = "";
+  zoneThemes.append(construitLeSelecteurDeThemes(rafraichit));
+
+  rafraichit();
+  prononce(`Univers ${theme.nom}`);
+});
+
+window.addEventListener("progression-modifiee", rafraichit);
+window.addEventListener("reglages-modifies", rafraichit);
+
+rafraichit();
+
+/**
+ * Le catalogue de thèmes utilise un await de plus haut niveau : ce module
+ * s'exécute donc après l'événement load. Attendre cet événement ne
+ * déclencherait jamais l'enregistrement, on teste l'état du document.
+ */
+const activeLeModeHorsLigne = () => {
+  if (!("serviceWorker" in navigator)) return;
+
+  navigator.serviceWorker.register("service-worker.js").catch(() => {
+    // Hors ligne indisponible : le jeu fonctionne quand même en ligne.
+  });
+};
+
+if (document.readyState === "complete") {
+  activeLeModeHorsLigne();
+} else {
+  window.addEventListener("load", activeLeModeHorsLigne, { once: true });
+}

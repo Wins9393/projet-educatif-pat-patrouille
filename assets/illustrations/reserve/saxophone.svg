@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Saxophone">
+  <defs><linearGradient id="saxophone-laiton" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe08a"/><stop offset="50%" stop-color="#e0a516"/><stop offset="100%" stop-color="#8f6f04"/>
+  </linearGradient></defs>
+  <ellipse cx="56" cy="110" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M74 10 q-16 4 -16 22 v40 q0 22 -22 22 q-22 0 -22 -22 q0 -14 14 -16"
+        fill="none" stroke="url(#saxophone-laiton)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M74 10 q-16 4 -16 22 v40 q0 22 -22 22 q-22 0 -22 -22 q0 -14 14 -16"
+        fill="none" stroke="#7c6008" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  <path d="M14 82 q-10 12 2 22 q14 10 28 -2 q-16 4 -22 -6z" fill="url(#saxophone-laiton)" stroke="#7c6008" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M76 10 q10 -6 16 0 q-4 10 -14 10z" fill="#2f3540" stroke="#1b1f27" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#f2f6fb" stroke="#7c6008" stroke-width="3">
+    <circle cx="58" cy="38" r="5"/><circle cx="58" cy="54" r="5"/><circle cx="58" cy="70" r="5"/><circle cx="48" cy="84" r="5"/>
+  </g>
+  <path d="M64 24 v40" stroke="#fff" stroke-width="4" opacity="0.35" stroke-linecap="round"/>
+</svg>

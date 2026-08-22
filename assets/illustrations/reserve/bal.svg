@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Bal">
+  <defs><radialGradient id="bal-boule" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#e8f4ff"/><stop offset="50%" stop-color="#9fb8d0"/><stop offset="100%" stop-color="#5c7086"/>
+  </radialGradient></defs>
+  <path d="M60 8 v14" stroke="#8b96a4" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="60" cy="52" r="30" fill="url(#bal-boule)" stroke="#42546a" stroke-width="3.5"/>
+  <g stroke="#42546a" stroke-width="3" opacity="0.7">
+    <path d="M30 52 h60"/><path d="M34 38 h52"/><path d="M34 66 h52"/>
+    <path d="M60 22 v60"/><path d="M46 25 v54"/><path d="M74 25 v54"/>
+  </g>
+  <g fill="#fff" opacity="0.55"><rect x="48" y="30" width="10" height="8"/><rect x="62" y="44" width="10" height="8"/><rect x="36" y="56" width="10" height="8"/></g>
+  <g stroke="#f5c518" stroke-width="5" stroke-linecap="round" opacity="0.9">
+    <path d="M22 88 l-14 18"/><path d="M60 92 v20"/><path d="M98 88 l14 18"/>
+    <path d="M36 92 l-8 20"/><path d="M84 92 l8 20"/>
+  </g>
+  <g fill="#ffd166"><circle cx="14" cy="76" r="4"/><circle cx="106" cy="76" r="4"/></g>
+</svg>

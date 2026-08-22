@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Dragon">
+  <defs><linearGradient id="dragon-ecailles" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#8fd47a"/><stop offset="55%" stop-color="#4f9c3c"/><stop offset="100%" stop-color="#2a6b1c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="34" ry="5" fill="#000" opacity="0.18"/>
+  <path d="M84 96 q26 -6 24 -30 q-2 -14 -14 -10 q10 14 -2 24 q-8 8 -18 8z" fill="url(#dragon-ecailles)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M56 44 q26 -18 34 4 q6 18 -8 26 q6 16 -10 24 q-20 8 -32 -6 q-12 -16 0 -32z"
+        fill="url(#dragon-ecailles)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M64 46 l6 -18 12 14 12 -12 2 20z" fill="#3fb56b" stroke="#215417" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 58 q-22 -10 -30 4 q-6 14 10 18 q14 4 22 -8z" fill="url(#dragon-ecailles)" stroke="#215417" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M10 70 q-8 4 -8 10 q10 4 14 -2z" fill="#e8f0b8" stroke="#215417" stroke-width="3" stroke-linejoin="round"/>
+  <g stroke="#f5891e" stroke-width="5" stroke-linecap="round"><path d="M4 80 l-4 8 M2 74 l-8 2"/></g>
+  <circle cx="34" cy="58" r="6" fill="#f5d547"/><circle cx="34" cy="58" r="3" fill="#1d2430"/>
+  <g fill="#7cc266" opacity="0.6"><circle cx="66" cy="72" r="5"/><circle cx="52" cy="82" r="4.5"/><circle cx="76" cy="84" r="4"/></g>
+</svg>

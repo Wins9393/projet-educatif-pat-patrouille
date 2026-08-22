@@ -1,0 +1,282 @@
+/* ================================================================== */
+/* Décors de thème                                                     */
+/*                                                                     */
+/* Chaque thème déclare un décor ; il est posé en fond de page par      */
+/* deux couches fixes, peintes une fois et plus jamais retouchées.      */
+/*                                                                      */
+/* Ces couches ont été animées, puis figées : deux calques plein écran  */
+/* qui dérivent en continu tiennent le GPU éveillé en permanence, et    */
+/* chauffent la machine pour un mouvement que personne ne regarde.      */
+/* ================================================================== */
+
+.decor {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+  /* Les motifs étaient calibrés pour un dégradé sombre ; sur un aplat franc
+     ils ne sont plus qu'une texture, en retrait. */
+  opacity: 0.45;
+}
+
+.decor::before,
+.decor::after {
+  content: "";
+  position: absolute;
+  /* Les couches débordaient de 25 % pour avoir de quoi dériver ; immobiles,
+     elles se contentent de l'écran, et le navigateur peint d'autant moins. */
+  inset: 0;
+  background-repeat: repeat;
+}
+
+/* ---------------------------------------------------------------- */
+/* Étoiles : deux nappes qui dérivent à des vitesses différentes,    */
+/* ce qui crée une profondeur sans la moindre image.                 */
+/* ---------------------------------------------------------------- */
+
+.decor--etoiles::before {
+  background-image:
+    radial-gradient(1.6px 1.6px at 20% 30%, #fff, transparent),
+    radial-gradient(1.4px 1.4px at 70% 65%, #fff, transparent),
+    radial-gradient(1.8px 1.8px at 45% 15%, #e8f0ff, transparent),
+    radial-gradient(1.2px 1.2px at 85% 40%, #fff, transparent),
+    radial-gradient(1.5px 1.5px at 12% 78%, #fff, transparent);
+  background-size: 320px 320px;
+  opacity: 0.75;
+}
+
+.decor--etoiles::after {
+  background-image:
+    radial-gradient(2.4px 2.4px at 60% 20%, #ffd9a0, transparent),
+    radial-gradient(2px 2px at 25% 55%, #cfe4ff, transparent),
+    radial-gradient(2.2px 2.2px at 90% 80%, #fff, transparent);
+  background-size: 520px 520px;
+  opacity: 0.55;
+}
+
+/* ---------------------------------------------------------------- */
+/* Bulles : montée continue, tailles variées                         */
+/* ---------------------------------------------------------------- */
+
+.decor--bulles::before {
+  background-image:
+    radial-gradient(9px 9px at 15% 90%, rgba(255, 255, 255, 0.24), transparent),
+    radial-gradient(5px 5px at 45% 95%, rgba(255, 255, 255, 0.3), transparent),
+    radial-gradient(13px 13px at 75% 88%, rgba(255, 255, 255, 0.16), transparent),
+    radial-gradient(7px 7px at 92% 93%, rgba(255, 255, 255, 0.22), transparent);
+  background-size: 340px 340px;
+}
+
+.decor--bulles::after {
+  background-image:
+    radial-gradient(16px 16px at 30% 92%, rgba(255, 255, 255, 0.12), transparent),
+    radial-gradient(11px 11px at 65% 96%, rgba(255, 255, 255, 0.15), transparent);
+  background-size: 560px 560px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Feuilles : chute lente et oblique                                 */
+/* ---------------------------------------------------------------- */
+
+.decor--feuilles::before {
+  background-image:
+    radial-gradient(7px 4px at 20% 10%, rgba(180, 240, 170, 0.3), transparent),
+    radial-gradient(6px 3px at 62% 25%, rgba(255, 220, 140, 0.26), transparent),
+    radial-gradient(8px 4px at 88% 8%, rgba(160, 220, 160, 0.24), transparent);
+  background-size: 380px 380px;
+}
+
+.decor--feuilles::after {
+  background-image:
+    radial-gradient(10px 5px at 40% 15%, rgba(210, 250, 200, 0.16), transparent),
+    radial-gradient(9px 4px at 75% 30%, rgba(255, 235, 170, 0.14), transparent);
+  background-size: 620px 620px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Circuits : trame technique qui défile                             */
+/* ---------------------------------------------------------------- */
+
+.decor--circuits::before {
+  background-image:
+    linear-gradient(rgba(0, 212, 255, 0.09) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 212, 255, 0.09) 1px, transparent 1px);
+  background-size: 56px 56px;
+}
+
+.decor--circuits::after {
+  background-image:
+    radial-gradient(3px 3px at 25% 25%, rgba(0, 212, 255, 0.5), transparent),
+    radial-gradient(3px 3px at 75% 75%, rgba(0, 212, 255, 0.4), transparent);
+  background-size: 224px 224px;
+  opacity: 0.55;
+}
+
+/* ---------------------------------------------------------------- */
+/* Étincelles : paillettes qui apparaissent et disparaissent         */
+/* ---------------------------------------------------------------- */
+
+.decor--etincelles::before {
+  background-image:
+    radial-gradient(2.5px 2.5px at 18% 22%, rgba(255, 235, 250, 0.9), transparent),
+    radial-gradient(2px 2px at 58% 48%, rgba(255, 214, 236, 0.85), transparent),
+    radial-gradient(3px 3px at 82% 30%, rgba(255, 255, 255, 0.8), transparent),
+    radial-gradient(2px 2px at 35% 75%, rgba(255, 224, 245, 0.8), transparent);
+  background-size: 300px 300px;
+  opacity: 0.6;
+}
+
+.decor--etincelles::after {
+  background-image:
+    radial-gradient(4px 4px at 68% 66%, rgba(255, 255, 255, 0.55), transparent),
+    radial-gradient(3.5px 3.5px at 12% 44%, rgba(255, 205, 235, 0.5), transparent);
+  background-size: 480px 480px;
+  opacity: 0.6;
+}
+
+/* ---------------------------------------------------------------- */
+/* Prairie : nuages doux qui traversent                              */
+/* ---------------------------------------------------------------- */
+
+.decor--prairie::before {
+  background-image:
+    radial-gradient(120px 44px at 20% 18%, rgba(255, 255, 255, 0.16), transparent),
+    radial-gradient(90px 34px at 72% 30%, rgba(255, 255, 255, 0.12), transparent);
+  background-size: 760px 760px;
+}
+
+.decor--prairie::after {
+  background-image:
+    radial-gradient(150px 52px at 45% 12%, rgba(255, 255, 255, 0.1), transparent);
+  background-size: 1000px 1000px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Route : marquage au sol qui défile                                */
+/* ---------------------------------------------------------------- */
+
+.decor--route::before {
+  background-image: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.14) 0 34px,
+    transparent 34px 92px
+  );
+  background-size: 190px 126px;
+}
+
+.decor--route::after {
+  background-image:
+    radial-gradient(3px 3px at 50% 50%, rgba(255, 183, 3, 0.35), transparent);
+  background-size: 260px 260px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Douceur : halos flous qui respirent                               */
+/* ---------------------------------------------------------------- */
+
+.decor--douceur::before {
+  background-image:
+    radial-gradient(180px 180px at 22% 28%, rgba(255, 214, 165, 0.16), transparent),
+    radial-gradient(150px 150px at 78% 66%, rgba(255, 235, 205, 0.13), transparent);
+  background-size: 820px 820px;
+  opacity: 0.85;
+}
+
+.decor--douceur::after {
+  background-image:
+    radial-gradient(220px 220px at 55% 82%, rgba(255, 255, 255, 0.08), transparent);
+  background-size: 1000px 1000px;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------------------------- */
+/* Pluie : traits fins et rapides                                    */
+/* ---------------------------------------------------------------- */
+
+.decor--pluie::before {
+  background-image: repeating-linear-gradient(
+    18deg,
+    rgba(200, 230, 255, 0.22) 0 2px,
+    transparent 2px 22px
+  );
+  background-size: 200px 200px;
+}
+
+.decor--pluie::after {
+  background-image:
+    radial-gradient(4px 4px at 30% 70%, rgba(200, 230, 255, 0.2), transparent),
+    radial-gradient(3px 3px at 80% 40%, rgba(200, 230, 255, 0.16), transparent);
+  background-size: 420px 420px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Ondes : cercles concentriques qui se dilatent                     */
+/* ---------------------------------------------------------------- */
+
+.decor--ondes::before {
+  background-image: repeating-radial-gradient(
+    circle at 50% 50%,
+    rgba(255, 198, 255, 0.14) 0 2px,
+    transparent 2px 60px
+  );
+  background-size: 100% 100%;
+  opacity: 0.85;
+}
+
+.decor--ondes::after {
+  background-image: repeating-radial-gradient(
+    circle at 20% 80%,
+    rgba(255, 255, 255, 0.09) 0 2px,
+    transparent 2px 90px
+  );
+  background-size: 100% 100%;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------------------------- */
+/* Énergie : rayons obliques qui balaient                            */
+/* ---------------------------------------------------------------- */
+
+.decor--energie::before {
+  background-image: repeating-linear-gradient(
+    115deg,
+    rgba(255, 209, 102, 0.09) 0 20px,
+    transparent 20px 90px
+  );
+  background-size: 600px 600px;
+}
+
+.decor--energie::after {
+  background-image:
+    radial-gradient(200px 200px at 70% 30%, rgba(255, 209, 102, 0.1), transparent);
+  background-size: 900px 900px;
+  opacity: 0.85;
+}
+
+/* ---------------------------------------------------------------- */
+/* Mélange : des halos de toutes les couleurs, un par univers, qui    */
+/* dérivent et respirent. Le fond de « Tout », qui n'appartient à     */
+/* aucun thème en particulier.                                        */
+/* ---------------------------------------------------------------- */
+
+.decor--melange::before {
+  background-image:
+    radial-gradient(58px 58px at 16% 24%, rgba(255, 209, 102, 0.22), transparent),
+    radial-gradient(52px 52px at 74% 18%, rgba(123, 223, 242, 0.2), transparent),
+    radial-gradient(64px 64px at 42% 70%, rgba(255, 198, 255, 0.18), transparent),
+    radial-gradient(48px 48px at 88% 62%, rgba(199, 249, 204, 0.18), transparent),
+    radial-gradient(56px 56px at 8% 82%, rgba(244, 162, 97, 0.16), transparent);
+  background-size: 620px 620px;
+  opacity: 0.85;
+}
+
+.decor--melange::after {
+  background-image:
+    radial-gradient(2.4px 2.4px at 28% 36%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(2px 2px at 66% 56%, rgba(255, 235, 200, 0.6), transparent),
+    radial-gradient(2.8px 2.8px at 84% 22%, rgba(214, 236, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 14% 66%, rgba(255, 214, 236, 0.6), transparent);
+  background-size: 340px 340px;
+  opacity: 0.6;
+}

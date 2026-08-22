@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Violon">
+  <defs><radialGradient id="violon-caisse" cx="36%" cy="30%" r="76%">
+    <stop offset="0" stop-color="#e08a4e"/><stop offset="55%" stop-color="#a85a1e"/><stop offset="100%" stop-color="#6f3306"/>
+  </radialGradient></defs>
+  <ellipse cx="54" cy="110" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M78 44 l26 -32" stroke="#6b4620" stroke-width="8" stroke-linecap="round"/>
+  <path d="M98 8 q10 4 8 14 l-10 -6z" fill="#5f4830" stroke="#3d2c18" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M60 48 q-18 4 -20 20 q-2 12 8 16 q-12 6 -10 20 q2 16 20 16 q18 0 20 -16 q2 -14 -10 -20 q10 -4 8 -16 q-2 -16 -16 -20z"
+        fill="url(#violon-caisse)" stroke="#5c2a04" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#3f2408"><path d="M40 78 q-4 8 0 14 M78 78 q4 8 0 14" stroke="#3f2408" stroke-width="4" fill="none" stroke-linecap="round"/></g>
+  <g stroke="#f2e6d0" stroke-width="3" stroke-linecap="round" opacity="0.9">
+    <path d="M52 106 l24 -60"/><path d="M57 107 l24 -60"/><path d="M62 108 l24 -60"/>
+  </g>
+  <path d="M48 100 h24" stroke="#3f2408" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 40 l70 44" stroke="#c9925c" stroke-width="5" stroke-linecap="round"/>
+  <path d="M14 40 l70 44" stroke="#f2e6d0" stroke-width="3" stroke-linecap="round"/>
+</svg>

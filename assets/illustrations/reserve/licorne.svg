@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Licorne">
+  <defs>
+    <linearGradient id="licorne-robe" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#f2ecf8"/><stop offset="100%" stop-color="#cdbfdc"/>
+    </linearGradient>
+    <linearGradient id="licorne-criniere" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ff8fb8"/><stop offset="50%" stop-color="#a97fd8"/><stop offset="100%" stop-color="#5cb8e8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M52 108 v-24 M74 108 v-26" stroke="#cdbfdc" stroke-width="10" stroke-linecap="round"/>
+  <ellipse cx="66" cy="76" rx="32" ry="24" fill="url(#licorne-robe)" stroke="#a897bd" stroke-width="3.5"/>
+  <path d="M94 76 q18 -6 16 -26" stroke="url(#licorne-criniere)" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M40 60 q-14 -12 -12 -28 q2 -12 14 -10 q14 4 16 20 l2 16z" fill="url(#licorne-robe)" stroke="#a897bd" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M32 26 l4 -20 8 18z" fill="#f5c518" stroke="#a8830a" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M46 20 q14 8 14 26 q0 14 -4 20" stroke="url(#licorne-criniere)" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M24 22 l-6 -12 12 4z" fill="url(#licorne-robe)" stroke="#a897bd" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="34" cy="38" r="4.5" fill="#2f3540"/><circle cx="32.6" cy="36.6" r="1.8" fill="#fff"/>
+  <ellipse cx="26" cy="52" rx="6" ry="5" fill="#e8bcd0"/>
+</svg>

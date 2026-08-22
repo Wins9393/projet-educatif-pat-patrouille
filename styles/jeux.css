@@ -1,0 +1,633 @@
+/* ================================================================== */
+/* Écrans de jeu                                                       */
+/* ================================================================== */
+
+.jeu-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.plateau {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 16px;
+  padding: 16px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.consigne {
+  display: flex;
+  align-items: center;
+  align-self: center;
+  width: fit-content;
+  gap: 12px;
+  font-size: clamp(0.95rem, 2.2vw, 1.15rem);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 8px 18px;
+  color: var(--texte);
+  background: var(--levre);
+  border-radius: 999px;
+}
+
+/* Zone de la question : grande image, ou mot à lire */
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22vh;
+  --taille-visuel: clamp(6rem, 22vh, 12rem);
+}
+
+.question img {
+  max-height: 22vh;
+  max-width: 60vw;
+  object-fit: contain;
+}
+
+/* Les réponses proposées */
+.choix {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 2vw, 20px);
+  width: 100%;
+  --taille-visuel: clamp(3.5rem, 11vh, 6rem);
+  --taille-caractere: clamp(2.8rem, 9vh, 5rem);
+}
+
+.choix__bouton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 88px;
+  min-height: 88px;
+  padding: 10px;
+  background: var(--bloc);
+  border: 0;
+  border-radius: var(--rayon-lg);
+  box-shadow: 0 var(--epaisseur) 0 var(--levre);
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+.choix__bouton img {
+  max-height: 14vh;
+  max-width: 22vw;
+  object-fit: contain;
+}
+
+.choix__bouton:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 calc(var(--epaisseur) + 3px) 0 var(--levre);
+}
+
+.choix__bouton:active {
+  transform: translateY(calc(var(--epaisseur) - 1px));
+  box-shadow: 0 1px 0 var(--levre);
+}
+
+/* La bonne réponse se signale par une couleur franche, pas par un halo. */
+.choix__bouton--juste {
+  box-shadow: 0 var(--epaisseur) 0 var(--succes-levre);
+  outline: 5px solid var(--succes);
+  outline-offset: -5px;
+  animation: pulse 0.6s ease;
+}
+
+.choix__bouton--faux {
+  animation: secousse 0.4s ease;
+  box-shadow: 0 var(--epaisseur) 0 var(--erreur-levre);
+  outline: 5px solid var(--erreur);
+  outline-offset: -5px;
+}
+
+.choix__bouton--efface {
+  display: none;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@keyframes secousse {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-9px); }
+  75% { transform: translateX(9px); }
+}
+
+/* Le mot en cours de construction (jeu ÉCRIRE) */
+.mot-en-cours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 12vh;
+  --taille-caractere: clamp(2.2rem, 8vh, 4.5rem);
+}
+
+.mot-en-cours__case {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: clamp(38px, 9vw, 64px);
+  min-height: clamp(48px, 11vh, 80px);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.16);
+}
+
+.mot-en-cours__case img {
+  max-height: 10vh;
+}
+
+.mot-en-cours__case--remplie {
+  background: var(--bloc);
+  box-shadow: 0 4px 0 var(--levre);
+  animation: apparait 0.4s ease;
+}
+
+@keyframes apparait {
+  from { transform: scale(2.2) translateY(-20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+
+/* Le mot à lire (jeu LIRE) */
+.mot-a-lire {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 18px 34px;
+  background: var(--bloc);
+  border-radius: var(--rayon-lg);
+  box-shadow: 0 var(--epaisseur) 0 var(--levre);
+  --taille-caractere: clamp(2.6rem, 10vh, 5.4rem);
+}
+
+.mot-a-lire img {
+  max-height: 12vh;
+}
+
+/* ---------------------------------------------------------------- */
+/* COMPTER : les objets à dénombrer                                  */
+/* ---------------------------------------------------------------- */
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(4px, 1.5vw, 14px);
+  min-height: 26vh;
+  padding: 12px;
+  --taille-visuel: clamp(2.5rem, 8vh, 4.5rem);
+}
+
+.collection img {
+  max-height: 9vh;
+}
+
+/* ---------------------------------------------------------------- */
+/* CALCULER : glisser-déposer                                        */
+/* ---------------------------------------------------------------- */
+
+.calculer {
+  flex: 1;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+  gap: 12px;
+  padding: 12px;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.calculer__bas {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 8px;
+}
+
+.calculer__haut {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 16px;
+  --taille-caractere: clamp(3rem, 12vh, 7rem);
+}
+
+.objectif,
+.total {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.objectif__valeur,
+.total__valeur {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+/* Ces chiffres-là ne sont pas dans un bloc clair : ils gardent le blanc. */
+.objectif__valeur .caractere-texte,
+.total__valeur .caractere-texte {
+  color: var(--texte);
+}
+
+.objectif__valeur img,
+.total__valeur img {
+  max-height: 14vh;
+}
+
+.objectif__etiquette,
+.total__etiquette {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+.receptacle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(140px, 26vh, 240px);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--bloc);
+  border: 6px solid var(--erreur);
+  box-shadow: 0 var(--epaisseur) 0 var(--erreur-levre);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  --taille-visuel: clamp(6rem, 20vh, 12rem);
+}
+
+.receptacle img {
+  max-height: 80%;
+  max-width: 80%;
+  object-fit: contain;
+}
+
+.receptacle--pret {
+  border-color: var(--succes);
+  box-shadow: 0 var(--epaisseur) 0 var(--succes-levre);
+}
+
+.reserve {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: clamp(6px, 2vw, 18px);
+  padding: 8px 0;
+}
+
+.jeton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  padding: 8px 10px;
+  background: var(--bloc);
+  border: 0;
+  border-radius: var(--rayon);
+  box-shadow: 0 4px 0 var(--levre);
+  touch-action: none;
+  cursor: grab;
+  user-select: none;
+  --taille-visuel: clamp(1.8rem, 5vh, 3rem);
+}
+
+.jeton img {
+  max-height: 5vh;
+}
+
+.jeton--pris {
+  cursor: grabbing;
+  position: fixed;
+  z-index: 20;
+  filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.4));
+}
+
+.jeton--pose {
+  opacity: 0.55;
+  border-style: dashed;
+}
+
+/* ---------------------------------------------------------------- */
+/* Bandeau de victoire                                               */
+/* ---------------------------------------------------------------- */
+
+.victoire {
+  position: fixed;
+  inset: 0;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 24px;
+  text-align: center;
+  background: rgba(12, 16, 28, 0.72);
+  z-index: 30;
+}
+
+.victoire--visible {
+  display: flex;
+}
+
+.victoire__emoji {
+  font-size: clamp(4rem, 18vh, 9rem);
+  animation: pulse 0.8s ease;
+}
+
+.victoire__texte {
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  font-weight: 800;
+}
+
+/* Posée sur le voile sombre, cette pastille est claire : son texte doit
+   repasser en encre, il hérite sinon du blanc de l'écran de victoire. */
+.victoire__recompense {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 22px;
+  font-weight: 700;
+  color: var(--encre);
+  background: var(--bloc);
+  border-radius: 999px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 600px) {
+  .plateau {
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .choix__bouton {
+    min-width: 72px;
+    min-height: 72px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* CALCULER sur petit écran : l'objectif et le total doivent tenir    */
+/* de part et d'autre du réceptacle sans déborder.                    */
+/* ---------------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  .calculer__haut {
+    justify-content: space-between;
+    gap: 4px;
+    --taille-caractere: clamp(2rem, 9vw, 3.5rem);
+  }
+
+  .objectif,
+  .total {
+    flex: 0 0 auto;
+    min-width: 0;
+  }
+
+  .objectif__etiquette,
+  .total__etiquette {
+    font-size: 0.7rem;
+  }
+
+  .receptacle {
+    width: clamp(120px, 42vw, 190px);
+    --taille-visuel: clamp(4.5rem, 28vw, 8rem);
+  }
+
+  .jeton {
+    --taille-visuel: clamp(1rem, 3.6vw, 1.8rem);
+    padding: 6px;
+  }
+
+  .reserve {
+    gap: 6px;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* CALCULER : mode opération posée                                   */
+/* ---------------------------------------------------------------- */
+
+.mode-operation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(16px, 4vh, 36px);
+}
+
+.operation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+.operation__enonce {
+  font-size: clamp(2.4rem, 9vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--encre);
+  background: var(--bloc);
+  padding: 10px 30px;
+  border-radius: var(--rayon-lg);
+  box-shadow: 0 var(--epaisseur) 0 var(--levre);
+}
+
+.operation__illustration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 14px;
+  --taille-visuel: clamp(2rem, 6vw, 3.2rem);
+}
+
+.operation__groupe {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 2px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+
+.operation__signe {
+  font-size: clamp(1.6rem, 5vw, 2.4rem);
+  font-weight: 700;
+  opacity: 0.85;
+}
+
+/* Objet retiré par une soustraction : nettement barré, pour que l'enfant
+   voie immédiatement ce qui est enlevé. */
+.operation__retire {
+  opacity: 0.4;
+  position: relative;
+  filter: grayscale(0.7);
+}
+
+.operation__retire::before,
+.operation__retire::after {
+  content: "";
+  position: absolute;
+  inset: 48% -10% auto -10%;
+  height: 5px;
+  border-radius: 3px;
+  background: var(--erreur);
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.45);
+}
+
+.operation__retire::before {
+  transform: rotate(24deg);
+}
+
+.operation__retire::after {
+  transform: rotate(-24deg);
+}
+
+.mode-collecte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+/* Sur un écran étroit et haut, l'illustration ne doit pas repousser les
+   réponses hors de vue : elle cède de la hauteur au reste du plateau. */
+@media (max-width: 620px) {
+  .question {
+    min-height: 16vh;
+    --taille-visuel: clamp(4.5rem, 26vw, 8rem);
+  }
+
+  .question img {
+    max-height: 18vh;
+  }
+
+  .plateau {
+    justify-content: space-around;
+    padding: 12px 12px 20px;
+  }
+
+  .mot-en-cours {
+    min-height: 9vh;
+  }
+}
+
+/* ---------------------------------------------------------------- */
+/* MEMORY : un tapis de cartes qui se retournent                     */
+/* ---------------------------------------------------------------- */
+
+.memory {
+  display: grid;
+  grid-template-columns: repeat(var(--colonnes, 4), 1fr);
+  gap: clamp(6px, 1.4vw, 14px);
+  width: 100%;
+  /* Les cartes sont carrées : leur taille suit la largeur du tapis. Sur un
+     écran bas — une tablette couchée — cette largeur est donc plafonnée par
+     la hauteur restante, sinon le bouton « Nouvelle partie » sort de l'écran. */
+  max-width: min(100%, 640px, calc((100dvh - 250px) / var(--lignes, 3) * var(--colonnes, 4)));
+  --taille-visuel: clamp(1.6rem, 7vh, 3.6rem);
+}
+
+.carte-memo {
+  aspect-ratio: 1;
+  padding: 0;
+  background: none;
+  border: 0;
+  border-radius: var(--rayon);
+  cursor: pointer;
+  perspective: 800px;
+}
+
+.carte-memo__pivot {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+
+/* Les deux faces occupent la même place ; seule celle tournée vers nous est
+   peinte, ce qui évite de dupliquer la mise en page. */
+.carte-memo__face {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--rayon);
+  backface-visibility: hidden;
+}
+
+/* Les deux faces sont opaques : une face translucide laisserait voir la
+   vignette du dos sous l'image, et l'enfant hésiterait entre les deux. */
+.carte-memo__dos {
+  font-size: clamp(1.4rem, 5vh, 2.4rem);
+  background: var(--levre);
+  box-shadow: 0 var(--epaisseur) 0 rgba(0, 0, 0, 0.34);
+}
+
+/* La vignette du thème habille le dos sans se faire passer pour une carte. */
+.carte-memo__vignette {
+  opacity: 0.5;
+}
+
+/* Retournée, la carte devient un bloc clair cerné d'accent : d'un coup d'œil
+   on voit ce qui est ouvert. */
+.carte-memo__avant {
+  background: var(--bloc);
+  outline: 4px solid var(--action);
+  outline-offset: -4px;
+  box-shadow: 0 var(--epaisseur) 0 var(--action-levre);
+  transform: rotateY(180deg);
+}
+
+.carte-memo--face .carte-memo__pivot,
+.carte-memo--trouvee .carte-memo__pivot {
+  transform: rotateY(180deg);
+}
+
+.carte-memo:hover:not(.carte-memo--trouvee) .carte-memo__dos {
+  filter: brightness(1.18);
+}
+
+/* Une paire trouvée s'efface — après un temps de pause, le temps de la voir
+   et d'entendre son mot. Sa case reste vide : dans un mémory les positions ne
+   doivent jamais bouger, sinon le tapis mémorisé ne veut plus rien dire. */
+.carte-memo--trouvee {
+  cursor: default;
+  pointer-events: none;
+  opacity: 0;
+  transform: scale(0.84);
+  transition: opacity 0.45s ease 0.7s, transform 0.45s ease 0.7s;
+}
+
+@media (max-width: 620px) {
+  .memory {
+    grid-template-columns: repeat(var(--colonnes-etroit, 3), 1fr);
+    max-width: min(100%, calc((100dvh - 250px) / var(--lignes-etroit, 4) * var(--colonnes-etroit, 3)));
+  }
+}

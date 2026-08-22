@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Médaille">
+  <defs><radialGradient id="medaille-or" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#fff3c4"/><stop offset="50%" stop-color="#f5c518"/><stop offset="100%" stop-color="#a8830a"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="112" rx="26" ry="4.5" fill="#000" opacity="0.14"/>
+  <path d="M40 10 l16 40 h-20 l-14 -40z" fill="#3d7fc9" stroke="#1d4f80" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M80 10 l-16 40 h20 l14 -40z" fill="#e03131" stroke="#8f1414" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="76" r="32" fill="url(#medaille-or)" stroke="#8f6f04" stroke-width="3.5"/>
+  <circle cx="60" cy="76" r="24" fill="none" stroke="#c9a20f" stroke-width="3.5"/>
+  <path d="M60 60 l6 12 13 2 -9 9 2 13 -12 -6 -12 6 2 -13 -9 -9 13 -2z" fill="#fff8dc" stroke="#c9a20f" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="46" cy="62" rx="7" ry="5" fill="#fff" opacity="0.4" transform="rotate(-24 46 62)"/>
+</svg>

@@ -1,323 +1,383 @@
-import { options } from "../particles/particles-options.js";
+import { construitGrille } from "../shared/aleatoire.js";
+import {
+  demarreUneManche,
+  enregistreUneErreur,
+  prepareLaPage,
+  sonJuste,
+  termineLaManche,
+} from "../shared/jeu.js";
+import { enonce, leurresNumeriques, tireUneOperation } from "../shared/niveaux.js";
+import { reglages } from "../shared/reglages.js";
+import { creeCaractere, creeVisuel } from "../shared/rendu.js";
+import { sonPose } from "../shared/sons.js";
+import { prononce } from "../shared/voix.js";
 
-const body = document.querySelector(".body-100");
-const nombreAleatoire = document.querySelector(".nombre-aleatoire-calculer");
-const imgOsPaquet = document.querySelectorAll(".img-os-paquet");
-const divTotalOsPose = document.querySelector(".total-os-pose");
-const btnJouerCalculer = document.querySelector(".btn-calculer");
-const audio = document.querySelector(".audio1");
+const { theme, niveau } = prepareLaPage({ titre: "CALCULER" });
 
-const imgOs1 = document.querySelector(".img-os-1");
-const imgOs2 = document.querySelector(".img-os-2");
-const imgOs3 = document.querySelector(".img-os-3");
-const imgOs4 = document.querySelector(".img-os-4");
-const imgOs5 = document.querySelector(".img-os-5");
+const consigne = document.querySelector(".consigne__texte");
+const sectionCollecte = document.querySelector(".mode-collecte");
+const sectionOperation = document.querySelector(".mode-operation");
 
-let os1InitialPosition = { left: 0, top: 0 };
-let os2InitialPosition = { left: 0, top: 0 };
-let os3InitialPosition = { left: 0, top: 0 };
-let os4InitialPosition = { left: 0, top: 0 };
-let os5InitialPosition = { left: 0, top: 0 };
+const objet = theme.collecte.objet;
+const contenant = theme.collecte.receptacle;
 
-let mousePosition;
-let offset = [0, 0];
-let isDown = false;
-let receptacleCourant = null;
-let totalOsPose = 0;
-let totalOsPoseTab = [];
-let randomInt;
-let toggleFullscreen = false;
+let operation = null;
+let mancheGagnee = false;
+let annonceCourante = "";
 
-const afficheBtnPleinEcran = () => {
-  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
-    const btnFullscreen = document.createElement("button");
-    const btnJouerContainer = document.querySelector(".btn-jouer-container");
-    btnFullscreen.classList.add("btn", "btn-jouer", "vert");
-    btnFullscreen.innerHTML = "PLEIN ÉCRAN";
-    btnFullscreen.addEventListener("click", () => {
-      if (document.body.requestFullscreen && body.clientWidth < 700) {
-        if (!toggleFullscreen) {
-          document.body.requestFullscreen();
-          toggleFullscreen = true;
-        } else {
-          document.exitFullscreen();
-          toggleFullscreen = false;
-        }
-      }
-    });
-    btnJouerContainer.append(btnFullscreen);
+const annonce = () => prononce(annonceCourante);
+
+/* ================================================================== */
+/* Mode manipulation : composer une quantité avec des jetons           */
+/* ================================================================== */
+
+const zoneObjectif = document.querySelector(".objectif__valeur");
+const zoneTotal = document.querySelector(".total__valeur");
+const receptacle = document.querySelector(".receptacle");
+
+/**
+ * Où poser les jetons, dit en français.
+ *
+ * « dans le panier » marche pour un contenant, pas pour un destinataire :
+ * un thème peut donc fournir sa propre tournure — « au chien » plutôt que
+ * « dans le chien ».
+ */
+const ou = () => contenant.destination ?? `dans ${contenant.nom}`;
+const reserve = document.querySelector(".reserve");
+
+const VALEURS_DES_JETONS = [1, 2, 3, 4, 5];
+
+/** Jetons actuellement déposés, par valeur. */
+const poses = new Set();
+
+let jetonEnCours = null;
+let offset = { x: 0, y: 0 };
+
+const total = () => [...poses].reduce((somme, valeur) => somme + valeur, 0);
+
+const afficheUnNombre = (zone, valeur) => {
+  zone.innerHTML = "";
+
+  // Le total peut dépasser neuf : on le compose alors chiffre par chiffre.
+  for (const chiffre of String(valeur)) {
+    zone.append(creeCaractere(theme, chiffre));
   }
+
+  zone.setAttribute("aria-label", String(valeur));
 };
 
-const getImgOsPosition = () => {
-  os1InitialPosition = { left: imgOs1.x, top: imgOs1.y };
-  os2InitialPosition = { left: imgOs2.x, top: imgOs2.y };
-  os3InitialPosition = { left: imgOs3.x, top: imgOs3.y };
-  os4InitialPosition = { left: imgOs4.x, top: imgOs4.y };
-  os5InitialPosition = { left: imgOs5.x, top: imgOs5.y };
+const construitLeReceptacle = () => {
+  receptacle.innerHTML = "";
+  receptacle.append(creeVisuel(theme, { visuel: contenant.visuel, affichage: contenant.nom }));
+  receptacle.setAttribute("aria-label", contenant.nom);
 };
 
-const resetOsPosition = () => {
-  if (body.clientWidth < 700 && navigator.userAgent.includes("Chrome")) {
-    imgOs1.style.left = 8 + "px";
-    imgOs1.style.top = body.clientHeight - 280 + "px";
-    imgOs2.style.left = body.clientWidth / 2 - 58 + "px";
-    imgOs2.style.top = body.clientHeight - 280 + "px";
-    imgOs3.style.left = body.clientWidth - 105 + "px";
-    imgOs3.style.top = body.clientHeight - 280 + "px";
-    imgOs4.style.left = 8 + "px";
-    imgOs4.style.top = body.clientHeight - 185 + "px";
-    imgOs5.style.left = body.clientWidth - 165 + "px";
-    imgOs5.style.top = body.clientHeight - 185 + "px";
-  } else if (body.clientWidth > 700 && navigator.userAgent.includes("Chrome")) {
-    imgOs1.style.left = 86 + "px";
-    imgOs1.style.top = body.clientHeight - 310 + "px";
-    imgOs2.style.left = body.clientWidth / 4 - 150 + "px";
-    imgOs2.style.top = body.clientHeight - 310 + "px";
-    imgOs3.style.left = body.clientWidth / 2.5 - 130 + "px";
-    imgOs3.style.top = body.clientHeight - 310 + "px";
-    imgOs4.style.left = body.clientWidth / 1.5 - 280 + "px";
-    imgOs4.style.top = body.clientHeight - 310 + "px";
-    imgOs5.style.left = body.clientWidth - 550 + "px";
-    imgOs5.style.top = body.clientHeight - 310 + "px";
+const construitLesJetons = () => {
+  reserve.innerHTML = "";
+
+  VALEURS_DES_JETONS.filter((valeur) => valeur <= Math.max(5, niveau.nombreMax)).forEach((valeur) => {
+    const jeton = document.createElement("div");
+    jeton.className = "jeton";
+    jeton.dataset.valeur = valeur;
+    jeton.setAttribute("role", "button");
+    jeton.setAttribute("tabindex", "0");
+    jeton.setAttribute("aria-pressed", "false");
+    jeton.setAttribute("aria-label", `${valeur} ${valeur > 1 ? objet.pluriel : objet.nom}`);
+
+    for (let i = 0; i < valeur; i++) {
+      jeton.append(creeVisuel(theme, { visuel: objet.visuel, affichage: "" }));
+    }
+
+    installeLeGlissement(jeton, valeur);
+    reserve.append(jeton);
+  });
+};
+
+/**
+ * Un jeton est déposé si son centre tombe dans le disque du réceptacle.
+ *
+ * Le test est géométrique et non fondé sur elementFromPoint : un jeton déjà
+ * posé ne peut donc pas masquer la zone de dépôt pour les suivants.
+ */
+const estDansLeReceptacle = (jeton) => {
+  const zoneJeton = jeton.getBoundingClientRect();
+  const zoneCible = receptacle.getBoundingClientRect();
+
+  const rayonX = zoneCible.width / 2;
+  const rayonY = zoneCible.height / 2;
+  const ecartX = (zoneJeton.left + zoneJeton.width / 2 - (zoneCible.left + rayonX)) / rayonX;
+  const ecartY = (zoneJeton.top + zoneJeton.height / 2 - (zoneCible.top + rayonY)) / rayonY;
+
+  return ecartX * ecartX + ecartY * ecartY <= 1;
+};
+
+const metAJourLeTotal = () => {
+  const valeur = total();
+  afficheUnNombre(zoneTotal, valeur);
+
+  receptacle.classList.toggle("receptacle--pret", valeur === operation.resultat);
+
+  if (valeur !== operation.resultat || mancheGagnee) return;
+
+  mancheGagnee = true;
+  reussite(`Bravo ! Ça fait ${operation.resultat}`);
+};
+
+/** Rend le jeton au flux de la réserve. */
+const rangeLeJeton = (jeton) => {
+  jeton.classList.remove("jeton--pris");
+  jeton.style.removeProperty("left");
+  jeton.style.removeProperty("top");
+  jeton.style.removeProperty("width");
+};
+
+const poseLeJeton = (jeton, valeur) => {
+  const dedans = estDansLeReceptacle(jeton);
+
+  if (dedans) {
+    poses.add(valeur);
+    sonPose();
   } else {
-    imgOs1.style.left = os1InitialPosition.left + "px";
-    imgOs1.style.top = os1InitialPosition.top + "px";
-    imgOs2.style.left = os2InitialPosition.left + "px";
-    imgOs2.style.top = os2InitialPosition.top + "px";
-    imgOs3.style.left = os3InitialPosition.left + "px";
-    imgOs3.style.top = os3InitialPosition.top + "px";
-    imgOs4.style.left = os4InitialPosition.left + "px";
-    imgOs4.style.top = os4InitialPosition.top + "px";
-    imgOs5.style.left = os5InitialPosition.left + "px";
-    imgOs5.style.top = os5InitialPosition.top + "px";
+    poses.delete(valeur);
+    rangeLeJeton(jeton);
   }
+
+  jeton.classList.toggle("jeton--pose", dedans);
+  jeton.setAttribute("aria-pressed", String(dedans));
+
+  metAJourLeTotal();
 };
 
-const afficheNombreAleatoire = () => {
-  randomInt = Math.floor(Math.random() * 9) + 1;
-  nombreAleatoire.src = `../assets/alphabet/${randomInt}.png`;
+/**
+ * Maintient le jeton dans la fenêtre. La dimension de référence passe par
+ * documentElement, plus fiable que window.innerWidth, et le clamp est ignoré
+ * si elle n'est pas exploitable.
+ */
+const borne = (valeur, taille, dimension) => {
+  const disponible =
+    dimension === "largeur"
+      ? document.documentElement.clientWidth || window.innerWidth
+      : document.documentElement.clientHeight || window.innerHeight;
+
+  const maximum = disponible - taille;
+  if (!(maximum > 0)) return Math.max(valeur, 0);
+
+  return Math.min(Math.max(valeur, 0), maximum);
 };
 
-const calculTotalOsPose = (tab) => {
-  return (totalOsPose = tab.reduce(
-    (previous, current) => previous + current,
-    0
-  ));
-};
+const installeLeGlissement = (jeton, valeur) => {
+  jeton.addEventListener("pointerdown", (e) => {
+    if (mancheGagnee) return;
 
-const afficheTotalOsPose = (totalOs) => {
-  const imgTotalOsPose = document.createElement("img");
-  imgTotalOsPose.classList.add("img-total-os-pose");
-  imgTotalOsPose.src = `../assets/alphabet/${totalOs}.png`;
-  divTotalOsPose.innerHTML = "";
-  divTotalOsPose.append(imgTotalOsPose);
-};
+    jetonEnCours = jeton;
 
-const mouseUpTouchEndHandler = (e) => {
-  isDown = false;
+    // La capture garantit de recevoir les pointermove et pointerup même si le
+    // doigt sort de l'élément. Si le navigateur la refuse, le glissement doit
+    // malgré tout rester possible.
+    try {
+      jeton.setPointerCapture(e.pointerId);
+    } catch {
+      // Capture indisponible : on continue sans elle.
+    }
 
-  imgOsPaquet.forEach((imgOs) => {
-    imgOs.style.pointerEvents = null;
+    const zone = jeton.getBoundingClientRect();
+    offset = { x: e.clientX - zone.left, y: e.clientY - zone.top };
+
+    jeton.classList.add("jeton--pris");
+    jeton.style.left = `${zone.left}px`;
+    jeton.style.top = `${zone.top}px`;
+    jeton.style.width = `${zone.width}px`;
+
+    e.preventDefault();
   });
 
-  if (receptacleCourant) {
-    if (!totalOsPoseTab.includes(parseInt(e.target.dataset.os))) {
-      if (e.target.dataset.os) {
-        totalOsPoseTab.push(parseInt(e.target.dataset.os));
+  jeton.addEventListener("pointermove", (e) => {
+    if (jetonEnCours !== jeton) return;
 
-        calculTotalOsPose(totalOsPoseTab);
+    e.preventDefault();
 
-        if (totalOsPose <= 9) afficheTotalOsPose(totalOsPose);
+    jeton.style.left = `${borne(e.clientX - offset.x, jeton.offsetWidth, "largeur")}px`;
+    jeton.style.top = `${borne(e.clientY - offset.y, jeton.offsetHeight, "hauteur")}px`;
 
-        if (totalOsPose === randomInt) {
-          audio.src = "../assets/reactions/cris-de-joie.mp3";
-          tsParticles.load("tsparticles", options);
-          receptacleCourant.style.boxShadow = "0px 0px 18px 12px #0be881";
-        } else {
-          receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
-        }
-      }
+    receptacle.classList.toggle("receptacle--pret", estDansLeReceptacle(jeton));
+  });
+
+  const relache = () => {
+    if (jetonEnCours !== jeton) return;
+
+    jetonEnCours = null;
+    poseLeJeton(jeton, valeur);
+  };
+
+  jeton.addEventListener("pointerup", relache);
+  jeton.addEventListener("pointercancel", relache);
+
+  // Équivalent au clavier : Entrée dépose ou retire le jeton.
+  jeton.addEventListener("keydown", (e) => {
+    if (mancheGagnee || (e.key !== "Enter" && e.key !== " ")) return;
+
+    e.preventDefault();
+
+    if (poses.has(valeur)) {
+      poses.delete(valeur);
+      jeton.classList.remove("jeton--pose");
+      rangeLeJeton(jeton);
+    } else {
+      poses.add(valeur);
+      jeton.classList.add("jeton--pose");
+      sonPose();
     }
+
+    jeton.setAttribute("aria-pressed", String(poses.has(valeur)));
+    metAJourLeTotal();
+  });
+};
+
+const demarreLaCollecte = () => {
+  poses.clear();
+
+  afficheUnNombre(zoneObjectif, operation.resultat);
+  afficheUnNombre(zoneTotal, 0);
+  receptacle.classList.remove("receptacle--pret");
+
+  construitLeReceptacle();
+  construitLesJetons();
+
+  const quantite = `${operation.resultat} ${operation.resultat > 1 ? objet.pluriel : objet.nom}`;
+  annonceCourante = `Mets ${quantite} ${ou()}`;
+  consigne.textContent = annonceCourante;
+};
+
+/* ================================================================== */
+/* Mode opération : résoudre un calcul posé                            */
+/* ================================================================== */
+
+const ligneEnonce = document.querySelector(".operation__enonce");
+const illustration = document.querySelector(".operation__illustration");
+const zoneChoix = document.querySelector(".choix");
+
+/** Illustration des petites additions et soustractions, en objets du thème. */
+const illustre = () => {
+  illustration.innerHTML = "";
+
+  // Au-delà d'une dizaine d'objets par groupe, l'illustration devient
+  // illisible et n'aide plus : on s'en tient au calcul écrit.
+  const illustrable =
+    (operation.type === "addition" || operation.type === "soustraction") &&
+    operation.a <= 10 &&
+    operation.b <= 10;
+
+  if (!illustrable) return;
+
+  const groupe = (nombre, barres = 0) => {
+    const bloc = document.createElement("span");
+    bloc.className = "operation__groupe";
+
+    for (let i = 0; i < nombre; i++) {
+      const visuel = creeVisuel(theme, { visuel: objet.visuel, affichage: "" });
+      // Les objets retirés sont barrés : la soustraction devient visible.
+      if (i >= nombre - barres) visuel.classList.add("operation__retire");
+      bloc.append(visuel);
+    }
+
+    return bloc;
+  };
+
+  if (operation.type === "addition") {
+    const signe = document.createElement("span");
+    signe.className = "operation__signe";
+    signe.textContent = "+";
+    illustration.append(groupe(operation.a), signe, groupe(operation.b));
+  } else {
+    illustration.append(groupe(operation.a, operation.b));
   }
 };
 
-imgOsPaquet.forEach((imgOs) => {
-  imgOs.addEventListener("mousedown", (e) => {
-    if (e.target === imgOs) {
-      isDown = true;
-      offset = [imgOs.offsetLeft - e.clientX, imgOs.offsetTop - e.clientY];
+const demarreLOperation = () => {
+  const lisible = enonce(operation);
+
+  ligneEnonce.textContent = `${lisible.ecrit} = ?`;
+  ligneEnonce.setAttribute("aria-label", `${lisible.parle}, égale combien ?`);
+
+  illustre();
+
+  const pool = leurresNumeriques(operation.resultat, reglages().nombreDeChoix, niveau.nombreMax);
+  const grille = construitGrille([operation.resultat, ...pool], operation.resultat, reglages().nombreDeChoix);
+
+  zoneChoix.innerHTML = "";
+  grille.forEach((valeur) => {
+    const bouton = document.createElement("button");
+    bouton.className = "choix__bouton";
+    bouton.setAttribute("aria-label", String(valeur));
+
+    for (const caractere of String(valeur)) {
+      bouton.append(creeCaractere(theme, caractere));
     }
+
+    bouton.addEventListener("click", () => verifieLaReponse(valeur, bouton));
+    zoneChoix.append(bouton);
   });
-});
 
-// version tactile
-imgOsPaquet.forEach((imgOs) => {
-  imgOs.addEventListener("touchstart", (e) => {
-    if (e.target === imgOs) {
-      isDown = true;
-      offset = [
-        imgOs.offsetLeft - e.touches[0].clientX,
-        imgOs.offsetTop - e.touches[0].clientY,
-      ];
-    }
+  annonceCourante = `${lisible.parle}, ça fait combien ?`;
+  consigne.textContent = `${lisible.ecrit} = ?`;
+};
+
+const verifieLaReponse = (valeur, bouton) => {
+  if (mancheGagnee) return;
+
+  if (valeur !== operation.resultat) {
+    enregistreUneErreur("calculer", `${operation.type}-${operation.a}-${operation.b}`);
+    bouton.classList.add("choix__bouton--faux");
+    setTimeout(() => bouton.classList.remove("choix__bouton--faux"), 400);
+    return;
+  }
+
+  mancheGagnee = true;
+  bouton.classList.add("choix__bouton--juste");
+
+  zoneChoix.querySelectorAll(".choix__bouton").forEach((autre) => {
+    if (autre !== bouton) autre.classList.add("choix__bouton--efface");
   });
-});
 
-document.addEventListener("mouseup", (e) => {
-  mouseUpTouchEndHandler(e);
-});
+  reussite(`Bravo ! ${enonce(operation).parle} égale ${operation.resultat}`);
+};
 
-// version tactile
-document.addEventListener("touchend", (e) => {
-  mouseUpTouchEndHandler(e);
-});
+/* ================================================================== */
+/* Enchaînement des manches                                            */
+/* ================================================================== */
 
-document.addEventListener("mousemove", (e) => {
-  e.preventDefault();
-  if (isDown) {
-    mousePosition = {
-      x: e.clientX,
-      y: e.clientY,
-    };
+const reussite = (texte) => {
+  sonJuste();
 
-    imgOsPaquet.forEach((imgOs) => {
-      if (imgOs === e.target) {
-        window.scrollTo(0, 0);
+  termineLaManche({
+    jeu: "calculer",
+    mot: operation.type === "collecte" ? `collecte-${operation.resultat}` : `${operation.type}-${operation.a}-${operation.b}`,
+    texte,
+    emoji: objet.visuel,
+    surSuite: nouvelleManche,
+  });
+};
 
-        imgOs.style.left = mousePosition.x + offset[0] + "px";
-        imgOs.style.top = mousePosition.y + offset[1] + "px";
+const nouvelleManche = () => {
+  demarreUneManche();
 
-        imgOs.hidden = true;
-        let sousElem = document.elementFromPoint(e.clientX, e.clientY);
-        imgOs.hidden = false;
+  mancheGagnee = false;
+  operation = tireUneOperation(niveau);
 
-        if (!sousElem) return;
+  const enCollecte = operation.type === "collecte";
+  sectionCollecte.hidden = !enCollecte;
+  sectionOperation.hidden = enCollecte;
 
-        let receptacle = sousElem.closest(".receptacle-wrapper");
-
-        // l'element sort de la zone dropable
-        if (receptacleCourant != receptacle) {
-          if (receptacleCourant) {
-            receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
-
-            totalOsPoseTab.forEach((elem, index) => {
-              if (elem === parseInt(imgOs.dataset.os)) {
-                totalOsPoseTab.splice(index, 1);
-              }
-            });
-
-            totalOsPose = totalOsPoseTab.reduce(
-              (previous, current) => previous + current,
-              0
-            );
-
-            afficheTotalOsPose(totalOsPose);
-          }
-          receptacleCourant = receptacle;
-
-          // l'element entre dans la zone dropable
-          if (receptacleCourant) {
-            receptacle.style.boxShadow = "0px 0px 18px 12px #0be881";
-          }
-        }
-      } else {
-        imgOs.style.pointerEvents = "none";
-      }
-    });
+  if (enCollecte) {
+    demarreLaCollecte();
+  } else {
+    demarreLOperation();
   }
-});
 
-//version tactile
-document.addEventListener("touchmove", (e) => {
-  if (isDown) {
-    mousePosition = {
-      x: e.touches[0].clientX,
-      y: e.touches[0].clientY,
-    };
+  annonce();
+};
 
-    imgOsPaquet.forEach((imgOs) => {
-      if (imgOs === e.target) {
-        // window.scrollTo(0, 0);
-        let imgOsLeft = imgOs.style.left.split("p")[0];
-        let imgOsTop = imgOs.style.top.split("p")[0];
+document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-        if (imgOsLeft <= body.clientWidth - 70 && imgOsLeft >= 0) {
-          imgOs.style.left = mousePosition.x + offset[0] + "px";
-        } else {
-          if (imgOsLeft <= 0) {
-            imgOs.style.left = 5 + "px";
-          } else if (imgOsLeft >= body.clientWidth - 70) {
-            imgOs.style.left = body.clientWidth - 75 + "px";
-          }
-        }
-
-        if (imgOsTop <= body.clientHeight - 70 && imgOsTop >= 0) {
-          imgOs.style.top = mousePosition.y + offset[1] + "px";
-        } else {
-          if (imgOsTop <= 0) {
-            imgOs.style.top = 5 + "px";
-          } else if (imgOsTop >= body.clientHeight - 70) {
-            imgOs.style.top = body.clientHeight - 75 + "px";
-          }
-        }
-        // imgOs.style.left = mousePosition.x + offset[0] + "px";
-        // imgOs.style.top = mousePosition.y + offset[1] + "px";
-
-        imgOs.hidden = true;
-        let sousElem = document.elementFromPoint(
-          e.touches[0].clientX,
-          e.touches[0].clientY
-        );
-        imgOs.hidden = false;
-
-        if (!sousElem) return;
-
-        let receptacle = sousElem.closest(".receptacle-wrapper");
-
-        // l'element sort de la zone dropable
-        if (receptacleCourant != receptacle) {
-          if (receptacleCourant) {
-            receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
-
-            totalOsPoseTab.forEach((elem, index) => {
-              if (elem === parseInt(imgOs.dataset.os)) {
-                totalOsPoseTab.splice(index, 1);
-              }
-            });
-
-            totalOsPose = totalOsPoseTab.reduce(
-              (previous, current) => previous + current,
-              0
-            );
-
-            afficheTotalOsPose(totalOsPose);
-          }
-          receptacleCourant = receptacle;
-
-          // l'element entre dans la zone dropable
-          if (receptacleCourant) {
-            receptacle.style.boxShadow = "0px 0px 18px 12px #0be881";
-          }
-        }
-      } else {
-        imgOs.style.pointerEvents = "none";
-      }
-    });
-  }
-});
-
-btnJouerCalculer.addEventListener("click", () => {
-  afficheNombreAleatoire();
-  resetOsPosition();
-  totalOsPose = 0;
-  totalOsPoseTab = [];
-  afficheTotalOsPose(totalOsPose);
-  if (receptacleCourant)
-    receptacleCourant.style.boxShadow = "0px 0px 18px 12px crimson";
-});
-
-afficheBtnPleinEcran();
-afficheTotalOsPose(totalOsPose);
-afficheNombreAleatoire();
-getImgOsPosition();
+nouvelleManche();

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Île">
+  <defs>
+    <linearGradient id="ile-sable" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9b8"/><stop offset="100%" stop-color="#d9b877"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 92 q16 -8 30 0 q16 8 30 0 q18 -8 32 0 q10 6 20 0 v16 h-112z" fill="#3d9ad4" opacity="0.6"/>
+  <ellipse cx="60" cy="90" rx="46" ry="18" fill="url(#ile-sable)" stroke="#bd9a55" stroke-width="3.5"/>
+  <path d="M56 84 q-4 -30 2 -44" stroke="#8a6a48" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <g fill="#3fb56b" stroke="#237a44" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M58 40 q-26 -14 -34 4 q20 4 34 4z"/>
+    <path d="M58 40 q26 -14 34 4 q-20 4 -34 4z"/>
+    <path d="M58 40 q-14 -26 4 -32 q10 16 6 32z"/>
+    <path d="M58 40 q22 -20 34 -8 q-16 12 -34 12z"/>
+  </g>
+  <g fill="#a9752f"><circle cx="52" cy="46" r="4"/><circle cx="62" cy="48" r="4"/></g>
+  <ellipse cx="30" cy="92" rx="8" ry="4" fill="#c9a86a" opacity="0.7"/>
+</svg>

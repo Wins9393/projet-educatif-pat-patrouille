@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Plume">
+  <defs><linearGradient id="plume-barbes" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#a9d8f0"/><stop offset="55%" stop-color="#5b9bc4"/><stop offset="100%" stop-color="#2f6284"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="24" ry="4.5" fill="#000" opacity="0.14"/>
+  <path d="M84 12 q-52 22 -60 60 q-4 22 10 30 q22 -6 38 -30 q18 -26 12 -60z"
+        fill="url(#plume-barbes)" stroke="#22506e" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M84 12 q-30 30 -50 90" stroke="#f2f6fb" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <g stroke="#2f6284" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M72 30 l-14 6"/><path d="M64 46 l-16 8"/><path d="M56 62 l-16 8"/><path d="M46 80 l-12 6"/>
+    <path d="M76 26 l6 -8"/><path d="M68 42 l10 -6"/><path d="M58 60 l12 -4"/>
+  </g>
+  <path d="M34 102 l-8 12" stroke="#e0d5c4" stroke-width="5" stroke-linecap="round"/>
+</svg>

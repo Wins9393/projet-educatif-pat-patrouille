@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Radar">
+  <defs><radialGradient id="radar-ecran" cx="50%" cy="50%" r="60%">
+    <stop offset="0" stop-color="#3fb56b"/><stop offset="70%" stop-color="#1f7a44"/><stop offset="100%" stop-color="#0f4d29"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="34" ry="5.5" fill="#000" opacity="0.2"/>
+  <rect x="34" y="90" width="52" height="14" rx="6" fill="#4a5464" stroke="#252d38" stroke-width="3.5"/>
+  <circle cx="60" cy="54" r="44" fill="#5f6a7a" stroke="#333c49" stroke-width="3.5"/>
+  <circle cx="60" cy="54" r="36" fill="url(#radar-ecran)" stroke="#0d3d22" stroke-width="3"/>
+  <g fill="none" stroke="#7ee0a0" stroke-width="3" opacity="0.7">
+    <circle cx="60" cy="54" r="26"/><circle cx="60" cy="54" r="16"/><circle cx="60" cy="54" r="7"/>
+  </g>
+  <path d="M60 54 h34" stroke="#c9f5d8" stroke-width="4" stroke-linecap="round"/>
+  <path d="M60 54 l24 -24" stroke="#c9f5d8" stroke-width="4" stroke-linecap="round" opacity="0.5"/>
+  <circle cx="78" cy="40" r="5" fill="#ffe066"/>
+  <path d="M60 96 v-6" stroke="#333c49" stroke-width="6" stroke-linecap="round"/>
+</svg>

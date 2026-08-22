@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pluie">
+  <defs><linearGradient id="pluie-nuage" x1="0.3" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#c9d4e0"/><stop offset="60%" stop-color="#9fb0c0"/><stop offset="100%" stop-color="#6e8298"/>
+  </linearGradient></defs>
+  <g fill="url(#pluie-nuage)" stroke="#5c7086" stroke-width="3.5">
+    <circle cx="36" cy="48" r="20"/><circle cx="60" cy="36" r="25"/><circle cx="84" cy="48" r="19"/>
+    <rect x="34" y="48" width="50" height="20" rx="10"/>
+  </g>
+  <g stroke="#5cb8e8" stroke-width="7" stroke-linecap="round">
+    <path d="M34 78 l-6 18"/><path d="M56 80 l-6 20"/><path d="M78 78 l-6 18"/>
+  </g>
+  <g fill="#8fd4f5"><circle cx="24" cy="102" r="5"/><circle cx="46" cy="108" r="5"/><circle cx="68" cy="104" r="5"/><circle cx="90" cy="100" r="4.5"/></g>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Citron">
+  <defs><radialGradient id="citron-peau" cx="34%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#fff59a"/><stop offset="50%" stop-color="#f5d312"/><stop offset="100%" stop-color="#b59a04"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="32" ry="5.5" fill="#000" opacity="0.16"/>
+  <path d="M14 66 q0 -32 46 -32 q46 0 46 32 q0 32 -46 32 q-46 0 -46 -32z"
+        fill="url(#citron-peau)" stroke="#a38a04" stroke-width="3.5"/>
+  <path d="M104 62 q12 2 12 4 q0 3 -12 4z" fill="url(#citron-peau)" stroke="#a38a04" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M16 62 q-12 2 -12 4 q0 3 12 4z" fill="url(#citron-peau)" stroke="#a38a04" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M56 34 q14 -14 26 -8 q-8 14 -24 12z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="42" cy="54" rx="12" ry="9" fill="#fff" opacity="0.35" transform="rotate(-18 42 54)"/>
+  <g fill="#d4b60a" opacity="0.3"><circle cx="66" cy="80" r="3"/><circle cx="82" cy="70" r="2.6"/></g>
+</svg>

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Nid">
+  <defs>
+    <linearGradient id="nid-brindilles" x1="0.2" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#c9925c"/><stop offset="55%" stop-color="#8a5f2c"/><stop offset="100%" stop-color="#513413"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="104" rx="46" ry="7" fill="#000" opacity="0.2"/>
+  <g fill="#f2e6d0" stroke="#a3927e" stroke-width="3.5">
+    <ellipse cx="44" cy="56" rx="15" ry="19"/><ellipse cx="72" cy="52" rx="14" ry="18"/>
+  </g>
+  <ellipse cx="40" cy="48" rx="5" ry="6" fill="#fff" opacity="0.7"/>
+  <path d="M8 70 q0 -18 52 -18 q52 0 52 18 q0 30 -52 30 q-52 0 -52 -30z"
+        fill="url(#nid-brindilles)" stroke="#3f2708" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#a8763f" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.85">
+    <path d="M16 74 q24 10 50 8"/><path d="M104 74 q-24 12 -52 10"/><path d="M22 88 q30 8 60 2"/>
+  </g>
+  <g stroke="#6f4a20" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M12 66 q28 -8 54 -6"/><path d="M108 68 q-26 -10 -50 -8"/>
+  </g>
+</svg>

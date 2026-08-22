@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Crevette">
+  <defs><linearGradient id="crevette-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffb397"/><stop offset="55%" stop-color="#f5764c"/><stop offset="100%" stop-color="#b8411c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M96 44 q16 -6 20 6 q-14 10 -22 4z" fill="url(#crevette-corps)" stroke="#993512" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M30 40 q34 -14 62 4 q10 6 4 16 q-10 16 -34 20 q-28 4 -36 -14 q-6 -16 4 -26z"
+        fill="url(#crevette-corps)" stroke="#993512" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M52 34 q6 30 -4 44 M70 36 q6 28 -4 40" stroke="#993512" stroke-width="4" fill="none" opacity="0.55"/>
+  <path d="M24 46 q-14 4 -14 18 q0 14 14 16 q10 2 12 -8" fill="url(#crevette-corps)" stroke="#993512" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#993512" stroke-width="3.5" stroke-linecap="round">
+    <path d="M40 78 l-4 14 M56 82 l-2 14 M72 78 l2 14"/>
+  </g>
+  <path d="M22 46 q-10 -18 -18 -20 M22 54 q-14 -8 -20 -4" stroke="#993512" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="22" cy="58" r="5.5" fill="#1d2430"/><circle cx="20.5" cy="56.5" r="2" fill="#fff"/>
+</svg>

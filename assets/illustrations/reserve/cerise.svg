@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cerises">
+  <defs><radialGradient id="cerise-peau" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ff7a8a"/><stop offset="50%" stop-color="#d31435"/><stop offset="100%" stop-color="#8a0a20"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M60 22 q-18 20 -22 46 M60 22 q18 22 20 44" stroke="#4caf50" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M60 22 q-14 -12 -28 -8 q10 12 28 8z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="38" cy="80" r="24" fill="url(#cerise-peau)" stroke="#7a0a1c" stroke-width="3.5"/>
+  <circle cx="82" cy="82" r="22" fill="url(#cerise-peau)" stroke="#7a0a1c" stroke-width="3.5"/>
+  <ellipse cx="30" cy="72" rx="7" ry="9" fill="#fff" opacity="0.35" transform="rotate(-22 30 72)"/>
+  <ellipse cx="75" cy="75" rx="6" ry="8" fill="#fff" opacity="0.3" transform="rotate(-22 75 75)"/>
+</svg>

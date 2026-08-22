@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Fermier">
+  <defs><linearGradient id="fermier-salopette" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#7fb8f0"/><stop offset="50%" stop-color="#3d6fc9"/><stop offset="100%" stop-color="#1d3f80"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M30 108 v-24 q0 -22 30 -22 q30 0 30 22 v24z" fill="url(#fermier-salopette)" stroke="#173a70" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M44 66 v-10 M76 66 v-10" stroke="#3d6fc9" stroke-width="7" stroke-linecap="round"/>
+  <rect x="48" y="76" width="24" height="18" rx="4" fill="#5b8fd9" stroke="#173a70" stroke-width="3"/>
+  <circle cx="60" cy="40" r="21" fill="#f7d9bc" stroke="#c49a76" stroke-width="3.5"/>
+  <g fill="#2f3540"><circle cx="53" cy="40" r="3.4"/><circle cx="67" cy="40" r="3.4"/></g>
+  <path d="M54 50 q6 5 12 0" stroke="#c49a76" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M20 28 q0 -6 8 -8 q10 -14 32 -14 q22 0 32 14 q8 2 8 8 q-40 8 -80 0z"
+        fill="#e0b41c" stroke="#96760a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M34 22 q26 -6 52 0" stroke="#c09a0f" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

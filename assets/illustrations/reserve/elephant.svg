@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Éléphant">
+  <defs><linearGradient id="elephant-peau" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#b9c2ce"/><stop offset="55%" stop-color="#8e99a8"/><stop offset="100%" stop-color="#626d7c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="34" ry="5.5" fill="#000" opacity="0.18"/>
+  <path d="M34 108 v-18 M56 110 v-20 M78 110 v-20 M96 106 v-16" stroke="#626d7c" stroke-width="11" stroke-linecap="round"/>
+  <ellipse cx="66" cy="72" rx="36" ry="27" fill="url(#elephant-peau)" stroke="#4f5967" stroke-width="3.5"/>
+  <ellipse cx="30" cy="52" rx="26" ry="25" fill="url(#elephant-peau)" stroke="#4f5967" stroke-width="3.5"/>
+  <ellipse cx="46" cy="42" rx="20" ry="24" fill="#a7b1bf" stroke="#4f5967" stroke-width="3.5"/>
+  <path d="M18 68 q-6 22 6 32 q10 8 16 -2" stroke="#8e99a8" stroke-width="12" fill="none" stroke-linecap="round"/>
+  <path d="M18 68 q-6 22 6 32 q10 8 16 -2" stroke="#6c7788" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <circle cx="26" cy="48" r="5" fill="#2d2016"/><circle cx="24.5" cy="46.5" r="2" fill="#fff"/>
+  <path d="M34 78 q-8 10 -2 16" stroke="#f0ece0" stroke-width="6" fill="none" stroke-linecap="round"/>
+</svg>

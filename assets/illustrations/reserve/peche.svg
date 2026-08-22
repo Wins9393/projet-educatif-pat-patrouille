@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pêche">
+  <defs><radialGradient id="peche-peau" cx="34%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#ffd6a3"/><stop offset="45%" stop-color="#ff9a6b"/><stop offset="100%" stop-color="#d1503a"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="68" r="40" fill="url(#peche-peau)" stroke="#a83d2a" stroke-width="3.5"/>
+  <path d="M60 30 q-8 26 0 76" stroke="#d1503a" stroke-width="4" fill="none" opacity="0.5"/>
+  <path d="M60 30 q-4 -10 -12 -14" stroke="#7a4a1e" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <path d="M58 26 q16 -16 30 -8 q-10 16 -28 14z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="42" cy="52" rx="10" ry="13" fill="#fff" opacity="0.35" transform="rotate(-22 42 52)"/>
+</svg>

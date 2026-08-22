@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Crocodile">
+  <defs><linearGradient id="crocodile-peau" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#8fce6b"/><stop offset="55%" stop-color="#5da33c"/><stop offset="100%" stop-color="#3a7024"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="42" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M20 96 q-8 -4 -6 -14 M46 98 q-6 -4 -4 -12 M74 98 q-6 -4 -4 -12 M100 96 q8 -4 6 -14"
+        stroke="#3a7024" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M8 74 q30 -16 56 -12 q30 4 48 16 q-20 14 -50 12 q-32 -2 -54 -16z"
+        fill="url(#crocodile-peau)" stroke="#2d5a1a" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#4a8c2e"><path d="M40 64 l6 -10 6 10z"/><path d="M58 62 l6 -11 6 11z"/><path d="M76 64 l6 -10 6 10z"/></g>
+  <path d="M6 78 q22 -20 46 -14 q10 3 10 12 q0 10 -14 12 q-24 4 -42 -10z"
+        fill="url(#crocodile-peau)" stroke="#2d5a1a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M10 84 q20 6 42 2" stroke="#fff" stroke-width="5" fill="none" opacity="0.9" stroke-linecap="round"/>
+  <g fill="#fff"><path d="M16 82 l3 6 3 -6z"/><path d="M28 84 l3 6 3 -6z"/><path d="M40 85 l3 6 3 -6z"/></g>
+  <circle cx="30" cy="66" r="8" fill="url(#crocodile-peau)" stroke="#2d5a1a" stroke-width="3"/>
+  <circle cx="30" cy="66" r="4" fill="#f5d547"/><circle cx="30" cy="66" r="2" fill="#1d2430"/>
+</svg>

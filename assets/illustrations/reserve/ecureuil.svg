@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Écureuil">
+  <defs><linearGradient id="ecureuil-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#e08a4e"/><stop offset="55%" stop-color="#b8622a"/><stop offset="100%" stop-color="#8a4415"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5.5" fill="#000" opacity="0.18"/>
+  <path d="M86 104 q26 -14 18 -44 q-6 -22 -26 -14 q16 10 12 30 q-4 18 -14 22z"
+        fill="url(#ecureuil-poil)" stroke="#77390f" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="52" cy="80" rx="26" ry="26" fill="url(#ecureuil-poil)" stroke="#77390f" stroke-width="3.5"/>
+  <ellipse cx="52" cy="88" rx="15" ry="16" fill="#f7dcc0"/>
+  <path d="M34 34 l-4 -18 16 10z" fill="url(#ecureuil-poil)" stroke="#77390f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M68 34 l4 -18 -16 10z" fill="url(#ecureuil-poil)" stroke="#77390f" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="51" cy="46" r="24" fill="url(#ecureuil-poil)" stroke="#77390f" stroke-width="3.5"/>
+  <circle cx="42" cy="43" r="5" fill="#2d2016"/><circle cx="60" cy="43" r="5" fill="#2d2016"/>
+  <circle cx="40.5" cy="41.5" r="2" fill="#fff"/><circle cx="58.5" cy="41.5" r="2" fill="#fff"/>
+  <ellipse cx="51" cy="55" rx="5" ry="4" fill="#7a3c14"/>
+  <circle cx="34" cy="86" r="9" fill="#a9703c" stroke="#77390f" stroke-width="3"/>
+</svg>

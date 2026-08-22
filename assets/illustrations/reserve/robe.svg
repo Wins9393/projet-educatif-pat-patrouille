@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Robe">
+  <defs><linearGradient id="robe-tissu" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#c9a8f0"/><stop offset="50%" stop-color="#8e5ec9"/><stop offset="100%" stop-color="#553380"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="40" ry="6" fill="#000" opacity="0.18"/>
+  <path d="M42 12 l18 12 18 -12 q10 4 8 16 l-6 16 q16 30 20 56 h-80 q4 -26 20 -56 l-6 -16 q-2 -12 8 -16z"
+        fill="url(#robe-tissu)" stroke="#452a68" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M42 12 l18 12 18 -12 q-8 12 -18 12 q-10 0 -18 -12z" fill="#f7d9bc" stroke="#c49a76" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 56 h40" stroke="#f5c518" stroke-width="7" stroke-linecap="round"/>
+  <g stroke="#a97fd8" stroke-width="4" fill="none" opacity="0.7" stroke-linecap="round">
+    <path d="M44 70 q-6 18 -8 30"/><path d="M60 68 v32"/><path d="M76 70 q6 18 8 30"/>
+  </g>
+  <circle cx="60" cy="56" r="6" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+</svg>

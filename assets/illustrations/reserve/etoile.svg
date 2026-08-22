@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Étoile">
+  <defs>
+    <radialGradient id="etoile-corps" cx="40%" cy="34%" r="70%">
+      <stop offset="0" stop-color="#fff3c4"/>
+      <stop offset="60%" stop-color="#ffd166"/>
+      <stop offset="100%" stop-color="#f0a202"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="26" ry="5" fill="#000" opacity="0.15"/>
+  <path d="M60 10 l14 30 33 5 -24 23 6 33 -29 -16 -29 16 6 -33 -24 -23 33 -5z"
+        fill="url(#etoile-corps)" stroke="#d98c00" stroke-width="4" stroke-linejoin="round"/>
+  <circle cx="49" cy="46" r="5" fill="#fff" opacity="0.75"/>
+</svg>

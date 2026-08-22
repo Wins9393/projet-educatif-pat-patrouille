@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Banjo">
+  <defs><radialGradient id="banjo-peau" cx="36%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#f0e8da"/><stop offset="100%" stop-color="#c9b89c"/>
+  </radialGradient></defs>
+  <ellipse cx="48" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M66 62 l40 -46" stroke="#6b4620" stroke-width="12" stroke-linecap="round"/>
+  <path d="M100 12 l12 12 -8 8 -12 -12z" fill="#5f4830" stroke="#3d2c18" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="46" cy="76" r="34" fill="#c9925c" stroke="#7a5228" stroke-width="3.5"/>
+  <circle cx="46" cy="76" r="26" fill="url(#banjo-peau)" stroke="#a3927e" stroke-width="3"/>
+  <g fill="#8a6a48"><circle cx="46" cy="44" r="3.4"/><circle cx="18" cy="62" r="3.4"/><circle cx="18" cy="90" r="3.4"/>
+    <circle cx="46" cy="108" r="3.4"/><circle cx="74" cy="90" r="3.4"/><circle cx="74" cy="62" r="3.4"/></g>
+  <g stroke="#5f4830" stroke-width="3" stroke-linecap="round">
+    <path d="M40 92 l58 -66"/><path d="M46 94 l58 -66"/><path d="M52 96 l56 -64"/>
+  </g>
+  <path d="M36 92 h24" stroke="#4a3018" stroke-width="5" stroke-linecap="round"/>
+</svg>

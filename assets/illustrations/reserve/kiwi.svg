@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Kiwi">
+  <defs><radialGradient id="kiwi-chair" cx="50%" cy="50%" r="60%">
+    <stop offset="0" stop-color="#f2f7dc"/><stop offset="35%" stop-color="#b8d94a"/><stop offset="100%" stop-color="#7fa32a"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="34" ry="5.5" fill="#000" opacity="0.16"/>
+  <ellipse cx="60" cy="64" rx="42" ry="38" fill="#9c7a4a" stroke="#6b5028" stroke-width="3.5"/>
+  <ellipse cx="60" cy="64" rx="35" ry="31" fill="url(#kiwi-chair)"/>
+  <ellipse cx="60" cy="64" rx="11" ry="10" fill="#f7fbe8"/>
+  <g fill="#2f3a12">
+    <ellipse cx="60" cy="46" rx="2.4" ry="3.4"/><ellipse cx="74" cy="52" rx="2.4" ry="3.4"/>
+    <ellipse cx="80" cy="66" rx="2.4" ry="3.4"/><ellipse cx="72" cy="80" rx="2.4" ry="3.4"/>
+    <ellipse cx="58" cy="84" rx="2.4" ry="3.4"/><ellipse cx="44" cy="78" rx="2.4" ry="3.4"/>
+    <ellipse cx="38" cy="64" rx="2.4" ry="3.4"/><ellipse cx="46" cy="50" rx="2.4" ry="3.4"/>
+  </g>
+  <path d="M26 44 q10 -10 22 -12" stroke="#fff" stroke-width="5" fill="none" opacity="0.35" stroke-linecap="round"/>
+</svg>

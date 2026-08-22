@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Noix">
+  <defs><radialGradient id="noix-coque" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#d9b483"/><stop offset="50%" stop-color="#a8783f"/><stop offset="100%" stop-color="#6e4a1c"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="106" rx="32" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M60 22 q-38 0 -38 38 q0 40 38 42 q38 -2 38 -42 q0 -38 -38 -38z"
+        fill="url(#noix-coque)" stroke="#563814" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M60 24 v76" stroke="#563814" stroke-width="4" opacity="0.7"/>
+  <g stroke="#7a5424" stroke-width="3.5" fill="none" opacity="0.7" stroke-linecap="round">
+    <path d="M44 40 q-10 20 -4 44"/><path d="M76 40 q10 20 4 44"/>
+    <path d="M34 62 q12 4 22 0"/><path d="M86 62 q-12 4 -22 0"/>
+  </g>
+  <ellipse cx="44" cy="44" rx="8" ry="10" fill="#fff" opacity="0.22" transform="rotate(-22 44 44)"/>
+</svg>

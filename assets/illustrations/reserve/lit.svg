@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lit">
+  <defs><linearGradient id="lit-couette" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#7fc4f0"/><stop offset="100%" stop-color="#2b7fc9"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="46" ry="6" fill="#000" opacity="0.2"/>
+  <rect x="8" y="34" width="14" height="66" rx="5" fill="#a8763f" stroke="#6f4a20" stroke-width="3.5"/>
+  <rect x="98" y="58" width="14" height="42" rx="5" fill="#a8763f" stroke="#6f4a20" stroke-width="3.5"/>
+  <rect x="14" y="66" width="92" height="22" rx="6" fill="#e8edf4" stroke="#98a3b0" stroke-width="3.5"/>
+  <path d="M40 66 h68 q4 0 4 6 v10 q0 6 -6 6 h-66z" fill="url(#lit-couette)" stroke="#134f80" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="18" y="52" width="30" height="20" rx="7" fill="#fff8e8" stroke="#c9b48c" stroke-width="3.5"/>
+  <path d="M46 76 h58" stroke="#5ba3e0" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lever de soleil">
+  <defs>
+    <linearGradient id="aurore-ciel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffb15c"/><stop offset="100%" stop-color="#ffd166"/>
+    </linearGradient>
+    <radialGradient id="aurore-soleil" cx="50%" cy="60%" r="60%">
+      <stop offset="0" stop-color="#fff6c4"/><stop offset="55%" stop-color="#ffc300"/><stop offset="100%" stop-color="#f57c1e"/>
+    </radialGradient>
+  </defs>
+  <g stroke="url(#aurore-ciel)" stroke-width="7" stroke-linecap="round">
+    <path d="M60 12 v-6"/><path d="M26 26 l-5 -5"/><path d="M94 26 l5 -5"/><path d="M12 58 h-6"/><path d="M108 58 h6"/>
+  </g>
+  <path d="M22 76 a38 38 0 0 1 76 0z" fill="url(#aurore-soleil)" stroke="#d99b0b" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M4 76 h112" stroke="#e08a1e" stroke-width="6" stroke-linecap="round"/>
+  <g stroke="#5cb8e8" stroke-width="6" stroke-linecap="round" opacity="0.85">
+    <path d="M14 90 h34"/><path d="M60 90 h46"/><path d="M24 104 h30"/><path d="M68 104 h28"/>
+  </g>
+</svg>

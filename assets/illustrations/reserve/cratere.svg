@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Cratère">
+  <defs>
+    <linearGradient id="cratere-sol" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#e4eaf3"/>
+      <stop offset="100%" stop-color="#b9c3d2"/>
+    </linearGradient>
+    <linearGradient id="cratere-creux" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3f4757"/>
+      <stop offset="55%" stop-color="#5d6779"/>
+      <stop offset="100%" stop-color="#8b95a6"/>
+    </linearGradient>
+  </defs>
+  <path d="M4 74 q16 -10 34 -8 q10 -22 34 -20 q26 2 32 22 q10 0 12 6 v34 h-112z"
+        fill="url(#cratere-sol)" stroke="#8b95a6" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="72" rx="42" ry="20" fill="#a3aebd" stroke="#78849a" stroke-width="3.5"/>
+  <ellipse cx="60" cy="76" rx="33" ry="15" fill="url(#cratere-creux)"/>
+  <ellipse cx="60" cy="82" rx="19" ry="8" fill="#2f3846" opacity="0.6"/>
+  <path d="M30 68 q12 -8 26 -9" stroke="#fff" stroke-width="4" fill="none" opacity="0.55" stroke-linecap="round"/>
+  <circle cx="20" cy="96" r="6" fill="#cdd5e0" stroke="#8b95a6" stroke-width="3"/>
+  <circle cx="100" cy="100" r="5" fill="#cdd5e0" stroke="#8b95a6" stroke-width="3"/>
+</svg>

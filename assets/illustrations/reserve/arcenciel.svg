@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Arc-en-ciel">
+  <g fill="none" stroke-linecap="round">
+    <path d="M12 96 a48 48 0 0 1 96 0" stroke="#e63946" stroke-width="11"/>
+    <path d="M23 96 a37 37 0 0 1 74 0" stroke="#f5891e" stroke-width="11"/>
+    <path d="M34 96 a26 26 0 0 1 52 0" stroke="#f5cd2a" stroke-width="11"/>
+    <path d="M45 96 a15 15 0 0 1 30 0" stroke="#4caf50" stroke-width="11"/>
+  </g>
+  <g fill="#f2f6fb" stroke="#c3ceda" stroke-width="3">
+    <circle cx="16" cy="98" r="14"/><circle cx="32" cy="102" r="11"/>
+    <circle cx="104" cy="98" r="14"/><circle cx="88" cy="102" r="11"/>
+  </g>
+  <g fill="#ffd166"><circle cx="98" cy="26" r="7"/><circle cx="22" cy="34" r="5"/></g>
+</svg>

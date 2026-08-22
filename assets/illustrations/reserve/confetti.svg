@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Confettis">
+  <defs><linearGradient id="confetti-cone" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#ffd98a"/><stop offset="55%" stop-color="#e8a33d"/><stop offset="100%" stop-color="#a86a12"/>
+  </linearGradient></defs>
+  <path d="M8 110 l34 -46 20 20z" fill="url(#confetti-cone)" stroke="#8a5410" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M18 96 l24 -22" stroke="#fff" stroke-width="4" opacity="0.4" stroke-linecap="round"/>
+  <g stroke-linecap="round">
+    <rect x="52" y="34" width="12" height="8" rx="3" fill="#e03131" transform="rotate(-20 58 38)"/>
+    <rect x="74" y="18" width="12" height="8" rx="3" fill="#5cb8e8" transform="rotate(24 80 22)"/>
+    <rect x="92" y="44" width="12" height="8" rx="3" fill="#3fb56b" transform="rotate(-40 98 48)"/>
+    <rect x="66" y="58" width="12" height="8" rx="3" fill="#f5c518" transform="rotate(15 72 62)"/>
+    <rect x="88" y="74" width="12" height="8" rx="3" fill="#c98ae0" transform="rotate(-14 94 78)"/>
+    <rect x="44" y="14" width="12" height="8" rx="3" fill="#f5891e" transform="rotate(35 50 18)"/>
+  </g>
+  <g fill="none" stroke-width="4" stroke-linecap="round">
+    <path d="M60 44 q10 -8 6 -18" stroke="#e0508e"/>
+    <path d="M82 34 q12 -4 12 -14" stroke="#5cb8e8"/>
+    <path d="M78 66 q14 0 18 -10" stroke="#f5c518"/>
+  </g>
+  <g fill="#ffd166"><circle cx="104" cy="24" r="4"/><circle cx="54" cy="76" r="4"/><circle cx="110" cy="60" r="3.4"/></g>
+</svg>

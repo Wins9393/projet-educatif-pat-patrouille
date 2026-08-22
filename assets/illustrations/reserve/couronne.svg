@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Couronne">
+  <defs><linearGradient id="couronne-or" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff3c4"/><stop offset="50%" stop-color="#f5c518"/><stop offset="100%" stop-color="#a8830a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="40" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M10 84 l6 -50 24 22 20 -32 20 32 24 -22 6 50z"
+        fill="url(#couronne-or)" stroke="#8f6f04" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="10" y="84" width="100" height="16" rx="7" fill="#e0b41c" stroke="#8f6f04" stroke-width="3.5"/>
+  <g fill="#e03131" stroke="#8f1414" stroke-width="3">
+    <circle cx="34" cy="92" r="6"/><circle cx="60" cy="92" r="6"/><circle cx="86" cy="92" r="6"/>
+  </g>
+  <circle cx="16" cy="34" r="7" fill="#5cb8e8" stroke="#2b7fc9" stroke-width="3"/>
+  <circle cx="60" cy="22" r="8" fill="#3fb56b" stroke="#237a44" stroke-width="3"/>
+  <circle cx="104" cy="34" r="7" fill="#5cb8e8" stroke="#2b7fc9" stroke-width="3"/>
+  <path d="M22 62 q10 -10 18 -2" stroke="#fff" stroke-width="4" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

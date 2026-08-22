@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Masque">
+  <defs><linearGradient id="masque-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#c98ae0"/><stop offset="50%" stop-color="#8e44ad"/><stop offset="100%" stop-color="#59216f"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="30" ry="4.5" fill="#000" opacity="0.14"/>
+  <path d="M6 46 q0 -20 26 -20 q18 0 28 12 q10 -12 28 -12 q26 0 26 20 q0 40 -34 40 q-16 0 -20 -14 q-4 14 -20 14 q-34 0 -34 -40z"
+        fill="url(#masque-corps)" stroke="#4a1c60" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M18 46 q10 -10 22 -2 q-10 12 -22 2z" fill="#2f1a3c"/>
+  <path d="M102 46 q-10 -10 -22 -2 q10 12 22 2z" fill="#2f1a3c"/>
+  <g fill="#f5c518"><circle cx="14" cy="28" r="6"/><circle cx="60" cy="34" r="6"/><circle cx="106" cy="28" r="6"/></g>
+  <g fill="#e0508e"><circle cx="34" cy="72" r="5"/><circle cx="86" cy="72" r="5"/></g>
+  <path d="M52 92 q8 8 16 0" stroke="#4a1c60" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+</svg>

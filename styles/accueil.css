@@ -1,0 +1,263 @@
+/* ================================================================== */
+/* Accueil : choix du jeu, du thème et suivi de la progression         */
+/* ================================================================== */
+
+.accueil {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+.accueil__corps {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px 16px 32px;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accueil__titre {
+  text-align: center;
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.accueil__sous-titre {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-top: -16px;
+}
+
+/* ---------------------------------------------------------------- */
+/* Cartes de jeux                                                    */
+/* ---------------------------------------------------------------- */
+
+.jeux {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.jeu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 28px 16px;
+  text-align: center;
+  color: var(--encre);
+  background: var(--bloc);
+  border: 0;
+  border-radius: var(--rayon-lg);
+  box-shadow: 0 var(--epaisseur) 0 var(--levre);
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+.jeu:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 calc(var(--epaisseur) + 3px) 0 var(--levre);
+}
+
+.jeu:active {
+  transform: translateY(calc(var(--epaisseur) - 1px));
+  box-shadow: 0 1px 0 var(--levre);
+}
+
+.jeu__icone {
+  font-size: 3.5rem;
+  line-height: 1;
+}
+
+.jeu__nom {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.jeu__desc {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+.jeu__compteur {
+  font-size: 0.82rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+  color: var(--encre);
+  background: var(--bloc-creux);
+}
+
+/* ---------------------------------------------------------------- */
+/* Sélecteur de thème                                                */
+/* ---------------------------------------------------------------- */
+
+.bloc {
+  background: var(--levre);
+  border-radius: var(--rayon-lg);
+  padding: 20px;
+}
+
+.bloc__titre {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* Le carrousel défile, donc il rogne — un débordement horizontal rogne aussi
+   le vertical. Or le survol soulève la vignette de 4 px et le focus l'entoure
+   d'un halo de 7 px, tous deux dessinés hors de sa boîte. On leur réserve la
+   place en marge intérieure, et les marges négatives la rendent exactement :
+   la rangée ne bouge pas d'un pixel. */
+.themes {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  margin: -12px -8px -2px;
+  padding: 12px 8px 8px;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 8px;
+}
+
+.theme-vignette {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  width: 104px;
+  padding: 14px 8px;
+  border-radius: var(--rayon);
+  color: var(--encre);
+  background: var(--bloc);
+  border: 0;
+  outline: 4px solid transparent;
+  outline-offset: -4px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.3);
+  scroll-snap-align: start;
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+.theme-vignette:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* L'univers actif se signale par un liseré franc, pas par une nuance. */
+.theme-vignette[aria-pressed="true"] {
+  outline-color: var(--action);
+  box-shadow: 0 4px 0 var(--action-levre);
+}
+
+.theme-vignette__emoji {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.theme-vignette__nom {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------- */
+/* Autocollants                                                      */
+/* ---------------------------------------------------------------- */
+
+.autocollants {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.autocollant {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  font-size: 2rem;
+  border-radius: 50%;
+  background: var(--bloc-creux);
+}
+
+.autocollant--verrouille {
+  filter: grayscale(1);
+  opacity: 0.35;
+}
+
+.progression-barre {
+  height: 14px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+  margin-top: 14px;
+}
+
+.progression-barre__jauge {
+  height: 100%;
+  border-radius: 999px;
+  background: var(--couleur-accent);
+  transition: width 0.4s ease;
+}
+
+.progression-legende {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Le carrousel dépasse largement l'écran : un dégradé sur le bord droit
+   signale qu'il reste des univers à faire défiler. */
+.selecteur-themes {
+  position: relative;
+  /* Sans quoi la marge négative du carrousel remonterait tout le sélecteur. */
+  display: flow-root;
+}
+
+.selecteur-themes::after {
+  content: "";
+  position: absolute;
+  inset: 0 -4px 6px auto;
+  width: 56px;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(0, 0, 0, 0.28));
+  border-radius: 0 var(--rayon) var(--rayon) 0;
+}
+
+.themes {
+  scrollbar-width: thin;
+  scrollbar-color: var(--bordure) transparent;
+}
+
+.themes::-webkit-scrollbar {
+  height: 6px;
+}
+
+.themes::-webkit-scrollbar-thumb {
+  background: var(--bordure);
+  border-radius: 999px;
+}
+
+
+
+/* Cartes de jeux : léger effet de profondeur au survol */
+.jeu {
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.jeu:hover,
+.jeu:focus-visible {
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.34);
+}
+
+

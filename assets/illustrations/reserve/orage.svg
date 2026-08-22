@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Orage">
+  <defs><linearGradient id="orage-nuage" x1="0.3" y1="0" x2="0.6" y2="1">
+    <stop offset="0" stop-color="#8b9aab"/><stop offset="60%" stop-color="#5f7086"/><stop offset="100%" stop-color="#3a485a"/>
+  </linearGradient></defs>
+  <g fill="url(#orage-nuage)" stroke="#2b3644" stroke-width="3.5">
+    <circle cx="36" cy="46" r="20"/><circle cx="60" cy="34" r="25"/><circle cx="84" cy="46" r="19"/>
+    <rect x="34" y="46" width="50" height="20" rx="10"/>
+  </g>
+  <path d="M62 66 l-22 26 h16 l-10 26 30 -34 h-16z" fill="#ffd166" stroke="#c9931a" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#7fa8c4" stroke-width="6" stroke-linecap="round">
+    <path d="M28 74 l-5 14"/><path d="M92 74 l-5 14"/>
+  </g>
+</svg>

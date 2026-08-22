@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Parapluie">
+  <defs>
+    <linearGradient id="parapluie-rouge" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8080"/><stop offset="100%" stop-color="#c01f2b"/>
+    </linearGradient>
+  </defs>
+  <path d="M60 60 v40 q0 12 -14 12 q-12 0 -12 -10" fill="none" stroke="#8a6a48" stroke-width="7" stroke-linecap="round"/>
+  <path d="M6 60 q0 -48 54 -48 q54 0 54 48 q-14 -12 -27 0 q-13 -12 -27 0 q-14 -12 -27 0 q-13 -12 -27 0z"
+        fill="url(#parapluie-rouge)" stroke="#8f1420" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M33 55 q0 -43 27 -43 q27 0 27 43" fill="#f7f9fc" opacity="0.28"/>
+  <g stroke="#8f1420" stroke-width="3" fill="none" opacity="0.45">
+    <path d="M60 12 v44"/><path d="M33 22 q0 20 0 34"/><path d="M87 22 q0 20 0 34"/>
+  </g>
+  <circle cx="60" cy="10" r="6" fill="#8a6a48" stroke="#5f4830" stroke-width="3"/>
+  <g fill="#5cb8e8" opacity="0.8"><circle cx="18" cy="86" r="5"/><circle cx="96" cy="80" r="5"/><circle cx="86" cy="104" r="4"/></g>
+</svg>

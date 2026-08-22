@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Golf">
+  <ellipse cx="60" cy="102" rx="52" ry="16" fill="#5cb85c" stroke="#2f7d3f" stroke-width="3.5"/>
+  <ellipse cx="76" cy="98" rx="14" ry="6" fill="#2b3441" stroke="#161b23" stroke-width="3"/>
+  <path d="M76 96 v-76" stroke="#c9d2de" stroke-width="6" stroke-linecap="round"/>
+  <path d="M78 20 l30 12 -30 12z" fill="#e03131" stroke="#8f1414" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="34" cy="92" r="14" fill="#f7f9fc" stroke="#b8c2cf" stroke-width="3.5"/>
+  <g fill="#d6dde6"><circle cx="30" cy="88" r="2.4"/><circle cx="38" cy="88" r="2.4"/><circle cx="34" cy="95" r="2.4"/><circle cx="28" cy="96" r="2"/><circle cx="40" cy="95" r="2"/></g>
+  <path d="M8 96 q14 -6 26 -4" stroke="#3f8f2e" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+</svg>

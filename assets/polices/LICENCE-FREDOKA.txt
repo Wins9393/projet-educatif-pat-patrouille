@@ -1,0 +1,7 @@
+Police Fredoka — SIL Open Font License 1.1
+Copyright (c) The Fredoka Project Authors (https://github.com/hafontia/Fredoka)
+
+Fichier : fredoka-latin.woff2 (sous-ensemble latin, fonte variable 300-700)
+Récupéré depuis Google Fonts et servi en local pour le fonctionnement hors ligne.
+
+Texte complet de la licence : https://openfontlicense.org

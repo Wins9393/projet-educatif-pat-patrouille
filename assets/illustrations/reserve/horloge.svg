@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Horloge">
+  <defs><radialGradient id="horloge-cadran" cx="36%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="70%" stop-color="#f2f5f9"/><stop offset="100%" stop-color="#cfd7e2"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M28 22 l10 12 M92 22 l-10 12" stroke="#c0392b" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="26" cy="18" r="10" fill="#e0574a" stroke="#96291a" stroke-width="3"/>
+  <circle cx="94" cy="18" r="10" fill="#e0574a" stroke="#96291a" stroke-width="3"/>
+  <circle cx="60" cy="66" r="42" fill="#e0574a" stroke="#96291a" stroke-width="3.5"/>
+  <circle cx="60" cy="66" r="34" fill="url(#horloge-cadran)" stroke="#b8c2cf" stroke-width="3"/>
+  <g stroke="#42505f" stroke-width="4" stroke-linecap="round">
+    <path d="M60 38 v6"/><path d="M60 88 v6"/><path d="M32 66 h6"/><path d="M82 66 h6"/>
+  </g>
+  <path d="M60 66 v-20" stroke="#2f3540" stroke-width="5" stroke-linecap="round"/>
+  <path d="M60 66 l16 10" stroke="#2f3540" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="60" cy="66" r="4.5" fill="#c0392b"/>
+  <path d="M44 100 v8 M76 100 v8" stroke="#96291a" stroke-width="6" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Bonhomme de neige">
+  <defs><radialGradient id="bonhomme-neige" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#eef4fa"/><stop offset="100%" stop-color="#c3d3e0"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="112" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="86" r="26" fill="url(#bonhomme-neige)" stroke="#9fb4c6" stroke-width="3.5"/>
+  <circle cx="60" cy="50" r="20" fill="url(#bonhomme-neige)" stroke="#9fb4c6" stroke-width="3.5"/>
+  <path d="M34 50 l-22 -8 M86 50 l22 -8" stroke="#8a6a48" stroke-width="5" stroke-linecap="round"/>
+  <path d="M18 44 l-6 -6 M18 44 l-7 4" stroke="#8a6a48" stroke-width="4" stroke-linecap="round"/>
+  <path d="M102 44 l6 -6 M102 44 l7 4" stroke="#8a6a48" stroke-width="4" stroke-linecap="round"/>
+  <path d="M40 32 h40 v-16 h-28 v16z" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M40 32 h40" stroke="#e03131" stroke-width="5"/>
+  <circle cx="52" cy="46" r="4" fill="#2f3540"/><circle cx="68" cy="46" r="4" fill="#2f3540"/>
+  <path d="M60 52 l14 4 -14 4z" fill="#f5891e" stroke="#c26908" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#2f3540"><circle cx="60" cy="78" r="4"/><circle cx="60" cy="92" r="4"/></g>
+</svg>

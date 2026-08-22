@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lampe">
+  <defs>
+    <linearGradient id="lampe-abat" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#ffe08a"/><stop offset="55%" stop-color="#f0b429"/><stop offset="100%" stop-color="#a87a08"/>
+    </linearGradient>
+    <radialGradient id="lampe-halo" cx="50%" cy="0%" r="80%">
+      <stop offset="0" stop-color="#fff3c4" stop-opacity="0.75"/><stop offset="100%" stop-color="#fff3c4" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="60" cy="108" rx="32" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M24 52 l72 0 -28 46 h-16z" fill="url(#lampe-halo)"/>
+  <path d="M28 50 l14 -32 h36 l14 32z" fill="url(#lampe-abat)" stroke="#8f6404" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M28 50 h64" stroke="#8f6404" stroke-width="3.5" stroke-linecap="round"/>
+  <path d="M60 50 v40" stroke="#9aa5b4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M60 50 v40" stroke="#68727f" stroke-width="3" stroke-linecap="round" opacity="0.4"/>
+  <ellipse cx="60" cy="98" rx="26" ry="8" fill="#b9c2ce" stroke="#7e8a99" stroke-width="3.5"/>
+  <path d="M40 26 l8 20" stroke="#fff" stroke-width="4" opacity="0.35" stroke-linecap="round"/>
+</svg>

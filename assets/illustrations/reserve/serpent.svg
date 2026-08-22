@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Serpent">
+  <defs><linearGradient id="serpent-peau" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#9ede6f"/><stop offset="55%" stop-color="#63b23f"/><stop offset="100%" stop-color="#3d7a25"/>
+  </linearGradient></defs>
+  <ellipse cx="62" cy="108" rx="36" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M96 100 q-56 6 -60 -14 q-3 -16 26 -16 q26 0 24 -16 q-2 -14 -22 -14"
+        stroke="url(#serpent-peau)" stroke-width="20" fill="none" stroke-linecap="round"/>
+  <path d="M96 100 q-56 6 -60 -14 q-3 -16 26 -16 q26 0 24 -16 q-2 -14 -22 -14"
+        stroke="#2d5c1a" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.35"/>
+  <g fill="#b6ea8e" opacity="0.8">
+    <circle cx="80" cy="98" r="4"/><circle cx="58" cy="94" r="4"/><circle cx="44" cy="76" r="4"/><circle cx="70" cy="68" r="4"/>
+  </g>
+  <ellipse cx="60" cy="34" rx="22" ry="17" fill="url(#serpent-peau)" stroke="#2d5c1a" stroke-width="3.5"/>
+  <circle cx="52" cy="30" r="5" fill="#f5d547"/><circle cx="70" cy="30" r="5" fill="#f5d547"/>
+  <circle cx="52" cy="30" r="2.4" fill="#1d2430"/><circle cx="70" cy="30" r="2.4" fill="#1d2430"/>
+  <path d="M60 48 v10 l-6 6 M60 58 l6 6" stroke="#e0455f" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

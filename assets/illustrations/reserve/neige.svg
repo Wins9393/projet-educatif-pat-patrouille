@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Neige">
+  <defs><linearGradient id="neige-flocon" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="60%" stop-color="#d6ecf9"/><stop offset="100%" stop-color="#8fc4e0"/>
+  </linearGradient></defs>
+  <g stroke="url(#neige-flocon)" stroke-width="9" stroke-linecap="round">
+    <path d="M60 12 v96"/><path d="M18 36 l84 48"/><path d="M102 36 l-84 48"/>
+  </g>
+  <g stroke="#7fb5d4" stroke-width="3" stroke-linecap="round" opacity="0.5">
+    <path d="M60 12 v96"/><path d="M18 36 l84 48"/><path d="M102 36 l-84 48"/>
+  </g>
+  <g stroke="url(#neige-flocon)" stroke-width="7" stroke-linecap="round">
+    <path d="M60 30 l-14 -12 M60 30 l14 -12"/><path d="M60 90 l-14 12 M60 90 l14 12"/>
+    <path d="M32 46 l-18 2 M32 46 l-4 -18"/><path d="M88 74 l18 -2 M88 74 l4 18"/>
+    <path d="M88 46 l18 2 M88 46 l4 -18"/><path d="M32 74 l-18 -2 M32 74 l-4 18"/>
+  </g>
+  <circle cx="60" cy="60" r="9" fill="url(#neige-flocon)" stroke="#7fb5d4" stroke-width="3"/>
+</svg>

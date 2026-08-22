@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Soleil">
+  <defs>
+    <radialGradient id="soleil-corps" cx="38%" cy="34%" r="72%">
+      <stop offset="0" stop-color="#fff6cc"/>
+      <stop offset="55%" stop-color="#ffc300"/>
+      <stop offset="100%" stop-color="#f77f00"/>
+    </radialGradient>
+  </defs>
+  <g fill="#ffb703">
+    <rect x="55" y="2" width="10" height="20" rx="5"/>
+    <rect x="55" y="98" width="10" height="20" rx="5"/>
+    <rect x="2" y="55" width="20" height="10" rx="5"/>
+    <rect x="98" y="55" width="20" height="10" rx="5"/>
+    <rect x="14" y="16" width="10" height="20" rx="5" transform="rotate(-45 19 26)"/>
+    <rect x="96" y="16" width="10" height="20" rx="5" transform="rotate(45 101 26)"/>
+    <rect x="14" y="84" width="10" height="20" rx="5" transform="rotate(45 19 94)"/>
+    <rect x="96" y="84" width="10" height="20" rx="5" transform="rotate(-45 101 94)"/>
+  </g>
+  <circle cx="60" cy="60" r="33" fill="url(#soleil-corps)" stroke="#f08c00" stroke-width="4"/>
+  <circle cx="49" cy="49" r="6" fill="#fff" opacity="0.6"/>
+</svg>

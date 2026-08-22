@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Raisin">
+  <defs><radialGradient id="raisin-grain" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#c98ae0"/><stop offset="50%" stop-color="#8e44ad"/><stop offset="100%" stop-color="#59216f"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M60 34 v-14" stroke="#7a4a1e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M62 22 q16 -14 28 -6 q-10 14 -28 10z" fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="url(#raisin-grain)" stroke="#4a1c60" stroke-width="3">
+    <circle cx="44" cy="46" r="13"/><circle cx="70" cy="44" r="13"/>
+    <circle cx="32" cy="66" r="13"/><circle cx="58" cy="64" r="13"/><circle cx="84" cy="64" r="13"/>
+    <circle cx="44" cy="84" r="13"/><circle cx="70" cy="84" r="13"/>
+    <circle cx="58" cy="100" r="12"/>
+  </g>
+  <g fill="#fff" opacity="0.3"><circle cx="40" cy="42" r="4"/><circle cx="28" cy="62" r="4"/><circle cx="54" cy="60" r="4"/><circle cx="40" cy="80" r="3.6"/></g>
+</svg>

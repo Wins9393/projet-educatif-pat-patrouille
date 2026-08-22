@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Girafe">
+  <defs><linearGradient id="girafe-robe" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffd98a"/><stop offset="55%" stop-color="#efb44b"/><stop offset="100%" stop-color="#bd8420"/>
+  </linearGradient></defs>
+  <ellipse cx="66" cy="112" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M52 108 v-20 M70 110 v-22 M86 108 v-20" stroke="#bd8420" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="70" cy="80" rx="28" ry="20" fill="url(#girafe-robe)" stroke="#9c6a12" stroke-width="3.5"/>
+  <path d="M46 84 q-8 -34 -6 -56" stroke="#efb44b" stroke-width="18" fill="none" stroke-linecap="round"/>
+  <path d="M46 84 q-8 -34 -6 -56" stroke="#9c6a12" stroke-width="3.5" fill="none" stroke-linecap="round" opacity="0.35"/>
+  <g fill="#a9701a" opacity="0.85">
+    <circle cx="38" cy="42" r="5"/><circle cx="44" cy="60" r="5"/><circle cx="62" cy="74" r="6"/>
+    <circle cx="80" cy="82" r="6"/><circle cx="70" cy="92" r="5"/>
+  </g>
+  <path d="M32 16 v-8 M46 16 v-8" stroke="#9c6a12" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="32" cy="8" r="5" fill="#7a5310"/><circle cx="46" cy="8" r="5" fill="#7a5310"/>
+  <ellipse cx="38" cy="26" rx="20" ry="16" fill="url(#girafe-robe)" stroke="#9c6a12" stroke-width="3.5"/>
+  <ellipse cx="22" cy="30" rx="9" ry="6" fill="#d9a13e" stroke="#9c6a12" stroke-width="3"/>
+  <circle cx="34" cy="22" r="4.5" fill="#2d2016"/><circle cx="32.6" cy="20.6" r="1.8" fill="#fff"/>
+  <ellipse cx="50" cy="32" rx="7" ry="5" fill="#c98a30"/>
+</svg>

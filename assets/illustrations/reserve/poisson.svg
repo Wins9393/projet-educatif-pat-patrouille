@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Poisson">
+  <defs><linearGradient id="poisson-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffc06a"/><stop offset="55%" stop-color="#f58a1e"/><stop offset="100%" stop-color="#bd5a04"/>
+  </linearGradient></defs>
+  <path d="M96 60 l20 -20 v40z" fill="url(#poisson-corps)" stroke="#9c4a04" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="58" cy="60" rx="42" ry="30" fill="url(#poisson-corps)" stroke="#9c4a04" stroke-width="3.5"/>
+  <path d="M56 30 q10 -18 22 -14 q-2 12 -8 18z" fill="#f5a83c" stroke="#9c4a04" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M56 90 q10 18 22 14 q-2 -12 -8 -18z" fill="#f5a83c" stroke="#9c4a04" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M40 34 q6 26 0 52 M62 32 q8 28 0 56" stroke="#fff" stroke-width="9" fill="none" opacity="0.75"/>
+  <ellipse cx="52" cy="66" rx="26" ry="14" fill="#ffd9a3" opacity="0.5"/>
+  <circle cx="28" cy="52" r="8" fill="#fff"/><circle cx="28" cy="52" r="4.5" fill="#1d2430"/>
+  <circle cx="26" cy="50" r="1.8" fill="#fff"/>
+  <path d="M18 66 q8 5 14 1" stroke="#9c4a04" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ordinateur portable">
+  <defs><linearGradient id="portable-dalle" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#8fd4f5"/><stop offset="55%" stop-color="#3d9ad4"/><stop offset="100%" stop-color="#1a5580"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="48" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M22 78 v-52 q0 -6 6 -6 h64 q6 0 6 6 v52z" fill="#4a5464" stroke="#252d38" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="30" y="28" width="60" height="42" rx="4" fill="url(#portable-dalle)" stroke="#153f5f" stroke-width="3"/>
+  <path d="M36 62 l14 -18 10 10 10 -14 16 22z" fill="#c9e8fa" opacity="0.55"/>
+  <path d="M6 78 h108 q0 16 -14 16 h-80 q-14 0 -14 -16z" fill="#8b96a4" stroke="#5f6a7a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M46 86 h28" stroke="#5f6a7a" stroke-width="4" stroke-linecap="round"/>
+  <path d="M36 34 l10 -3" stroke="#fff" stroke-width="4" opacity="0.4" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Échelle">
+  <defs><linearGradient id="echelle-bois" x1="0" y1="0" x2="0.5" y2="1">
+    <stop offset="0" stop-color="#d9a86b"/><stop offset="50%" stop-color="#a8763f"/><stop offset="100%" stop-color="#714d20"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="38" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M32 106 l10 -94" stroke="url(#echelle-bois)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M88 106 l-10 -94" stroke="url(#echelle-bois)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M32 106 l10 -94 M88 106 l-10 -94" stroke="#5f3f18" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <g stroke="url(#echelle-bois)" stroke-width="9" stroke-linecap="round">
+    <path d="M41 26 h38"/><path d="M38 48 h44"/><path d="M35 70 h50"/><path d="M33 92 h54"/>
+  </g>
+  <g stroke="#5f3f18" stroke-width="3" stroke-linecap="round" opacity="0.3">
+    <path d="M41 26 h38"/><path d="M38 48 h44"/><path d="M35 70 h50"/><path d="M33 92 h54"/>
+  </g>
+</svg>

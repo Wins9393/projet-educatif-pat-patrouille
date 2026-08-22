@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Accordéon">
+  <defs><linearGradient id="accordeon-caisse" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#ff8080"/><stop offset="50%" stop-color="#c0392b"/><stop offset="100%" stop-color="#8a1f14"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="40" ry="5" fill="#000" opacity="0.18"/>
+  <rect x="8" y="22" width="24" height="76" rx="7" fill="url(#accordeon-caisse)" stroke="#701810" stroke-width="3.5"/>
+  <rect x="88" y="22" width="24" height="76" rx="7" fill="url(#accordeon-caisse)" stroke="#701810" stroke-width="3.5"/>
+  <g fill="#f2f6fb" stroke="#98a3b0" stroke-width="3">
+    <rect x="14" y="34" width="12" height="12" rx="3"/><rect x="14" y="52" width="12" height="12" rx="3"/><rect x="14" y="70" width="12" height="12" rx="3"/>
+  </g>
+  <g fill="#2f3540"><circle cx="100" cy="40" r="5"/><circle cx="100" cy="58" r="5"/><circle cx="100" cy="76" r="5"/></g>
+  <path d="M32 30 l8 8 -8 8 8 8 -8 8 8 8 -8 8 8 8 -8 8 h56 l-8 -8 8 -8 -8 -8 8 -8 -8 -8 8 -8 -8 -8 8 -8z"
+        fill="#f7f9fc" stroke="#98a3b0" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M40 30 v64 M52 30 v64 M64 30 v64 M76 30 v64" stroke="#c3ccd8" stroke-width="3"/>
+</svg>

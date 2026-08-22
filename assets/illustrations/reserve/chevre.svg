@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Chèvre">
+  <defs><linearGradient id="chevre-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#f4efe4"/><stop offset="55%" stop-color="#ddd2bd"/><stop offset="100%" stop-color="#ab9d84"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="112" rx="30" ry="5.5" fill="#000" opacity="0.18"/>
+  <path d="M42 108 v-18 M60 110 v-20 M78 108 v-18" stroke="#8d8069" stroke-width="8" stroke-linecap="round"/>
+  <ellipse cx="62" cy="76" rx="32" ry="22" fill="url(#chevre-poil)" stroke="#8d8069" stroke-width="3.5"/>
+  <circle cx="34" cy="48" r="23" fill="url(#chevre-poil)" stroke="#8d8069" stroke-width="3.5"/>
+  <path d="M24 28 q-6 -18 4 -22 q4 10 4 20z" fill="#c3b295" stroke="#8d8069" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M44 28 q6 -18 -4 -22 q-4 10 -4 20z" fill="#c3b295" stroke="#8d8069" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="14" cy="52" rx="9" ry="12" fill="url(#chevre-poil)" stroke="#8d8069" stroke-width="3"/>
+  <ellipse cx="14" cy="56" rx="5" ry="4" fill="#8d8069"/>
+  <circle cx="28" cy="44" r="4.5" fill="#2d2016"/><circle cx="44" cy="44" r="4.5" fill="#2d2016"/>
+  <circle cx="26.5" cy="42.5" r="1.9" fill="#fff"/><circle cx="42.5" cy="42.5" r="1.9" fill="#fff"/>
+  <path d="M34 66 q-3 12 2 16" stroke="#c3b295" stroke-width="5" fill="none" stroke-linecap="round"/>
+</svg>

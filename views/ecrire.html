@@ -3,67 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles.css">
-    <script type="module" src="../controllers/ecrire.js" defer></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.2.4/tsparticles.bundle.min.js" defer></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles-preset-confetti@2/tsparticles.preset.confetti.bundle.min.js">
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1b2a4a">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/decors.css">
+    <link rel="stylesheet" href="../styles/jeux.css">
+    <link rel="stylesheet" href="../styles/panneaux.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../vendor/confetti.min.js" defer></script>
+    <script type="module" src="../controllers/ecrire.js"></script>
     <title>ÉCRIRE</title>
-    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
 </head>
 
 <body>
+    <main class="jeu-page">
+        <div class="plateau">
+            <p class="consigne">
+                <span class="consigne__texte">Écris le mot</span>
+                <button class="bouton bouton--discret bouton--icone" data-action="ecouter" aria-label="Réécouter">🔊</button>
+            </p>
 
-    <main class="main">
-        <audio class="audio1" autoplay src=""></audio>
-        <!-- <audio class="audio2" autoplay loop src=""></audio> -->
-        <div class="reaction"></div>
-        <div id="tsparticles"></div>
+            <div class="question"></div>
 
-        <header class="main-header flex-space-around">
-            <nav>
-                <a class="lien-header btn bleu" href="../index.html">ACCUEIL</a>
-                <a class="lien-header btn bleu" href="#">ÉCRIRE</a>
-                <a class="lien-header btn bleu" href="lire.html">LIRE</a>
-                <a class="lien-header btn bleu" href="compter.html">COMPTER</a>
-                <a class="lien-header btn bleu" href="calculer.html">CALCULER</a>
-            </nav>
-        </header>
+            <div class="mot-en-cours"></div>
 
-        <div class="main-content flex-space-evenly-column">
-            <div>
-                <button class="btn btn-jouer btn-ecrire rose">REJOUER</button>
-            </div>
+            <div class="choix"></div>
 
-            <!-- <div class="victoire">
-                <img src="../assets/reactions/X5NZ.gif" alt="">
-                <img src="../assets/reactions/bf6.gif" alt="">
-                <img src="../assets/reactions/5G7b.gif" alt="">
-                <img src="../assets/reactions/Z3us.gif" alt="">
-            </div> -->
-
-            <div>
-                <div class="dynamic-letters flex-center">
-                    <img class="img-btn" src="" alt="">
-                    <img class="img-btn" src="" alt="">
-                    <img class="img-btn" src="" alt="">
-                    <img class="img-btn" src="" alt="">
-                    <img class="img-btn" src="" alt="">
-                </div>
-            </div>
-
-            <div class="image-aleatoire-wrapper flex-center">
-                <img class="image-aleatoire" src="" alt="">
-            </div>
-
-            <div class="nom-chiot"></div>
-
+            <button class="bouton" data-action="rejouer">Nouveau mot</button>
         </div>
     </main>
-
-    <!-- <script class="script-particules" type="module" src="../controllers/particules.js" defer></script> -->
 </body>
 
 </html>

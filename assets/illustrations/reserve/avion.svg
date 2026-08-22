@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Avion">
+  <defs><linearGradient id="avion-fuselage" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="55%" stop-color="#e4e9f0"/><stop offset="100%" stop-color="#b3bcc9"/>
+  </linearGradient></defs>
+  <path d="M58 44 l-46 -22 q-8 -4 -8 4 l8 26z" fill="#dbe2ec" stroke="#8b96a4" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M58 72 l-46 22 q-8 4 -8 -4 l8 -26z" fill="#c6cfdb" stroke="#8b96a4" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M96 44 l14 -14 q6 -4 6 4 l-6 20z" fill="#dbe2ec" stroke="#8b96a4" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 58 q0 -18 46 -18 h26 q24 0 30 18 q-6 18 -30 18 h-26 q-46 0 -46 -18z"
+        fill="url(#avion-fuselage)" stroke="#8b96a4" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#5eb3e8"><circle cx="40" cy="56" r="5"/><circle cx="56" cy="56" r="5"/><circle cx="72" cy="56" r="5"/></g>
+  <path d="M100 52 q10 4 10 6 q0 2 -10 6z" fill="#c9e8fa" stroke="#8b96a4" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M16 66 h74" stroke="#e03131" stroke-width="5" stroke-linecap="round" opacity="0.85"/>
+</svg>

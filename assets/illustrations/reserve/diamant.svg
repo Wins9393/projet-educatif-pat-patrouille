@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Diamant">
+  <defs>
+    <linearGradient id="diamant-gauche" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#d6f0fb"/><stop offset="100%" stop-color="#5cb8e8"/>
+    </linearGradient>
+    <linearGradient id="diamant-droite" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7fc9ea"/><stop offset="100%" stop-color="#2b7fa8"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.14"/>
+  <path d="M28 20 h64 l22 26 -54 58 -54 -58z" fill="url(#diamant-gauche)" stroke="#1d6b96" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M60 104 l54 -58 -22 -26 -12 26z" fill="url(#diamant-droite)" stroke="#1d6b96" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M6 46 h108" stroke="#1d6b96" stroke-width="3.5"/>
+  <path d="M28 20 l12 26 -34 0 M92 20 l-12 26 M40 46 l20 58 M80 46 l-20 58 M40 46 h40" stroke="#1d6b96" stroke-width="3" fill="none"/>
+  <path d="M34 26 h20 l-6 14z" fill="#fff" opacity="0.55"/>
+</svg>

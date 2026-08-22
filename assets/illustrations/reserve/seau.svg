@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Seau">
+  <defs><linearGradient id="seau-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#8fd4f5"/><stop offset="50%" stop-color="#3d9ad4"/><stop offset="100%" stop-color="#1a5580"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="38" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M18 44 q42 -16 84 0 v6 q0 12 -14 12" fill="none" stroke="#8b96a4" stroke-width="6" stroke-linecap="round"/>
+  <path d="M16 46 h88 l-12 54 h-64z" fill="url(#seau-corps)" stroke="#164e78" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="46" rx="44" ry="12" fill="#5cb8e8" stroke="#164e78" stroke-width="3.5"/>
+  <ellipse cx="60" cy="46" rx="34" ry="8" fill="#d9b877" stroke="#a88a52" stroke-width="3"/>
+  <g fill="#c9a86a"><circle cx="46" cy="45" r="5"/><circle cx="68" cy="48" r="4.5"/></g>
+  <path d="M22 62 h76" stroke="#7fc9ea" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+  <path d="M26 74 q6 -3 12 -2" stroke="#fff" stroke-width="4" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

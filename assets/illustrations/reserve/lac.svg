@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lac">
+  <defs><linearGradient id="lac-eau" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#8fd4f5"/><stop offset="55%" stop-color="#3d9ad4"/><stop offset="100%" stop-color="#1d5f8f"/>
+  </linearGradient></defs>
+  <path d="M4 66 l26 -32 18 22 12 -14 30 24z" fill="#7e8a99" stroke="#5c6878" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M30 34 l-10 14 20 0z" fill="#f2f6fb" stroke="#c4cdd8" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="82" rx="52" ry="24" fill="url(#lac-eau)" stroke="#164e78" stroke-width="3.5"/>
+  <g stroke="#cfeaf9" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M24 78 q10 -5 20 0"/><path d="M56 86 q10 -5 20 0"/><path d="M34 92 q10 -5 20 0"/><path d="M74 74 q9 -5 18 0"/>
+  </g>
+  <g fill="#5cb85c" stroke="#2f7d3f" stroke-width="3"><circle cx="14" cy="62" r="10"/><circle cx="106" cy="64" r="11"/></g>
+  <ellipse cx="60" cy="106" rx="44" ry="5" fill="#000" opacity="0.14"/>
+</svg>

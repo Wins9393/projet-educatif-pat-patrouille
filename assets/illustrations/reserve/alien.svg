@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Alien">
+  <ellipse cx="60" cy="113" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <!-- antennes -->
+  <path d="M40 34 q-6 -16 -12 -22" stroke="#4caf7d" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <path d="M80 34 q6 -16 12 -22" stroke="#4caf7d" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <circle cx="27" cy="11" r="8" fill="#ffd166" stroke="#e0a800" stroke-width="3"/>
+  <circle cx="93" cy="11" r="8" fill="#ffd166" stroke="#e0a800" stroke-width="3"/>
+  <!-- corps -->
+  <path d="M60 96 q-20 0 -20 -14 v-6 h40 v6 q0 14 -20 14z" fill="#4caf7d"/>
+  <!-- tête -->
+  <ellipse cx="60" cy="56" rx="38" ry="34" fill="#6cc99a"/>
+  <ellipse cx="60" cy="50" rx="38" ry="30" fill="#7ed3a8"/>
+  <!-- yeux -->
+  <ellipse cx="45" cy="54" rx="11" ry="14" fill="#20343f" transform="rotate(-14 45 54)"/>
+  <ellipse cx="75" cy="54" rx="11" ry="14" fill="#20343f" transform="rotate(14 75 54)"/>
+  <circle cx="42" cy="48" r="4" fill="#fff" opacity="0.9"/>
+  <circle cx="72" cy="48" r="4" fill="#fff" opacity="0.9"/>
+  <!-- sourire -->
+  <path d="M50 74 q10 8 20 0" stroke="#20343f" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>

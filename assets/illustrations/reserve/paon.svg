@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Paon">
+  <defs><radialGradient id="paon-roue" cx="50%" cy="80%" r="70%">
+    <stop offset="0" stop-color="#3fb56b"/><stop offset="60%" stop-color="#1f8fb5"/><stop offset="100%" stop-color="#155f8f"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="112" rx="24" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M60 92 a44 44 0 0 1 -44 -44 a44 44 0 0 1 88 0 a44 44 0 0 1 -44 44z" fill="url(#paon-roue)" stroke="#10496e" stroke-width="3.5"/>
+  <g fill="#f5d547" stroke="#c9a812" stroke-width="3">
+    <circle cx="60" cy="20" r="6"/><circle cx="34" cy="28" r="6"/><circle cx="86" cy="28" r="6"/>
+    <circle cx="22" cy="52" r="6"/><circle cx="98" cy="52" r="6"/><circle cx="38" cy="72" r="6"/><circle cx="82" cy="72" r="6"/>
+  </g>
+  <g fill="#1f5f8f"><circle cx="60" cy="20" r="2.6"/><circle cx="34" cy="28" r="2.6"/><circle cx="86" cy="28" r="2.6"/>
+    <circle cx="22" cy="52" r="2.6"/><circle cx="98" cy="52" r="2.6"/><circle cx="38" cy="72" r="2.6"/><circle cx="82" cy="72" r="2.6"/></g>
+  <ellipse cx="60" cy="86" rx="15" ry="20" fill="#1f6f9c" stroke="#10496e" stroke-width="3.5"/>
+  <circle cx="60" cy="62" r="12" fill="#2a86b8" stroke="#10496e" stroke-width="3.5"/>
+  <path d="M60 50 v-8" stroke="#10496e" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="60" cy="40" r="3.5" fill="#3fb56b"/>
+  <circle cx="55" cy="60" r="3.5" fill="#1d2430"/><circle cx="65" cy="60" r="3.5" fill="#1d2430"/>
+  <path d="M60 66 l-5 5 h10z" fill="#f5d547"/>
+</svg>

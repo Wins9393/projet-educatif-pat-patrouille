@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Crabe">
+  <defs><radialGradient id="crabe-carapace" cx="36%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ff8f6b"/><stop offset="55%" stop-color="#e0492a"/><stop offset="100%" stop-color="#9c2410"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="36" ry="6" fill="#000" opacity="0.2"/>
+  <g stroke="#8a1f0c" stroke-width="4" stroke-linecap="round">
+    <path d="M28 84 l-16 12 M34 92 l-12 14 M92 84 l16 12 M86 92 l12 14"/>
+  </g>
+  <path d="M22 62 q-16 -8 -18 -24 q10 -6 16 4 q10 -6 12 6 q2 10 -10 14z"
+        fill="url(#crabe-carapace)" stroke="#8a1f0c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M98 62 q16 -8 18 -24 q-10 -6 -16 4 q-10 -6 -12 6 q-2 10 10 14z"
+        fill="url(#crabe-carapace)" stroke="#8a1f0c" stroke-width="3.5" stroke-linejoin="round"/>
+  <ellipse cx="60" cy="72" rx="42" ry="28" fill="url(#crabe-carapace)" stroke="#8a1f0c" stroke-width="3.5"/>
+  <path d="M46 34 v14 M74 34 v14" stroke="#c93a1c" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="46" cy="30" r="9" fill="#fff" stroke="#c93a1c" stroke-width="3"/>
+  <circle cx="74" cy="30" r="9" fill="#fff" stroke="#c93a1c" stroke-width="3"/>
+  <circle cx="46" cy="31" r="4.5" fill="#1d2430"/><circle cx="74" cy="31" r="4.5" fill="#1d2430"/>
+  <path d="M46 78 q14 8 28 0" stroke="#8a1f0c" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <ellipse cx="42" cy="62" rx="9" ry="6" fill="#fff" opacity="0.25"/>
+</svg>

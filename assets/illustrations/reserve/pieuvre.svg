@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pieuvre">
+  <defs><radialGradient id="pieuvre-corps" cx="36%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ff9db8"/><stop offset="55%" stop-color="#e05a86"/><stop offset="100%" stop-color="#9c2f54"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="112" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <g stroke="#8a2447" stroke-width="3.5" fill="url(#pieuvre-corps)">
+    <path d="M26 74 q-16 12 -14 30 q10 6 14 -8 q3 -12 6 -16z"/>
+    <path d="M44 80 q-10 16 -4 30 q10 2 10 -14 q0 -10 2 -14z"/>
+    <path d="M76 80 q10 16 4 30 q-10 2 -10 -14 q0 -10 -2 -14z"/>
+    <path d="M94 74 q16 12 14 30 q-10 6 -14 -8 q-3 -12 -6 -16z"/>
+  </g>
+  <ellipse cx="60" cy="56" rx="40" ry="38" fill="url(#pieuvre-corps)" stroke="#8a2447" stroke-width="3.5"/>
+  <circle cx="46" cy="50" r="9" fill="#fff"/><circle cx="74" cy="50" r="9" fill="#fff"/>
+  <circle cx="46" cy="51" r="5" fill="#1d2430"/><circle cx="74" cy="51" r="5" fill="#1d2430"/>
+  <circle cx="43.5" cy="48" r="2.2" fill="#fff"/><circle cx="71.5" cy="48" r="2.2" fill="#fff"/>
+  <path d="M50 70 q10 8 20 0" stroke="#8a2447" stroke-width="4" fill="none" stroke-linecap="round"/>
+  <circle cx="38" cy="30" r="7" fill="#fff" opacity="0.35"/>
+  <g fill="#f5b8cd" opacity="0.85"><circle cx="30" cy="92" r="4"/><circle cx="48" cy="100" r="4"/><circle cx="72" cy="100" r="4"/><circle cx="90" cy="92" r="4"/></g>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Champignon">
+  <defs><radialGradient id="champignon-chapeau" cx="36%" cy="26%" r="76%">
+    <stop offset="0" stop-color="#ff8a7a"/><stop offset="50%" stop-color="#e03131"/><stop offset="100%" stop-color="#961818"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="30" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M44 62 q-6 26 -2 40 q18 6 36 0 q4 -14 -2 -40z" fill="#f7ecd8" stroke="#c9b48c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M8 64 q4 -46 52 -46 q48 0 52 46 q-26 10 -52 10 q-26 0 -52 -10z"
+        fill="url(#champignon-chapeau)" stroke="#8a1414" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#fff" opacity="0.92"><circle cx="34" cy="46" r="8"/><circle cx="62" cy="36" r="9"/><circle cx="88" cy="48" r="7"/><circle cx="48" cy="60" r="6"/><circle cx="76" cy="62" r="5.5"/></g>
+  <path d="M50 92 q10 4 20 0" stroke="#c9b48c" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

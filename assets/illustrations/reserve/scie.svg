@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Scie">
+  <defs><linearGradient id="scie-lame" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#e8edf4"/><stop offset="50%" stop-color="#a9b4c2"/><stop offset="100%" stop-color="#66727f"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="38" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M18 34 h72 l-6 34 h-56z" fill="url(#scie-lame)" stroke="#454f5e" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M28 68 l6 10 6 -10 6 10 6 -10 6 10 6 -10 6 10 6 -10 6 10 4 -10z"
+        fill="url(#scie-lame)" stroke="#454f5e" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M22 42 h60" stroke="#fff" stroke-width="4" opacity="0.45" stroke-linecap="round"/>
+  <path d="M90 34 q22 0 22 16 q0 16 -20 18 l-8 0" fill="none" stroke="#c9925c" stroke-width="12" stroke-linecap="round"/>
+  <path d="M90 34 q22 0 22 16 q0 16 -20 18 l-8 0" fill="none" stroke="#7a5228" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+</svg>

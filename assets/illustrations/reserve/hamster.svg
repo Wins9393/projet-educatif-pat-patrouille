@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Hamster">
+  <defs><linearGradient id="hamster-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffd9a0"/><stop offset="55%" stop-color="#e8b06a"/><stop offset="100%" stop-color="#b57f3c"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5.5" fill="#000" opacity="0.18"/>
+  <circle cx="32" cy="34" r="14" fill="url(#hamster-poil)" stroke="#96652b" stroke-width="3.5"/>
+  <circle cx="88" cy="34" r="14" fill="url(#hamster-poil)" stroke="#96652b" stroke-width="3.5"/>
+  <circle cx="32" cy="34" r="7" fill="#f7c0cf"/><circle cx="88" cy="34" r="7" fill="#f7c0cf"/>
+  <ellipse cx="60" cy="66" rx="38" ry="34" fill="url(#hamster-poil)" stroke="#96652b" stroke-width="3.5"/>
+  <ellipse cx="60" cy="82" rx="24" ry="16" fill="#fff2dc"/>
+  <circle cx="46" cy="58" r="6" fill="#2d2016"/><circle cx="74" cy="58" r="6" fill="#2d2016"/>
+  <circle cx="44" cy="56" r="2.4" fill="#fff"/><circle cx="72" cy="56" r="2.4" fill="#fff"/>
+  <ellipse cx="60" cy="72" rx="5.5" ry="4" fill="#c4788c"/>
+  <path d="M60 76 v4 M60 80 q-6 5 -11 1 M60 80 q6 5 11 1" stroke="#b57f3c" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M55 84 v7 h10 v-7z" fill="#fff" stroke="#c9a878" stroke-width="3"/>
+</svg>

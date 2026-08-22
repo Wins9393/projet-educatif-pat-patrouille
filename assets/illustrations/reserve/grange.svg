@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Grange">
+  <defs><linearGradient id="grange-mur" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0" stop-color="#e0574a"/><stop offset="55%" stop-color="#c0392b"/><stop offset="100%" stop-color="#8a2318"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="44" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M16 50 l44 -32 44 32 v52h-88z" fill="url(#grange-mur)" stroke="#701810" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M10 52 l50 -36 50 36 -8 10 -42 -30 -42 30z" fill="#8a4a3c" stroke="#5f1810" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M44 102 v-32 h32 v32z" fill="#f2e6d0" stroke="#a3927e" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M44 70 l32 32 M76 70 l-32 32" stroke="#c0392b" stroke-width="5"/>
+  <rect x="50" y="42" width="20" height="16" rx="3" fill="#f5c518" stroke="#a8830a" stroke-width="3"/>
+  <path d="M60 42 v16 M50 50 h20" stroke="#a8830a" stroke-width="3"/>
+  <path d="M24 62 h12 M96 62 h-12" stroke="#f2e6d0" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+</svg>

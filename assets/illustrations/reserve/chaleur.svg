@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Thermomètre">
+  <defs><linearGradient id="chaleur-mercure" x1="0" y1="1" x2="0" y2="0">
+    <stop offset="0" stop-color="#e02020"/><stop offset="100%" stop-color="#ff8080"/>
+  </linearGradient></defs>
+  <ellipse cx="46" cy="112" rx="26" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M34 82 v-58 q0 -12 12 -12 q12 0 12 12 v58z" fill="#f2f6fb" stroke="#98a3b0" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="46" cy="90" r="20" fill="#f2f6fb" stroke="#98a3b0" stroke-width="3.5"/>
+  <circle cx="46" cy="90" r="13" fill="url(#chaleur-mercure)"/>
+  <rect x="41" y="40" width="10" height="44" rx="5" fill="url(#chaleur-mercure)"/>
+  <g stroke="#98a3b0" stroke-width="3" stroke-linecap="round">
+    <path d="M58 32 h10"/><path d="M58 44 h7"/><path d="M58 56 h10"/><path d="M58 68 h7"/>
+  </g>
+  <g stroke="#f5a31e" stroke-width="5" stroke-linecap="round">
+    <path d="M88 30 v-12"/><path d="M104 46 h12"/><path d="M96 34 l8 -8"/>
+  </g>
+  <circle cx="90" cy="52" r="16" fill="#ffd166" stroke="#c9931a" stroke-width="3"/>
+  <path d="M40 26 v14" stroke="#fff" stroke-width="4" opacity="0.6" stroke-linecap="round"/>
+</svg>

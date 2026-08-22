@@ -1,97 +1,85 @@
-import { options } from "../particles/particles-options.js";
+import { choisirAleatoire, construitGrille } from "../shared/aleatoire.js";
+import {
+  demarreUneManche,
+  enregistreUneErreur,
+  prepareLaPage,
+  sonJuste,
+  termineLaManche,
+} from "../shared/jeu.js";
+import { motsDuNiveau } from "../shared/niveaux.js";
+import { reglages } from "../shared/reglages.js";
+import { creeCaractere, creeVisuel } from "../shared/rendu.js";
+import { prononce } from "../shared/voix.js";
 
-const btnJouerLire = document.querySelector(".btn-lire");
-const nomAleatoire = document.querySelector(".nom-aleatoire");
-const dynamicChiots = document.querySelector(".dynamic-chiots");
-const chiotButtons = document.querySelectorAll(".img-btn");
-const audio = document.querySelector(".audio1");
-const chiots = [
-  "everest",
-  "rocky",
-  "stella",
-  "marcus",
-  "ruben",
-  "zuma",
-  "chase",
-  "tracker",
-  "rex",
-  "liberty",
-];
+const { theme, niveau } = prepareLaPage({ titre: "LIRE" });
 
-let currentChiot = "";
+const motALire = document.querySelector(".mot-a-lire");
+const zoneChoix = document.querySelector(".choix");
+const consigne = document.querySelector(".consigne__texte");
 
-const generateurDeNom = () => {
-  let randomInt = Math.floor(Math.random() * chiots.length);
+const disponibles = motsDuNiveau(theme.items, niveau);
 
-  currentChiot = chiots[randomInt];
+let itemADeviner = null;
+let mancheGagnee = false;
 
-  for (let lettre of currentChiot) {
-    const imgLettre = document.createElement("img");
-    imgLettre.classList.add("img-lettre");
-    imgLettre.src = `../assets/alphabet/${lettre}.png`;
+const annonce = () => prononce("Quel mot est écrit ?");
 
-    nomAleatoire.append(imgLettre);
+const nouvelleManche = () => {
+  demarreUneManche();
+
+  mancheGagnee = false;
+  itemADeviner = choisirAleatoire(disponibles);
+
+  motALire.innerHTML = "";
+  for (const caractere of itemADeviner.mot) {
+    motALire.append(creeCaractere(theme, caractere));
   }
-};
+  motALire.setAttribute("aria-label", `Le mot ${itemADeviner.affichage}`);
 
-const afficheImageChiots = (currentChiot) => {
-  let randomChiotPlace = Math.floor(Math.random() * 3);
+  const grille = construitGrille(disponibles, itemADeviner, reglages().nombreDeChoix);
 
-  chiotButtons.forEach((imgButton, index) => {
-    let randomInt = Math.floor(Math.random() * chiots.length);
-
-    if (index === randomChiotPlace) {
-      imgButton.src = `../assets/${currentChiot}.png`;
-    } else {
-      imgButton.src = `../assets/${chiots[randomInt]}.png`;
-    }
-
-    dynamicChiots.style.display = "flex";
+  zoneChoix.innerHTML = "";
+  grille.forEach((item) => {
+    const bouton = document.createElement("button");
+    bouton.className = "choix__bouton";
+    bouton.setAttribute("aria-label", item.affichage);
+    bouton.append(creeVisuel(theme, item));
+    bouton.addEventListener("click", () => verifie(item, bouton));
+    zoneChoix.append(bouton);
   });
+
+  consigne.textContent = "Quel mot est écrit ?";
+  annonce();
 };
 
-const verifieChiotClique = (e) => {
-  const chiotCliqueTmp = e.target.src.split("/");
-  const chiotCliqueTmp2 = chiotCliqueTmp[chiotCliqueTmp.length - 1];
-  const chiotClique = chiotCliqueTmp2.split(".")[0];
+const verifie = (item, bouton) => {
+  if (mancheGagnee) return;
 
-  if (chiotClique === currentChiot) {
-    audio.src = "../assets/reactions/cris-de-joie.mp3";
-
-    tsParticles.load("tsparticles", options);
-
-    chiotButtons.forEach((chiotBtn) => {
-      if (chiotBtn !== e.target) {
-        chiotBtn.style.display = "none";
-      } else {
-        chiotBtn.classList.add("img-trouvee");
-        // chiotBtn.classList.remove("img-btn");
-      }
-    });
-
-    // dynamicChiots.style.display = "none";
-  } else {
-    audio.src = `../assets/sons/mauvais.mp3`;
+  if (item !== itemADeviner) {
+    enregistreUneErreur("lire", itemADeviner.mot);
+    bouton.classList.add("choix__bouton--faux");
+    setTimeout(() => bouton.classList.remove("choix__bouton--faux"), 400);
+    return;
   }
+
+  mancheGagnee = true;
+  sonJuste();
+  bouton.classList.add("choix__bouton--juste");
+
+  zoneChoix.querySelectorAll(".choix__bouton").forEach((autre) => {
+    if (autre !== bouton) autre.classList.add("choix__bouton--efface");
+  });
+
+  termineLaManche({
+    jeu: "lire",
+    mot: itemADeviner.mot,
+    texte: `Bravo ! C'est ${itemADeviner.affichage}`,
+    emoji: itemADeviner.visuel,
+    surSuite: nouvelleManche,
+  });
 };
 
-btnJouerLire.addEventListener("click", () => {
-  chiotButtons.forEach((chiotBtn) => {
-    chiotBtn.classList.remove("img-trouvee");
-    // chiotBtn.classList.add("img-btn");
-    chiotBtn.style.display = "flex";
-  });
-  audio.removeAttribute("loop");
-  nomAleatoire.innerHTML = "";
-  generateurDeNom();
-  afficheImageChiots(currentChiot);
-});
+document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-chiotButtons.forEach((imgBtn) => {
-  imgBtn.addEventListener("click", (e) => {
-    verifieChiotClique(e);
-  });
-});
-
-generateurDeNom();
-afficheImageChiots(currentChiot);
+nouvelleManche();

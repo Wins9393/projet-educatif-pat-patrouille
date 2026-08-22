@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Vent">
+  <g fill="none" stroke="#c9dced" stroke-width="9" stroke-linecap="round">
+    <path d="M10 36 h56 q16 0 16 -12 q0 -12 -12 -10"/>
+    <path d="M8 62 h74 q18 0 18 12 q0 12 -14 12"/>
+    <path d="M16 88 h44 q14 0 14 10 q0 10 -12 10"/>
+  </g>
+  <g fill="none" stroke="#8fb8d4" stroke-width="3" stroke-linecap="round" opacity="0.6">
+    <path d="M10 36 h56 q16 0 16 -12 q0 -12 -12 -10"/>
+    <path d="M8 62 h74 q18 0 18 12 q0 12 -14 12"/>
+  </g>
+  <g fill="#e8f3fb" opacity="0.85"><circle cx="94" cy="36" r="5"/><circle cx="26" cy="50" r="4"/><circle cx="100" cy="100" r="4.5"/></g>
+</svg>

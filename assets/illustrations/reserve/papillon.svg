@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Papillon">
+  <defs>
+    <linearGradient id="papillon-aile" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#ff9de0"/><stop offset="50%" stop-color="#c86ae0"/><stop offset="100%" stop-color="#7c3fb5"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="112" rx="20" ry="4" fill="#000" opacity="0.12"/>
+  <path d="M56 56 q-30 -34 -46 -14 q-14 18 10 32 q22 12 36 -4z" fill="url(#papillon-aile)" stroke="#5e2a8c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M64 56 q30 -34 46 -14 q14 18 -10 32 q-22 12 -36 -4z" fill="url(#papillon-aile)" stroke="#5e2a8c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M54 66 q-22 24 -8 34 q14 8 22 -14z" fill="url(#papillon-aile)" stroke="#5e2a8c" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M66 66 q22 24 8 34 q-14 8 -22 -14z" fill="url(#papillon-aile)" stroke="#5e2a8c" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#ffe066" opacity="0.9"><circle cx="30" cy="46" r="6"/><circle cx="90" cy="46" r="6"/><circle cx="40" cy="86" r="4.5"/><circle cx="80" cy="86" r="4.5"/></g>
+  <ellipse cx="60" cy="66" rx="7" ry="26" fill="#4a3a2a" stroke="#2e2318" stroke-width="3"/>
+  <path d="M56 40 q-8 -14 -16 -18 M64 40 q8 -14 16 -18" stroke="#2e2318" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <circle cx="40" cy="22" r="3.5" fill="#2e2318"/><circle cx="80" cy="22" r="3.5" fill="#2e2318"/>
+</svg>

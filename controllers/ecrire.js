@@ -1,103 +1,136 @@
-import { options } from "../particles/particles-options.js";
+import { choisirAleatoire, construitGrille } from "../shared/aleatoire.js";
+import {
+  demarreUneManche,
+  enregistreUneErreur,
+  prepareLaPage,
+  sonJuste,
+  termineLaManche,
+} from "../shared/jeu.js";
+import { motsDuNiveau } from "../shared/niveaux.js";
+import { reglages } from "../shared/reglages.js";
+import { creeCaractere, creeVisuel } from "../shared/rendu.js";
+import { prononce, prononceUneLettre } from "../shared/voix.js";
 
-const imageAleatoire = document.querySelector(".image-aleatoire");
-const dynamicLetters = document.querySelector(".dynamic-letters");
-const btnJouerEcrire = document.querySelector(".btn-ecrire");
-const lettersButton = document.querySelectorAll(".img-btn");
-const reaction = document.querySelector(".reaction");
-const audio = document.querySelector(".audio1");
-// const audio2 = document.querySelector(".audio2");
-// let victoireDiv = document.querySelector(".victoire");
-let nomChiot = document.querySelector(".nom-chiot");
+const { theme, niveau } = prepareLaPage({ titre: "ÉCRIRE" });
 
-let currentChiot = "";
-let premiereLettre = "";
-let lettreCounter = 0;
+const question = document.querySelector(".question");
+const motEnCours = document.querySelector(".mot-en-cours");
+const zoneChoix = document.querySelector(".choix");
+const consigne = document.querySelector(".consigne__texte");
 
-const chiots = ["everest", "rocky", "stella", "marcus", "ruben", "zuma", "chase", "tracker", "rex", "liberty"];
-const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+const ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const disponibles = motsDuNiveau(theme.items, niveau);
 
-const selectUnChiotAleatoire = () => {
-  let randomInt = Math.floor(Math.random() * chiots.length);
+let itemAEcrire = null;
+let position = 0;
+let motTermine = false;
 
-  currentChiot = chiots[randomInt];
-  imageAleatoire.src = `../assets/${chiots[randomInt]}.png`;
+const lettreAttendue = () => itemAEcrire.mot[position];
+
+/** Aide complète : le mot, puis la lettre à chercher. C'est le rôle du 🔊. */
+const souffle = () => {
+  if (motTermine) return;
+  prononce(`${itemAEcrire.affichage}. Trouve la lettre ${lettreAttendue()}`);
 };
 
-const afficheLettres = (currentChiot) => {
-  premiereLettre = currentChiot[lettreCounter];
-  let randomLetterPlace = Math.floor(Math.random() * 5);
+/**
+ * Ce que le jeu dit de lui-même.
+ *
+ * À partir du niveau 4, le mot n'est plus donné — ni écrit sous l'image, ni
+ * prononcé : l'image le nomme, et le reconnaître fait partie de l'exercice.
+ * Le bouton 🔊 continue de le souffler à qui bloque.
+ */
+const annonce = () => {
+  if (!niveau.motDonne) return;
+  souffle();
+};
 
-  lettersButton.forEach((imgButton, index) => {
-    let randomInt = Math.floor(Math.random() * alphabet.length);
+/** Une case par lettre : l'enfant voit d'emblée la longueur du mot. */
+const dessineLesCases = () => {
+  motEnCours.innerHTML = "";
 
-    if (index === randomLetterPlace) {
-      imgButton.src = `../assets/alphabet/${premiereLettre}.png`;
-    } else {
-      imgButton.src = `../assets/alphabet/${alphabet[randomInt]}.png`;
+  [...itemAEcrire.mot].forEach((caractere, index) => {
+    const case_ = document.createElement("span");
+    case_.className = "mot-en-cours__case";
+
+    if (index < position) {
+      case_.classList.add("mot-en-cours__case--remplie");
+      case_.append(creeCaractere(theme, caractere));
     }
 
-    dynamicLetters.style.display = "flex";
+    motEnCours.append(case_);
+  });
+
+  motEnCours.setAttribute("aria-label", `${position} lettre sur ${itemAEcrire.mot.length}`);
+};
+
+const dessineLesChoix = () => {
+  const grille = construitGrille(ALPHABET, lettreAttendue(), reglages().nombreDeChoix);
+
+  zoneChoix.innerHTML = "";
+  grille.forEach((caractere) => {
+    const bouton = document.createElement("button");
+    bouton.className = "choix__bouton";
+    bouton.setAttribute("aria-label", `Lettre ${caractere}`);
+    bouton.append(creeCaractere(theme, caractere));
+    bouton.addEventListener("click", () => verifie(caractere, bouton));
+    zoneChoix.append(bouton);
   });
 };
 
-const verifieLettreCliquee = (e) => {
-  // Ouvert en cliquant sur le fichier HTML
-  // const lettreCliqueeTmp = e.target.src.split(".")[0];
-  // const lettreCliquee = lettreCliqueeTmp.substring(lettreCliqueeTmp.length - 1);
+const nouvelleManche = () => {
+  demarreUneManche();
 
-  // Ouvert avec un serveur
-  const lettreCliqueeTmp = e.target.src.split("/");
-  const lettreCliqueeTmp2 = lettreCliqueeTmp[lettreCliqueeTmp.length - 1];
-  const lettreCliquee = lettreCliqueeTmp2[0];
+  motTermine = false;
+  position = 0;
+  itemAEcrire = choisirAleatoire(disponibles);
 
-  if (lettreCliquee === premiereLettre) {
-    audio.src = `../assets/sons/bon.mp3`;
-    const imgNomChiot = document.createElement("img");
-    const imgReaction = document.createElement("img");
+  question.innerHTML = "";
+  question.append(creeVisuel(theme, itemAEcrire));
 
-    imgNomChiot.classList.add("img-nom-chiot");
-    imgReaction.classList.add("img-reaction");
+  consigne.textContent = niveau.motDonne ? `Écris ${itemAEcrire.affichage}` : "Écris le mot";
 
-    imgReaction.src = `../assets/reactions/double-pouce.png`;
-    imgNomChiot.src = `../assets/alphabet/${premiereLettre}.png`;
+  dessineLesCases();
+  dessineLesChoix();
+  annonce();
+};
 
-    nomChiot.append(imgNomChiot);
-    reaction.appendChild(imgReaction);
-    reaction.style.display = "flex";
+const verifie = (caractere, bouton) => {
+  if (motTermine) return;
 
-    lettreCounter++;
-    afficheLettres(currentChiot);
-
-    if (premiereLettre === undefined) {
-      audio.src = "../assets/reactions/cris-de-joie.mp3";
-      tsParticles.load("tsparticles", options);
-
-      dynamicLetters.style.display = "none";
-    }
-
-    setTimeout(() => {
-      reaction.innerHTML = "";
-    }, 2000);
-  } else {
-    audio.src = `../assets/sons/mauvais.mp3`;
+  if (caractere !== lettreAttendue()) {
+    enregistreUneErreur("ecrire", itemAEcrire.mot);
+    bouton.classList.add("choix__bouton--faux");
+    setTimeout(() => bouton.classList.remove("choix__bouton--faux"), 400);
+    return;
   }
+
+  sonJuste();
+  prononceUneLettre(caractere);
+  position += 1;
+  dessineLesCases();
+
+  // Le mot est complet : on s'arrête ici plutôt que de tirer une grille sur
+  // une lettre qui n'existe pas.
+  if (position === itemAEcrire.mot.length) {
+    motTermine = true;
+    zoneChoix.innerHTML = "";
+
+    termineLaManche({
+      jeu: "ecrire",
+      mot: itemAEcrire.mot,
+      texte: `Bravo ! Tu as écrit ${itemAEcrire.affichage}`,
+      emoji: itemAEcrire.visuel,
+      surSuite: nouvelleManche,
+    });
+    return;
+  }
+
+  dessineLesChoix();
+  annonce();
 };
 
-btnJouerEcrire.addEventListener("click", () => {
-  lettreCounter = 0;
-  nomChiot.innerHTML = "";
-  reaction.innerHTML = "";
+document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="ecouter"]').addEventListener("click", souffle);
 
-  selectUnChiotAleatoire();
-  afficheLettres(currentChiot);
-});
-
-lettersButton.forEach((imgBtn) => {
-  imgBtn.addEventListener("click", (e) => {
-    verifieLettreCliquee(e);
-  });
-});
-
-selectUnChiotAleatoire();
-afficheLettres(currentChiot);
+nouvelleManche();

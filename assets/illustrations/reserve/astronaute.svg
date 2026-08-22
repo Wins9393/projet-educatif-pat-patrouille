@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Astronaute">
+  <defs>
+    <linearGradient id="astronaute-combinaison" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e6ebf3"/>
+      <stop offset="100%" stop-color="#bcc6d4"/>
+    </linearGradient>
+    <linearGradient id="astronaute-visiere" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#ffdf7a"/>
+      <stop offset="55%" stop-color="#e8a33d"/>
+      <stop offset="100%" stop-color="#9c5a17"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="113" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <rect x="26" y="52" width="16" height="34" rx="8" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3"/>
+  <rect x="78" y="52" width="16" height="34" rx="8" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3"/>
+  <rect x="40" y="86" width="16" height="24" rx="7" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3"/>
+  <rect x="64" y="86" width="16" height="24" rx="7" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3"/>
+  <rect x="34" y="46" width="52" height="46" rx="16" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3.5"/>
+  <rect x="50" y="62" width="20" height="14" rx="4" fill="#3fd0c9" stroke="#2a9d99" stroke-width="3"/>
+  <circle cx="60" cy="32" r="27" fill="url(#astronaute-combinaison)" stroke="#8b97a8" stroke-width="3.5"/>
+  <path d="M39 30 q0 -14 21 -14 q21 0 21 14 q0 15 -21 15 q-21 0 -21 -15z" fill="url(#astronaute-visiere)" stroke="#8b5a12" stroke-width="3"/>
+  <path d="M45 26 q7 -8 15 -8" stroke="#fff" stroke-width="4" fill="none" opacity="0.6" stroke-linecap="round"/>
+  <circle cx="86" cy="34" r="5" fill="#ff6b6b" stroke="#c94141" stroke-width="3"/>
+</svg>

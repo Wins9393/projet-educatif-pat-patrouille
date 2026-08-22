@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Escargot">
+  <defs><linearGradient id="escargot-coquille" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#f0c37a"/><stop offset="55%" stop-color="#cf9440"/><stop offset="100%" stop-color="#96631a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="40" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M12 98 q-4 -14 12 -16 l40 0 q10 0 10 10 q0 8 -12 8z" fill="#c9d97f" stroke="#89a03f" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M22 82 q-6 -32 -2 -50 q2 -10 8 -8 M36 80 q-2 -34 4 -50 q3 -8 9 -4"
+        stroke="#c9d97f" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <path d="M22 82 q-6 -32 -2 -50 q2 -10 8 -8 M36 80 q-2 -34 4 -50 q3 -8 9 -4"
+        stroke="#89a03f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.4"/>
+  <circle cx="28" cy="22" r="5.5" fill="#1d2430"/><circle cx="50" cy="26" r="5.5" fill="#1d2430"/>
+  <circle cx="26.5" cy="20.5" r="2.2" fill="#fff"/><circle cx="48.5" cy="24.5" r="2.2" fill="#fff"/>
+  <circle cx="76" cy="62" r="34" fill="url(#escargot-coquille)" stroke="#7a4d0e" stroke-width="3.5"/>
+  <path d="M76 62 m0 -24 a24 24 0 1 1 -17 41 a17 17 0 1 1 24 -24 a10 10 0 1 1 -14 14"
+        fill="none" stroke="#8f5c12" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="64" cy="46" r="6" fill="#fff" opacity="0.35"/>
+</svg>

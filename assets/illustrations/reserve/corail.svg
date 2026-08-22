@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Corail">
+  <defs>
+    <linearGradient id="corail-rose" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ff9ec4"/><stop offset="55%" stop-color="#f2609a"/><stop offset="100%" stop-color="#b52f68"/>
+    </linearGradient>
+    <linearGradient id="corail-orange" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#ffc07a"/><stop offset="55%" stop-color="#f58a3c"/><stop offset="100%" stop-color="#bd5a08"/>
+    </linearGradient>
+  </defs>
+  <ellipse cx="60" cy="104" rx="42" ry="7" fill="#000" opacity="0.2"/>
+  <g stroke="url(#corail-orange)" stroke-width="11" fill="none" stroke-linecap="round">
+    <path d="M32 100 v-22"/><path d="M32 82 q-10 -8 -12 -22"/><path d="M32 80 q10 -10 14 -24"/>
+  </g>
+  <g stroke="url(#corail-rose)" stroke-width="12" fill="none" stroke-linecap="round">
+    <path d="M74 100 v-30"/><path d="M74 76 q-14 -8 -16 -26"/><path d="M74 72 q14 -10 18 -28"/>
+    <path d="M58 52 q-4 -12 -12 -18"/><path d="M92 46 q4 -12 12 -16"/>
+  </g>
+  <g fill="#ffd6e6"><circle cx="46" cy="26" r="6"/><circle cx="104" cy="30" r="6"/><circle cx="92" cy="44" r="5"/><circle cx="58" cy="50" r="5"/></g>
+  <g fill="#ffe0b8"><circle cx="20" cy="60" r="5.5"/><circle cx="46" cy="56" r="5.5"/></g>
+  <ellipse cx="60" cy="100" rx="34" ry="9" fill="#f5e6c8" stroke="#c9ac7c" stroke-width="3"/>
+  <g fill="#e0cba3"><circle cx="40" cy="100" r="3.5"/><circle cx="82" cy="102" r="3"/></g>
+</svg>

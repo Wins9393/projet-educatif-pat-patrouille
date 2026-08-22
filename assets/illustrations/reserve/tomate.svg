@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tomate">
+  <defs><radialGradient id="tomate-peau" cx="34%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#ff8a7a"/><stop offset="50%" stop-color="#e02020"/><stop offset="100%" stop-color="#961010"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="30" ry="5" fill="#000" opacity="0.16"/>
+  <ellipse cx="60" cy="70" rx="42" ry="36" fill="url(#tomate-peau)" stroke="#8a0f0f" stroke-width="3.5"/>
+  <path d="M60 36 v-12" stroke="#3f8f2e" stroke-width="6" stroke-linecap="round"/>
+  <path d="M60 36 q-22 -6 -26 -14 q16 -2 22 4 q-6 -12 4 -14 q10 2 4 14 q6 -6 22 -4 q-4 8 -26 14z"
+        fill="#4caf50" stroke="#2e7d32" stroke-width="3" stroke-linejoin="round"/>
+  <ellipse cx="42" cy="58" rx="10" ry="12" fill="#fff" opacity="0.3" transform="rotate(-22 42 58)"/>
+</svg>

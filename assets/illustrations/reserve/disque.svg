@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Disque">
+  <defs><radialGradient id="disque-surface" cx="36%" cy="30%" r="74%">
+    <stop offset="0" stop-color="#a9d8f0"/><stop offset="40%" stop-color="#5c8ba8"/><stop offset="70%" stop-color="#c9a2d8"/>
+    <stop offset="100%" stop-color="#4a5464"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="110" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="58" r="48" fill="url(#disque-surface)" stroke="#333c49" stroke-width="3.5"/>
+  <circle cx="60" cy="58" r="34" fill="none" stroke="#f2f6fb" stroke-width="3" opacity="0.3"/>
+  <circle cx="60" cy="58" r="24" fill="none" stroke="#f2f6fb" stroke-width="3" opacity="0.3"/>
+  <circle cx="60" cy="58" r="16" fill="#e8edf4" stroke="#98a3b0" stroke-width="3"/>
+  <circle cx="60" cy="58" r="6" fill="#333c49"/>
+  <path d="M28 34 q14 -18 34 -20" stroke="#fff" stroke-width="7" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

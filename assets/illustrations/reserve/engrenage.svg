@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Engrenage">
+  <defs><linearGradient id="engrenage-metal" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#8fd4f5"/><stop offset="50%" stop-color="#3d9ad4"/><stop offset="100%" stop-color="#1d5f8f"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <g fill="url(#engrenage-metal)" stroke="#164e78" stroke-width="3.5" stroke-linejoin="round">
+    <rect x="50" y="4" width="20" height="20" rx="4"/><rect x="50" y="96" width="20" height="20" rx="4"/>
+    <rect x="4" y="50" width="20" height="20" rx="4"/><rect x="96" y="50" width="20" height="20" rx="4"/>
+    <rect x="17" y="17" width="20" height="20" rx="4" transform="rotate(-45 27 27)"/>
+    <rect x="83" y="17" width="20" height="20" rx="4" transform="rotate(45 93 27)"/>
+    <rect x="17" y="83" width="20" height="20" rx="4" transform="rotate(45 27 93)"/>
+    <rect x="83" y="83" width="20" height="20" rx="4" transform="rotate(-45 93 93)"/>
+  </g>
+  <circle cx="60" cy="60" r="38" fill="url(#engrenage-metal)" stroke="#164e78" stroke-width="3.5"/>
+  <circle cx="60" cy="60" r="18" fill="#e8edf4" stroke="#164e78" stroke-width="3.5"/>
+  <path d="M34 38 q10 -12 24 -14" stroke="#fff" stroke-width="5" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

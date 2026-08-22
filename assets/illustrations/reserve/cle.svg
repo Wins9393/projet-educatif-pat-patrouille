@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Clé">
+  <defs><linearGradient id="cle-metal" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe08a"/><stop offset="50%" stop-color="#e0b41c"/><stop offset="100%" stop-color="#96760a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="34" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="34" cy="46" r="26" fill="url(#cle-metal)" stroke="#7c6008" stroke-width="3.5"/>
+  <circle cx="34" cy="46" r="11" fill="#2f3540" stroke="#7c6008" stroke-width="3"/>
+  <path d="M56 52 l46 30" stroke="url(#cle-metal)" stroke-width="14" stroke-linecap="round"/>
+  <path d="M56 52 l46 30" stroke="#7c6008" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M80 68 l-8 12 M92 76 l-8 12" stroke="url(#cle-metal)" stroke-width="12" stroke-linecap="round"/>
+  <path d="M80 68 l-8 12 M92 76 l-8 12" stroke="#7c6008" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M22 34 q6 -8 16 -8" stroke="#fff" stroke-width="5" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

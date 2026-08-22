@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ampoule">
+  <defs>
+    <radialGradient id="ampoule-verre" cx="36%" cy="30%" r="76%">
+      <stop offset="0" stop-color="#fff8d6"/><stop offset="55%" stop-color="#ffd166"/><stop offset="100%" stop-color="#e0a516"/>
+    </radialGradient>
+  </defs>
+  <g stroke="#f5c518" stroke-width="5" stroke-linecap="round" opacity="0.85">
+    <path d="M60 12 v-8"/><path d="M22 28 l-6 -6"/><path d="M98 28 l6 -6"/><path d="M12 62 h-8"/><path d="M108 62 h8"/>
+  </g>
+  <path d="M60 16 q30 0 30 30 q0 20 -14 30 v10 h-32 v-10 q-14 -10 -14 -30 q0 -30 30 -30z"
+        fill="url(#ampoule-verre)" stroke="#b8860b" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M50 76 q6 -18 10 -22 q4 4 10 22" fill="none" stroke="#c9931a" stroke-width="4" stroke-linecap="round"/>
+  <rect x="44" y="86" width="32" height="10" rx="3" fill="#c9d2de" stroke="#7e8a99" stroke-width="3"/>
+  <rect x="46" y="96" width="28" height="10" rx="3" fill="#a9b4c2" stroke="#7e8a99" stroke-width="3"/>
+  <path d="M42 40 q6 -14 18 -16" stroke="#fff" stroke-width="5" fill="none" opacity="0.6" stroke-linecap="round"/>
+</svg>

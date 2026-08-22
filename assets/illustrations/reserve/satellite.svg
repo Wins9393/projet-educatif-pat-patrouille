@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Satellite">
+  <defs>
+    <linearGradient id="satellite-panneau" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5aa9e6"/>
+      <stop offset="100%" stop-color="#1f5f9c"/>
+    </linearGradient>
+    <linearGradient id="satellite-corps" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f0f4fa"/>
+      <stop offset="100%" stop-color="#b3bdcc"/>
+    </linearGradient>
+  </defs>
+  <rect x="6" y="44" width="34" height="32" rx="4" fill="url(#satellite-panneau)" stroke="#164a7d" stroke-width="3"/>
+  <rect x="80" y="44" width="34" height="32" rx="4" fill="url(#satellite-panneau)" stroke="#164a7d" stroke-width="3"/>
+  <path d="M6 60 h34 M23 44 v32" stroke="#164a7d" stroke-width="3" opacity="0.6"/>
+  <path d="M80 60 h34 M97 44 v32" stroke="#164a7d" stroke-width="3" opacity="0.6"/>
+  <rect x="40" y="46" width="40" height="28" rx="6" fill="url(#satellite-corps)" stroke="#7d8b9e" stroke-width="3.5"/>
+  <rect x="48" y="54" width="24" height="12" rx="3" fill="#ffd166" stroke="#d99b0b" stroke-width="3"/>
+  <path d="M60 46 v-14" stroke="#7d8b9e" stroke-width="4" stroke-linecap="round"/>
+  <path d="M44 30 q16 -16 32 0z" fill="#e3e8f0" stroke="#7d8b9e" stroke-width="3.5" stroke-linejoin="round"/>
+  <circle cx="60" cy="26" r="4" fill="#ff6b6b" stroke="#c94141" stroke-width="3"/>
+  <path d="M60 74 v18" stroke="#7d8b9e" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="60" cy="98" rx="14" ry="5" fill="#9aa8bd" stroke="#7d8b9e" stroke-width="3"/>
+</svg>

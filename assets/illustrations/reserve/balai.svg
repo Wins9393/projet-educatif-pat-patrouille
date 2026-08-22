@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Balai">
+  <defs><linearGradient id="balai-paille" x1="0" y1="0" x2="0.3" y2="1">
+    <stop offset="0" stop-color="#ffd98a"/><stop offset="50%" stop-color="#d9a13e"/><stop offset="100%" stop-color="#96681a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="32" ry="5" fill="#000" opacity="0.18"/>
+  <path d="M74 10 l-24 52" stroke="#a8763f" stroke-width="10" stroke-linecap="round"/>
+  <path d="M74 10 l-24 52" stroke="#714d20" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M38 58 l30 14 -4 10 -30 -14z" fill="#8a6a48" stroke="#5f4830" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M34 68 l30 14 -14 26 -30 -14z" fill="url(#balai-paille)" stroke="#7c5510" stroke-width="3.5" stroke-linejoin="round"/>
+  <g stroke="#a87a1e" stroke-width="3" stroke-linecap="round" opacity="0.7">
+    <path d="M32 76 l-8 16"/><path d="M42 80 l-8 16"/><path d="M52 85 l-8 16"/><path d="M60 89 l-7 15"/>
+  </g>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Coccinelle">
+  <defs><radialGradient id="coccinelle-carapace" cx="36%" cy="28%" r="78%">
+    <stop offset="0" stop-color="#ff8080"/><stop offset="55%" stop-color="#e63946"/><stop offset="100%" stop-color="#9c1b26"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="108" rx="32" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M30 84 l-16 12 M90 84 l16 12 M26 66 l-18 2 M94 66 l18 2" stroke="#2f2a22" stroke-width="4" stroke-linecap="round"/>
+  <ellipse cx="60" cy="66" rx="42" ry="36" fill="url(#coccinelle-carapace)" stroke="#8f1f29" stroke-width="3.5"/>
+  <path d="M60 30 v72" stroke="#2f2a22" stroke-width="5"/>
+  <g fill="#2f2a22">
+    <circle cx="40" cy="52" r="8"/><circle cx="80" cy="52" r="8"/>
+    <circle cx="36" cy="80" r="7"/><circle cx="84" cy="80" r="7"/><circle cx="60" cy="92" r="6"/>
+  </g>
+  <path d="M28 40 q12 -22 32 -22 q20 0 32 22z" fill="#2f2a22"/>
+  <circle cx="47" cy="30" r="5" fill="#fff"/><circle cx="73" cy="30" r="5" fill="#fff"/>
+  <circle cx="47" cy="30" r="2.6" fill="#1d2430"/><circle cx="73" cy="30" r="2.6" fill="#1d2430"/>
+  <path d="M46 18 q-4 -10 -12 -12 M74 18 q4 -10 12 -12" stroke="#2f2a22" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+  <ellipse cx="44" cy="48" rx="8" ry="6" fill="#fff" opacity="0.25"/>
+</svg>

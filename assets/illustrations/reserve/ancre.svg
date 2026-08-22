@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ancre">
+  <defs><linearGradient id="ancre-metal" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#cfd7e2"/><stop offset="55%" stop-color="#94a0b0"/><stop offset="100%" stop-color="#5e6a7a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="32" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="20" r="13" fill="none" stroke="url(#ancre-metal)" stroke-width="9"/>
+  <circle cx="60" cy="20" r="13" fill="none" stroke="#4d5867" stroke-width="3" opacity="0.4"/>
+  <path d="M60 32 v66" stroke="url(#ancre-metal)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M60 32 v66" stroke="#4d5867" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M34 46 h52" stroke="url(#ancre-metal)" stroke-width="9" stroke-linecap="round"/>
+  <path d="M34 46 h52" stroke="#4d5867" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M18 66 q0 34 42 34 q42 0 42 -34" fill="none" stroke="url(#ancre-metal)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M18 66 q0 34 42 34 q42 0 42 -34" fill="none" stroke="#4d5867" stroke-width="3" stroke-linecap="round" opacity="0.35"/>
+  <path d="M8 62 l14 8 -4 -18z" fill="url(#ancre-metal)" stroke="#4d5867" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M112 62 l-14 8 4 -18z" fill="url(#ancre-metal)" stroke="#4d5867" stroke-width="3" stroke-linejoin="round"/>
+</svg>

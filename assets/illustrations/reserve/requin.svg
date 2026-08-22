@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Requin">
+  <defs><linearGradient id="requin-corps" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#9aa8b8"/><stop offset="45%" stop-color="#65788c"/><stop offset="100%" stop-color="#3c4a5a"/>
+  </linearGradient></defs>
+  <path d="M100 62 l18 -22 -6 22 6 22z" fill="url(#requin-corps)" stroke="#2b3644" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M8 64 q22 -34 56 -32 q30 2 40 30 q-14 28 -44 28 q-32 0 -52 -26z"
+        fill="url(#requin-corps)" stroke="#2b3644" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M12 74 q26 20 54 20 q26 0 38 -12 q-14 28 -44 28 q-30 0 -48 -36z" fill="#e2e8ef" opacity="0.85"/>
+  <path d="M56 32 q6 -24 22 -22 q-4 14 -12 22z" fill="#5a6c80" stroke="#2b3644" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M48 84 q4 16 18 18 q-4 -12 -8 -16z" fill="#5a6c80" stroke="#2b3644" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M14 74 q16 8 34 8" stroke="#fff" stroke-width="5" fill="none" stroke-linecap="round"/>
+  <g fill="#fff"><path d="M20 74 l3 7 3 -7z"/><path d="M30 78 l3 7 3 -7z"/><path d="M40 80 l3 7 3 -7z"/></g>
+  <circle cx="30" cy="56" r="6" fill="#1d2430"/><circle cx="28.4" cy="54.4" r="2" fill="#fff"/>
+  <path d="M78 56 l8 6 M86 54 l8 6" stroke="#2b3644" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+</svg>

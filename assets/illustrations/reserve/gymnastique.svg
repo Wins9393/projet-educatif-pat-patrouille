@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Gymnastique">
+  <ellipse cx="60" cy="110" rx="38" ry="5" fill="#000" opacity="0.16"/>
+  <circle cx="60" cy="24" r="15" fill="#f0c9a8" stroke="#c49a76" stroke-width="3.5"/>
+  <path d="M46 22 q0 -16 14 -16 q14 0 14 16 q-6 -6 -14 -6 q-8 0 -14 6z" fill="#c96a1e" stroke="#8f4508" stroke-width="3" stroke-linejoin="round"/>
+  <g fill="#2f3540"><circle cx="54" cy="24" r="3.2"/><circle cx="66" cy="24" r="3.2"/></g>
+  <path d="M60 40 v28" stroke="#e0508e" stroke-width="16" stroke-linecap="round"/>
+  <path d="M60 40 v28" stroke="#96225a" stroke-width="3" stroke-linecap="round" opacity="0.3"/>
+  <path d="M52 44 q-24 -6 -34 -22" stroke="#f0c9a8" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M68 44 q24 -6 34 -22" stroke="#f0c9a8" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M56 68 q-16 14 -30 18" stroke="#f0c9a8" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <path d="M64 68 q16 14 30 18" stroke="#f0c9a8" stroke-width="11" fill="none" stroke-linecap="round"/>
+  <g stroke="#f5b81e" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M10 96 q22 -14 44 -2"/><path d="M66 94 q22 -12 44 2"/>
+  </g>
+</svg>

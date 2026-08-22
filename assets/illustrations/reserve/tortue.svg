@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tortue">
+  <defs><radialGradient id="tortue-carapace" cx="36%" cy="26%" r="78%">
+    <stop offset="0" stop-color="#a8d97a"/><stop offset="55%" stop-color="#6ba33c"/><stop offset="100%" stop-color="#3f6e1c"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="106" rx="38" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M26 90 v10 M52 94 v8 M76 94 v8 M100 88 v10" stroke="#8bbf5e" stroke-width="9" stroke-linecap="round"/>
+  <path d="M96 76 q16 4 14 16" stroke="#8bbf5e" stroke-width="7" fill="none" stroke-linecap="round"/>
+  <ellipse cx="24" cy="70" rx="18" ry="16" fill="#a3cf7a" stroke="#5c8f2e" stroke-width="3.5"/>
+  <circle cx="18" cy="66" r="5" fill="#1d2430"/><circle cx="16.5" cy="64.5" r="2" fill="#fff"/>
+  <path d="M10 76 q7 5 13 1" stroke="#5c8f2e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M20 84 q30 -50 66 -22 q22 18 8 32 q-38 10 -74 -10z"
+        fill="url(#tortue-carapace)" stroke="#3a6819" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="none" stroke="#3a6819" stroke-width="3.5" opacity="0.75">
+    <path d="M44 54 l-6 34 M66 48 l2 40 M86 58 l-8 32"/>
+    <path d="M32 70 q30 8 62 0"/>
+  </g>
+  <ellipse cx="48" cy="60" rx="10" ry="7" fill="#fff" opacity="0.2"/>
+</svg>

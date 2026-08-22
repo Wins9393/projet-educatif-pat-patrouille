@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Tempête">
+  <defs><linearGradient id="tempete-spirale" x1="0" y1="0" x2="0.4" y2="1">
+    <stop offset="0" stop-color="#a9bdd0"/><stop offset="55%" stop-color="#6e8298"/><stop offset="100%" stop-color="#42546a"/>
+  </linearGradient></defs>
+  <g fill="url(#tempete-spirale)" stroke="#33445a" stroke-width="3.5" stroke-linejoin="round">
+    <path d="M8 20 h104 q-6 14 -26 14 h-56 q-18 0 -22 -14z"/>
+    <path d="M20 40 h84 q-6 14 -24 14 h-38 q-16 0 -22 -14z"/>
+    <path d="M32 60 h60 q-6 13 -22 13 h-20 q-14 0 -18 -13z"/>
+    <path d="M44 79 h36 q-5 12 -18 12 q-13 0 -18 -12z"/>
+    <path d="M54 97 h18 q-3 12 -9 12 q-7 0 -9 -12z"/>
+  </g>
+  <g stroke="#c9dced" stroke-width="4" fill="none" stroke-linecap="round" opacity="0.7">
+    <path d="M24 26 h50"/><path d="M36 46 h38"/><path d="M46 66 h26"/>
+  </g>
+</svg>

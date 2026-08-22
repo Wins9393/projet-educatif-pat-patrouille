@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Pelote de laine">
+  <defs><radialGradient id="pelote-laine" cx="34%" cy="28%" r="76%">
+    <stop offset="0" stop-color="#ff9ec4"/><stop offset="55%" stop-color="#e0508e"/><stop offset="100%" stop-color="#96225a"/>
+  </radialGradient></defs>
+  <ellipse cx="60" cy="106" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <circle cx="58" cy="64" r="40" fill="url(#pelote-laine)" stroke="#7c1a48" stroke-width="3.5"/>
+  <g stroke="#c93f7c" stroke-width="4.5" fill="none" opacity="0.85" stroke-linecap="round">
+    <path d="M22 50 q34 -14 66 10"/><path d="M18 70 q36 -8 74 4"/>
+    <path d="M30 96 q10 -50 44 -62"/><path d="M46 100 q6 -46 40 -56"/>
+  </g>
+  <path d="M96 74 q18 8 14 24 q-4 10 -14 6" stroke="#e0508e" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <ellipse cx="42" cy="44" rx="9" ry="7" fill="#fff" opacity="0.28" transform="rotate(-24 42 44)"/>
+</svg>

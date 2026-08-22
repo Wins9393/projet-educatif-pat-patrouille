@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Blé">
+  <defs><linearGradient id="ble-epi" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe08a"/><stop offset="55%" stop-color="#e0b41c"/><stop offset="100%" stop-color="#96760a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5" fill="#000" opacity="0.16"/>
+  <g stroke="#a8830a" stroke-width="6" fill="none" stroke-linecap="round">
+    <path d="M60 106 v-46"/><path d="M60 100 q-16 -14 -18 -34"/><path d="M60 100 q16 -14 18 -34"/>
+  </g>
+  <g fill="url(#ble-epi)" stroke="#8f6f04" stroke-width="3">
+    <ellipse cx="60" cy="18" rx="7" ry="12"/>
+    <ellipse cx="50" cy="30" rx="7" ry="11" transform="rotate(-22 50 30)"/>
+    <ellipse cx="70" cy="30" rx="7" ry="11" transform="rotate(22 70 30)"/>
+    <ellipse cx="52" cy="46" rx="7" ry="11" transform="rotate(-18 52 46)"/>
+    <ellipse cx="68" cy="46" rx="7" ry="11" transform="rotate(18 68 46)"/>
+    <ellipse cx="38" cy="42" rx="6" ry="10" transform="rotate(-34 38 42)"/>
+    <ellipse cx="82" cy="42" rx="6" ry="10" transform="rotate(34 82 42)"/>
+    <ellipse cx="34" cy="58" rx="6" ry="10" transform="rotate(-28 34 58)"/>
+    <ellipse cx="86" cy="58" rx="6" ry="10" transform="rotate(28 86 58)"/>
+  </g>
+  <g stroke="#c9a20f" stroke-width="3" stroke-linecap="round"><path d="M60 6 v-4"/><path d="M46 16 l-6 -8"/><path d="M74 16 l6 -8"/></g>
+</svg>

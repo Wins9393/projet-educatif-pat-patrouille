@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Lapin">
+  <defs><linearGradient id="lapin-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="55%" stop-color="#e6e9ef"/><stop offset="100%" stop-color="#bcc3cd"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="28" ry="5.5" fill="#000" opacity="0.18"/>
+  <ellipse cx="42" cy="26" rx="10" ry="24" fill="url(#lapin-poil)" stroke="#98a1ac" stroke-width="3.5"/>
+  <ellipse cx="78" cy="26" rx="10" ry="24" fill="url(#lapin-poil)" stroke="#98a1ac" stroke-width="3.5"/>
+  <ellipse cx="42" cy="28" rx="4.5" ry="15" fill="#f7c0cf"/><ellipse cx="78" cy="28" rx="4.5" ry="15" fill="#f7c0cf"/>
+  <ellipse cx="60" cy="84" rx="28" ry="22" fill="url(#lapin-poil)" stroke="#98a1ac" stroke-width="3.5"/>
+  <circle cx="60" cy="60" r="27" fill="url(#lapin-poil)" stroke="#98a1ac" stroke-width="3.5"/>
+  <circle cx="50" cy="56" r="5.5" fill="#2d2016"/><circle cx="70" cy="56" r="5.5" fill="#2d2016"/>
+  <circle cx="48" cy="54" r="2.2" fill="#fff"/><circle cx="68" cy="54" r="2.2" fill="#fff"/>
+  <path d="M56 68 h8 l-4 5z" fill="#f5799a"/>
+  <path d="M60 73 q-5 5 -10 2 M60 73 q5 5 10 2" stroke="#98a1ac" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M34 68 h-14 M34 76 h-13 M86 68 h14 M86 76 h13" stroke="#c3cad4" stroke-width="3" stroke-linecap="round"/>
+</svg>

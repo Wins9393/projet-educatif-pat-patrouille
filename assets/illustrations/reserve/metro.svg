@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Métro">
+  <defs><linearGradient id="metro-corps" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#c6d2e0"/><stop offset="50%" stop-color="#8b9bb0"/><stop offset="100%" stop-color="#556479"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="106" rx="42" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M20 92 v-48 q0 -22 40 -22 q40 0 40 22 v48z"
+        fill="url(#metro-corps)" stroke="#42506a" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M28 44 q0 -14 32 -14 q32 0 32 14 v14 h-64z" fill="#c9e8fa" stroke="#42506a" stroke-width="3"/>
+  <path d="M60 30 v28" stroke="#42506a" stroke-width="3"/>
+  <rect x="28" y="66" width="24" height="20" rx="4" fill="#7c8ba0" stroke="#42506a" stroke-width="3"/>
+  <rect x="68" y="66" width="24" height="20" rx="4" fill="#7c8ba0" stroke="#42506a" stroke-width="3"/>
+  <rect x="24" y="88" width="72" height="7" rx="3.5" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+  <circle cx="34" cy="60" r="6" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <circle cx="86" cy="60" r="6" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <path d="M12 98 h96" stroke="#68727f" stroke-width="5" stroke-linecap="round"/>
+</svg>

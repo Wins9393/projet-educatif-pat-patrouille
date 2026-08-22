@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Scooter">
+  <defs><linearGradient id="scooter-carenage" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#a8e8d0"/><stop offset="50%" stop-color="#3fb58a"/><stop offset="100%" stop-color="#1f7256"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="104" rx="44" ry="6" fill="#000" opacity="0.2"/>
+  <circle cx="26" cy="82" r="17" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="94" cy="82" r="17" fill="#2f3540" stroke="#1b1f27" stroke-width="3.5"/>
+  <circle cx="26" cy="82" r="7" fill="#b9c2ce"/><circle cx="94" cy="82" r="7" fill="#b9c2ce"/>
+  <path d="M26 82 h26 q4 0 6 -6 l6 -18 h20 q8 0 10 10 l6 14"
+        fill="none" stroke="url(#scooter-carenage)" stroke-width="16" stroke-linejoin="round" stroke-linecap="round"/>
+  <path d="M64 58 h20 q8 0 10 10" fill="none" stroke="#1f7256" stroke-width="3" opacity="0.4" stroke-linecap="round"/>
+  <path d="M52 66 q10 -12 22 -10 l-4 10z" fill="#3d3a36" stroke="#1b1f27" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M84 54 v-14" stroke="#9aa5b4" stroke-width="7" stroke-linecap="round"/>
+  <path d="M70 38 h30" stroke="#4a5464" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="100" cy="50" r="7" fill="#ffe066" stroke="#c9a812" stroke-width="3"/>
+  <path d="M34 70 h18" stroke="#fff" stroke-width="4" opacity="0.3" stroke-linecap="round"/>
+</svg>

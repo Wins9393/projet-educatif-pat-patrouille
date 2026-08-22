@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Chien">
+  <defs><linearGradient id="chien-poil" x1="0.3" y1="0" x2="0.7" y2="1">
+    <stop offset="0" stop-color="#e8c39a"/><stop offset="55%" stop-color="#c4915d"/><stop offset="100%" stop-color="#8e6134"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="31" ry="5.5" fill="#000" opacity="0.18"/>
+  <path d="M88 100 q14 -6 10 -22" stroke="#8e6134" stroke-width="8" fill="none" stroke-linecap="round"/>
+  <ellipse cx="58" cy="84" rx="30" ry="23" fill="url(#chien-poil)" stroke="#7a5129" stroke-width="3.5"/>
+  <ellipse cx="30" cy="48" rx="11" ry="20" fill="#8e6134" stroke="#6b4623" stroke-width="3.5"/>
+  <ellipse cx="90" cy="48" rx="11" ry="20" fill="#8e6134" stroke="#6b4623" stroke-width="3.5"/>
+  <circle cx="60" cy="46" r="29" fill="url(#chien-poil)" stroke="#7a5129" stroke-width="3.5"/>
+  <ellipse cx="60" cy="60" rx="17" ry="13" fill="#f2ddc2"/>
+  <circle cx="49" cy="41" r="6" fill="#2d2016"/><circle cx="71" cy="41" r="6" fill="#2d2016"/>
+  <circle cx="47" cy="39" r="2.4" fill="#fff"/><circle cx="69" cy="39" r="2.4" fill="#fff"/>
+  <ellipse cx="60" cy="55" rx="7" ry="5.5" fill="#2d2016"/>
+  <path d="M60 61 v5 M60 66 q-6 5 -11 1 M60 66 q6 5 11 1" stroke="#8e6134" stroke-width="3" fill="none" stroke-linecap="round"/>
+</svg>

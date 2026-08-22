@@ -1,0 +1,246 @@
+/* ================================================================== */
+/* Panneaux modaux : réglages, profils, espace parent                  */
+/* ================================================================== */
+
+.panneau {
+  border: none;
+  padding: 0;
+  margin: auto;
+  width: min(560px, 94vw);
+  max-height: 88vh;
+  color: var(--encre);
+  background: var(--bloc);
+  border-radius: var(--rayon-lg);
+  box-shadow: 0 18px 0 -6px rgba(0, 0, 0, 0.22);
+  overflow: hidden;
+
+  /* L'intérieur d'un panneau clair : les règles qui suivent lisent ces
+     variables, elles basculent donc sans être réécrites une à une. */
+  --texte: var(--encre);
+  --surface: var(--bloc-creux);
+  --bordure: rgba(22, 33, 58, 0.16);
+}
+
+.panneau::backdrop {
+  background: rgba(12, 16, 28, 0.62);
+}
+
+.panneau__entete {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 20px;
+  border-bottom: 2px solid var(--bordure);
+}
+
+.panneau__titre {
+  font-size: 1.35rem;
+  font-weight: 800;
+}
+
+.panneau__corps {
+  padding: 20px;
+  overflow-y: auto;
+  max-height: calc(88vh - 76px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.reglage {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.reglage__intitule {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.reglage__aide {
+  font-size: 0.88rem;
+  opacity: 0.75;
+  margin-top: -6px;
+}
+
+.segments {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.segment {
+  flex: 1;
+  min-width: 84px;
+  min-height: 48px;
+  padding: 0 14px;
+  font-weight: 700;
+  background: var(--surface);
+  border: 2px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+
+.segment[aria-pressed="true"] {
+  background: var(--action);
+  color: var(--encre);
+  border-color: var(--action);
+}
+
+.profils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.profil-jeton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 48px;
+  padding: 0 16px;
+  font-weight: 700;
+  background: var(--surface);
+  border: 2px solid var(--bordure);
+  border-radius: 999px;
+}
+
+.profil-jeton[aria-pressed="true"] {
+  background: var(--action);
+  color: var(--encre);
+}
+
+.champ {
+  display: flex;
+  gap: 8px;
+}
+
+.champ input {
+  flex: 1;
+  min-height: 48px;
+  padding: 0 14px;
+  font: inherit;
+  color: var(--texte);
+  background: var(--bloc-creux);
+  border: 2px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+
+.champ input::placeholder {
+  color: rgba(22, 33, 58, 0.5);
+}
+
+/* Statistiques de l'espace parent */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.stat {
+  padding: 14px;
+  text-align: center;
+  background: var(--surface);
+  border-radius: var(--rayon);
+}
+
+.stat__valeur {
+  font-size: 1.9rem;
+  font-weight: 800;
+}
+
+.stat__intitule {
+  font-size: 0.82rem;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.liste-mots {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.liste-mots__ligne {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 14px;
+  background: var(--surface);
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+/* Petit texte sur fond clair : la version vive de l'erreur n'y passe pas,
+   il lui faut une teinte plus dense. */
+.liste-mots__erreurs {
+  font-size: 0.9rem;
+  color: #a8301e;
+}
+
+/* ---------------------------------------------------------------- */
+/* Choix du niveau                                                   */
+/* ---------------------------------------------------------------- */
+
+.niveaux {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(96px, 1fr));
+  gap: 8px;
+}
+
+.niveau-jeton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  padding: 12px 6px;
+  background: var(--surface);
+  border: 2px solid var(--bordure);
+  border-radius: var(--rayon);
+  transition: transform var(--transition), background var(--transition);
+}
+
+.niveau-jeton:hover {
+  transform: translateY(-3px);
+}
+
+.niveau-jeton[aria-pressed="true"] {
+  background: var(--action);
+  color: var(--encre);
+  border-color: var(--action);
+}
+
+.niveau-jeton__emoji {
+  font-size: 1.7rem;
+  line-height: 1;
+}
+
+.niveau-jeton__nom {
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.niveau-jeton__age {
+  font-size: 0.74rem;
+  opacity: 0.75;
+}
+
+.selecteur {
+  flex: 1;
+  min-width: 0;
+  min-height: 48px;
+  padding: 0 12px;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--texte);
+  background: var(--bloc-creux);
+  border: 2px solid var(--bordure);
+  border-radius: var(--rayon);
+}
+
+.selecteur option {
+  color: #16213a;
+  background: #fff;
+}

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Trophée">
+  <defs><linearGradient id="trophee-or" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#fff3c4"/><stop offset="50%" stop-color="#f5c518"/><stop offset="100%" stop-color="#a8830a"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="108" rx="34" ry="6" fill="#000" opacity="0.2"/>
+  <path d="M32 16 h56 v26 q0 28 -28 28 q-28 0 -28 -28z" fill="url(#trophee-or)" stroke="#8f6f04" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M32 24 h-14 q-8 0 -8 10 q0 16 22 18" fill="none" stroke="url(#trophee-or)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M88 24 h14 q8 0 8 10 q0 16 -22 18" fill="none" stroke="url(#trophee-or)" stroke-width="8" stroke-linecap="round"/>
+  <path d="M54 70 h12 v14 h-12z" fill="#d9a913" stroke="#8f6f04" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M36 84 h48 v10 h-48z" fill="#c9925c" stroke="#7a5228" stroke-width="3.5" stroke-linejoin="round"/>
+  <rect x="28" y="94" width="64" height="12" rx="5" fill="#a8763f" stroke="#7a5228" stroke-width="3.5"/>
+  <path d="M42 26 q-2 24 8 34" stroke="#fff" stroke-width="6" fill="none" opacity="0.45" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Ambulance">
+  <ellipse cx="60" cy="102" rx="46" ry="6" fill="#000" opacity="0.2"/>
+  <rect x="44" y="18" width="24" height="12" rx="5" fill="#e03131" stroke="#8f1414" stroke-width="3"/>
+  <path d="M8 82 v-32 q0 -8 8 -8 h48 v-8 h14 q8 0 12 8 l16 22 v18z"
+        fill="#f7f9fc" stroke="#98a3b0" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M74 42 h8 q4 0 6 4 l10 14 h-24z" fill="#c9e8fa" stroke="#98a3b0" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M30 54 h16 M38 46 v16" stroke="#e03131" stroke-width="8" stroke-linecap="round"/>
+  <rect x="8" y="70" width="96" height="8" fill="#e03131" opacity="0.9"/>
+  <circle cx="30" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="86" cy="86" r="14" fill="#2f3540" stroke="#1b1f27" stroke-width="3"/>
+  <circle cx="30" cy="86" r="6" fill="#b9c2ce"/><circle cx="86" cy="86" r="6" fill="#b9c2ce"/>
+</svg>

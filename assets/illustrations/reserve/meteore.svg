@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Météore">
+  <defs>
+    <linearGradient id="meteore-trainee" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb703" stop-opacity="0"/><stop offset="55%" stop-color="#ff8c1a" stop-opacity="0.8"/><stop offset="100%" stop-color="#e03131"/>
+    </linearGradient>
+    <radialGradient id="meteore-roche" cx="34%" cy="28%" r="76%">
+      <stop offset="0" stop-color="#8b7d6e"/><stop offset="55%" stop-color="#5c5145"/><stop offset="100%" stop-color="#332c24"/>
+    </radialGradient>
+  </defs>
+  <path d="M4 12 q30 22 48 44 l18 18 q-24 -6 -42 -26 q-18 -20 -24 -36z" fill="url(#meteore-trainee)"/>
+  <path d="M16 10 q26 20 40 40" stroke="#ffd166" stroke-width="5" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <circle cx="80" cy="76" r="30" fill="url(#meteore-roche)" stroke="#241f18" stroke-width="3.5"/>
+  <g fill="#40372e" opacity="0.75">
+    <circle cx="70" cy="66" r="7"/><circle cx="92" cy="82" r="6"/><circle cx="76" cy="92" r="5"/>
+  </g>
+  <path d="M62 62 q8 -10 20 -12" stroke="#a89887" stroke-width="4" fill="none" opacity="0.5" stroke-linecap="round"/>
+  <g stroke="#ffb703" stroke-width="4" stroke-linecap="round"><path d="M52 88 l-10 6"/><path d="M56 100 l-6 8"/></g>
+</svg>

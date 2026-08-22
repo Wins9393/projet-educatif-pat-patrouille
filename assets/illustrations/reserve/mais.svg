@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="Maïs">
+  <defs><linearGradient id="mais-epi" x1="0.2" y1="0" x2="0.8" y2="1">
+    <stop offset="0" stop-color="#ffe98f"/><stop offset="50%" stop-color="#f5c72a"/><stop offset="100%" stop-color="#b58f04"/>
+  </linearGradient></defs>
+  <ellipse cx="60" cy="110" rx="24" ry="5" fill="#000" opacity="0.16"/>
+  <path d="M40 40 q-22 12 -18 40 q4 24 22 24 q-16 -30 -4 -64z" fill="#5cb85c" stroke="#2e7d32" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M80 40 q22 12 18 40 q-4 24 -22 24 q16 -30 4 -64z" fill="#5cb85c" stroke="#2e7d32" stroke-width="3.5" stroke-linejoin="round"/>
+  <path d="M60 14 q22 12 22 44 q0 44 -22 46 q-22 -2 -22 -46 q0 -32 22 -44z"
+        fill="url(#mais-epi)" stroke="#a37e06" stroke-width="3.5" stroke-linejoin="round"/>
+  <g fill="#e0aa10" opacity="0.55">
+    <circle cx="52" cy="42" r="4"/><circle cx="68" cy="42" r="4"/><circle cx="60" cy="52" r="4"/>
+    <circle cx="46" cy="60" r="4"/><circle cx="74" cy="60" r="4"/><circle cx="60" cy="70" r="4"/>
+    <circle cx="50" cy="80" r="4"/><circle cx="70" cy="80" r="4"/><circle cx="60" cy="90" r="3.6"/>
+  </g>
+  <path d="M60 14 q-4 -10 -12 -12 M60 14 q4 -10 12 -12" stroke="#c9a812" stroke-width="4" fill="none" stroke-linecap="round"/>
+</svg>
