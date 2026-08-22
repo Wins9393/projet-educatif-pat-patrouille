@@ -156,13 +156,41 @@ Accessibles par l'engrenage, conservés d'une session à l'autre :
 - `prefers-reduced-motion` fige les décors et les animations
 - Cibles tactiles d'au moins 44 px
 
+## Interface réactive sans framework
+
+Garder l'écran en accord avec l'état — le travail d'un React — tient ici en
+trois pièces :
+
+1. **Une source de vérité qui s'annonce.** Toute écriture passe par
+   `shared/progression.js` ou `shared/reglages.js`, qui émettent un événement
+   sur `window`. C'est le magasin et le canal d'abonnement, en deux lignes.
+2. **De petites fonctions qui refont leur fragment.** Aucune comparaison
+   d'arbres : une ligne de statistiques ou une liste de cinq mots se
+   reconstruit plus vite qu'elle ne se compare.
+3. **Un abonnement qui meurt avec le fragment**, dans `shared/reactif.js`.
+
+Le troisième point est le seul qui demande de l'attention. `resteAJour` prend
+l'élément qu'il maintient, et **coupe l'abonnement dès que cet élément quitte
+le document**. On aurait pu le raccrocher à un événement de fermeture, mais
+c'est fragile : un nœud simplement retiré du DOM n'en émet aucun, et tous les
+chemins de suppression ne passent pas par le même endroit. Un panneau rouvert
+dix fois laisserait sinon dix écouteurs derrière lui, chacun redessinant un
+fragment que plus personne ne regarde.
+
+```js
+resteAJour(contenu, () => contenu.replaceChildren(...bilanDuProfil()));
+```
+
+C'est tout ce qu'il faut pour que changer de profil mette à jour l'espace
+parent, les mots difficiles et le score de la barre en même temps.
+
 ## Organisation
 
 ```
 index.html / index.js      accueil : jeux, univers, progression
 views/ + controllers/      un écran et un contrôleur par mini-jeu
 shared/                    tirages, niveaux, rendu, sons, voix, confettis,
-                           progression, réglages, interface
+                           progression, réglages, interface, réactivité
 themes/                    les seize univers, plus « Tout » qui les mélange
 styles/                    fondations, décors de thème, accueil, jeux, panneaux
 assets/illustrations/      Mars, la réserve de dessins et la charte

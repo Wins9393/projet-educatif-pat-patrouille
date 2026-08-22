@@ -3,6 +3,7 @@ import * as progression from "./progression.js";
 import { themes, themeActif, choisitLeTheme } from "./themes.js";
 import { NIVEAUX, niveauParId } from "./niveaux.js";
 import { prononce, laVoixEstDisponible, voixDisponibles, voixChoisie, choisitLaVoix } from "./voix.js";
+import { resteAJour } from "./reactif.js";
 
 /* ------------------------------------------------------------------ */
 /* Barre supérieure                                                    */
@@ -291,23 +292,22 @@ const sectionProfils = () => {
   const liste = document.createElement("div");
   liste.className = "profils";
 
-  const dessine = () => {
-    liste.innerHTML = "";
+  // Le clic ne redessine plus lui-même : il écrit dans la progression, qui
+  // annonce le changement, et tout ce qui en dépend se remet à jour — ici
+  // comme dans l'espace parent et dans la barre supérieure.
+  resteAJour(liste, () => {
+    liste.replaceChildren(
+      ...progression.nomsDesProfils().map((nom) => {
+        const jeton = document.createElement("button");
+        jeton.className = "profil-jeton";
+        jeton.textContent = nom;
+        jeton.setAttribute("aria-pressed", String(nom === progression.profilActif()));
+        jeton.addEventListener("click", () => progression.choisitLeProfil(nom));
+        return jeton;
+      })
+    );
+  });
 
-    progression.nomsDesProfils().forEach((nom) => {
-      const jeton = document.createElement("button");
-      jeton.className = "profil-jeton";
-      jeton.textContent = nom;
-      jeton.setAttribute("aria-pressed", String(nom === progression.profilActif()));
-      jeton.addEventListener("click", () => {
-        progression.choisitLeProfil(nom);
-        dessine();
-      });
-      liste.append(jeton);
-    });
-  };
-
-  dessine();
   bloc.append(liste);
 
   const champ = document.createElement("div");
@@ -337,15 +337,13 @@ const sectionProfils = () => {
   return bloc;
 };
 
-const sectionParent = () => {
-  const bloc = document.createElement("div");
-  bloc.className = "reglage";
-
-  const titre = document.createElement("p");
-  titre.className = "reglage__intitule";
-  titre.textContent = "Espace parent";
-  bloc.append(titre);
-
+/**
+ * Le bilan du profil actif : compteurs et mots qui coincent.
+ *
+ * Renvoie des éléments plutôt que de les poser : c'est ce qui permet de le
+ * rappeler à chaque changement de profil sans rien savoir de son conteneur.
+ */
+const bilanDuProfil = () => {
   const courant = progression.profil();
   const total = courant.reussites + courant.erreurs;
   const taux = total ? Math.round((courant.reussites / total) * 100) : 0;
@@ -357,28 +355,43 @@ const sectionParent = () => {
     <div class="stat"><p class="stat__valeur">${taux}%</p><p class="stat__intitule">Bonnes réponses</p></div>
     <div class="stat"><p class="stat__valeur">${courant.meilleureSerie}</p><p class="stat__intitule">Meilleure série</p></div>
   `;
-  bloc.append(stats);
 
   const difficiles = progression.motsDifficiles();
+  if (!difficiles.length) return [stats];
 
-  if (difficiles.length) {
-    const sousTitre = document.createElement("p");
-    sousTitre.className = "reglage__aide";
-    sousTitre.textContent = "Mots qui demandent encore de l'entraînement :";
-    bloc.append(sousTitre);
+  const sousTitre = document.createElement("p");
+  sousTitre.className = "reglage__aide";
+  sousTitre.textContent = "Mots qui demandent encore de l'entraînement :";
 
-    const liste = document.createElement("div");
-    liste.className = "liste-mots";
+  const liste = document.createElement("div");
+  liste.className = "liste-mots";
+  difficiles.forEach(({ mot, erreurs, reussites }) => {
+    const ligne = document.createElement("div");
+    ligne.className = "liste-mots__ligne";
+    ligne.innerHTML = `<span>${mot}</span><span class="liste-mots__erreurs">${erreurs} erreur${erreurs > 1 ? "s" : ""} · ${reussites} réussite${reussites > 1 ? "s" : ""}</span>`;
+    liste.append(ligne);
+  });
 
-    difficiles.forEach(({ mot, erreurs, reussites }) => {
-      const ligne = document.createElement("div");
-      ligne.className = "liste-mots__ligne";
-      ligne.innerHTML = `<span>${mot}</span><span class="liste-mots__erreurs">${erreurs} erreur${erreurs > 1 ? "s" : ""} · ${reussites} réussite${reussites > 1 ? "s" : ""}</span>`;
-      liste.append(ligne);
-    });
+  return [stats, sousTitre, liste];
+};
 
-    bloc.append(liste);
-  }
+const sectionParent = () => {
+  const bloc = document.createElement("div");
+  bloc.className = "reglage";
+
+  const titre = document.createElement("p");
+  titre.className = "reglage__intitule";
+  titre.textContent = "Espace parent";
+  bloc.append(titre);
+
+  // Tout ce qui dépend du profil vit dans ce conteneur, refait d'un bloc à
+  // chaque changement. Le bouton de remise à zéro reste dehors : il ne dépend
+  // de rien, et le refaire lui ferait perdre le focus sous les doigts.
+  const contenu = document.createElement("div");
+  contenu.className = "espace-parent";
+  bloc.append(contenu);
+
+  resteAJour(contenu, () => contenu.replaceChildren(...bilanDuProfil()));
 
   const remiseAZero = document.createElement("button");
   remiseAZero.className = "bouton bouton--discret";
