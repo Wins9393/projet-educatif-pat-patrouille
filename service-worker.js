@@ -38,6 +38,7 @@ const NOYAU = [
   "./shared/progression.js",
   "./shared/reactif.js",
   "./shared/reglages.js",
+  "./shared/reprise.js",
   "./shared/rendu.js",
   "./shared/sons.js",
   "./shared/themes.js",

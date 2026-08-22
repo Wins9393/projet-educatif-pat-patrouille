@@ -8,6 +8,7 @@ import {
 } from "../shared/jeu.js";
 import { leurresNumeriques } from "../shared/niveaux.js";
 import { reglages } from "../shared/reglages.js";
+import { oublie, reprise, sauvegarde } from "../shared/reprise.js";
 import { creeCaractere, creeVisuel } from "../shared/rendu.js";
 import { prononce } from "../shared/voix.js";
 
@@ -24,11 +25,11 @@ let mancheGagnee = false;
 
 const annonce = () => prononce(`Combien y a-t-il de ${objet.pluriel} ?`);
 
-const nouvelleManche = () => {
+const nouvelleManche = (repris = null) => {
   demarreUneManche();
 
   mancheGagnee = false;
-  quantite = entierAleatoire(niveau.quantiteMax) + 1;
+  quantite = repris?.quantite ?? entierAleatoire(niveau.quantiteMax) + 1;
 
   collection.innerHTML = "";
   for (let i = 0; i < quantite; i++) {
@@ -41,7 +42,11 @@ const nouvelleManche = () => {
   collection.setAttribute("aria-label", `${quantite} ${objet.pluriel} à compter`);
 
   const pool = leurresNumeriques(quantite, reglages().nombreDeChoix, niveau.quantiteMax);
-  const grille = construitGrille([quantite, ...pool], quantite, reglages().nombreDeChoix);
+  const grille = repris?.grille?.includes(quantite)
+    ? repris.grille
+    : construitGrille([quantite, ...pool], quantite, reglages().nombreDeChoix);
+
+  sauvegarde("compter", { quantite, grille });
 
   zoneChoix.innerHTML = "";
   grille.forEach((chiffre) => {
@@ -73,6 +78,7 @@ const verifie = (chiffre, bouton) => {
   }
 
   mancheGagnee = true;
+  oublie("compter");
   sonJuste();
   bouton.classList.add("choix__bouton--juste");
 
@@ -89,7 +95,7 @@ const verifie = (chiffre, bouton) => {
   });
 };
 
-document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());
 document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-nouvelleManche();
+nouvelleManche(reprise("compter"));

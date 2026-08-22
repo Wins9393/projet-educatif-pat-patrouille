@@ -156,6 +156,28 @@ Accessibles par l'engrenage, conservés d'une session à l'autre :
 - `prefers-reduced-motion` fige les décors et les animations
 - Cibles tactiles d'au moins 44 px
 
+## Reprendre une manche interrompue
+
+Un rechargement effaçait l'exercice en cours : le mot à moitié écrit, les
+paires déjà retournées, les jetons posés. On aurait pu demander confirmation
+avant de quitter, mais ça ne couvre que le geste volontaire d'un adulte devant
+un clavier. Le cas qui fait vraiment mal — l'application web mise en arrière-
+plan puis déchargée par le système, fréquent sur iPad — ne demande rien à
+personne.
+
+Alors plutôt que d'empêcher le rechargement, on le rend indolore. Chaque coup
+écrit un instantané de la manche dans `shared/reprise.js`, et l'écran repart
+d'où il s'était arrêté. Ça couvre du même geste le plantage et la batterie
+vide.
+
+L'instantané est écarté dès qu'il n'a plus de sens : un autre jeu, un univers
+ou un niveau changés entre-temps, un autre enfant aux commandes, ou une manche
+vieille de plus de deux heures. Il est effacé dès que la manche est gagnée.
+
+Ce qui est conservé se limite au strict nécessaire — le mot et l'avancée pour
+ÉCRIRE, la grille de choix pour LIRE et COMPTER, l'opération et les jetons
+posés pour CALCULER, l'ordre des cartes et les paires trouvées pour MEMORY.
+
 ## Interface réactive sans framework
 
 Garder l'écran en accord avec l'état — le travail d'un React — tient ici en
@@ -190,7 +212,7 @@ parent, les mots difficiles et le score de la barre en même temps.
 index.html / index.js      accueil : jeux, univers, progression
 views/ + controllers/      un écran et un contrôleur par mini-jeu
 shared/                    tirages, niveaux, rendu, sons, voix, confettis,
-                           progression, réglages, interface, réactivité
+                           progression, réglages, interface, réactivité, reprise
 themes/                    les seize univers, plus « Tout » qui les mélange
 styles/                    fondations, décors de thème, accueil, jeux, panneaux
 assets/illustrations/      Mars, la réserve de dessins et la charte

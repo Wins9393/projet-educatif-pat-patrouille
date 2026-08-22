@@ -8,6 +8,7 @@ import {
 } from "../shared/jeu.js";
 import { motsDuNiveau } from "../shared/niveaux.js";
 import { reglages } from "../shared/reglages.js";
+import { oublie, reprise, sauvegarde } from "../shared/reprise.js";
 import { creeCaractere, creeVisuel } from "../shared/rendu.js";
 import { prononce } from "../shared/voix.js";
 
@@ -24,11 +25,19 @@ let mancheGagnee = false;
 
 const annonce = () => prononce("Quel mot est écrit ?");
 
-const nouvelleManche = () => {
+/** Le mot cherché et les images proposées : sans la grille, la reprise
+    changerait les réponses sous les yeux de l'enfant. */
+const noteLaManche = (grille) => {
+  sauvegarde("lire", { mot: itemADeviner.mot, grille: grille.map((item) => item.mot) });
+};
+
+const parMot = (mot) => disponibles.find((item) => item.mot === mot);
+
+const nouvelleManche = (repris = null) => {
   demarreUneManche();
 
   mancheGagnee = false;
-  itemADeviner = choisirAleatoire(disponibles);
+  itemADeviner = (repris && parMot(repris.mot)) || choisirAleatoire(disponibles);
 
   motALire.innerHTML = "";
   for (const caractere of itemADeviner.mot) {
@@ -36,7 +45,11 @@ const nouvelleManche = () => {
   }
   motALire.setAttribute("aria-label", `Le mot ${itemADeviner.affichage}`);
 
-  const grille = construitGrille(disponibles, itemADeviner, reglages().nombreDeChoix);
+  const reprisEntier = repris?.grille?.map(parMot);
+  const grille =
+    reprisEntier?.every(Boolean) && reprisEntier.includes(itemADeviner)
+      ? reprisEntier
+      : construitGrille(disponibles, itemADeviner, reglages().nombreDeChoix);
 
   zoneChoix.innerHTML = "";
   grille.forEach((item) => {
@@ -52,6 +65,7 @@ const nouvelleManche = () => {
   annonce();
 };
 
+  noteLaManche(grille);
 const verifie = (item, bouton) => {
   if (mancheGagnee) return;
 
@@ -66,6 +80,7 @@ const verifie = (item, bouton) => {
   sonJuste();
   bouton.classList.add("choix__bouton--juste");
 
+  oublie("lire");
   zoneChoix.querySelectorAll(".choix__bouton").forEach((autre) => {
     if (autre !== bouton) autre.classList.add("choix__bouton--efface");
   });
@@ -79,7 +94,7 @@ const verifie = (item, bouton) => {
   });
 };
 
-document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());
 document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-nouvelleManche();
+nouvelleManche(reprise("lire"));

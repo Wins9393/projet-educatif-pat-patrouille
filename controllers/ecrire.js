@@ -8,6 +8,7 @@ import {
 } from "../shared/jeu.js";
 import { motsDuNiveau } from "../shared/niveaux.js";
 import { reglages } from "../shared/reglages.js";
+import { oublie, reprise, sauvegarde } from "../shared/reprise.js";
 import { creeCaractere, creeVisuel } from "../shared/rendu.js";
 import { prononce, prononceUneLettre } from "../shared/voix.js";
 
@@ -78,12 +79,17 @@ const dessineLesChoix = () => {
   });
 };
 
-const nouvelleManche = () => {
+const noteLaManche = () => sauvegarde("ecrire", { mot: itemAEcrire.mot, position });
+
+const nouvelleManche = (repris = null) => {
   demarreUneManche();
 
   motTermine = false;
-  position = 0;
-  itemAEcrire = choisirAleatoire(disponibles);
+
+  const retrouve = repris && disponibles.find((item) => item.mot === repris.mot);
+  itemAEcrire = retrouve || choisirAleatoire(disponibles);
+  // Une position héritée d'un autre mot n'aurait aucun sens.
+  position = retrouve ? Math.min(repris.position, itemAEcrire.mot.length - 1) : 0;
 
   question.innerHTML = "";
   question.append(creeVisuel(theme, itemAEcrire));
@@ -106,6 +112,7 @@ const verifie = (caractere, bouton) => {
   }
 
   sonJuste();
+  noteLaManche();
   prononceUneLettre(caractere);
   position += 1;
   dessineLesCases();
@@ -123,14 +130,16 @@ const verifie = (caractere, bouton) => {
       emoji: itemAEcrire.visuel,
       surSuite: nouvelleManche,
     });
+  noteLaManche();
     return;
   }
 
   dessineLesChoix();
   annonce();
+    oublie("ecrire");
 };
 
-document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());
 document.querySelector('[data-action="ecouter"]').addEventListener("click", souffle);
 
-nouvelleManche();
+nouvelleManche(reprise("ecrire"));

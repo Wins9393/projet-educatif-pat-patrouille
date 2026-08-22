@@ -6,6 +6,7 @@ import {
   sonJuste,
   termineLaManche,
 } from "../shared/jeu.js";
+import { oublie, reprise, sauvegarde } from "../shared/reprise.js";
 import { creeVisuel } from "../shared/rendu.js";
 import { prononce } from "../shared/voix.js";
 
@@ -120,7 +121,12 @@ const valide = (premiereCarte, secondeCarte, item) => {
   prononce(item.affichage);
   pairesTrouvees += 1;
 
-  if (pairesTrouvees < niveau.paires) return;
+  if (pairesTrouvees < niveau.paires) {
+    noteLeTapis();
+    return;
+  }
+
+  oublie("memory");
 
   termineLaManche({
     jeu: "memory",
@@ -131,15 +137,39 @@ const valide = (premiereCarte, secondeCarte, item) => {
   });
 };
 
-const nouvelleManche = () => {
+/** Un tapis neuf : chaque mot du tirage en deux exemplaires, mélangés. */
+const tapisNeuf = () => {
+  const tirage = tirageDuNiveau();
+  return melange([...tirage, ...tirage]);
+};
+
+/**
+ * Le tapis sauvegardé, remis dans le même ordre.
+ *
+ * Un mot peut avoir disparu du thème depuis — on repart alors d'un tapis neuf
+ * plutôt que d'en afficher un incomplet.
+ */
+const cartesReprises = ({ cartes }) => {
+  const retrouvees = cartes.map((mot) => theme.items.find((item) => item.mot === mot));
+  return retrouvees.every(Boolean) ? retrouvees : tapisNeuf();
+};
+
+/** Un tapis se décrit par l'ordre de ses cartes et les paires déjà trouvées. */
+const noteLeTapis = () => {
+  sauvegarde("memory", {
+    cartes: [...grille.querySelectorAll(".carte-memo")].map((c) => c.dataset.mot),
+    trouvees: [...grille.querySelectorAll(".carte-memo--trouvee")].map((c) => c.dataset.mot),
+  });
+};
+
+const nouvelleManche = (repris = null) => {
   demarreUneManche();
 
   premiere = null;
   pairesTrouvees = 0;
   bloque = false;
 
-  const tirage = tirageDuNiveau();
-  const cartes = melange([...tirage, ...tirage]);
+  const cartes = repris ? cartesReprises(repris) : tapisNeuf();
 
   const parRangee = colonnes(cartes.length);
   const etroit = Math.min(parRangee, 4);
@@ -151,11 +181,32 @@ const nouvelleManche = () => {
   grille.innerHTML = "";
   cartes.forEach((item) => grille.append(construitUneCarte(item)));
 
+  if (repris) restaureLesPairesTrouvees(repris.trouvees);
+
   consigne.textContent = `Retrouve les ${niveau.paires} paires`;
+  noteLeTapis();
   annonce();
 };
 
-document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+/**
+ * Repose les paires déjà trouvées, sans son ni voix : l'enfant les a déjà
+ * gagnées, on ne les lui rejoue pas.
+ */
+const restaureLesPairesTrouvees = (trouvees = []) => {
+  for (const mot of new Set(trouvees)) {
+    const item = theme.items.find((i) => i.mot === mot);
+    for (const carte of grille.querySelectorAll(`[data-mot="${mot}"]`)) {
+      carte.classList.add("carte-memo--trouvee");
+      carte.setAttribute("aria-label", `${item?.affichage ?? mot}, trouvé`);
+      carte.disabled = true;
+    }
+    pairesTrouvees += 1;
+  }
+};
+
+// Le bouton repart d'un tapis neuf : l'argument d'événement ne doit pas être
+// pris pour une manche à reprendre.
+document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());
 document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-nouvelleManche();
+nouvelleManche(reprise("memory"));

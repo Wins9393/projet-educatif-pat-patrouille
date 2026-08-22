@@ -8,6 +8,7 @@ import {
 } from "../shared/jeu.js";
 import { enonce, leurresNumeriques, tireUneOperation } from "../shared/niveaux.js";
 import { reglages } from "../shared/reglages.js";
+import { oublie, reprise, sauvegarde } from "../shared/reprise.js";
 import { creeCaractere, creeVisuel } from "../shared/rendu.js";
 import { sonPose } from "../shared/sons.js";
 import { prononce } from "../shared/voix.js";
@@ -120,6 +121,7 @@ const metAJourLeTotal = () => {
   if (valeur !== operation.resultat || mancheGagnee) return;
 
   mancheGagnee = true;
+  oublie("calculer");
   reussite(`Bravo ! Ça fait ${operation.resultat}`);
 };
 
@@ -131,21 +133,30 @@ const rangeLeJeton = (jeton) => {
   jeton.style.removeProperty("width");
 };
 
-const poseLeJeton = (jeton, valeur) => {
-  const dedans = estDansLeReceptacle(jeton);
-
-  if (dedans) {
-    poses.add(valeur);
-    sonPose();
-  } else {
-    poses.delete(valeur);
-    rangeLeJeton(jeton);
-  }
+/**
+ * Marque un jeton comme posé ou repris, sans rien savoir de sa position.
+ *
+ * C'est ce qui permet à la reprise de remettre les jetons dans le réceptacle
+ * après un rechargement : le test géométrique n'a plus rien à mesurer.
+ */
+const marqueLeJeton = (jeton, valeur, dedans) => {
+  if (dedans) poses.add(valeur);
+  else poses.delete(valeur);
 
   jeton.classList.toggle("jeton--pose", dedans);
   jeton.setAttribute("aria-pressed", String(dedans));
 
   metAJourLeTotal();
+};
+
+const poseLeJeton = (jeton, valeur) => {
+  const dedans = estDansLeReceptacle(jeton);
+
+  if (dedans) sonPose();
+  else rangeLeJeton(jeton);
+
+  marqueLeJeton(jeton, valeur, dedans);
+  noteLaManche();
 };
 
 /**
@@ -212,24 +223,20 @@ const installeLeGlissement = (jeton, valeur) => {
   jeton.addEventListener("pointerup", relache);
   jeton.addEventListener("pointercancel", relache);
 
-  // Équivalent au clavier : Entrée dépose ou retire le jeton.
+  // Équivalent au clavier : Entrée dépose ou retire le jeton. Il passe par le
+  // même marquage que le glisser — c'est ce qui lui vaut d'être sauvegardé lui
+  // aussi, et ça évite de tenir deux fois la même logique.
   jeton.addEventListener("keydown", (e) => {
     if (mancheGagnee || (e.key !== "Enter" && e.key !== " ")) return;
 
     e.preventDefault();
 
-    if (poses.has(valeur)) {
-      poses.delete(valeur);
-      jeton.classList.remove("jeton--pose");
-      rangeLeJeton(jeton);
-    } else {
-      poses.add(valeur);
-      jeton.classList.add("jeton--pose");
-      sonPose();
-    }
+    const dedans = !poses.has(valeur);
+    if (dedans) sonPose();
+    else rangeLeJeton(jeton);
 
-    jeton.setAttribute("aria-pressed", String(poses.has(valeur)));
-    metAJourLeTotal();
+    marqueLeJeton(jeton, valeur, dedans);
+    noteLaManche();
   });
 };
 
@@ -293,7 +300,7 @@ const illustre = () => {
   }
 };
 
-const demarreLOperation = () => {
+const demarreLOperation = (grilleReprise = null) => {
   const lisible = enonce(operation);
 
   ligneEnonce.textContent = `${lisible.ecrit} = ?`;
@@ -302,7 +309,11 @@ const demarreLOperation = () => {
   illustre();
 
   const pool = leurresNumeriques(operation.resultat, reglages().nombreDeChoix, niveau.nombreMax);
-  const grille = construitGrille([operation.resultat, ...pool], operation.resultat, reglages().nombreDeChoix);
+  const grille = grilleReprise?.includes(operation.resultat)
+    ? grilleReprise
+    : construitGrille([operation.resultat, ...pool], operation.resultat, reglages().nombreDeChoix);
+
+  noteLaManche(grille);
 
   zoneChoix.innerHTML = "";
   grille.forEach((valeur) => {
@@ -333,6 +344,7 @@ const verifieLaReponse = (valeur, bouton) => {
   }
 
   mancheGagnee = true;
+  oublie("calculer");
   bouton.classList.add("choix__bouton--juste");
 
   zoneChoix.querySelectorAll(".choix__bouton").forEach((autre) => {
@@ -358,11 +370,16 @@ const reussite = (texte) => {
   });
 };
 
-const nouvelleManche = () => {
+/** L'opération tirée, plus ce qui a déjà été posé ou proposé. */
+const noteLaManche = (grille = null) => {
+  sauvegarde("calculer", { operation, poses: [...poses], grille });
+};
+
+const nouvelleManche = (repris = null) => {
   demarreUneManche();
 
   mancheGagnee = false;
-  operation = tireUneOperation(niveau);
+  operation = repris?.operation ?? tireUneOperation(niveau);
 
   const enCollecte = operation.type === "collecte";
   sectionCollecte.hidden = !enCollecte;
@@ -370,14 +387,19 @@ const nouvelleManche = () => {
 
   if (enCollecte) {
     demarreLaCollecte();
+    repris?.poses?.forEach((valeur) => {
+      const jeton = reserve.querySelector(`[data-valeur="${valeur}"]`);
+      if (jeton) marqueLeJeton(jeton, valeur, true);
+    });
+    noteLaManche();
   } else {
-    demarreLOperation();
+    demarreLOperation(repris?.grille);
   }
 
   annonce();
 };
 
-document.querySelector('[data-action="rejouer"]').addEventListener("click", nouvelleManche);
+document.querySelector('[data-action="rejouer"]').addEventListener("click", () => nouvelleManche());
 document.querySelector('[data-action="ecouter"]').addEventListener("click", annonce);
 
-nouvelleManche();
+nouvelleManche(reprise("calculer"));
