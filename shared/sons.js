@@ -70,6 +70,7 @@ const melodie = (notes) => {
 };
 
 /* Gamme de do majeur, en hertz. */
+const DO_GRAVE = 261.63;
 const DO = 523.25;
 const RE = 587.33;
 const MI = 659.25;
@@ -107,3 +108,9 @@ export const sonRecompense = () => melodie([
 
 /** Retour tactile discret sur un dépôt réussi. */
 export const sonPose = () => melodie([[LA, 0, 0.12, 0.1]]);
+
+/**
+ * Une pièce qui ne rentre pas là. Volontairement plus sourd et plus court
+ * que le son d'erreur : au puzzle, essayer une case n'est pas se tromper.
+ */
+export const sonRefus = () => melodie([[DO_GRAVE, 0, 0.09, 0.07]]);

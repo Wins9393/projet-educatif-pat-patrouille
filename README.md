@@ -1,6 +1,6 @@
 # Les Petits Mondes
 
-Cinq mini-jeux pour apprendre à **lire, écrire et compter**, dans seize univers
+Six mini-jeux pour apprendre à **lire, écrire, compter et assembler**, dans seize univers
 que l'enfant choisit : espace, océan, dinosaures, robots, princesses, ferme,
 jungle, fruits et légumes, véhicules, maison, nature, sports, musique, météo,
 fêtes, animaux — ou **Tout**, qui les mélange.
@@ -17,6 +17,7 @@ Installable comme application et jouable hors ligne.
 | **COMPTER** | Des objets à dénombrer, le bon nombre à désigner |
 | **CALCULER** | Une quantité à composer, puis de vraies opérations |
 | **MEMORY** | Des paires d'images à retrouver, et leur mot à entendre |
+| **PUZZLE** | Une grille à remplir avec un set de formes, qu'on fait pivoter |
 
 Chaque bonne réponse rapporte une étoile et fait progresser vers l'autocollant
 suivant.
@@ -34,6 +35,11 @@ Un seul réglage fait évoluer les cinq jeux ensemble.
 | 🏆 Champion | 7 ans et + | tous | jusqu'à 20 | les quatre opérations |
 
 MEMORY suit le même réglage : 3 paires au premier niveau, 10 au dernier.
+
+PUZZLE aussi, sur deux axes à la fois : la grille passe de 3 × 3 à 6 × 6, et
+les petites pièces disparaissent — le carré seul, qui bouche n'importe quel
+trou, n'existe qu'au premier niveau. À partir du troisième, une manche sur
+deux se joue sur une silhouette plutôt qu'un rectangle.
 
 Aux deux premiers niveaux, CALCULER se joue en manipulant des jetons — on
 compose une quantité en la touchant. À partir du troisième, l'opération est
@@ -107,6 +113,74 @@ sont conformes à la charte et prêts à reprendre du service : le déplacer dan
 Ajouter un univers tient en un fichier dans `themes/`. Le format est décrit dans
 [themes/README.md](themes/README.md).
 
+## Un puzzle qui ne peut pas être insoluble
+
+Si les pièces du PUZZLE étaient tirées au hasard, la grille serait insoluble
+une fois sur deux. Et un enfant de cinq ans devant un puzzle impossible ne
+conclut pas que le programme a un bug : il conclut qu'il est nul.
+
+Alors on ne tire pas les pièces, **on découpe la grille**. Un remplissage
+complet par retour sur trace, dans `shared/decoupe.js`, et les morceaux
+obtenus *sont* le jeu. La solution existe par construction, et l'enfant en
+trouvera peut-être une autre.
+
+Deux détails font la différence entre une découpe qui marche et une découpe
+jouable. Une seule pose est possible à chaque étape — la première case de la
+pièce doit couvrir la première case libre — ce qui réduit l'arbre de recherche
+à presque rien. Et le tirage est pondéré par la taille : sans ça, la grille
+revient en pluie de miettes.
+
+`decoupe()` travaille sur **un ensemble de cases quelconque**, pas sur un
+rectangle. C'est ce qui rend les silhouettes presque gratuites : un rectangle
+n'est qu'une silhouette pleine, et c'est le même chemin de code.
+
+Les pièces tournent, elles ne se retournent jamais. Le bois se retourne, pas
+un écran : distinguer un L de son miroir par la pensée est un exercice d'un
+autre âge. L et J sont donc deux pièces distinctes, S et Z aussi — et la
+découpe puise dans exactement le même jeu que celui remis à l'enfant.
+
+Les vingt-deux silhouettes de `shared/silhouettes.js` se dessinent en toutes
+lettres et se relisent d'un coup d'œil. Aucune ne descend sous une quinzaine
+de cases : un bateau de neuf cases est une tache. Chacune est vérifiée à la
+fabrication, jamais à l'exécution — un isthme d'une seule case tue le pavage
+par pentominos et ne se voit pas à l'œil nu.
+
+## Attraper, pivoter, poser
+
+Un enfant ne fait pas la différence entre un toucher et un glissement, et son
+doigt encore moins : un « toucher » dérive presque toujours de trois pixels,
+et un « glissement » commence toujours par un appui immobile. Deux
+gestionnaires en concurrence donneraient des sélections fantômes et des pièces
+qui restent collées. `shared/glissement.js` n'expose donc **qu'un seul geste à
+deux issues** : l'appui ouvre un glissement candidat, qui devient une prise
+au-delà de huit pixels et retombe en simple toucher s'il est relâché avant.
+
+Le mouvement est suivi **sur la fenêtre, pas sur la pièce**. Déplacer un
+élément dans le DOM lui retire sa capture du pointeur : la spécification le
+dit, Firefox l'applique, Chrome laisse passer. Or la pièce voyage jusqu'au
+`body` à l'instant où on la soulève — écoutée sur elle-même, elle ne recevrait
+jamais son relâchement et resterait collée au curseur. La capture est
+redemandée après le déménagement, pour le seul cas que la fenêtre ne couvre
+pas : un doigt relâché en dehors d'elle.
+
+Une seule règle d'ancrage, aussi : **la case que tu tiens est la case où tu
+poses**. C'est la seule qui reste vraie sur un L, dont le coin haut-gauche du
+cadre est vide, et elle couvre les trois façons de poser — la case attrapée en
+glissant, la case touchée dans le bac, la première case au clavier. La pièce
+prend la taille du plateau dès qu'on la soulève, monte un peu au-dessus du
+doigt qui la cacherait, et les cases visées s'éclairent en vert avant qu'on
+lâche.
+
+Une pose ratée n'est pas une erreur : elle n'est jamais enregistrée comme
+telle. Au puzzle, essayer une case n'est pas se tromper, et compter ces essais
+fausserait l'espace parent. La pose est même indulgente — si la case visée ne
+convient pas, les huit voisines sont essayées avant de rendre la pièce.
+
+Tout se joue aussi au clavier : les flèches déplacent un curseur, `Entrée`
+pose, `R` pivote, `Retour arrière` reprend la pièce sous le curseur. Les trois
+chemins débouchent sur une seule fonction. C'est une leçon déjà payée ici : le
+clavier de CALCULER doublait la logique du glisser et oubliait la sauvegarde.
+
 ## Papier et blocs
 
 L'interface était en verre dépoli : des surfaces translucides floutées sur un
@@ -178,7 +252,8 @@ vieille de plus de deux heures. Il est effacé dès que la manche est gagnée.
 
 Ce qui est conservé se limite au strict nécessaire — le mot et l'avancée pour
 ÉCRIRE, la grille de choix pour LIRE et COMPTER, l'opération et les jetons
-posés pour CALCULER, l'ordre des cartes et les paires trouvées pour MEMORY.
+posés pour CALCULER, l'ordre des cartes et les paires trouvées pour MEMORY, le
+plateau et la position de chaque pièce pour PUZZLE.
 
 ## Interface réactive sans framework
 
@@ -214,7 +289,8 @@ parent, les mots difficiles et le score de la barre en même temps.
 index.html / index.js      accueil : jeux, univers, progression
 views/ + controllers/      un écran et un contrôleur par mini-jeu
 shared/                    tirages, niveaux, rendu, sons, voix, confettis,
-                           progression, réglages, interface, réactivité, reprise
+                           progression, réglages, interface, réactivité, reprise,
+                           formes et découpe du puzzle, silhouettes, glissement
 themes/                    les seize univers, plus « Tout » qui les mélange
 styles/                    fondations, décors de thème, accueil, jeux, panneaux
 assets/illustrations/      Mars, la réserve de dessins et la charte

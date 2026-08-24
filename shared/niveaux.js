@@ -1,5 +1,5 @@
 /**
- * Niveaux de difficulté, partagés par les quatre mini-jeux.
+ * Niveaux de difficulté, partagés par les six mini-jeux.
  *
  * La progression suit celle de la maternelle vers le CP : on commence par des
  * mots très courts et des quantités manipulables, puis on allonge les mots et
@@ -29,6 +29,17 @@ export const NIVEAUX = [
     quantiteMax: 5,
     /** Nombre de paires à retrouver en MEMORY. */
     paires: 3,
+    /**
+     * Le plateau du PUZZLE : sa taille, et les pièces qui serviront à le
+     * découper. La difficulté monte sur deux axes à la fois — la grille
+     * s'agrandit et les petites pièces disparaissent. Le monomino, qui
+     * bouche n'importe quel trou, n'existe qu'ici.
+     *
+     * `silhouettes` donne la fourchette de cases des formes jouables, ou
+     * false pour rester au rectangle : en dessous d'une quinzaine de cases,
+     * un bateau n'est qu'une tache.
+     */
+    puzzle: { lignes: 3, colonnes: 3, tailleMin: 1, tailleMax: 3, silhouettes: false },
     /** Opérations autorisées en CALCULER. */
     operations: ["collecte"],
     /** Plus grand nombre manipulé en CALCULER. */
@@ -44,6 +55,7 @@ export const NIVEAUX = [
     lettreDictee: true,
     quantiteMax: 9,
     paires: 4,
+    puzzle: { lignes: 4, colonnes: 4, tailleMin: 2, tailleMax: 4, silhouettes: false },
     operations: ["collecte"],
     nombreMax: 9,
   },
@@ -57,6 +69,7 @@ export const NIVEAUX = [
     lettreDictee: true,
     quantiteMax: 12,
     paires: 6,
+    puzzle: { lignes: 5, colonnes: 4, tailleMin: 3, tailleMax: 4, silhouettes: [15, 22] },
     operations: ["addition"],
     nombreMax: 10,
   },
@@ -70,6 +83,7 @@ export const NIVEAUX = [
     lettreDictee: false,
     quantiteMax: 16,
     paires: 8,
+    puzzle: { lignes: 5, colonnes: 5, tailleMin: 3, tailleMax: 5, silhouettes: [23, 29] },
     operations: ["addition", "soustraction"],
     nombreMax: 20,
   },
@@ -83,6 +97,7 @@ export const NIVEAUX = [
     lettreDictee: false,
     quantiteMax: 20,
     paires: 10,
+    puzzle: { lignes: 6, colonnes: 6, tailleMin: 4, tailleMax: 5, silhouettes: [30, 40] },
     operations: ["addition", "soustraction", "multiplication", "division"],
     nombreMax: 50,
   },

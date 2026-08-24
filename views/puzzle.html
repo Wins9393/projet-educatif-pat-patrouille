@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1b2a4a">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/decors.css">
+    <link rel="stylesheet" href="../styles/jeux.css">
+    <link rel="stylesheet" href="../styles/panneaux.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../vendor/confetti.min.js" defer></script>
+    <script type="module" src="../controllers/puzzle.js"></script>
+    <title>PUZZLE</title>
+</head>
+
+<body>
+    <main class="jeu-page">
+        <div class="plateau">
+            <p class="consigne">
+                <span class="consigne__texte">Remplis la grille</span>
+                <button class="bouton bouton--discret bouton--icone" data-action="ecouter" aria-label="Réécouter">🔊</button>
+            </p>
+
+            <div class="puzzle">
+                <div class="puzzle__cadre">
+                    <div class="puzzle__grille" tabindex="0" role="application" aria-label="Grille à remplir. Flèches pour se déplacer, Entrée pour poser, R pour pivoter."></div>
+                </div>
+
+                <div class="puzzle__commande">
+                    <p class="puzzle__annonce" aria-live="polite"></p>
+                    <button class="bouton" data-action="pivoter">↻ Pivoter</button>
+                </div>
+
+                <div class="puzzle__bac" role="group" aria-label="Formes à poser"></div>
+            </div>
+
+            <div class="puzzle__actions">
+                <button class="bouton bouton--discret" data-action="vider">Tout enlever</button>
+                <button class="bouton bouton--discret" data-action="rejouer">Nouvelle grille</button>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

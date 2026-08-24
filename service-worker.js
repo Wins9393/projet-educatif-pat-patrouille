@@ -4,7 +4,7 @@
  * Le noyau (pages, styles, scripts, sons) est précaché à l'installation ;
  * le reste — visuels des thèmes — est mis en cache au fil de l'utilisation.
  */
-const VERSION = "petits-mondes-v19";
+const VERSION = "petits-mondes-v21";
 const NOYAU = [
   "./",
   "./index.html",
@@ -24,14 +24,19 @@ const NOYAU = [
   "./views/compter.html",
   "./views/calculer.html",
   "./views/memory.html",
+  "./views/puzzle.html",
   "./controllers/ecrire.js",
   "./controllers/lire.js",
   "./controllers/compter.js",
   "./controllers/calculer.js",
   "./controllers/memory.js",
+  "./controllers/puzzle.js",
   "./shared/aleatoire.js",
   "./shared/chemins.js",
   "./shared/confettis.js",
+  "./shared/decoupe.js",
+  "./shared/formes.js",
+  "./shared/glissement.js",
   "./shared/interface.js",
   "./shared/jeu.js",
   "./shared/niveaux.js",
@@ -40,6 +45,7 @@ const NOYAU = [
   "./shared/reglages.js",
   "./shared/reprise.js",
   "./shared/rendu.js",
+  "./shared/silhouettes.js",
   "./shared/sons.js",
   "./shared/themes.js",
   "./shared/voix.js",

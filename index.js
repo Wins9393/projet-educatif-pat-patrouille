@@ -12,6 +12,7 @@ const JEUX = [
   { id: "compter", nom: "COMPTER", icone: "🔢", desc: "Combien y en a-t-il ?", lien: "views/compter.html" },
   { id: "calculer", nom: "CALCULER", icone: "➕", desc: "Compose le bon total", lien: "views/calculer.html" },
   { id: "memory", nom: "MEMORY", icone: "🃏", desc: "Retrouve les paires", lien: "views/memory.html" },
+  { id: "puzzle", nom: "PUZZLE", icone: "🧩", desc: "Remplis la grille avec les formes", lien: "views/puzzle.html" },
 ];
 
 const accueil = document.querySelector(".accueil");
