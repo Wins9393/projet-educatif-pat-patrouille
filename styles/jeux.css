@@ -723,7 +723,7 @@
   grid-template-columns: repeat(var(--largeur), var(--case));
   grid-auto-rows: var(--case);
   touch-action: none;
-  cursor: pointer;
+  cursor: grab;
   filter: drop-shadow(0 var(--epaisseur-piece, 5px) 0 var(--piece-levre));
   transition: transform 0.12s ease;
 }

@@ -60,7 +60,6 @@ let selectionnee = null;
 let curseur = null;
 let enCours = null;
 let gagne = false;
-let clicIgnore = false;
 
 /** Case du plateau → pièce qui l'occupe. */
 const occupees = new Map();
@@ -227,6 +226,7 @@ const pose = (piece, cellules) => {
   sonPose();
   compteLeReste();
   noteLaManche();
+  selectionne(prochaineAPoser());
   verifieLaVictoire();
 };
 
@@ -245,8 +245,8 @@ const renvoieAuBac = (piece, { refus = false } = {}) => {
 };
 
 /**
- * Pose la pièce sur une case désignée — au toucher ou au clavier. La pièce est
- * tenue par sa première case, celle que montre le fantôme.
+ * Pose la pièce sur la case du curseur, au clavier. La pièce est tenue par sa
+ * première case, celle que montre le fantôme.
  */
 const poseSurLaCase = (piece, ligne, colonne) => {
   libere(piece);
@@ -255,7 +255,6 @@ const poseSurLaCase = (piece, ligne, colonne) => {
   if (!cellules) return renvoieAuBac(piece, { refus: true });
 
   pose(piece, cellules);
-  selectionne(prochaineAPoser());
 };
 
 /* ================================================================== */
@@ -419,16 +418,6 @@ const relache = (e, { abandonne = false } = {}) => {
 
   rendLaPiece(piece);
 
-  /*
-   * Le pointeur était capturé par la pièce, qui a voyagé jusqu'au body et en
-   * est revenue : le clic de synthèse qui suit peut atterrir n'importe où. On
-   * laisse passer le tour.
-   */
-  clicIgnore = true;
-  setTimeout(() => {
-    clicIgnore = false;
-  }, 0);
-
   if (cellules) pose(piece, cellules);
   else renvoieAuBac(piece, { refus: !abandonne });
 
@@ -438,24 +427,19 @@ const relache = (e, { abandonne = false } = {}) => {
 const installeLesGestes = (piece) => {
   installeLeGeste(piece.element, {
     autorise: () => !gagne,
+
+    /*
+     * Poser le doigt sur une pièce la choisit — c'est ce qui donne son sens au
+     * bouton ↻, sans avoir à distinguer un clic d'un glissement. Que le geste
+     * devienne une prise ou s'arrête là ne change rien : dans les deux cas
+     * c'est cette pièce que l'enfant désigne.
+     */
+    surAppui: () => selectionne(piece),
+
     surPrise: (e, depart) => attrape(piece, e, depart),
     surDeplacement: deplace,
     surDepose: relache,
     surAbandon: (e) => relache(e, { abandonne: true }),
-
-    surToucher: () => {
-      if (gagne) return;
-
-      // Une pièce posée revient au bac : c'est aussi comme ça qu'on se reprend.
-      if (piece.ligne !== null) {
-        renvoieAuBac(piece);
-        selectionne(piece);
-        return;
-      }
-
-      if (selectionnee === piece) pivoteLaSelection();
-      else selectionne(piece);
-    },
   });
 };
 
@@ -547,16 +531,6 @@ const installeLeClavierDesPieces = (piece) => {
     }
   });
 };
-
-grille.addEventListener("click", (e) => {
-  if (gagne || clicIgnore || !selectionnee) return;
-
-  const cellule = e.target.closest(".case");
-  if (!cellule) return;
-
-  curseur = [Number(cellule.dataset.ligne), Number(cellule.dataset.colonne)];
-  poseSurLaCase(selectionnee, curseur[0], curseur[1]);
-});
 
 /* ================================================================== */
 /* La manche                                                           */

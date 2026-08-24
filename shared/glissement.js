@@ -1,15 +1,14 @@
 /**
  * Le geste : attraper, déplacer, lâcher — ou simplement toucher.
  *
- * Un enfant ne fait pas la différence entre un toucher et un glissement, et
- * son doigt encore moins : un « toucher » dérive presque toujours de trois
- * pixels, et un « glissement » commence toujours par un appui immobile. Deux
- * gestionnaires en concurrence produiraient des sélections fantômes et des
- * pièces qui restent collées.
+ * Un seul geste, une seule issue : on attrape et on déplace. L'appui marque
+ * l'intention — c'est là que la pièce se choisit — et la prise ne commence
+ * qu'au-delà d'un seuil de quelques pixels, sinon la moindre dérive du doigt
+ * ferait décoller la pièce sur un simple appui.
  *
- * D'où un seul geste à deux issues : l'appui ouvre un glissement *candidat*,
- * qui devient une prise au-delà d'un seuil de quelques pixels, et retombe en
- * simple toucher s'il est relâché avant.
+ * Rien ne se joue au relâchement immobile. Faire cohabiter un toucher et un
+ * glissement sur les mêmes éléments revenait à faire deviner au programme
+ * lequel des deux l'enfant voulait, et il devinait mal.
  */
 
 /** En deçà, le doigt n'a pas voulu déplacer quoi que ce soit. */
@@ -19,7 +18,7 @@ const SEUIL = 8;
  * @param {Element} element
  * @param {object} gestes
  * @param {(e: PointerEvent) => boolean} [gestes.autorise] refuse l'appui
- * @param {(e: PointerEvent) => void} [gestes.surToucher] relâché sans bouger
+ * @param {(e: PointerEvent) => void} [gestes.surAppui] le doigt s'est posé
  * @param {(e: PointerEvent, depart: {x: number, y: number}) => void} [gestes.surPrise]
  *   seuil franchi ; `depart` est le point d'appui d'origine, celui qui dit
  *   quelle partie de l'élément le doigt tient vraiment
@@ -27,7 +26,7 @@ const SEUIL = 8;
  * @param {(e: PointerEvent) => void} [gestes.surDepose]
  * @param {(e: PointerEvent) => void} [gestes.surAbandon] geste interrompu
  */
-export const installeLeGeste = (element, { autorise, surToucher, surPrise, surDeplacement, surDepose, surAbandon }) => {
+export const installeLeGeste = (element, { autorise, surAppui, surPrise, surDeplacement, surDepose, surAbandon }) => {
   let pointeur = null;
   let depart = null;
   let pris = false;
@@ -61,10 +60,9 @@ export const installeLeGeste = (element, { autorise, surToucher, surPrise, surDe
     const avaitPris = pris;
     raccroche();
 
-    if (!avaitPris) {
-      if (!interrompu) surToucher?.(e);
-      return;
-    }
+    // Relâché sans avoir bougé : la pièce est choisie depuis l'appui, il n'y a
+    // rien de plus à en faire.
+    if (!avaitPris) return;
 
     if (interrompu) surAbandon?.(e);
     else surDepose?.(e);
@@ -78,6 +76,7 @@ export const installeLeGeste = (element, { autorise, surToucher, surPrise, surDe
     pris = false;
 
     saisitLePointeur(element, e.pointerId);
+    surAppui?.(e);
 
     /*
      * Les mouvements sont suivis sur la fenêtre, pas sur l'élément.

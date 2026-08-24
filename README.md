@@ -165,11 +165,16 @@ pas : un doigt relâché en dehors d'elle.
 
 Une seule règle d'ancrage, aussi : **la case que tu tiens est la case où tu
 poses**. C'est la seule qui reste vraie sur un L, dont le coin haut-gauche du
-cadre est vide, et elle couvre les trois façons de poser — la case attrapée en
-glissant, la case touchée dans le bac, la première case au clavier. La pièce
-prend la taille du plateau dès qu'on la soulève, monte un peu au-dessus du
-doigt qui la cacherait, et les cases visées s'éclairent en vert avant qu'on
-lâche.
+cadre est vide. La pièce prend la taille du plateau dès qu'on la soulève,
+monte un peu au-dessus du doigt qui la cacherait, et les cases visées
+s'éclairent en vert avant qu'on lâche.
+
+Une pièce se **choisit à l'appui**, pas au relâchement — c'est ce qui donne son
+sens au bouton ↻ sans avoir à deviner si l'enfant voulait cliquer ou glisser.
+Il y a eu un temps où poser le doigt puis toucher une case posait la pièce, en
+plus du glisser : deux gestes concurrents sur les mêmes éléments, et le
+programme choisissait mal. Une pièce déjà posée se reprend en la tirant hors
+du plateau.
 
 Une pose ratée n'est pas une erreur : elle n'est jamais enregistrée comme
 telle. Au puzzle, essayer une case n'est pas se tromper, et compter ces essais
@@ -177,9 +182,10 @@ fausserait l'espace parent. La pose est même indulgente — si la case visée n
 convient pas, les huit voisines sont essayées avant de rendre la pièce.
 
 Tout se joue aussi au clavier : les flèches déplacent un curseur, `Entrée`
-pose, `R` pivote, `Retour arrière` reprend la pièce sous le curseur. Les trois
-chemins débouchent sur une seule fonction. C'est une leçon déjà payée ici : le
-clavier de CALCULER doublait la logique du glisser et oubliait la sauvegarde.
+pose, `R` pivote, `Retour arrière` reprend la pièce sous le curseur. Le
+glissement et le clavier débouchent sur une seule fonction. C'est une leçon
+déjà payée ici : le clavier de CALCULER doublait la logique du glisser et
+oubliait la sauvegarde.
 
 ## Papier et blocs
 
