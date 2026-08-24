@@ -3,6 +3,8 @@
 /* ================================================================== */
 
 .panneau {
+  /* La seule surface claire de l'application : ses contrôles natifs le sont aussi. */
+  color-scheme: light;
   border: none;
   padding: 0;
   margin: auto;

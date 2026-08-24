@@ -19,21 +19,12 @@ const zoneAnnonce = document.querySelector(".puzzle__annonce");
 const boutonPivoter = document.querySelector('[data-action="pivoter"]');
 
 /**
- * Huit couleurs de pièces, les mêmes dans les dix-huit univers — comme le
- * jaune d'action, elles s'apprennent une fois. L'identité du thème est déjà
- * portée par son aplat, elle n'a pas besoin de repasser par les pièces.
- * Chacune vient avec sa lèvre, la version sombre qui lui donne son épaisseur.
+ * Combien de couleurs de pièces la feuille de style propose.
+ *
+ * Les couleurs elles-mêmes vivent dans `styles/jeux.css`, sous
+ * `.piece--couleur-*` : le contrôleur ne manipule qu'un numéro.
  */
-const COULEURS = [
-  ["#e8615a", "#b53f3a"],
-  ["#f08c3c", "#bd6420"],
-  ["#7cb342", "#54812a"],
-  ["#22a699", "#14766c"],
-  ["#4478c4", "#2b5391"],
-  ["#8a63c9", "#623f9b"],
-  ["#e0709f", "#b04a76"],
-  ["#9c6b4f", "#6f4732"],
-];
+const NOMBRE_DE_COULEURS = 8;
 
 /** De combien la pièce monte au-dessus du doigt, en cases. Le doigt cache la cible. */
 const LEVEE_TACTILE = 0.9;
@@ -112,18 +103,16 @@ const creeLaPiece = (definition, index) => {
     nom: definition.nom,
     orientations,
     rotation: definition.rotation ?? Math.floor(Math.random() * orientations.length),
-    couleur: definition.couleur ?? index % COULEURS.length,
+    couleur: definition.couleur ?? index % NOMBRE_DE_COULEURS,
     ligne: null,
     colonne: null,
     empreinte: null,
     element,
   };
 
-  element.className = "piece";
+  element.className = `piece piece--couleur-${piece.couleur}`;
   element.setAttribute("role", "button");
   element.tabIndex = 0;
-  element.style.setProperty("--piece", COULEURS[piece.couleur][0]);
-  element.style.setProperty("--piece-levre", COULEURS[piece.couleur][1]);
 
   installeLesGestes(piece);
   dessineLaPiece(piece);
@@ -570,7 +559,7 @@ const mancheNeuve = () => {
     pieces: morceaux.map((morceau, index) => ({
       nom: morceau.nom,
       cellules: normalise(morceau.cellules),
-      couleur: index % COULEURS.length,
+      couleur: index % NOMBRE_DE_COULEURS,
     })),
   };
 };

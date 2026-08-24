@@ -14,6 +14,13 @@
 }
 
 :root {
+  /*
+   * L'application n'a qu'une tenue, et elle est sombre. Le déclarer donne aux
+   * ascenseurs et aux contrôles natifs la même teinte que le reste, et dit aux
+   * extensions de thème sombre que la page n'a pas besoin d'être retournée.
+   */
+  color-scheme: dark;
+
   /* Surchargées à l'exécution par le thème actif (voir shared/rendu.js) */
   --couleur-fond: #1b2a4a;
   --couleur-fondClair: #35558a;

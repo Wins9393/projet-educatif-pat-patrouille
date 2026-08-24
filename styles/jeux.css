@@ -712,6 +712,27 @@
 /* ------------------------------------------------------------------ */
 
 /*
+ * Huit couleurs de pièces, les mêmes dans les dix-huit univers — comme le
+ * jaune d'action, elles s'apprennent une fois. L'identité du thème est déjà
+ * portée par son aplat, elle n'a pas besoin de repasser par les pièces.
+ * Chacune vient avec sa lèvre, la version sombre qui lui donne son épaisseur.
+ *
+ * Elles vivent ici et non dans le contrôleur pour deux raisons : c'est leur
+ * place, avec le reste de la palette ; et une couleur posée en ligne par le
+ * script, sur un élément pas encore inséré dans la page, échappe aux
+ * extensions qui réécrivent les feuilles de style. Un thème sombre forcé
+ * laissait les pièces transparentes jusqu'à ce qu'on les fasse pivoter.
+ */
+.piece--couleur-0 { --piece: #e8615a; --piece-levre: #b53f3a; }
+.piece--couleur-1 { --piece: #f08c3c; --piece-levre: #bd6420; }
+.piece--couleur-2 { --piece: #7cb342; --piece-levre: #54812a; }
+.piece--couleur-3 { --piece: #22a699; --piece-levre: #14766c; }
+.piece--couleur-4 { --piece: #4478c4; --piece-levre: #2b5391; }
+.piece--couleur-5 { --piece: #8a63c9; --piece-levre: #623f9b; }
+.piece--couleur-6 { --piece: #e0709f; --piece-levre: #b04a76; }
+.piece--couleur-7 { --piece: #9c6b4f; --piece-levre: #6f4732; }
+
+/*
  * Une pièce n'est pas rectangulaire : sa lèvre ne peut pas être une ombre de
  * boîte. `drop-shadow` suit le contour réel, y compris les creux d'un L.
  *
@@ -724,7 +745,7 @@
   grid-auto-rows: var(--case);
   touch-action: none;
   cursor: grab;
-  filter: drop-shadow(0 var(--epaisseur-piece, 5px) 0 var(--piece-levre));
+  filter: drop-shadow(0 var(--epaisseur-piece, 5px) 0 var(--piece-levre, #4a4f57));
   transition: transform 0.12s ease;
 }
 
@@ -736,7 +757,7 @@
 .piece__carreau {
   grid-column: calc(var(--c) + 1);
   grid-row: calc(var(--l) + 1);
-  background: var(--piece);
+  background: var(--piece, #8a8f98);
   box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.2);
 }
 
