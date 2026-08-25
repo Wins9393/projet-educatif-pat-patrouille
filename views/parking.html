@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#1b2a4a">
+    <link rel="stylesheet" href="../styles/base.css">
+    <link rel="stylesheet" href="../styles/decors.css">
+    <link rel="stylesheet" href="../styles/jeux.css">
+    <link rel="stylesheet" href="../styles/panneaux.css">
+    <link rel="manifest" href="../manifest.webmanifest">
+    <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+    <script src="../vendor/confetti.min.js" defer></script>
+    <script type="module" src="../controllers/parking.js"></script>
+    <title>PARKING</title>
+</head>
+
+<body>
+    <main class="jeu-page">
+        <div class="plateau">
+            <p class="consigne">
+                <span class="consigne__texte">Fais sortir la voiture rouge</span>
+                <button class="bouton bouton--discret bouton--icone" data-action="ecouter" aria-label="Réécouter">🔊</button>
+            </p>
+
+            <div class="parking">
+                <div class="parking__cadre">
+                    <div class="parking__grille" role="group" aria-label="Le parking. Choisis un véhicule, puis les flèches le font avancer et reculer."></div>
+                    <span class="parking__ouverture" aria-hidden="true"></span>
+                    <span class="parking__panneau" aria-hidden="true">➜</span>
+                </div>
+
+                <div class="parking__commande">
+                    <p class="parking__annonce" aria-live="polite"></p>
+                    <button class="bouton" data-action="indice">💡 Un indice</button>
+                </div>
+
+                <div class="parking__actions">
+                    <button class="bouton bouton--discret" data-action="annuler">↩ Annuler</button>
+                    <button class="bouton bouton--discret" data-action="recommencer">Recommencer</button>
+                    <button class="bouton bouton--discret" data-action="rejouer">Nouveau parking</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

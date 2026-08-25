@@ -1,9 +1,10 @@
 # Les Petits Mondes
 
-Six mini-jeux pour apprendre à **lire, écrire, compter et assembler**, dans seize univers
-que l'enfant choisit : espace, océan, dinosaures, robots, princesses, ferme,
-jungle, fruits et légumes, véhicules, maison, nature, sports, musique, météo,
-fêtes, animaux — ou **Tout**, qui les mélange.
+Sept mini-jeux pour apprendre à **lire, écrire, compter, assembler et
+raisonner**, dans seize univers que l'enfant choisit : espace, océan,
+dinosaures, robots, princesses, ferme, jungle, fruits et légumes, véhicules,
+maison, nature, sports, musique, météo, fêtes, animaux — ou **Tout**, qui les
+mélange.
 
 Application web sans dépendance ni build : un serveur statique suffit.
 Installable comme application et jouable hors ligne.
@@ -18,13 +19,14 @@ Installable comme application et jouable hors ligne.
 | **CALCULER** | Une quantité à composer, puis de vraies opérations |
 | **MEMORY** | Des paires d'images à retrouver, et leur mot à entendre |
 | **PUZZLE** | Une grille à remplir avec un set de formes, qu'on fait pivoter |
+| **PARKING** | Un embouteillage à démêler pour faire sortir la voiture rouge |
 
 Chaque bonne réponse rapporte une étoile et fait progresser vers l'autocollant
 suivant.
 
 ## Niveaux
 
-Un seul réglage fait évoluer les cinq jeux ensemble.
+Un seul réglage fait évoluer les sept jeux ensemble.
 
 | Niveau | Âge | Mots | Quantités | Calcul |
 | --- | --- | --- | --- | --- |
@@ -40,6 +42,11 @@ PUZZLE aussi, sur deux axes à la fois : la grille passe de 3 × 3 à 6 × 6, et
 les petites pièces disparaissent — le carré seul, qui bouche n'importe quel
 trou, n'existe qu'au premier niveau. À partir du troisième, une manche sur
 deux se joue sur une silhouette plutôt qu'un rectangle.
+
+PARKING ne monte que sur un axe, mais il suffit : le parking passe de 4 × 4 à
+6 × 6 et se remplit de trois à onze gêneurs. La solution la plus courte suit
+toute seule — trois coups au premier niveau, une dizaine au dernier, et
+parfois trente.
 
 Aux deux premiers niveaux, CALCULER se joue en manipulant des jetons — on
 compose une quantité en la touchant. À partir du troisième, l'opération est
@@ -187,6 +194,73 @@ glissement et le clavier débouchent sur une seule fonction. C'est une leçon
 déjà payée ici : le clavier de CALCULER doublait la logique du glisser et
 oubliait la sauvegarde.
 
+## Un embouteillage qui se défait toujours
+
+Le PARKING pose le même piège que le PUZZLE, en pire : une disposition de
+véhicules tirée au hasard est **insoluble à peu près une fois sur cinq**, et
+rien ne le laisse voir. L'enfant pousse des voitures pendant dix minutes devant
+un problème qui n'a pas de solution.
+
+Le jeu offre pourtant la sortie gratuitement, à condition de la remarquer :
+**un coup se défait**. Reculer une voiture qu'on vient d'avancer est un coup
+légal, donc le graphe des dispositions est *non orienté*. Il en découle deux
+choses, et tout `shared/embouteillage.js` tient dedans :
+
+- si **une seule** disposition de la composante connexe permet la sortie,
+  **toutes** la permettent ;
+- un parcours en largeur *depuis les dispositions gagnantes* donne la distance
+  exacte de toutes les autres à la sortie, en coups.
+
+On pose donc les véhicules au hasard, on explore toute la composante, et on
+retient comme position de départ la disposition **la plus éloignée** de la
+sortie. Le parking est soluble par construction, et sa difficulté n'est pas
+estimée : elle est **mesurée**, en nombre exact de coups minimum. Régler la
+difficulté revient alors à ajouter des véhicules, rien d'autre.
+
+Une seule règle de placement écarte la plupart des parkings insolubles :
+**aucun véhicule horizontal sur la rangée de sortie** à part la voiture rouge.
+Il ne pourrait jamais quitter cette rangée, et une fois poussé contre le mur il
+boucherait la sortie pour toujours.
+
+Deux seuils gouvernent le tirage, et ils ne servent pas à la même chose. Le
+*plancher* est la cible : atteinte, on s'arrête là. Le *minimum* est
+intransigeant, car une grille déjà résolue n'est pas une manche — sans cette
+distinction, un tirage malchanceux rendait parfois une voiture rouge qui
+n'avait plus qu'à sortir.
+
+Explorer la composante d'un parking de douze véhicules demande quelques
+dizaines de millisecondes, et peut-être une demi-seconde sur une vieille
+tablette. La grille suivante est donc **calculée pendant que l'enfant joue
+celle-ci** : seule la toute première d'une session se paie comptant.
+
+Le solveur qui fabrique les grilles est aussi celui qui souffle les indices. Il
+n'y en a qu'un, et il ne peut donc pas conseiller un coup que le parking ne
+permet pas.
+
+## Pousser, buter, sortir
+
+Le glissement du PUZZLE se réutilise tel quel, mais **contraint à l'axe et
+borné à l'espace libre** : un véhicule suit le doigt sur sa seule voie, et il
+bute. La course disponible se calcule une fois, à la prise — rien d'autre ne
+bouge pendant, elle reste vraie jusqu'au bout. Tirer trois mètres trop loin ne
+fait rien de plus que tirer jusqu'à la butée.
+
+Le mouvement est continu, pas case par case : c'est la butée qui enseigne la
+règle, bien mieux qu'une phrase. Un véhicule que rien ne laisse bouger tremble
+sur place — ce n'est pas une faute, c'est un renseignement, et ça n'est jamais
+enregistré comme une erreur.
+
+Un coup, c'est un véhicule glissé — d'une case ou de quatre, peu importe.
+C'est la mesure du jeu de bois, et celle du solveur : les deux comptes se
+comparent, et sortir en autant de coups que le minimum se remarque.
+
+**La voiture sort vraiment.** Quand la voie est dégagée, sa course s'étend
+au-delà du mur : on la tire hors du parking, et c'est ce geste-là qui gagne la
+manche. Pas une case qui s'illumine — une voiture qui s'en va.
+
+Tout se joue aussi au clavier : les flèches poussent le véhicule sélectionné,
+et il ignore poliment les deux qui ne sont pas dans son axe.
+
 ## Papier et blocs
 
 L'interface était en verre dépoli : des surfaces translucides floutées sur un
@@ -233,7 +307,7 @@ Accessibles par l'engrenage, conservés d'une session à l'autre :
 ## Accessibilité
 
 - Tout se joue au clavier : les réponses sont des boutons, les jetons se posent
-  avec Entrée
+  avec Entrée, et les flèches poussent les véhicules du PARKING
 - Chaque visuel porte une alternative textuelle
 - `prefers-reduced-motion` fige les décors et les animations
 - Cibles tactiles d'au moins 44 px
@@ -259,7 +333,8 @@ vieille de plus de deux heures. Il est effacé dès que la manche est gagnée.
 Ce qui est conservé se limite au strict nécessaire — le mot et l'avancée pour
 ÉCRIRE, la grille de choix pour LIRE et COMPTER, l'opération et les jetons
 posés pour CALCULER, l'ordre des cartes et les paires trouvées pour MEMORY, le
-plateau et la position de chaque pièce pour PUZZLE.
+plateau et la position de chaque pièce pour PUZZLE, le parking et la position
+de chaque véhicule pour PARKING.
 
 ## Interface réactive sans framework
 
@@ -296,7 +371,8 @@ index.html / index.js      accueil : jeux, univers, progression
 views/ + controllers/      un écran et un contrôleur par mini-jeu
 shared/                    tirages, niveaux, rendu, sons, voix, confettis,
                            progression, réglages, interface, réactivité, reprise,
-                           formes et découpe du puzzle, silhouettes, glissement
+                           formes et découpe du puzzle, silhouettes, glissement,
+                           circulation et embouteillage du parking
 themes/                    les seize univers, plus « Tout » qui les mélange
 styles/                    fondations, décors de thème, accueil, jeux, panneaux
 assets/illustrations/      Mars, la réserve de dessins et la charte

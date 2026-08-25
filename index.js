@@ -13,6 +13,7 @@ const JEUX = [
   { id: "calculer", nom: "CALCULER", icone: "➕", desc: "Compose le bon total", lien: "views/calculer.html" },
   { id: "memory", nom: "MEMORY", icone: "🃏", desc: "Retrouve les paires", lien: "views/memory.html" },
   { id: "puzzle", nom: "PUZZLE", icone: "🧩", desc: "Remplis la grille avec les formes", lien: "views/puzzle.html" },
+  { id: "parking", nom: "PARKING", icone: "🚗", desc: "Fais sortir la voiture rouge", lien: "views/parking.html" },
 ];
 
 const accueil = document.querySelector(".accueil");

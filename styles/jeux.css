@@ -918,3 +918,339 @@
     padding: 8px 10px 8px 20px;
   }
 }
+
+/* ================================================================== */
+/* PARKING                                                             */
+/* ================================================================== */
+
+/*
+ * Toutes les mesures du jeu descendent de `--case`, posée ici : la grille, les
+ * murs, les véhicules et le panneau de sortie s'accordent parce qu'ils lisent
+ * tous la même variable.
+ *
+ * Le budget en largeur compte une case et demie de plus que la grille : les
+ * murs en prennent une demie, le panneau de sortie une.
+ */
+.parking {
+  --case: max(
+    26px,
+    min(clamp(32px, 12vw, 84px), calc((100vw - 48px) / (var(--colonnes) + 1.5)), calc((100dvh - 400px) / var(--lignes)))
+  );
+  --mur: calc(var(--case) * 0.22);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+
+/*
+ * Les murs du parking : un liseré clair tout autour de l'asphalte.
+ *
+ * La marge à droite réserve la place du panneau de sortie, qui déborde du
+ * cadre sans occuper de place dans le flux. Sans elle, c'est le parking seul
+ * qui se centre, et le panneau part hors de l'écran sur téléphone.
+ */
+.parking__cadre {
+  position: relative;
+  margin-right: calc(var(--case) * 0.95);
+  padding: var(--mur);
+  background: var(--bloc-creux);
+  border-radius: calc(var(--rayon) + var(--mur));
+  box-shadow: var(--ombre-douce);
+}
+
+/*
+ * Aucun remplissage ni bordure sur la grille elle-même : sa largeur divisée
+ * par le nombre de colonnes doit donner exactement le côté d'une case, c'est
+ * ce qui permet de savoir de combien de cases un véhicule a glissé.
+ */
+.parking__grille {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(var(--colonnes), var(--case));
+  grid-auto-rows: var(--case);
+  border-radius: var(--rayon);
+  overflow: hidden;
+}
+
+/* Une place de parking : l'asphalte, et son marquage au sol. */
+.parking__place {
+  background: #3b4252;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/*
+ * L'ouverture recouvre le mur sur la seule rangée de sortie. Un mur percé
+ * pour de bon demanderait un dégradé conique ou un masque ; le recouvrir tient
+ * en trois lignes et se déplace avec `--sortie`.
+ */
+.parking__ouverture {
+  position: absolute;
+  top: calc(var(--mur) + var(--sortie) * var(--case));
+  right: 0;
+  width: var(--mur);
+  height: var(--case);
+  background: #3b4252;
+}
+
+/* Le panneau qui dit par où : posé dehors, au bout de la rangée de sortie. */
+.parking__panneau {
+  position: absolute;
+  top: calc(var(--mur) + (var(--sortie) + 0.5) * var(--case));
+  right: calc(var(--case) * -0.95);
+  display: grid;
+  place-items: center;
+  width: calc(var(--case) * 0.7);
+  height: calc(var(--case) * 0.7);
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background: #2d6cdf;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.85);
+  color: #ffffff;
+  font-size: calc(var(--case) * 0.4);
+  line-height: 1;
+}
+
+/* ------------------------------------------------------------------ */
+/* Les véhicules                                                       */
+/* ------------------------------------------------------------------ */
+
+/*
+ * Six couleurs de gêneurs, les mêmes dans les dix-huit univers — le PUZZLE a
+ * déjà tranché ainsi, et pour la même raison : l'aplat du thème porte
+ * l'identité, les pièces n'ont pas à repasser par là. Le rouge n'est donné à
+ * personne d'autre qu'à la voiture à sortir : c'est le repère du jeu.
+ */
+.vehicule--couleur-0 { --vehicule: #4478c4; --vehicule-ombre: #2b5391; }
+.vehicule--couleur-1 { --vehicule: #7cb342; --vehicule-ombre: #54812a; }
+.vehicule--couleur-2 { --vehicule: #f0a63c; --vehicule-ombre: #bd7620; }
+.vehicule--couleur-3 { --vehicule: #8a63c9; --vehicule-ombre: #623f9b; }
+.vehicule--couleur-4 { --vehicule: #22a699; --vehicule-ombre: #14766c; }
+.vehicule--couleur-5 { --vehicule: #d9d2c5; --vehicule-ombre: #a49c8d; }
+.vehicule--heros { --vehicule: #e33a2f; --vehicule-ombre: #a72219; }
+
+/*
+ * L'élément porte la place occupée sur la grille, jamais le dessin : c'est le
+ * corps, à l'intérieur, qui est une voiture. Le vertical réutilise exactement
+ * le même dessin, pivoté d'un quart de tour — une voiture vue de dessus n'a
+ * pas deux dessins à entretenir.
+ *
+ * `touch-action: none` est vital : sans lui, un glissement du doigt fait
+ * défiler la page au lieu de pousser le véhicule.
+ */
+.vehicule {
+  position: absolute;
+  left: calc(var(--colonne) * var(--case));
+  top: calc(var(--ligne) * var(--case));
+  z-index: 2;
+  width: calc(var(--largeur) * var(--case));
+  height: calc(var(--hauteur) * var(--case));
+  touch-action: none;
+  cursor: grab;
+  transition: transform 0.16s ease;
+}
+
+.vehicule:focus-visible {
+  outline: 3px solid var(--action);
+  outline-offset: 3px;
+  border-radius: calc(var(--case) * 0.25);
+}
+
+/*
+ * La carrosserie, ses vitres et ses quatre roues en un seul élément : les
+ * roues sont quatre aplats posés par `background-image`, et c'est ce qui
+ * raconte pourquoi un véhicule n'avance que dans un sens.
+ */
+.vehicule__corps {
+  --marge: calc(var(--case) * 0.09);
+  --roue: linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.42));
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: calc(var(--taille) * var(--case) - var(--marge) * 2);
+  height: calc(var(--case) - var(--marge) * 2);
+  transform: translate(-50%, -50%);
+  border-radius: calc(var(--case) * 0.26);
+  background-color: var(--vehicule);
+  background-image: var(--roue), var(--roue), var(--roue), var(--roue);
+  background-size: 12% 16%;
+  background-position: 16% 2%, 16% 98%, 78% 2%, 78% 98%;
+  background-repeat: no-repeat;
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.22),
+    0 calc(var(--case) * 0.06) 0 var(--vehicule-ombre);
+}
+
+.vehicule--vertical .vehicule__corps {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+/* Le pare-brise et la lunette arrière, d'un seul tenant. */
+.vehicule__corps::before {
+  content: "";
+  position: absolute;
+  inset: 20% 26%;
+  border-radius: calc(var(--case) * 0.14);
+  background: rgba(210, 235, 255, 0.72);
+}
+
+/* Un camion, c'est une cabine à l'avant et une remorque derrière. */
+.vehicule--camion .vehicule__corps::before {
+  inset: 18% 8% 18% 68%;
+}
+
+.vehicule--camion .vehicule__corps {
+  background-position: 10% 2%, 10% 98%, 74% 2%, 74% 98%;
+}
+
+/* Tenu : il colle au doigt, sans transition qui le ferait traîner. */
+.vehicule--tenu {
+  z-index: 4;
+  cursor: grabbing;
+  transition: none;
+}
+
+.vehicule--tenu .vehicule__corps {
+  box-shadow:
+    inset 0 0 0 2px rgba(255, 255, 255, 0.32),
+    0 calc(var(--case) * 0.1) calc(var(--case) * 0.14) rgba(0, 0, 0, 0.35);
+}
+
+/* Coincé : il tremble sur place. Ce n'est pas une faute, c'est un renseignement. */
+.vehicule--coince {
+  animation: parking-coince 0.3s ease;
+}
+
+@keyframes parking-coince {
+  25% { transform: translate(-2px, 2px); }
+  50% { transform: translate(2px, -2px); }
+  75% { transform: translate(-1px, 1px); }
+}
+
+/* L'indice : le véhicule à pousser fait trois pas dans le bon sens. */
+.vehicule--indice {
+  z-index: 3;
+}
+
+.vehicule--indice.vehicule--horizontal {
+  animation: parking-indice-horizontal 0.52s ease-in-out 3;
+}
+
+.vehicule--indice.vehicule--vertical {
+  animation: parking-indice-vertical 0.52s ease-in-out 3;
+}
+
+@keyframes parking-indice-horizontal {
+  50% { transform: translateX(calc(var(--sens) * var(--case) * 0.3)); }
+}
+
+@keyframes parking-indice-vertical {
+  50% { transform: translateY(calc(var(--sens) * var(--case) * 0.3)); }
+}
+
+/*
+ * La sortie. La voiture rouge ne s'arrête pas au mur : elle s'en va pour de
+ * bon, et c'est la seule récompense que l'enfant a vraiment gagnée à la main.
+ */
+.vehicule--sorti {
+  z-index: 5;
+  animation: parking-sortie 0.75s ease-in forwards;
+}
+
+@keyframes parking-sortie {
+  to {
+    transform: translateX(calc(var(--case) * 3.4));
+    opacity: 0;
+  }
+}
+
+.parking__commande {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+}
+
+.parking__annonce {
+  margin: 0;
+  min-width: 6ch;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--texte);
+}
+
+.parking__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vehicule,
+  .vehicule--coince,
+  .vehicule--indice.vehicule--horizontal,
+  .vehicule--indice.vehicule--vertical {
+    animation: none;
+    transition: none;
+  }
+
+  .vehicule--indice .vehicule__corps {
+    box-shadow: inset 0 0 0 4px var(--action);
+  }
+}
+
+/*
+ * Sur téléphone, le glissement se bat contre le défilement de la page : la
+ * grille, le compteur et les boutons doivent tenir ensemble dans l'écran.
+ */
+@media (max-width: 620px) {
+  .parking {
+    --case: max(
+      24px,
+      min(clamp(30px, 15vw, 74px), calc((100vw - 32px) / (var(--colonnes) + 1.5)), calc((100dvh - 380px) / var(--lignes)))
+    );
+    gap: 12px;
+  }
+
+  .parking__commande {
+    gap: 12px;
+  }
+
+  .parking__actions {
+    gap: 8px;
+  }
+
+  .parking__actions .bouton--discret {
+    padding: 10px 14px;
+    font-size: 0.92rem;
+  }
+}
+
+/*
+ * Les écrans courts sont le cas limite : un iPhone SE au niveau Champion, six
+ * rangées et douze véhicules. La grille et le bouton d'indice ne se négocient
+ * pas — sans eux on ne joue pas. La rangée du bas, elle, se resserre jusqu'à
+ * tenir sur une seule ligne plutôt que de pousser un bouton hors de l'écran.
+ */
+@media (max-width: 620px) and (max-height: 700px) {
+  .parking {
+    --case: max(
+      22px,
+      min(clamp(26px, 15vw, 74px), calc((100vw - 32px) / (var(--colonnes) + 1.5)), calc((100dvh - 400px) / var(--lignes)))
+    );
+    gap: 10px;
+  }
+
+  .parking__actions {
+    gap: 6px;
+  }
+
+  .parking__actions .bouton--discret {
+    padding: 9px;
+    font-size: 0.85rem;
+  }
+}

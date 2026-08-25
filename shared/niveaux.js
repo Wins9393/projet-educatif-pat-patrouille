@@ -1,5 +1,5 @@
 /**
- * Niveaux de difficulté, partagés par les six mini-jeux.
+ * Niveaux de difficulté, partagés par les sept mini-jeux.
  *
  * La progression suit celle de la maternelle vers le CP : on commence par des
  * mots très courts et des quantités manipulables, puis on allonge les mots et
@@ -40,6 +40,20 @@ export const NIVEAUX = [
      * un bateau n'est qu'une tache.
      */
     puzzle: { lignes: 3, colonnes: 3, tailleMin: 1, tailleMax: 3, silhouettes: false },
+    /**
+     * Le parking du PARKING : sa taille, le nombre de gêneurs à y garer — le
+     * héros ne compte pas — et combien d'entre eux sont des camions de trois
+     * cases. `sortie` est la rangée par laquelle la voiture rouge s'échappe.
+     *
+     * La difficulté tient à ce seul nombre de véhicules : plus le parking est
+     * encombré, plus la solution est longue. Elle n'est d'ailleurs pas
+     * estimée mais mesurée, en coups (voir `shared/embouteillage.js`).
+     *
+     * `plancher` est la profondeur visée, sous laquelle on retente un tirage ;
+     * `minimum` est intransigeant, car une grille déjà résolue n'est pas une
+     * manche.
+     */
+    parking: { lignes: 4, colonnes: 4, sortie: 1, vehicules: 3, camions: 0, plancher: 2, minimum: 2 },
     /** Opérations autorisées en CALCULER. */
     operations: ["collecte"],
     /** Plus grand nombre manipulé en CALCULER. */
@@ -56,6 +70,7 @@ export const NIVEAUX = [
     quantiteMax: 9,
     paires: 4,
     puzzle: { lignes: 4, colonnes: 4, tailleMin: 2, tailleMax: 4, silhouettes: false },
+    parking: { lignes: 5, colonnes: 5, sortie: 2, vehicules: 4, camions: 1, plancher: 3, minimum: 2 },
     operations: ["collecte"],
     nombreMax: 9,
   },
@@ -70,6 +85,7 @@ export const NIVEAUX = [
     quantiteMax: 12,
     paires: 6,
     puzzle: { lignes: 5, colonnes: 4, tailleMin: 3, tailleMax: 4, silhouettes: [15, 22] },
+    parking: { lignes: 5, colonnes: 5, sortie: 2, vehicules: 5, camions: 1, plancher: 4, minimum: 3 },
     operations: ["addition"],
     nombreMax: 10,
   },
@@ -84,6 +100,7 @@ export const NIVEAUX = [
     quantiteMax: 16,
     paires: 8,
     puzzle: { lignes: 5, colonnes: 5, tailleMin: 3, tailleMax: 5, silhouettes: [23, 29] },
+    parking: { lignes: 6, colonnes: 6, sortie: 2, vehicules: 8, camions: 2, plancher: 7, minimum: 4 },
     operations: ["addition", "soustraction"],
     nombreMax: 20,
   },
@@ -98,6 +115,7 @@ export const NIVEAUX = [
     quantiteMax: 20,
     paires: 10,
     puzzle: { lignes: 6, colonnes: 6, tailleMin: 4, tailleMax: 5, silhouettes: [30, 40] },
+    parking: { lignes: 6, colonnes: 6, sortie: 2, vehicules: 11, camions: 3, plancher: 9, minimum: 5 },
     operations: ["addition", "soustraction", "multiplication", "division"],
     nombreMax: 50,
   },
